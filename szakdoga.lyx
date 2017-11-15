@@ -150,6 +150,16 @@ május 20.) szerény családi háttérrel rendelkezett.
  A kutatás eredményeként valódi ipari alkalmazások nemlineáris optimalizálási
  problémáinak megoldására adtak eszközöket.
  
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Mint például?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -166,11 +176,31 @@ Az iparban töltött évei alatt Broyden a Davidon–Fletcher–Powell (DFP) mó
  A kutatása 1970-ben egy új, továbbfejlesztett módszerhez vezetett.
  Tőle függetlenül, nagyjából egy időben, Fletcher, Donald Goldfarb, és David
  Shanno is ugyanerre az eredményre jutott.
- Ezért az új módszert BFGS módszernek nevezték el.
+ Ezért az új módszert BFGS 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Miért BFGS a neve?
+\end_layout
+
+\end_inset
+
+módszernek nevezték el.
  Más kutatások folytatták a kvázi-Newton módszerek optimalizálását, de a
  BFGS módszer még ma is a leginkább választott, ha a Hessian mátrix kiszámítása
  túl költséges.
- 1981-től Abaffy Józseffel és Emilio Spedicato-val az ABS módszereken dolgozott.
+ 1981-től Abaffy Józseffel és Emilio Spedicato-val az ABS 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Mi az, hogy ABS?
+\end_layout
+
+\end_inset
+
+módszereken dolgozott.
  Később a numerikus lineáris algebrára fókuszált, ezen belül is a konjugált
  gradiens módszerekre és ezek rendszertanára.
  A szakdolgozat legfőképp kutatásának a konjugált gradiens módszerekkel
@@ -183,7 +213,17 @@ Feleségével, Joan-nal, 1959-ben házasodtak össze.
  Négy gyerekük született, a legidősebb, Robbie, 4 éves korában meghalt.
  Broyden nagy örömét lelte családjában, gyermekeiben, Christopher, Jane
  és Nicholas-ban.
- Szeretett madárlesre járni, zenével foglalkozni, kórusban énekelni, vitorlázni.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+-ban -ban -ban?
+\end_layout
+
+\end_inset
+
+Szeretett madárlesre járni, zenével foglalkozni, kórusban énekelni, vitorlázni.
  A helyi közösség és az egyházi közösség aktív tagja volt.
  Hét unokája született.
  A legidősebb unokája, Tom, az Oxford egyetemen tanult matematikát, a második
