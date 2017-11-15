@@ -1,0 +1,229 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\use_default_options true
+\maintain_unincluded_children false
+\language magyar
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2.5cm
+\rightmargin 2cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language polish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Bevezetés
+\end_layout
+
+\begin_layout Section
+Broyden életrajza
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename broyden-1.gif
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Charles George Broyden (1933.
+\begin_inset space \space{}
+\end_inset
+
+február 3.
+\begin_inset space \space{}
+\end_inset
+
+- 2011.
+\begin_inset space \space{}
+\end_inset
+
+május 20.) szerény családi háttérrel rendelkezett.
+ Angliában született, édesapja gyári munkásként, édesanyja háztartásbeliként
+ dolgozott.
+ Szülei ennek ellenére a kezdetektől tanulásra biztatták.
+ Charles már gyerekként rengeteget olvasott, jó tanuló volt.
+ Édesapja sajnálatos módon meghalt tuberkulózisban, mikor ő még csak 11
+ éves volt.
+ Ez még jobban megnehezítette családi helyzetüket, de édesanyja még így
+ is arra biztatta, hogy egyetemre menjen.
+ A King's College London egyetemen szerzett fizikus diplomát 1955-ben.
+ A következő 10 évet az iparban töltötte.
+ Ezután 1965-1967 között az Aberystwyth Egyetemen tanított, majd a University
+ of Essex egyetemen 1967-ben professzor, később a matematika intézet dékánja
+ lett.
+ 1986-ban innen visszavonult, 1990-ben a Bolognai Egyetemen fogadott el
+ professzori kinevezést.
+ Jelentős szerepe volt a kvázi-Newton módszerek kifejlesztésében.
+ A kvázi-Newton módszerek előtt a nemlineáris optimalizálási problémákat
+ gradiens alapú módszerekkel oldották meg.
+ Nemlineáris esetben az ehhez szükséges Hessian mátrix kiszámítása legtöbbször
+ nem praktikus.
+ A kvázi-Newton módszerek kifejlesztésére irányuló munka az 1960-as és 1970-es
+ években zajlott, a nemlineáris optimalizálás egy izgalmas időszakában.
+ A kutatásban részt vett Bill Davidon, Roger Flecher és Mike Powell.
+ A kutatás eredményeként valódi ipari alkalmazások nemlineáris optimalizálási
+ problémáinak megoldására adtak eszközöket.
+ 
+\end_layout
+
+\begin_layout Standard
+Az iparban töltött évei alatt Broyden a Davidon–Fletcher–Powell (DFP) módszert
+ adaptálta nemlineáris problémákra.
+ Ez vezetett az 1965-ös klasszikus "A class of methods for solving nonlinear
+ simultaneous equations" cikkéhez a Mathematics of Computation folyóiratban.
+ Ez a munka széleskörűen elismert, mint a 20.
+ század egyik legnagyobb numerikus analízis eredménye.
+ A University of Essex egyetemen a DFP módszer optimalizálásra fókuszált.
+ Feltűnt neki, hogy habár a módszer jól működik, néha furcsa eredményeket
+ produkál.
+ Kerekítési hibákra gyanakodott.
+ A kutatása 1970-ben egy új, továbbfejlesztett módszerhez vezetett.
+ Tőle függetlenül, nagyjából egy időben, Fletcher, Donald Goldfarb, és David
+ Shanno is ugyanerre az eredményre jutott.
+ Ezért az új módszert BFGS módszernek nevezték el.
+ Más kutatások folytatták a kvázi-Newton módszerek optimalizálását, de a
+ BFGS módszer még ma is a leginkább választott, ha a Hessian mátrix kiszámítása
+ túl költséges.
+ 1981-től Abaffy Józseffel és Emilio Spedicato-val az ABS módszereken dolgozott.
+ Később a numerikus lineáris algebrára fókuszált, ezen belül is a konjugált
+ gradiens módszerekre és ezek rendszertanára.
+ A szakdolgozat legfőképp kutatásának a konjugált gradiens módszerekkel
+ kapcsolatos részét öleli fel.
+ 2011-ben 78 évesen, egy szívroham komplikációiba belehalt.
+\end_layout
+
+\begin_layout Standard
+Feleségével, Joan-nal, 1959-ben házasodtak össze.
+ Négy gyerekük született, a legidősebb, Robbie, 4 éves korában meghalt.
+ Broyden nagy örömét lelte családjában, gyermekeiben, Christopher, Jane
+ és Nicholas-ban.
+ Szeretett madárlesre járni, zenével foglalkozni, kórusban énekelni, vitorlázni.
+ A helyi közösség és az egyházi közösség aktív tagja volt.
+ Hét unokája született.
+ A legidősebb unokája, Tom, az Oxford egyetemen tanult matematikát, a második
+ legidősebb unokája, Matt, a Warwick Egyetemen tanul matematikát, Ben pedig
+ mérnöknek tanul a Swansea Egyetemen.
+ Így nagyapjuk nyomában járnak.
+ Köszönet Joan Broyden-nek a életrajzban nyújtott segítségéért.
+\end_layout
+
+\begin_layout Section
+Mátrixok alapvető jellemzése
+\end_layout
+
+\begin_layout Section
+Lineáris egyenletrendszerek megoldása, osztályozása
+\end_layout
+
+\begin_layout Section
+Felső relaxációs eljárás (SOR)
+\end_layout
+
+\begin_layout Section
+Blokk konjugált gradiens módszer (BlCG)
+\end_layout
+
+\begin_layout Section
+A konjugált gradiens módszerek új rendszertana
+\end_layout
+
+\begin_layout Section
+MATLAB tesztfeladatokon való összehasonlítás
+\end_layout
+
+\begin_layout Section
+Konklúzió
+\end_layout
+
+\begin_layout Section
+Appendix 
+\end_layout
+
+\end_body
+\end_document
