@@ -6,6 +6,11 @@
 \origin unavailable
 \textclass extarticle
 \use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
 \maintain_unincluded_children false
 \language magyar
 \language_package default
@@ -235,6 +240,186 @@ Szeretett madárlesre járni, zenével foglalkozni, kórusban énekelni, vitorl�
 
 \begin_layout Section
 Mátrixok alapvető jellemzése
+\end_layout
+
+\begin_layout Standard
+Ebben a fejezetben a további fejezetekhez szükséges fogalmakat vezetünk
+ be és tisztázzuk a jelölésüket.
+\end_layout
+
+\begin_layout Definition*
+A valós vektor a valós számok egy rendezett halmaza.
+ A halmaz elemeinek a száma a vektor rendje, vagy más szóval a vektor dimenziója.
+\end_layout
+
+\begin_layout Standard
+A vektorokat a szakdolgozatban vastag kisbetűvel jelöljük.
+ Pl.: 
+\series bold
+
+\begin_inset Formula $\boldsymbol{x}=[x_{i}]$
+\end_inset
+
+
+\series default
+, ahol 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ a vektor 
+\begin_inset Formula $i$
+\end_inset
+
+-edik elemét jelöli.
+ Az 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ vektor transzponáltját 
+\begin_inset Formula $\boldsymbol{x^{T}}$
+\end_inset
+
+-vel jelöljük.
+ Oszlopvektoron vektort, sorvektoron vektor transzponáltat értünk.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+i és n tisztázása?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\series bold
+
+\begin_inset Formula $\boldsymbol{x}=[x_{i}]$
+\end_inset
+
+
+\series default
+ és 
+\series bold
+
+\begin_inset Formula $\boldsymbol{y}=[y_{i}]$
+\end_inset
+
+
+\series default
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű vektor.
+ A belső szorzata a sorvektor 
+\series bold
+x
+\begin_inset Formula $^{T}$
+\end_inset
+
+-
+\series default
+nek és az oszlopvektor 
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+-nak
+\begin_inset Formula 
+\[
+\boldsymbol{x}^{T}\boldsymbol{y}=\sum_{i=1}^{n}x_{i}y_{i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+A valós mátrix a valós vektorok egy rendezett halmaza.
+\end_layout
+
+\begin_layout Standard
+A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
+ Az 
+\begin_inset Formula $\boldsymbol{A}\boldsymbol{=}[a_{ij}]$
+\end_inset
+
+ jelölésben 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $i$
+\end_inset
+
+-edik sorának 
+\begin_inset Formula $j$
+\end_inset
+
+-edik eleme.
+ Ha a mátrix 
+\begin_inset Formula $m\times n$
+\end_inset
+
+-es, 
+\begin_inset Formula $i=1,2,...,m$
+\end_inset
+
+ és 
+\begin_inset Formula $j=1,2,...,n$
+\end_inset
+
+.
+ Az 
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}\boldsymbol{=}[a_{ij}]$
+\end_inset
+
+
+\series default
+ mátrix transzponáltja 
+\begin_inset Formula $\boldsymbol{A}^{T}$
+\end_inset
+
+-vel jelöljük, jelentése 
+\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{=}[a_{ji}],$
+\end_inset
+
+ azaz a mátrix sorainak és oszlopainak felcserélésével kapott mátrix.
+ Az 
+\begin_inset Formula $i=j$
+\end_inset
+
+ elemek a mátrix diagonális elemei.
+ Ha a mátrixnak ugyanannyi sora és oszlopa van, négyzetes mátrixnak nevezzük.
+ A négyzetes mátrix rendje a mátrix sorainak (oszlopainak) száma.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+principal diagonal?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
