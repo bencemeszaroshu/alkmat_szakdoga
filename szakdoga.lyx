@@ -242,6 +242,10 @@ Szeretett madárlesre járni, zenével foglalkozni, kórusban énekelni, vitorl�
 Mátrixok alapvető jellemzése
 \end_layout
 
+\begin_layout Subsection
+Vektorok és mátrixok
+\end_layout
+
 \begin_layout Standard
 Ebben a fejezetben a további fejezetekhez szükséges fogalmakat vezetünk
  be és tisztázzuk a jelölésüket.
@@ -353,7 +357,7 @@ A valós mátrix a valós vektorok egy rendezett halmaza.
 \begin_layout Standard
 A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
  Az 
-\begin_inset Formula $\boldsymbol{A}\boldsymbol{=}[a_{ij}]$
+\begin_inset Formula $\boldsymbol{A}=[a_{ij}]$
 \end_inset
 
  jelölésben 
@@ -374,7 +378,7 @@ A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
 
 -edik eleme.
  Ha a mátrix 
-\begin_inset Formula $m\times n$
+\begin_inset Formula $\ensuremath{m{\times}n}$
 \end_inset
 
 -es, 
@@ -389,7 +393,7 @@ A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
  Az 
 \series bold
 
-\begin_inset Formula $\boldsymbol{A}\boldsymbol{=}[a_{ij}]$
+\begin_inset Formula $\boldsymbol{A}=[a_{ij}]$
 \end_inset
 
 
@@ -399,7 +403,7 @@ A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
 \end_inset
 
 -vel jelöljük, jelentése 
-\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{=}[a_{ji}],$
+\begin_inset Formula $\boldsymbol{A}^{T}=[a_{ji}],$
 \end_inset
 
  azaz a mátrix sorainak és oszlopainak felcserélésével kapott mátrix.
@@ -409,7 +413,6 @@ A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
 
  elemek a mátrix diagonális elemei.
  Ha a mátrixnak ugyanannyi sora és oszlopa van, négyzetes mátrixnak nevezzük.
- A négyzetes mátrix rendje a mátrix sorainak (oszlopainak) száma.
 \begin_inset Note Note
 status open
 
@@ -420,6 +423,264 @@ principal diagonal?
 \end_inset
 
 
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix.
+ Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix szimmetrikus, ha 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{A}^{T}$
+\end_inset
+
+.
+ Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix antiszimmetrikus, ha 
+\begin_inset Formula $\boldsymbol{A}=-\boldsymbol{A}^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{x}=[x_{i}]$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű vektor, 
+\begin_inset Formula $\boldsymbol{y}=[y_{i}]$
+\end_inset
+
+ 
+\begin_inset Formula $m$
+\end_inset
+
+-ed rendű vektor, és 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\begin_inset Formula $\ensuremath{m{\times}n}$
+\end_inset
+
+-es mátrix.
+ Jelöle 
+\begin_inset Formula $\boldsymbol{a_{i}^{T}}$
+\end_inset
+
+ az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $i$
+\end_inset
+
+-edik sorát.
+ Az 
+\begin_inset Formula $\boldsymbol{y}=\boldsymbol{Ax}$
+\end_inset
+
+, ahol 
+\begin_inset Formula $y_{i}=\boldsymbol{\boldsymbol{a_{i}^{T}}x}$
+\end_inset
+
+ az 
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\series default
+mátrix és 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ vektor mátrix-vektor szorzata.
+ A mátrix-vektor szorzás disztributív.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\begin_inset Formula $\ensuremath{m{\times}n}$
+\end_inset
+
+-es mátrix.
+ Jelöle 
+\begin_inset Formula $\boldsymbol{a_{i}^{T}}$
+\end_inset
+
+ az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $i$
+\end_inset
+
+-edik sorát.
+ Legyen 
+\begin_inset Formula $\boldsymbol{B}$
+\end_inset
+
+ 
+\begin_inset Formula $\ensuremath{n{\times}p}$
+\end_inset
+
+-s mátrix.
+ Jelöle 
+\begin_inset Formula $\boldsymbol{b_{j}}$
+\end_inset
+
+ a 
+\begin_inset Formula $\boldsymbol{B}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $j$
+\end_inset
+
+-edik oszlopát.
+ Az 
+\begin_inset Formula $\boldsymbol{AB}$
+\end_inset
+
+ mátrixszorzat eredménye a 
+\begin_inset Formula $\boldsymbol{C}=[c_{ij}]$
+\end_inset
+
+ 
+\begin_inset Formula $\ensuremath{m{\times}p}$
+\end_inset
+
+-s mátrix, ahol 
+\begin_inset Formula $c_{ij}=\boldsymbol{a_{i}^{T}b_{j}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Az 
+\begin_inset Formula $\boldsymbol{AB}$
+\end_inset
+
+ esetén az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix oszlopainak száma meg kell egyezzen a 
+\begin_inset Formula $\boldsymbol{B}$
+\end_inset
+
+ mátrix sorainak számával, hogy a megfelelő sorvektorok és oszlopvektorok
+ belső szorzatai definiálva legyenek.
+ A mátrixszorzás nem kommutatív, 
+\begin_inset Formula $\boldsymbol{AB}\neq\boldsymbol{BA}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Legyenek 
+\begin_inset Formula $\boldsymbol{p_{i}}$
+\end_inset
+
+ vektorok, 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ skalárok, 
+\begin_inset Formula $i=1,2,...,n$
+\end_inset
+
+.
+ A 
+\begin_inset Formula $\sum_{i=1}^{n}\boldsymbol{p_{i}}y_{i}$
+\end_inset
+
+ vektor a 
+\begin_inset Formula $\boldsymbol{p_{i}}$
+\end_inset
+
+ vektorok lineáris kombinációja.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\ensuremath{n{\times}n}$
+\end_inset
+
+-es 
+\begin_inset Formula $\boldsymbol{D}=[d_{ij}]$
+\end_inset
+
+ mátrix diagonális, ha 
+\begin_inset Formula $d_{ij}=0$
+\end_inset
+
+ minden 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+ indexre.
+\end_layout
+
+\begin_layout Standard
+A diagonális mátrixot 
+\begin_inset Formula $diag(d_{i})$
+\end_inset
+
+-vel jelöljük, ahol 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+ az 
+\begin_inset Formula $i$
+\end_inset
+
+-edik diagonális elem.
 \end_layout
 
 \begin_layout Section
