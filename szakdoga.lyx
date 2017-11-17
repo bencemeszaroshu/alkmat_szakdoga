@@ -243,12 +243,8 @@ Szeretett madárlesre járni, zenével foglalkozni, kórusban énekelni, vitorl�
 Mátrixok alapvető jellemzése
 \end_layout
 
-\begin_layout Subsection
-Vektorok és mátrixok
-\end_layout
-
 \begin_layout Standard
-Ebben a fejezetben a további fejezetekhez szükséges fogalmakat vezetünk
+Ebben a fejezetben a további fejezetekhez szükséges fogalmakat vezetjük
  be és tisztázzuk a jelölésüket.
 \begin_inset Note Note
 status collapsed
@@ -261,6 +257,10 @@ a vele magát, aki ugy érzi nincs meg a megfelelő tudása a témában?
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Vektorok és mátrixok
 \end_layout
 
 \begin_layout Definition*
@@ -911,7 +911,7 @@ A szorzás szerint
 \begin_inset Formula $\boldsymbol{F}_{1}$
 \end_inset
 
- nem particionáltak jól, mert
+ nem jól particionáltak, mert
 \end_layout
 
 \begin_layout Example*
@@ -980,7 +980,7 @@ Az összeadás szerint
 \begin_inset Formula $\boldsymbol{F}_{2}$
 \end_inset
 
- nem particionáltak jól, mert
+ nem jól particionáltak, mert
 \end_layout
 
 \begin_layout Example*
@@ -1112,6 +1112,19 @@ Az
 
 \begin_layout Subsection
 Lineáris függetlenség
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ide valamit, hogy mit várhat, mire számíthat a kedves olvasó?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition*
@@ -1345,6 +1358,19 @@ Legyen
 Nemszinguláris mátrixok
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ide valamit, hogy mit várhat, mire számíthat a kedves olvasó?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Theorem*
 Nem létezik olyan 
 \series bold
@@ -1394,6 +1420,197 @@ Tegyük fel az ellenkezőjét.
 
 .
  Így ellentmondáshoz jutottunk.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Quotes pld
+\end_inset
+
+A nem négyzetes mátrixok nem invertálhatóak, de létezhet bal- vagy jobbinverzük
+\begin_inset Quotes prd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix.
+ Ha létezik olyan 
+\begin_inset Formula $\boldsymbol{X}$
+\end_inset
+
+ mátrix, hogy 
+\begin_inset Formula $\boldsymbol{AX}=\boldsymbol{I}$
+\end_inset
+
+, akkor 
+\series bold
+
+\begin_inset Formula $\boldsymbol{X}$
+\end_inset
+
+
+\series default
+ az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix jobboldali inverze.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix.
+ Ha létezik olyan 
+\begin_inset Formula $\boldsymbol{X}$
+\end_inset
+
+ mátrix, hogy 
+\begin_inset Formula $\boldsymbol{XA}=\boldsymbol{I}$
+\end_inset
+
+, akkor 
+\series bold
+
+\begin_inset Formula $\boldsymbol{X}$
+\end_inset
+
+
+\series default
+ az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix baloldali inverze.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix.
+ Ha létezik olyan 
+\begin_inset Formula $\boldsymbol{A}^{-1}$
+\end_inset
+
+ mátrix, hogy 
+\begin_inset Formula $\boldsymbol{AA}^{-1}=\boldsymbol{A}^{-1}\boldsymbol{A}=\boldsymbol{I}$
+\end_inset
+
+, akkor 
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}^{-1}$
+\end_inset
+
+
+\series default
+ az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix inverze.
+\end_layout
+
+\begin_layout Theorem*
+Ha egy négyzetes mátrixnak vannak lineárisan független oszlopai, akkor jobboldal
+i inverze egyértelmű.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Ha egy négyzetes mátrixnak létezik egyértelmű jobboldali inverze, akkor
+ az megegyezik a baloldali inverzével.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Ha 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ négyzetes mátrix, a következő állítások ekvivalensek.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+-nak vannak lineárisan független oszlopai
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+-nak vannak lineárisan független sorai,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ invertálható.
+\end_layout
+
+\end_deeper
+\begin_layout Definition*
+Ha a fenti ekvivalens állítások teljesülnek, az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix nemszinguláris, egyébként szinguláris.
+ 
+\end_layout
+
+\begin_layout Standard
+Most definiálunk és megvizsgálunk néhány elméleti vagy gyakorlati szempontból
+ érdekes nemszinguláris mátrixot.
 \end_layout
 
 \begin_layout Subsection
