@@ -448,7 +448,7 @@ A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
 
  elemek a mátrix diagonális elemei.
  Ha a mátrixnak ugyanannyi sora és oszlopa van, négyzetes mátrixnak nevezzük.
- A csupa nullából álló mátrixot 
+ A csupa nullából álló mátrixot, vektort 
 \begin_inset Formula $\boldsymbol{0}$
 \end_inset
 
@@ -1044,7 +1044,7 @@ A
 \begin_inset Formula $\boldsymbol{z}=\boldsymbol{x}+i\boldsymbol{y}$
 \end_inset
 
- vektor Hermite-féle transzponáltja 
+ komplex vektor Hermite-féle transzponáltja 
 \begin_inset Formula $\boldsymbol{z}^{H}=\overline{\boldsymbol{z}}^{T}=\boldsymbol{x}^{T}-i\boldsymbol{y}^{T}.$
 \end_inset
 
@@ -1063,7 +1063,7 @@ Az
 \begin_inset Formula $\boldsymbol{A}=\boldsymbol{B}+i\boldsymbol{C}$
 \end_inset
 
- mátrix Hermite-féle transzponáltja 
+ komplex mátrix Hermite-féle transzponáltja 
 \begin_inset Formula $\boldsymbol{A}^{H}=\overline{\boldsymbol{A}}^{T}=\boldsymbol{B}^{T}-i\boldsymbol{C}^{T}$
 \end_inset
 
@@ -1102,7 +1102,7 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix Hermite-mátrix, ha 
+ komplex mátrix Hermite-mátrix, ha 
 \begin_inset Formula $\boldsymbol{A}=\boldsymbol{A}^{H}$
 \end_inset
 
@@ -1317,11 +1317,21 @@ Ha az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
-mátrix oszlopainak lineáris függetlenségét nem befolyásolja, ha az 
+ mátrix oszlopainak lineáris függetlenségét nem befolyásolja, ha az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
  mátrix sorait permutáljuk.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Ezt most miért közöljük a kedves olvasóval?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Theorem*
@@ -1469,6 +1479,7 @@ Legyen
 \end_inset
 
  mátrix jobboldali inverze.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1568,11 +1579,12 @@ Ha egy négyzetes mátrixnak létezik egyértelmű jobboldali inverze, akkor
 \end_layout
 
 \begin_layout Definition*
-Ha 
+Legyen 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- négyzetes mátrix, a következő állítások ekvivalensek.
+ négyzetes mátrix.
+ A következő állítások ekvivalensek.
  
 \end_layout
 
@@ -1581,14 +1593,14 @@ Ha
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
--nak vannak lineárisan független oszlopai
+-nak vannak lineárisan független oszlopai.
 \end_layout
 
 \begin_layout Enumerate
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
--nak vannak lineárisan független sorai,
+-nak vannak lineárisan független sorai.
 \end_layout
 
 \begin_layout Enumerate
@@ -1610,7 +1622,7 @@ Ha a fenti ekvivalens állítások teljesülnek, az
 
 \begin_layout Standard
 Most definiálunk és megvizsgálunk néhány elméleti vagy gyakorlati szempontból
- érdekes nemszinguláris mátrixot.
+ fontos nemszinguláris mátrixot.
 \end_layout
 
 \begin_layout Subsection
