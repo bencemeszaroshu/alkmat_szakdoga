@@ -1625,8 +1625,766 @@ Most definiálunk és megvizsgálunk néhány elméleti vagy gyakorlati szempont
  fontos nemszinguláris mátrixot.
 \end_layout
 
+\begin_layout Definition*
+Az ortogonális mátrix olyan valós mátrix, melynek az inverze a transzponáltja.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{U}=[u_{ij}]$
+\end_inset
+
+ négyzetes mátrix felső háromszögmátrix, ha 
+\begin_inset Formula $u_{ij}=0$
+\end_inset
+
+ minden 
+\begin_inset Formula $i\geq j$
+\end_inset
+
+-re.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{U}=[u_{ij}]$
+\end_inset
+
+ négyzetes mátrix alsó háromszögmátrix, ha 
+\begin_inset Formula $u_{ij}=0$
+\end_inset
+
+ minden 
+\begin_inset Formula $i\leq j$
+\end_inset
+
+-re.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Ezt majd megnézni galántaiban, hogy egyenlsőség meg van e engedve??
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ négyzetes mátrix, ahol
+\begin_inset Formula 
+\[
+\boldsymbol{A}=\begin{bmatrix}\boldsymbol{A}_{11} & \boldsymbol{A}_{12}\\
+\boldsymbol{0} & \boldsymbol{A}_{22}
+\end{bmatrix},
+\]
+
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{A}_{22}$
+\end_inset
+
+ is négyzetes mátrixok.
+ Ekkor 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ akkor és csak akkor nemszinguláris, ha 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{A}_{22}$
+\end_inset
+
+ nemszinguláris.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Az 
+\begin_inset Formula $\boldsymbol{U}=[u_{ij}]$
+\end_inset
+
+ felső háromszögmátrix akkor és csak akkor nemszinguláris, ha 
+\begin_inset Formula $u_{ii}\neq0$
+\end_inset
+
+ minden 
+\begin_inset Formula $i$
+\end_inset
+
+-re.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ valós mátrix pozitív definit, ha 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ nemszinguláris és 
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}>0$
+\end_inset
+
+ minden 
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
+\end_inset
+
+-ra.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Ha 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixnak vannak lineárisan független oszlopai, akkor 
+\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{A}$
+\end_inset
+
+ pozitív definit.
+\end_layout
+
+\begin_layout Standard
+Miért akarunk normálni szöveg.
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\left\Vert \boldsymbol{x}\right\Vert $
+\end_inset
+
+ skalár az 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ vektor normája, ha kielégíti a következő három axiómát.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\Vert \boldsymbol{x}\right\Vert =0$
+\end_inset
+
+, ha 
+\begin_inset Formula $\boldsymbol{x}=\boldsymbol{0}$
+\end_inset
+
+, egyébként 
+\begin_inset Formula $\left\Vert \boldsymbol{x}\right\Vert >0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\Vert \boldsymbol{x}\theta\right\Vert =\left\Vert \boldsymbol{x}\right\Vert |\theta|$
+\end_inset
+
+, ahol 
+\begin_inset Formula $\theta$
+\end_inset
+
+ skalár.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\Vert \boldsymbol{x}+\boldsymbol{y}\right\Vert \leq\left\Vert \boldsymbol{x}\right\Vert +\left\Vert \boldsymbol{y}\right\Vert .$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ vektor 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $l_{\infty}$
+\end_inset
+
+ normáinak definíciója
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+galántai jegyzet csekk
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\Vert \boldsymbol{x}\right\Vert _{1}=\sum_{i}|x_{i}|$
+\end_inset
+
+ az 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+ norma,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\Vert \boldsymbol{x}\right\Vert _{2}=(\sum_{i}|x_{i}^{2}|)^{\frac{1}{2}}$
+\end_inset
+
+ az 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+ (euklideszi) norma,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\Vert \boldsymbol{x}\right\Vert _{\infty}=max_{i}|x_{i}|$
+\end_inset
+
+ az 
+\begin_inset Formula $l_{\infty}$
+\end_inset
+
+ norma.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ennek mi a nevek?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Itt a normák praktikus kiszámolásárol nem kéne megemlékezni?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+(Cauchy-egyenlőtlenség) Legyen 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű nem nulla vektor.
+ Az
+\begin_inset Formula 
+\[
+|\boldsymbol{x}^{T}\boldsymbol{y}|\leq\left\Vert \boldsymbol{x}\right\Vert _{2}\left\Vert \boldsymbol{y}\right\Vert _{2}
+\]
+
+\end_inset
+
+egyenlőtlenség akkor és csak akkor igaz, ha 
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+ vektor skalárszorosa 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ vektornak.
+ 
+\end_layout
+
+\begin_layout Standard
+A Cauchy-egyenlőtlenség komplex vektorokra is igaz, ha a transzponáltat
+ Hermite-féle transzponáltra cseréjük.
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\left\Vert \boldsymbol{A}\right\Vert $
+\end_inset
+
+ skalár az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix normája, ha kielégíti a következő négy axiómát.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\Vert \boldsymbol{A}\right\Vert =0$
+\end_inset
+
+, ha 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{0}$
+\end_inset
+
+, egyébként 
+\begin_inset Formula $\left\Vert \boldsymbol{A}\right\Vert >0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\Vert \boldsymbol{A}\theta\right\Vert =\left\Vert \boldsymbol{A}\right\Vert |\theta|$
+\end_inset
+
+, ahol 
+\begin_inset Formula $\theta$
+\end_inset
+
+ skalár.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\Vert \boldsymbol{A}+\boldsymbol{B}\right\Vert \leq\left\Vert \boldsymbol{A}\right\Vert +\left\Vert \boldsymbol{B}\right\Vert .$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\Vert \boldsymbol{A}\boldsymbol{B}\right\Vert \leq\left\Vert \boldsymbol{A}\right\Vert \left\Vert \boldsymbol{B}\right\Vert .$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $\left\Vert \boldsymbol{A}\right\Vert _{p}$
+\end_inset
+
+indukált normájának definíciója
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ennek mi a nevek?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boldsymbol{A}=max_{i\neq0}\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{p}}{\left\Vert \boldsymbol{x}\right\Vert _{p}},
+\]
+
+\end_inset
+
+ahol 
+\begin_inset Formula $p=1,2$
+\end_inset
+
+ vagy 
+\begin_inset Formula $\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Szöveg a 45.
+ oldalról, spektárlis norma, nem tudjuk explicit kiszamolni xy normát, ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix Forbenius normájának definíciója
+\begin_inset Formula 
+\[
+\left\Vert \boldsymbol{A}\right\Vert _{F}=(\sum_{i,j}|a_{ij}|^{2})^{\frac{1}{2}}.
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ezt miért nem ekuklideszi mátrix normának hivjuk? 46.oldal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+A nemsziguláris 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix kondíciószáma 
+\begin_inset Formula 
+\[
+k(A)=\left\Vert \boldsymbol{A}\right\Vert \left\Vert \boldsymbol{A}^{-1}\right\Vert ,
+\]
+
+\end_inset
+
+tetszőleges normáva.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Mire jó a kondíció szám stb 47.oldal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Sajátértékek és sajátvektorok
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+kedves olvasó tájékoztatása
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ négyzetes mátrix.
+ Az 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ skalár, hogy 
+\begin_inset Formula $\boldsymbol{A}-\lambda\boldsymbol{I}$
+\end_inset
+
+ szinguláris, az 
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+
+\series default
+ mátrix sajátértéke.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ négyzetes mátrix.
+ Az 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ vektor, hogy 
+\begin_inset Formula $(\boldsymbol{A}-\lambda\boldsymbol{I})\boldsymbol{x}=\boldsymbol{0}$
+\end_inset
+
+, az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix jobboldali sajátvektora.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ négyzetes mátrix.
+ Az 
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+ vektor, hogy 
+\begin_inset Formula $\boldsymbol{y}^{T}(\boldsymbol{A}-\lambda\boldsymbol{I})=\boldsymbol{0}^{T}$
+\end_inset
+
+, az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix baloldali sajátvektora.
+\end_layout
+
+\begin_layout Standard
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix sajátvektorának szorzása az 
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\series default
+mátrixszal a sajátvektor és a hozzá tartozó sajátérték szorzatát adja, 
+\begin_inset Formula $\boldsymbol{Ax}=\boldsymbol{x}\lambda$
+\end_inset
+
+és 
+\begin_inset Formula $\boldsymbol{y}^{T}\boldsymbol{A}=\lambda\boldsymbol{y}$
+\end_inset
+
+.
+ Valós mátrixokhoz gyakran tartozik komplex sajátérték és sajátvektor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+krylow sorozat?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ebben a fejezetben example? Máshol?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+sokszor irtam n-ed rendü helyett, hogy negyzetes, ez valszeg nem allja meg
+ a helyet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Minden négyzetes mátrixnak van legalább egy sajátértéke.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ komplex négyzetes mátrix.
+ Ha 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ sajátértéke, 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ sajátvektora 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+-nak, akkor 
+\begin_inset Formula $\overline{\lambda}$
+\end_inset
+
+ sajátértéke, 
+\begin_inset Formula $\boldsymbol{\overline{x}}$
+\end_inset
+
+ sajátvektora 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+-nak.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ komplex mátrix unitér mátrix, ha 
+\begin_inset Formula $\boldsymbol{A}^{H}\boldsymbol{A}=\boldsymbol{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+fdsfsd
 \end_layout
 
 \begin_layout Section
