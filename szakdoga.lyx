@@ -2141,7 +2141,7 @@ k(A)=\left\Vert \boldsymbol{A}\right\Vert \left\Vert \boldsymbol{A}^{-1}\right\V
 
 \end_inset
 
-tetszőleges normáva.
+tetszőleges normával.
  
 \begin_inset Note Note
 status open
@@ -2178,11 +2178,11 @@ Legyen
 \end_inset
 
  négyzetes mátrix.
- Az 
+ A 
 \begin_inset Formula $\lambda$
 \end_inset
 
- skalár, hogy 
+ skalár, ami mellett 
 \begin_inset Formula $\boldsymbol{A}-\lambda\boldsymbol{I}$
 \end_inset
 
@@ -2215,11 +2215,11 @@ Legyen
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
- vektor, hogy 
-\begin_inset Formula $(\boldsymbol{A}-\lambda\boldsymbol{I})\boldsymbol{x}=\boldsymbol{0}$
+ vektor, ami mellett 
+\begin_inset Formula $(\boldsymbol{A}-\lambda\boldsymbol{I})\boldsymbol{x}=\boldsymbol{0},$
 \end_inset
 
-, az 
+ az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -2243,11 +2243,11 @@ Legyen
 \begin_inset Formula $\boldsymbol{y}$
 \end_inset
 
- vektor, hogy 
-\begin_inset Formula $\boldsymbol{y}^{T}(\boldsymbol{A}-\lambda\boldsymbol{I})=\boldsymbol{0}^{T}$
+ vektor, ami mellett 
+\begin_inset Formula $\boldsymbol{y}^{T}(\boldsymbol{A}-\lambda\boldsymbol{I})=\boldsymbol{0}^{T},$
 \end_inset
 
-, az 
+ az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -2384,7 +2384,416 @@ Az
 \end_layout
 
 \begin_layout Definition*
-fdsfsd
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+ n-ed rendű mátrix.
+ Legyen 
+\series bold
+
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+
+\series default
+ nemszinguláris.
+ A 
+\begin_inset Formula $\boldsymbol{PA}\boldsymbol{P}^{-1}$
+\end_inset
+
+ transzformáció hasonlósági transzformáció, az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+és 
+\begin_inset Formula $\boldsymbol{PA}\boldsymbol{P}^{-1}$
+\end_inset
+
+ mátrixok hasonlóak.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+ n-ed rendű mátrix.
+ Legyen 
+\series bold
+
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+
+\series default
+ nemszinguláris.
+ A 
+\begin_inset Formula $\boldsymbol{PA}\boldsymbol{P}^{-1}$
+\end_inset
+
+ hasonlósági transzformáció ortogonális transzformáció, ha 
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+ mátrix ortogonális.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Obádovicsban 
+\begin_inset Quotes pld
+\end_inset
+
+ortogonálisan hasonlók
+\begin_inset Quotes prd
+\end_inset
+
+ van.
+ 308.
+ oldalnál kezdődik
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+ n-ed rendű mátrix.
+ Legyen 
+\series bold
+
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+
+\series default
+ nemszinguláris.
+ A 
+\begin_inset Formula $\boldsymbol{PA}\boldsymbol{P}^{-1}$
+\end_inset
+
+ hasonlósági transzformáció unitér transzformáció, ha 
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+ mátrix unitér.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Obádovicsban 
+\begin_inset Quotes pld
+\end_inset
+
+unitériálisan hasonlók
+\begin_inset Quotes prd
+\end_inset
+
+ van
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+A hasonlósági transzformáció nem változtatja meg a mátrix sajátértékeit.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Minden 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixhoz létezik egy olyan 
+\begin_inset Formula $\boldsymbol{Q}$
+\end_inset
+
+ unitér mátrix, hogy 
+\begin_inset Formula $\boldsymbol{Q}^{H}\boldsymbol{AQ}=\boldsymbol{U},$
+\end_inset
+
+ ahol 
+\series bold
+
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+
+\series default
+ felső háromszögmátrix.
+ 
+\end_layout
+
+\begin_layout Corollary*
+Minden 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű mátrixhoz 
+\series bold
+
+\begin_inset Formula $n$
+\end_inset
+
+
+\series default
+ darab sajátérték tartozik.
+\end_layout
+
+\begin_layout Standard
+A 
+\begin_inset Formula $n$
+\end_inset
+
+ darab sajátérték lehet nem különböző.
+ Minden 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű négyzetes mátrixot hasonlósági transzformációval felső háromszögmátrix
+szá alakíthatunk, melynek sajátértékei a főátló elemei.
+ A felső háromszögmátrix sajátértékei a főátló elemei.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+??
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix normál mátrix, ha 
+\begin_inset Formula $\boldsymbol{A}^{H}\boldsymbol{A}=\boldsymbol{A}^{H}\boldsymbol{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű mátrix és tartozzon hozzá 
+\begin_inset Formula $m$
+\end_inset
+
+ darab különböző sajátérték,
+\begin_inset Formula $m\leq n$
+\end_inset
+
+.
+ Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixhoz legalább 
+\begin_inset Formula $m$
+\end_inset
+
+ lineárisan független sajátvektor tartozik.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+ez meg nézni, hogy mindenhol 
+\begin_inset Quotes pld
+\end_inset
+
+tartozik
+\begin_inset Quotes prd
+\end_inset
+
+-ot hasznalok e, vagy 
+\begin_inset Quotes pld
+\end_inset
+
+van
+\begin_inset Quotes prd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Itt van 3 következmény a 87.
+ oldalon
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű mátrix, 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+ sajátvektorokkal, 
+\begin_inset Formula $1\leq i\leq n$
+\end_inset
+
+.
+ Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix spektrális sugara 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+ebben nem vagyok biztos, hogy ez a helyes forditas 
+\begin_inset Quotes pld
+\end_inset
+
+spectral radius
+\begin_inset Quotes prd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\rho(\boldsymbol{A})=max_{i}|\lambda_{i}|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ négyzetes mátrix.
+ Ekkor 
+\begin_inset Formula $\rho(\boldsymbol{A})\leq\left\Vert \boldsymbol{A}\right\Vert $
+\end_inset
+
+ tetszőleges normával.
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}=[a_{ij}]$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű mátrix.
+ Ekkor az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix nyoma 
+\begin_inset Formula $tr(\boldsymbol{A})=\sum_{i=1}^{n}a_{ii}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+A mátrixhoz tartozó sajátértékek összege egyenlőek a mátrix nyomával.
+\end_layout
+
+\begin_layout Theorem*
+
 \end_layout
 
 \begin_layout Section
