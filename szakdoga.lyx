@@ -1905,7 +1905,7 @@ galántai jegyzet csekk
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\left\Vert \boldsymbol{x}\right\Vert _{\infty}=max_{i}|x_{i}|$
+\begin_inset Formula $\left\Vert \boldsymbol{x}\right\Vert _{\infty}=\max{}_{i}|x_{i}|$
 \end_inset
 
  az 
@@ -2065,7 +2065,7 @@ Ennek mi a nevek?
 
 \begin_inset Formula 
 \[
-\boldsymbol{A}=max_{i\neq0}\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{p}}{\left\Vert \boldsymbol{x}\right\Vert _{p}},
+\boldsymbol{A}=\max_{i\neq0}\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{p}}{\left\Vert \boldsymbol{x}\right\Vert _{p}},
 \]
 
 \end_inset
@@ -2136,7 +2136,7 @@ A nemsziguláris
  mátrix kondíciószáma 
 \begin_inset Formula 
 \[
-k(A)=\left\Vert \boldsymbol{A}\right\Vert \left\Vert \boldsymbol{A}^{-1}\right\Vert ,
+k(\boldsymbol{A})=\left\Vert \boldsymbol{A}\right\Vert \left\Vert \boldsymbol{A}^{-1}\right\Vert ,
 \]
 
 \end_inset
@@ -2734,7 +2734,7 @@ spectral radius
 \end_inset
 
 
-\begin_inset Formula $\rho(\boldsymbol{A})=max_{i}|\lambda_{i}|$
+\begin_inset Formula $\rho(\boldsymbol{A})=\max_{i}|\lambda_{i}|$
 \end_inset
 
 .
@@ -2848,7 +2848,7 @@ Az
 
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 min maxokat kijavitani
@@ -2881,11 +2881,11 @@ Legyen
 \end_inset
 
  diagonális mátrix, melyre 
-\begin_inset Formula $\left\Vert \boldsymbol{BUB^{-1}}\right\Vert _{\infty}<1$
+\begin_inset Formula $\left\Vert \boldsymbol{BUB}^{-1}\right\Vert _{\infty}<1$
 \end_inset
 
  és 
-\begin_inset Formula $\left\Vert \boldsymbol{BUB^{-1}}\right\Vert _{1}<1$
+\begin_inset Formula $\left\Vert \boldsymbol{BUB}^{-1}\right\Vert _{1}<1$
 \end_inset
 
 .
