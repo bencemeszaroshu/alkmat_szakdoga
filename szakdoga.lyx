@@ -2792,8 +2792,122 @@ Legyen
 A mátrixhoz tartozó sajátértékek összege egyenlőek a mátrix nyomával.
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Standard
+\begin_inset Note Note
+status open
 
+\begin_layout Plain Layout
+A fejezet 
+\begin_inset Quotes pld
+\end_inset
+
+The Practical Evaluation of Eigenvalues and Eigenvectors
+\begin_inset Quotes prd
+\end_inset
+
+ még nem lett feldolgozva.
+ Vagy ide (talán inkább ide, vagy a lin.egyenletrendszeres köv fejezetben
+ kellene.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Konvergens mátrixok
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Szöveg 92.
+ oldal
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix konvergens, ha 
+\begin_inset Formula $\lim_{r\rightarrow\infty}\left\Vert \boldsymbol{A}^{r}\right\Vert =0.$
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+min maxokat kijavitani
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Legyen 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ felső háromszögmátrix és 
+\begin_inset Formula $\rho(\boldsymbol{U})<1$
+\end_inset
+
+.
+ Ekkor létezik 
+\begin_inset Formula $\boldsymbol{B}$
+\end_inset
+
+ diagonális mátrix, melyre 
+\begin_inset Formula $\left\Vert \boldsymbol{BUB^{-1}}\right\Vert _{\infty}<1$
+\end_inset
+
+ és 
+\begin_inset Formula $\left\Vert \boldsymbol{BUB^{-1}}\right\Vert _{1}<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix konvergenciájának szükséges és elégséges feltétele, hogy 
+\begin_inset Formula $\rho(\boldsymbol{A})<1$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
