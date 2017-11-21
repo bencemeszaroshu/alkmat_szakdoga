@@ -415,6 +415,20 @@ A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
 \end_inset
 
 .
+ Egy 
+\begin_inset Formula $\ensuremath{m{\times}n}$
+\end_inset
+
+-es mátrixot értelmezhetünk, mint 
+\begin_inset Formula $m$
+\end_inset
+
+ darab sorvektor, vagy mint 
+\begin_inset Formula $n$
+\end_inset
+
+ darab oszlopvektor.
+ Röviden azt mondjuk, hogy a mátrix sorai és oszlopai.
  Az 
 \series bold
 
@@ -1219,25 +1233,6 @@ x_{3}
 \end_inset
 
  is nulla.
- 
-\end_layout
-
-\begin_layout Standard
-A mátrix azonos rendű vektorok egy rendezett halmaza.
- Egy 
-\begin_inset Formula $\ensuremath{m{\times}n}$
-\end_inset
-
--es mátrixot értelmezhetünk, mint 
-\begin_inset Formula $m$
-\end_inset
-
- darab sorvektor, vagy mint 
-\begin_inset Formula $n$
-\end_inset
-
- darab oszlopvektor.
- Röviden azt mondjuk, hogy a mátrix sorai és oszlopai.
  
 \end_layout
 
@@ -2116,10 +2111,6 @@ A Forbenius norma az euklideszi vektornorma mátrix megfelelője, de nem az
  euklideszi vektornorma által indukált mátrixnorma.
  Nem vektornorma által indukált mátrixnorma, ezért a gyakorlatban sokszor
  szükségtelenül pontatlan eredményekhez vezet.
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \begin_layout Subsection
