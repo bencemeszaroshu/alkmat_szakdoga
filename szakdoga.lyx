@@ -244,19 +244,9 @@ Mátrixok alapvető jellemzése
 \end_layout
 
 \begin_layout Standard
-Ebben a fejezetben a további fejezetekhez szükséges fogalmakat vezetjük
- be és tisztázzuk a jelölésüket.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Nem kéne azt jelezni, hogy ez kb definiciok felsorolása, és csak az szorakoztass
-a vele magát, aki ugy érzi nincs meg a megfelelő tudása a témában?
-\end_layout
-
-\end_inset
-
-
+Ebben a fejezetben további fejezetekhez szükséges fogalmakat vezetünk be.
+ Definíciókat adunk meg és tételeket mondunk ki.
+ Tisztázzuk a jelöléseket.
 \end_layout
 
 \begin_layout Subsection
@@ -265,12 +255,12 @@ Vektorok és mátrixok
 
 \begin_layout Definition*
 A valós vektor a valós számok egy rendezett halmaza.
- A halmaz elemeinek a száma a vektor rendje, vagy más szóval a vektor dimenziója.
+ A vektor elemeinek a száma a vektor rendje, vagy más szóval a vektor dimenziója.
 \end_layout
 
 \begin_layout Standard
 A vektorokat a szakdolgozatban vastag kisbetűvel jelöljük.
- Pl.: 
+ Például 
 \series bold
 
 \begin_inset Formula $\boldsymbol{x}=[x_{i}]$
@@ -292,7 +282,7 @@ A vektorokat a szakdolgozatban vastag kisbetűvel jelöljük.
 \end_inset
 
  vektor transzponáltját 
-\begin_inset Formula $\boldsymbol{x^{T}}$
+\begin_inset Formula $\boldsymbol{x}^{T}$
 \end_inset
 
 -vel jelöljük.
@@ -331,11 +321,11 @@ Legyen
 \begin_inset Formula $n$
 \end_inset
 
--ed rendű vektor.
+-ed rendű valós vektor.
  A belső szorzata a sorvektor 
 \series bold
-x
-\begin_inset Formula $^{T}$
+
+\begin_inset Formula $\boldsymbol{x}{}^{T}$
 \end_inset
 
 -
@@ -386,7 +376,7 @@ Az
 \end_layout
 
 \begin_layout Definition*
-A valós mátrix a valós vektorok egy rendezett halmaza.
+A valós mátrix azonos rendű valós vektorok egy rendezett halmaza.
 \end_layout
 
 \begin_layout Standard
@@ -448,21 +438,12 @@ A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
 
  elemek a mátrix diagonális elemei.
  Ha a mátrixnak ugyanannyi sora és oszlopa van, négyzetes mátrixnak nevezzük.
+ A négyzetes mátrix rendje az oszlopainak száma.
  A csupa nullából álló mátrixot, vektort 
 \begin_inset Formula $\boldsymbol{0}$
 \end_inset
 
 -val jelöljük.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-principal diagonal?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Definition*
@@ -536,10 +517,6 @@ Legyen
 \begin_inset Formula $\boldsymbol{y}=\boldsymbol{Ax}$
 \end_inset
 
-, ahol 
-\begin_inset Formula $y_{i}=\boldsymbol{a}_{i}^{T}\boldsymbol{x}$
-\end_inset
-
  az 
 \series bold
 
@@ -552,7 +529,11 @@ mátrix és
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
- vektor mátrix-vektor szorzata.
+ vektor mátrix-vektor szorzata és 
+\begin_inset Formula $y_{i}=\boldsymbol{a}_{i}^{T}\boldsymbol{x}$
+\end_inset
+
+.
  A mátrix-vektor szorzás disztributív.
 \end_layout
 
@@ -743,23 +724,7 @@ A
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Új fejezet?
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-mátrix nyoma?
-\end_layout
-
+\begin_inset Separator plain
 \end_inset
 
 
@@ -845,7 +810,9 @@ Legyenek
 \end_inset
 
 , akkor 
-\begin_inset Formula $\boldsymbol{u}=[\boldsymbol{x}_{1}+\boldsymbol{x}_{2}\quad\boldsymbol{y}_{1}+\boldsymbol{y}_{2}]$
+\begin_inset Formula $\boldsymbol{u}=[\begin{array}{c}
+\boldsymbol{x}_{1}+\boldsymbol{x}_{2}\end{array}\begin{array}{c}
+\boldsymbol{y}_{1}+\boldsymbol{y}_{2}\end{array}]$
 \end_inset
 
 .
@@ -1001,11 +968,15 @@ Az alkalmazásokban gyakran szükség van komplex vektorokra, mátrixokra.
  A belső szorzatot leszámítva a fenti definíciók érvényesek komplex vektorokra
  és mátrixokra is, azzal a különbséggel, hogy a komplex vektorok elemei
  komplex számok, a komplex mátrixok elemei komplex vektorok.
+ A belső szorzat általánosabb definíciója megköveteli, hogy egy vektor saját
+ magával vett belső szorzata valós, nem negatív, és csak akkor nulla, ha
+ a vektor nulla.
+ Definiáljuk a belső szorzatot komplex vektorokra is.
  A 
 \begin_inset Formula $\boldsymbol{w}$
 \end_inset
 
- vektor konjugáltját 
+ komplex vektor konjugáltját 
 \begin_inset Formula $\overline{\boldsymbol{w}}$
 \end_inset
 
@@ -1017,26 +988,11 @@ Az alkalmazásokban gyakran szükség van komplex vektorokra, mátrixokra.
 
 
 \series default
- mátrix konjugáltját 
+ komplex mátrix konjugáltját 
 \begin_inset Formula $\overline{\boldsymbol{A}}$
 \end_inset
 
 -val jelöljük.
- Definiáljuk a belső szorzatot komplex vektorokra.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Ezt esetleg még fejtegetni, 18-adik oldal.
- Kérdőjeles rész.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Definition*
@@ -1078,6 +1034,40 @@ Az
 \end_layout
 
 \begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ komplex mátrix Hermite-mátrix, ha 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{A}^{H}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $\boldsymbol{A}^{H}\boldsymbol{z}=(\boldsymbol{B}^{T}-i\boldsymbol{C}^{T})(\boldsymbol{x}+i\boldsymbol{y})=\boldsymbol{B}^{T}\boldsymbol{x}+\boldsymbol{C}^{T}\boldsymbol{y}+i(\boldsymbol{B}^{T}\boldsymbol{y}-\boldsymbol{C}^{T}\boldsymbol{x})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
 A 
 \begin_inset Formula $\boldsymbol{w}$
 \end_inset
@@ -1094,19 +1084,15 @@ A
 \end_layout
 
 \begin_layout Standard
-Definiáljuk a szimmetrikus mátrix komplex megfelelőjét.
-\end_layout
-
-\begin_layout Definition*
-Az 
-\begin_inset Formula $\boldsymbol{A}$
+A 
+\begin_inset Formula $\boldsymbol{z}^{H}\boldsymbol{z}=(\boldsymbol{x}^{T}-i\boldsymbol{y}^{T})(\boldsymbol{x}+i\boldsymbol{y})=\boldsymbol{x}^{T}\boldsymbol{x}+\boldsymbol{y}^{T}\boldsymbol{y}$
 \end_inset
 
- komplex mátrix Hermite-mátrix, ha 
-\begin_inset Formula $\boldsymbol{A}=\boldsymbol{A}^{H}$
+ szorzat nem lehet se komplex, se negatív, és csak akkor nulla, ha 
+\begin_inset Formula $\boldsymbol{z}$
 \end_inset
 
-.
+ vektor nulla, így a definíció eleget tesz az általánosabb feltételeknek.
  
 \end_layout
 
@@ -1115,16 +1101,10 @@ Lineáris függetlenség
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ide valamit, hogy mit várhat, mire számíthat a kedves olvasó?
-\end_layout
-
-\end_inset
-
-
+A lineáris függetlenség alapvető fogalom nem csak a mátrix algebrában.
+ A következő fejezetekben nagyban fogunk annak a következményeire támaszkodni,
+ hogy vektorok lineárisan függetlenek e, vagy sem.
+ 
 \end_layout
 
 \begin_layout Definition*
@@ -1132,32 +1112,29 @@ Az
 \begin_inset Formula $\boldsymbol{a}_{i}$
 \end_inset
 
- (
-\begin_inset Formula $i=1,2,...,n)$
+ vektorok lineárisan összefüggők, ha léteznek olyan 
+\begin_inset Formula $x_{i}$
 \end_inset
 
- vektorok lineárisan függetlenek, ha
+ skalárok, amelyek nem mindegyike zérus, és a velük képzett lineáris kombinációr
+a fennáll, hogy
 \begin_inset Formula 
 \[
-\sum_{i=1}^{n}\boldsymbol{a}_{i}x_{i}=\boldsymbol{0}
+\sum_{i=1}^{n}\boldsymbol{a}_{i}x_{i}=\boldsymbol{0}.
 \]
 
 \end_inset
 
-csak 
-\begin_inset Formula $x_{i}=0$
-\end_inset
-
- (
-\begin_inset Formula $i=1,2,...,n)$
-\end_inset
-
- skalárokkal teljesül.
- Ellenkező esetben az 
+Ellenkező esetben az 
 \begin_inset Formula $\boldsymbol{a}_{i}$
 \end_inset
 
- vektorok lineárisan összefüggők.
+ vektorok lineárisan függetlenek.
+ 
+\begin_inset Formula $i=1,2,...,n.$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example*
@@ -1245,6 +1222,25 @@ x_{3}
  
 \end_layout
 
+\begin_layout Standard
+A mátrix azonos rendű vektorok egy rendezett halmaza.
+ Egy 
+\begin_inset Formula $\ensuremath{m{\times}n}$
+\end_inset
+
+-es mátrixot értelmezhetünk, mint 
+\begin_inset Formula $m$
+\end_inset
+
+ darab sorvektor, vagy mint 
+\begin_inset Formula $n$
+\end_inset
+
+ darab oszlopvektor.
+ Röviden azt mondjuk, hogy a mátrix sorai és oszlopai.
+ 
+\end_layout
+
 \begin_layout Definition*
 Az 
 \begin_inset Formula $\boldsymbol{A}$
@@ -1264,24 +1260,6 @@ Az
 
  vektor, hogy 
 \begin_inset Formula $\boldsymbol{Ax}=\boldsymbol{0}.$
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Itt az 
-\begin_inset Quotes pld
-\end_inset
-
-mátrix oszlopai
-\begin_inset Quotes prd
-\end_inset
-
- nem definiált fogalom bevezetésével nem vagyok megelégedve.
-\end_layout
-
 \end_inset
 
 
@@ -1307,8 +1285,8 @@ Ha az
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
- vektor nem egyértelmű, skalárral szorzása nem változtat az ortogonalitáson,
- így 
+ vektor nem egyértelmű, mert skalárral szorzása nem változtat az ortogonalitáson
+, így 
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
@@ -1321,17 +1299,7 @@ Ha az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix sorait permutáljuk.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Ezt most miért közöljük a kedves olvasóval?
-\end_layout
-
-\end_inset
-
-
+ mátrix sorait felcseréljük.
 \end_layout
 
 \begin_layout Theorem*
@@ -1360,8 +1328,66 @@ Legyen
 
  darab lineárisan független vektorunk, amik egy új vektor hozzáadásával
  lineárisan összefüggővé válnak.
- Ekkor az új vektor kifejezhető az eredeti r vektorok egyértelmű lineáris
- kombinációjaként.
+ Ekkor az új vektor kifejezhető az eredeti 
+\begin_inset Formula $r$
+\end_inset
+
+ vektorok egyértelmű lineáris kombinációjaként.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix.
+ Mindig létezik olyan 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{H}$
+\end_inset
+
+ mátrix, hogy a 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ mátrix oszlopai és a 
+\begin_inset Formula $\boldsymbol{H}$
+\end_inset
+
+ mátrix sorai lineárisan függetlenek, és 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{GH}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Egy mátrix lineárisan független oszlopainak vagy sorainak maximum darabszáma
+ a mátrix rangja.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1369,16 +1395,10 @@ Nemszinguláris mátrixok
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ide valamit, hogy mit várhat, mire számíthat a kedves olvasó?
-\end_layout
-
-\end_inset
-
-
+Definiáljuk a nemszinguláris mátrixot.
+ Ehhez megvizsgáljuk a mátrix oszlopainak illetve sorainak lineáris függőségét,
+ definiáljuk a mátrix inverzét, és megvizsgáljuk a lineáris függőség és
+ a mátrix inverze közötti kapcsolatot.
 \end_layout
 
 \begin_layout Theorem*
@@ -1432,26 +1452,6 @@ Tegyük fel az ellenkezőjét.
  Így ellentmondáshoz jutottunk.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Quotes pld
-\end_inset
-
-A nem négyzetes mátrixok nem invertálhatóak, de létezhet bal- vagy jobbinverzük
-\begin_inset Quotes prd
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Definition*
 Legyen 
 \begin_inset Formula $\boldsymbol{A}$
@@ -1479,34 +1479,18 @@ Legyen
 \end_inset
 
  mátrix jobboldali inverze.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition*
-Legyen 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- mátrix.
  Ha létezik olyan 
-\begin_inset Formula $\boldsymbol{X}$
+\begin_inset Formula $\boldsymbol{Y}$
 \end_inset
 
  mátrix, hogy 
-\begin_inset Formula $\boldsymbol{XA}=\boldsymbol{I}$
+\begin_inset Formula $\boldsymbol{YA}=\boldsymbol{I}$
 \end_inset
 
 , akkor 
 \series bold
 
-\begin_inset Formula $\boldsymbol{X}$
+\begin_inset Formula $\boldsymbol{Y}$
 \end_inset
 
 
@@ -1552,6 +1536,11 @@ Legyen
 \end_inset
 
  mátrix inverze.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Egy mátrix invertálható, ha létezik inverze.
 \end_layout
 
 \begin_layout Theorem*
@@ -1621,7 +1610,14 @@ Ha a fenti ekvivalens állítások teljesülnek, az
 \end_layout
 
 \begin_layout Standard
-Most definiálunk és megvizsgálunk néhány elméleti vagy gyakorlati szempontból
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definiálunk és megvizsgálunk néhány elméleti vagy gyakorlati szempontból
  fontos nemszinguláris mátrixot.
 \end_layout
 
@@ -1646,7 +1642,7 @@ Az
 \end_inset
 
  minden 
-\begin_inset Formula $i\geq j$
+\begin_inset Formula $i>j$
 \end_inset
 
 -re.
@@ -1669,17 +1665,37 @@ Az
 \end_inset
 
  minden 
-\begin_inset Formula $i\leq j$
+\begin_inset Formula $i<j$
 \end_inset
 
 -re.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Ezt majd megnézni galántaiban, hogy egyenlsőség meg van e engedve??
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Az 
+\begin_inset Formula $\boldsymbol{U}=[u_{ij}]$
+\end_inset
+
+ felső háromszögmátrix akkor és csak akkor nemszinguláris, ha 
+\begin_inset Formula $u_{ii}\neq0$
+\end_inset
+
+ minden 
+\begin_inset Formula $i$
+\end_inset
+
+-re.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
@@ -1731,29 +1747,6 @@ Legyen
 
 \end_layout
 
-\begin_layout Theorem*
-Az 
-\begin_inset Formula $\boldsymbol{U}=[u_{ij}]$
-\end_inset
-
- felső háromszögmátrix akkor és csak akkor nemszinguláris, ha 
-\begin_inset Formula $u_{ii}\neq0$
-\end_inset
-
- minden 
-\begin_inset Formula $i$
-\end_inset
-
--re.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
 \begin_layout Definition*
 Az 
 \begin_inset Formula $\boldsymbol{A}$
@@ -1793,8 +1786,17 @@ Ha
  pozitív definit.
 \end_layout
 
+\begin_layout Subsection
+Vektornormák és mátrixnormák
+\end_layout
+
 \begin_layout Standard
-Miért akarunk normálni szöveg.
+Gyakran tudni akarunk vektorokat vagy mátrixokat a méretük alapján összehasonlít
+ani.
+ Pl.
+ ha egy iteráló algoritmussal közelítünk egy elméleti megoldáshoz, a közelítés
+ és az elméleti megoldás mérete közötti különbség jó ha gyorsan csökken.
+ A norma a vektorokhoz és a mátrixokhoz egy skalárt rendel.
 \end_layout
 
 \begin_layout Definition*
@@ -1868,17 +1870,7 @@ Az
 \begin_inset Formula $l_{\infty}$
 \end_inset
 
- normáinak definíciója
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-galántai jegyzet csekk
-\end_layout
-
-\end_inset
-
-
+ normáinak definíciója:
 \end_layout
 
 \begin_deeper
@@ -1912,17 +1904,7 @@ galántai jegyzet csekk
 \begin_inset Formula $l_{\infty}$
 \end_inset
 
- norma.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ennek mi a nevek?
-\end_layout
-
-\end_inset
-
-
+ (maximum) norma.
 \end_layout
 
 \end_deeper
@@ -2052,17 +2034,7 @@ Az
 \begin_inset Formula $\left\Vert \boldsymbol{A}\right\Vert _{p}$
 \end_inset
 
-indukált normájának definíciója
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ennek mi a nevek?
-\end_layout
-
-\end_inset
-
-
+ indukált normájának definíciója
 \begin_inset Formula 
 \[
 \boldsymbol{A}=\max_{i\neq0}\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{p}}{\left\Vert \boldsymbol{x}\right\Vert _{p}},
@@ -2082,17 +2054,45 @@ ahol
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+Az indukált mátrixnormákra mindig igaz, hogy 
+\begin_inset Formula $\left\Vert \boldsymbol{Ax}\right\Vert \leq\left\Vert \boldsymbol{A}\right\Vert \left\Vert \boldsymbol{x}\right\Vert $
+\end_inset
 
-\begin_layout Plain Layout
-Szöveg a 45.
- oldalról, spektárlis norma, nem tudjuk explicit kiszamolni xy normát, ...
-\end_layout
+.
+ Ez a gyakorlatban sokszor hasznos.
+ Az 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+ indukált mátrixnormát explicit az 
+\begin_inset Formula 
+\[
+\left\Vert \boldsymbol{A}\right\Vert _{1}=\max_{j}\sum_{i}|a_{ij}|
+\]
 
 \end_inset
 
+ képlettel számolhatjuk.
+ Az 
+\begin_inset Formula $l_{\infty}$
+\end_inset
 
+ indukált mátrixnormát az 
+\begin_inset Formula 
+\[
+\left\Vert \boldsymbol{A}\right\Vert _{\infty}=\max_{i}\sum_{j}|a_{ij}|
+\]
+
+\end_inset
+
+ képlettel számolhatjuk.
+ Az 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+ által indukált mátrixnormát spektrális normának hívjuk.
+ A spektrális norma elméleti fontossága mellett nagy gyakorlati hátránya,
+ hogy nincs egyszerű explicit képlet a kiszámolására.
 \end_layout
 
 \begin_layout Definition*
@@ -2109,50 +2109,13 @@ Az
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ezt miért nem ekuklideszi mátrix normának hivjuk? 46.oldal
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition*
-A nemsziguláris 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- mátrix kondíciószáma 
-\begin_inset Formula 
-\[
-k(\boldsymbol{A})=\left\Vert \boldsymbol{A}\right\Vert \left\Vert \boldsymbol{A}^{-1}\right\Vert ,
-\]
-
-\end_inset
-
-tetszőleges normával.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Mire jó a kondíció szám stb 47.oldal
-\end_layout
-
-\end_inset
-
-
+A Forbenius norma az euklideszi vektornorma mátrix megfelelője, de nem az
+ euklideszi vektornorma által indukált mátrixnorma.
+ Nem vektornorma által indukált mátrixnorma, ezért a gyakorlatban sokszor
+ szükségtelenül pontatlan eredményekhez vezet.
 \end_layout
 
 \begin_layout Subsection
@@ -2161,7 +2124,7 @@ Sajátértékek és sajátvektorok
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 kedves olvasó tájékoztatása
@@ -2267,7 +2230,8 @@ Az
 
  
 \series default
-mátrixszal a sajátvektor és a hozzá tartozó sajátérték szorzatát adja, 
+mátrixszal, a sajátvektor és a hozzá tartozó sajátérték szorzatát adja,
+ 
 \begin_inset Formula $\boldsymbol{Ax}=\boldsymbol{x}\lambda$
 \end_inset
 
@@ -2364,6 +2328,26 @@ Legyen
 
 \end_layout
 
+\begin_layout Theorem*
+A valós szimmetrikus mátrixnak minden sajátértéke valós.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+A Hermite-féle mátrixnak minden sajátértéke valós.
+\end_layout
+
+\begin_layout Standard
+A Hermite-féle mátrixot ezért a valós szimmetrikus mátrix komplex megfelelőjének
+ tekintjük.
+\end_layout
+
 \begin_layout Definition*
 Az 
 \begin_inset Formula $\boldsymbol{A}$
@@ -2425,6 +2409,17 @@ Legyen
 
 \end_layout
 
+\begin_layout Theorem*
+A hasonlósági transzformáció nem változtatja meg a mátrix sajátértékeit.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Definition*
 Legyen 
 \begin_inset Formula $\boldsymbol{A}$
@@ -2454,7 +2449,7 @@ Legyen
 
  mátrix ortogonális.
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Obádovicsban 
@@ -2528,10 +2523,6 @@ unitériálisan hasonlók
 \end_inset
 
 
-\end_layout
-
-\begin_layout Theorem*
-A hasonlósági transzformáció nem változtatja meg a mátrix sajátértékeit.
 \end_layout
 
 \begin_layout Standard
@@ -2610,6 +2601,10 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Example*
+ddas
 \end_layout
 
 \begin_layout Definition*
@@ -2716,24 +2711,6 @@ Legyen
 \end_inset
 
  mátrix spektrális sugara 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-ebben nem vagyok biztos, hogy ez a helyes forditas 
-\begin_inset Quotes pld
-\end_inset
-
-spectral radius
-\begin_inset Quotes prd
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset Formula $\rho(\boldsymbol{A})=\max_{i}|\lambda_{i}|$
 \end_inset
 
@@ -2789,7 +2766,7 @@ Legyen
 \end_layout
 
 \begin_layout Theorem*
-A mátrixhoz tartozó sajátértékek összege egyenlőek a mátrix nyomával.
+A mátrixhoz tartozó sajátértékek összege egyenlő a mátrix nyomával.
 \end_layout
 
 \begin_layout Standard
@@ -2912,6 +2889,19 @@ Az
 
 \begin_layout Section
 Lineáris egyenletrendszerek megoldása, osztályozása
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+mátrix kondicioszamat majd definialni kell
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
