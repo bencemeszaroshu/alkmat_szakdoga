@@ -2118,6 +2118,10 @@ A Forbenius norma az euklideszi vektornorma mátrix megfelelője, de nem az
  szükségtelenül pontatlan eredményekhez vezet.
 \end_layout
 
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Subsection
 Sajátértékek és sajátvektorok
 \end_layout
@@ -2821,16 +2825,6 @@ Az
 
  mátrix konvergens, ha 
 \begin_inset Formula $\lim_{r\rightarrow\infty}\left\Vert \boldsymbol{A}^{r}\right\Vert =0.$
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-min maxokat kijavitani
-\end_layout
-
 \end_inset
 
 
