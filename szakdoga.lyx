@@ -326,7 +326,7 @@ Legyen
 \end_inset
 
 -ed rendű valós vektor.
- A belső szorzata a sorvektor 
+ A belső szorzata vagy skalár szorzata a sorvektor 
 \series bold
 
 \begin_inset Formula $\boldsymbol{x}{}^{T}$
@@ -548,11 +548,14 @@ mátrix és
 \end_inset
 
  vektor mátrix-vektor szorzata és 
-\begin_inset Formula $y_{i}=\boldsymbol{a}_{i}^{T}\boldsymbol{x}$
+\begin_inset Formula 
+\[
+y_{i}=\boldsymbol{a}_{i}^{T}\boldsymbol{x.}
+\]
+
 \end_inset
 
-.
- A mátrix-vektor szorzás disztributív.
+A mátrix-vektor szorzás disztributív.
 \end_layout
 
 \begin_layout Standard
@@ -620,11 +623,14 @@ Legyen
 \end_inset
 
 -s mátrix, ahol 
-\begin_inset Formula $c_{ij}=\boldsymbol{a}_{i}^{T}\boldsymbol{b}_{j}$
+\begin_inset Formula 
+\[
+c_{ij}=\boldsymbol{a}_{i}^{T}\boldsymbol{b}_{j.}
+\]
+
 \end_inset
 
-.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -664,7 +670,11 @@ Legyenek
 
 .
  A 
-\begin_inset Formula $\sum_{i=1}^{n}\boldsymbol{p}_{i}y_{i}$
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}\boldsymbol{p}_{i}y_{i}
+\]
+
 \end_inset
 
  vektor a 
@@ -757,7 +767,7 @@ Legyen
 \begin_inset Formula $n$
 \end_inset
 
--ed rendű vektor, ahol
+-ed rendű vektor, ahol 
 \begin_inset Formula $\boldsymbol{x}_{1}^{T}=[x_{1},x_{2},...,x_{r}]$
 \end_inset
 
@@ -850,7 +860,7 @@ Mátrixokat is részmátrixokra particionálhatunk.
 
 \begin_layout Definition*
 Mátrixok egy halmaza egy művelet szerint jól particionált, ha a mátrixok
- részmátrixai között a művelet definiált.
+ részmátrixai között a művelet jól definiált.
 \end_layout
 
 \begin_layout Example*
@@ -888,6 +898,7 @@ l_{21} & l_{22} & l_{23} & m_{21}
 \end_layout
 
 \begin_layout Example*
+\noindent
 A szorzás szerint 
 \begin_inset Formula $\boldsymbol{E}_{1}$
 \end_inset
@@ -902,8 +913,8 @@ A szorzás szerint
 \begin_layout Example*
 \begin_inset Formula 
 \[
-\boldsymbol{E}_{1}\boldsymbol{F}_{1}\neq\begin{bmatrix}\boldsymbol{AJ}+\boldsymbol{CK} & \boldsymbol{BJ}+\boldsymbol{DK}\\
-\boldsymbol{AL}+\boldsymbol{CM} & \boldsymbol{BL}+\boldsymbol{DM}
+\boldsymbol{E}_{1}\boldsymbol{F}_{1}\neq\begin{bmatrix}\boldsymbol{AJ}+\boldsymbol{BL} & \boldsymbol{AK}+\boldsymbol{BM}\\
+\boldsymbol{CJ}+\boldsymbol{DL} & \boldsymbol{CK}+\boldsymbol{DM}
 \end{bmatrix}.
 \]
 
@@ -957,6 +968,7 @@ j_{31} & k_{31} & k_{32} & k_{33}\\
 \end_layout
 
 \begin_layout Example*
+\noindent
 Az összeadás szerint 
 \begin_inset Formula $\boldsymbol{E}_{2}$
 \end_inset
@@ -1019,7 +1031,11 @@ A
 \end_inset
 
  komplex vektor Hermite-féle transzponáltja 
-\begin_inset Formula $\boldsymbol{z}^{H}=\overline{\boldsymbol{z}}^{T}=\boldsymbol{x}^{T}-i\boldsymbol{y}^{T}.$
+\begin_inset Formula 
+\[
+\boldsymbol{z}^{H}=\overline{\boldsymbol{z}}^{T}=\boldsymbol{x}^{T}-i\boldsymbol{y}^{T}.
+\]
+
 \end_inset
 
  
@@ -1038,10 +1054,14 @@ Az
 \end_inset
 
  komplex mátrix Hermite-féle transzponáltja 
-\begin_inset Formula $\boldsymbol{A}^{H}=\overline{\boldsymbol{A}}^{T}=\boldsymbol{B}^{T}-i\boldsymbol{C}^{T}$
+\begin_inset Formula 
+\[
+\boldsymbol{A}^{H}=\overline{\boldsymbol{A}}^{T}=\boldsymbol{B}^{T}-i\boldsymbol{C}^{T}.
+\]
+
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -1121,13 +1141,17 @@ Lineáris függetlenség
 \begin_layout Standard
 A lineáris függetlenség alapvető fogalom nem csak a mátrix algebrában.
  A következő fejezetekben nagyban fogunk annak a következményeire támaszkodni,
- hogy vektorok lineárisan függetlenek e, vagy sem.
+ hogy vektorok lineárisan függetlenek-e, vagy sem.
  
 \end_layout
 
 \begin_layout Definition*
 Az 
 \begin_inset Formula $\boldsymbol{a}_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,2,...,n$
 \end_inset
 
  vektorok lineárisan összefüggők, ha léteznek olyan 
@@ -1149,10 +1173,6 @@ Ellenkező esetben az
 
  vektorok lineárisan függetlenek.
  
-\begin_inset Formula $i=1,2,...,n.$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Example*
