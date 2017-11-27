@@ -2930,7 +2930,20 @@ Konklúzió
 \end_layout
 
 \begin_layout Section
-Appendix 
+Függelék
+\end_layout
+
+\begin_layout Section
+Felhasznált irodalom
+\end_layout
+
+\begin_layout Standard
+[1] C.G.
+ Broyden, 
+\shape italic
+Basic Matrices
+\shape default
+, The Macmillan Press Ltd, 1975.
 \end_layout
 
 \end_body
