@@ -5,11 +5,15 @@
 \save_transient_properties true
 \origin unavailable
 \textclass extarticle
+\begin_preamble
+\def\magyarOptions{defaults=hu-min}
+\end_preamble
 \use_default_options true
 \begin_modules
 theorems-ams
-eqs-within-sections
 figs-within-sections
+theorems-ams-extended
+theorems-sec
 \end_modules
 \maintain_unincluded_children false
 \language magyar
@@ -32,9 +36,9 @@ figs-within-sections
 \bibtex_command default
 \index_command default
 \paperfontsize 12
-\spacing single
+\spacing other 1.15
 \use_hyperref false
-\papersize default
+\papersize a4paper
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
@@ -59,10 +63,10 @@ figs-within-sections
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 3cm
+\leftmargin 3.5cm
 \topmargin 2.5cm
-\rightmargin 2cm
-\bottommargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 4cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -1297,7 +1301,7 @@ Ha az
  mátrix sorait felcseréljük.
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Az 
 \begin_inset Formula $n+1$
 \end_inset
@@ -1316,7 +1320,7 @@ Az
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Legyen 
 \begin_inset Formula $r$
 \end_inset
@@ -1337,7 +1341,7 @@ Legyen
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Legyen 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
@@ -1396,7 +1400,7 @@ Definiáljuk a nemszinguláris mátrixot.
  a mátrix inverze közötti kapcsolatot.
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Nem létezik olyan 
 \series bold
 
@@ -1538,7 +1542,7 @@ Legyen
 Egy mátrix invertálható, ha létezik inverze.
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Ha egy négyzetes mátrixnak vannak lineárisan független oszlopai, akkor jobboldal
 i inverze egyértelmű.
 \end_layout
@@ -1550,7 +1554,7 @@ i inverze egyértelmű.
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Ha egy négyzetes mátrixnak létezik egyértelmű jobboldali inverze, akkor
  az megegyezik a baloldali inverzével.
 \end_layout
@@ -1673,7 +1677,7 @@ Az
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Az 
 \begin_inset Formula $\boldsymbol{U}=[u_{ij}]$
 \end_inset
@@ -1696,7 +1700,7 @@ Az
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Legyen 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
@@ -1769,7 +1773,7 @@ Az
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Ha 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
@@ -1920,7 +1924,7 @@ Itt a normák praktikus kiszámolásárol nem kéne megemlékezni?
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 (Cauchy-egyenlőtlenség) Legyen 
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
@@ -2272,7 +2276,7 @@ sokszor irtam n-ed rendü helyett, hogy negyzetes, ez valszeg nem allja meg
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Minden négyzetes mátrixnak van legalább egy sajátértéke.
 \end_layout
 
@@ -2283,7 +2287,7 @@ Minden négyzetes mátrixnak van legalább egy sajátértéke.
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Legyen 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
@@ -2323,7 +2327,7 @@ Legyen
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 A valós szimmetrikus mátrixnak minden sajátértéke valós.
 \end_layout
 
@@ -2334,7 +2338,7 @@ A valós szimmetrikus mátrixnak minden sajátértéke valós.
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 A Hermite-féle mátrixnak minden sajátértéke valós.
 \end_layout
 
@@ -2404,7 +2408,7 @@ Legyen
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 A hasonlósági transzformáció nem változtatja meg a mátrix sajátértékeit.
 \end_layout
 
@@ -2527,7 +2531,7 @@ unitériálisan hasonlók
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Minden 
 \begin_inset Formula $n$
 \end_inset
@@ -2614,7 +2618,7 @@ Az
 .
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Legyen 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
@@ -2719,7 +2723,7 @@ Legyen
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Legyen 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
@@ -2760,7 +2764,7 @@ Legyen
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 A mátrixhoz tartozó sajátértékek összege egyenlő a mátrix nyomával.
 \end_layout
 
@@ -2828,7 +2832,7 @@ Az
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Legyen 
 \begin_inset Formula $\boldsymbol{U}$
 \end_inset
@@ -2860,7 +2864,7 @@ Legyen
 
 \end_layout
 
-\begin_layout Theorem*
+\begin_layout Theorem
 Az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
@@ -2887,6 +2891,10 @@ mátrix kondicioszamat majd definialni kell
 \end_inset
 
 
+\end_layout
+
+\begin_layout Theorem
+fdfdsfdsfdsf
 \end_layout
 
 \begin_layout Section
