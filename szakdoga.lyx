@@ -1321,6 +1321,22 @@ Ha az
  mátrix sorait felcseréljük.
 \end_layout
 
+\begin_layout Standard
+A következő tételeket csak kimondjuk és hivatkozunk a bizonyításokra.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ezzel a köv tételeket csak kimondjuk a bizonyítást lásd stílussal nem feltétlen
+ szimpatizálok.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Theorem
 Az 
 \begin_inset Formula $n+1$
@@ -1331,6 +1347,13 @@ Az
 \end_inset
 
 -ed rendű vektor lineárisan összefüggő.
+\end_layout
+
+\begin_layout Standard
+\noindent
+A bizonyítást lásd, C.G.
+ Broyden - Basic Matrices, Theorem 2.2, 29.
+ oldal.
 \end_layout
 
 \begin_layout Standard
@@ -1355,6 +1378,10 @@ Legyen
 \end_layout
 
 \begin_layout Standard
+\noindent
+A bizonyítást lásd, C.G.
+ Broyden - Basic Matrices, 30.
+ oldal.
 \begin_inset Separator plain
 \end_inset
 
@@ -1366,8 +1393,8 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix.
- Mindig létezik olyan 
+ tetszőleges mátrix.
+ Mindig létezik olyan négyzetes 
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
@@ -1391,6 +1418,10 @@ Legyen
 \end_layout
 
 \begin_layout Standard
+\noindent
+A bizonyítást lásd C.G.
+ Broyden - Basic Matrices, Theorem 7.1, 124.
+ oldal.
 \begin_inset Separator plain
 \end_inset
 
@@ -1418,6 +1449,18 @@ Definiáljuk a nemszinguláris mátrixot.
  Ehhez megvizsgáljuk a mátrix oszlopainak illetve sorainak lineáris függőségét,
  definiáljuk a mátrix inverzét, és megvizsgáljuk a lineáris függőség és
  a mátrix inverze közötti kapcsolatot.
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Tanár úr itt kifogásolta, hogy a mátix méreteket hanyagolom, de Broyden
+ se ír méretekről.
+ Rá kell majd kérdezni!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Theorem
@@ -1535,17 +1578,17 @@ Legyen
 
  mátrix.
  Ha létezik olyan 
-\begin_inset Formula $\boldsymbol{A}^{-1}$
+\begin_inset Formula $\boldsymbol{X}$
 \end_inset
 
  mátrix, hogy 
-\begin_inset Formula $\boldsymbol{AA}^{-1}=\boldsymbol{A}^{-1}\boldsymbol{A}=\boldsymbol{I}$
+\begin_inset Formula $\boldsymbol{AX}=\boldsymbol{X}\boldsymbol{A}=\boldsymbol{I}$
 \end_inset
 
 , akkor 
 \series bold
 
-\begin_inset Formula $\boldsymbol{A}^{-1}$
+\begin_inset Formula $\boldsymbol{X}$
 \end_inset
 
 
@@ -1555,6 +1598,15 @@ Legyen
 \end_inset
 
  mátrix inverze.
+ Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix inverzének jelölése 
+\begin_inset Formula $\boldsymbol{A}^{-1}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1592,7 +1644,11 @@ Legyen
 \end_inset
 
  négyzetes mátrix.
- A következő állítások ekvivalensek.
+ Ha a következő ekvivalens állítások teljesülnek, az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix nemszinguláris, egyébként szinguláris.
  
 \end_layout
 
@@ -1619,15 +1675,6 @@ Legyen
 \end_layout
 
 \end_deeper
-\begin_layout Definition*
-Ha a fenti ekvivalens állítások teljesülnek, az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- mátrix nemszinguláris, egyébként szinguláris.
- 
-\end_layout
-
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1827,7 +1874,7 @@ Az
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
- vektor normája, ha kielégíti a következő három axiómát.
+ vektor normája, ha kielégíti a következő három feltételt.
 \end_layout
 
 \begin_deeper
@@ -1992,7 +2039,7 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix normája, ha kielégíti a következő négy axiómát.
+ mátrix normája, ha kielégíti a következő négy feltételt.
 \end_layout
 
 \begin_deeper
@@ -2056,7 +2103,7 @@ Az
  indukált normájának definíciója
 \begin_inset Formula 
 \[
-\boldsymbol{A}=\max_{i\neq0}\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{p}}{\left\Vert \boldsymbol{x}\right\Vert _{p}},
+\boldsymbol{A}=\max_{x\neq0}\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{p}}{\left\Vert \boldsymbol{x}\right\Vert _{p}},
 \]
 
 \end_inset
@@ -2119,7 +2166,7 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix Forbenius normájának definíciója
+ mátrix Frobenius normájának definíciója
 \begin_inset Formula 
 \[
 \left\Vert \boldsymbol{A}\right\Vert _{F}=(\sum_{i,j}|a_{ij}|^{2})^{\frac{1}{2}}.
@@ -2131,7 +2178,7 @@ Az
 \end_layout
 
 \begin_layout Standard
-A Forbenius norma az euklideszi vektornorma mátrix megfelelője, de nem az
+A Frobenius norma az euklideszi vektornorma mátrix megfelelője, de nem az
  euklideszi vektornorma által indukált mátrixnorma.
  Nem vektornorma által indukált mátrixnorma, ezért a gyakorlatban sokszor
  szükségtelenül pontatlan eredményekhez vezet.
@@ -2147,7 +2194,7 @@ Sajátértékek és sajátvektorok
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 kedves olvasó tájékoztatása
@@ -2255,10 +2302,10 @@ Az
 \series default
 mátrixszal, a sajátvektor és a hozzá tartozó sajátérték szorzatát adja,
  
-\begin_inset Formula $\boldsymbol{Ax}=\boldsymbol{x}\lambda$
+\begin_inset Formula $\boldsymbol{Ax}=\lambda\boldsymbol{x}$
 \end_inset
 
-és 
+ és 
 \begin_inset Formula $\boldsymbol{y}^{T}\boldsymbol{A}=\lambda\boldsymbol{y}$
 \end_inset
 
@@ -2268,7 +2315,7 @@ mátrixszal, a sajátvektor és a hozzá tartozó sajátérték szorzatát adja,
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 krylow sorozat?
@@ -2278,7 +2325,7 @@ krylow sorozat?
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Ebben a fejezetben example? Máshol?
@@ -2288,7 +2335,7 @@ Ebben a fejezetben example? Máshol?
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 sokszor irtam n-ed rendü helyett, hogy negyzetes, ez valszeg nem allja meg
@@ -2371,18 +2418,6 @@ A Hermite-féle mátrixot ezért a valós szimmetrikus mátrix komplex megfelel�
  tekintjük.
 \end_layout
 
-\begin_layout Definition*
-Az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- komplex mátrix unitér mátrix, ha 
-\begin_inset Formula $\boldsymbol{A}^{H}\boldsymbol{A}=\boldsymbol{I}$
-\end_inset
-
-.
-\end_layout
-
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -2417,7 +2452,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
-és 
+ és 
 \begin_inset Formula $\boldsymbol{PA}\boldsymbol{P}^{-1}$
 \end_inset
 
@@ -2472,7 +2507,7 @@ Legyen
 
  mátrix ortogonális.
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Obádovicsban 
@@ -2491,6 +2526,25 @@ ortogonálisan hasonlók
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ komplex mátrix unitér mátrix, ha 
+\begin_inset Formula $\boldsymbol{A}^{H}\boldsymbol{A}=\boldsymbol{I}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2527,7 +2581,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{P}$
 \end_inset
 
- mátrix unitér.
+ mátrix unitér..
 \begin_inset Note Note
 status collapsed
 
@@ -2632,7 +2686,7 @@ Az
 \end_inset
 
  mátrix normál mátrix, ha 
-\begin_inset Formula $\boldsymbol{A}^{H}\boldsymbol{A}=\boldsymbol{A}^{H}\boldsymbol{A}$
+\begin_inset Formula $\boldsymbol{A}^{H}\boldsymbol{A}=\boldsymbol{A}\boldsymbol{A}^{H}$
 \end_inset
 
 .
@@ -2651,7 +2705,7 @@ Legyen
 \begin_inset Formula $m$
 \end_inset
 
- darab különböző sajátérték,
+ darab különböző sajátérték, 
 \begin_inset Formula $m\leq n$
 \end_inset
 
@@ -2866,7 +2920,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{B}$
 \end_inset
 
- diagonális mátrix, melyre 
+ diagonális mátrix, amelyre 
 \begin_inset Formula $\left\Vert \boldsymbol{BUB}^{-1}\right\Vert _{\infty}<1$
 \end_inset
 
