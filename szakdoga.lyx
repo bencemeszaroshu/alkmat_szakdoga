@@ -1230,12 +1230,12 @@ x_{3}
 \end{bmatrix}=\begin{bmatrix}0\\
 0\\
 0
-\end{bmatrix}
+\end{bmatrix}.
 \]
 
 \end_inset
 
--ből következik, hogy 
+Ebből következik, hogy 
 \begin_inset Formula $x_{3}=0$
 \end_inset
 
@@ -1322,7 +1322,7 @@ Ha az
 \end_layout
 
 \begin_layout Standard
-A következő tételeket csak kimondjuk és hivatkozunk a bizonyításokra.
+A következő tételeket csak kimondjuk és hivatkozunk a bizonyításukra.
  
 \begin_inset Note Note
 status open
@@ -1380,7 +1380,7 @@ Legyen
 \begin_layout Standard
 \noindent
 A bizonyítást lásd, C.G.
- Broyden - Basic Matrices, 30.
+ Broyden - Basic Matrices, Lemma 2.2, 30.
  oldal.
 \begin_inset Separator plain
 \end_inset
