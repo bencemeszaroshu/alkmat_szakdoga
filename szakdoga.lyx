@@ -2117,6 +2117,10 @@ A Forbenius norma az euklideszi vektornorma mátrix megfelelője, de nem az
  szükségtelenül pontatlan eredményekhez vezet.
 \end_layout
 
+\begin_layout Section
+Lineáris egyenletrendszerek megoldása, osztályozása
+\end_layout
+
 \begin_layout Subsection
 Sajátértékek és sajátvektorok
 \end_layout
@@ -2870,10 +2874,6 @@ Az
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Section
-Lineáris egyenletrendszerek megoldása, osztályozása
 \end_layout
 
 \begin_layout Standard
