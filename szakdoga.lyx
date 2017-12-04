@@ -1511,7 +1511,7 @@ Tegyük fel az ellenkezőjét.
 
 .
  Így 
-\begin_inset Formula $y^{T}\boldsymbol{AX}=\boldsymbol{0}^{T}$
+\begin_inset Formula $\boldsymbol{y}^{T}\boldsymbol{AX}=\boldsymbol{0}^{T}$
 \end_inset
 
 , de mivel 
@@ -1870,9 +1870,8 @@ Vektornormák és mátrixnormák
 
 \begin_layout Standard
 Gyakran akarunk vektorokat vagy mátrixokat a nagyságuk alapján összehasonlítani.
- Pl.
- ha egy iteratív eljárással közelítünk egy vektorhoz, a hibavektor (azaz
- a vektor és a közelítő vektor közötti különbség) nagysága jó ha gyorsan
+ Például ha egy iteratív eljárással közelítünk egy vektorhoz, a hibavektor
+ (azaz a vektor és a közelítő vektor közötti különbség) nagysága jó ha gyorsan
  csökken.
  A norma a vektorokhoz és a mátrixokhoz egy skalárt rendel.
 \end_layout
@@ -2228,6 +2227,10 @@ alakú egyenletrendszernek, ahol
 \end_inset
 
 -ed rendű nemszinguláris mátrix, 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ ismeretlen vektor, 
 \series bold
 
 \begin_inset Formula $\boldsymbol{b}$
@@ -2236,7 +2239,7 @@ alakú egyenletrendszernek, ahol
 
 \series default
  tetszőleges vektor, az egyik leggyakoribb feladat.
- A megoldási módszerek két fő osztálya az indirekt és direkt megoldási módszerek.
+ A megoldási módszerek két fő osztálya az iteratív és direkt megoldási módszerek.
  A 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -2249,7 +2252,7 @@ reference "eq:axb"
 \end_inset
 
 .
- Az indirekt megoldási módszereknél az 
+ Az iteratív megoldási módszereknél az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -2280,15 +2283,33 @@ vá válik.
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix tulajdonságai gyakran megváltoznak, de minden általános célú megoldási
- módszer direkt típusú, mert a szükséges megoldási kapacitás akár előre
- számolható és a megoldás pontos, leszámítva a kerekítési hibát.
+ mátrix tulajdonságai gyakran megváltoznak, de a legtöbb általános célú
+ megoldási módszer direkt típusú, mert a szükséges megoldási kapacitás akár
+ előre számolható, és a megoldás pontos, leszámítva a kerekítési hibákat.
  Az egyetlen feltétel, hogy az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
  mátrix nemszinguláris legyen.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A továbbiakban mégis mire számíthat a kedves olvasó? :)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Direkt módszerek
+\end_layout
+
+\begin_layout Subsection
+Iteratív módszerek
 \end_layout
 
 \begin_layout Subsection
@@ -2957,7 +2978,17 @@ The Practical Evaluation of Eigenvalues and Eigenvectors
 \end_layout
 
 \begin_layout Subsection
-Konvergens mátrixok
+Konvergens mátrixok 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Ez most a sajatvektorokhoz kiegeszites vagy mihez?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
