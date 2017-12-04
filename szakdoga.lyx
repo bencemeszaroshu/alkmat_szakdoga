@@ -1330,6 +1330,7 @@ status open
 \begin_layout Plain Layout
 Ezzel a köv tételeket csak kimondjuk a bizonyítást lásd stílussal nem feltétlen
  szimpatizálok.
+ MÉG ITT ÁT KELL ÍRNI!!
 \end_layout
 
 \end_inset
@@ -1445,6 +1446,15 @@ Nemszinguláris mátrixok
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Tételeket át kell írni, nézni!
+\end_layout
+
+\end_inset
+
 Definiáljuk a nemszinguláris mátrixot.
  Ehhez megvizsgáljuk a mátrix oszlopainak illetve sorainak lineáris függőségét,
  definiáljuk a mátrix inverzét, és megvizsgáljuk a lineáris függőség és
@@ -2186,6 +2196,16 @@ A Frobenius norma az euklideszi vektornorma mátrix megfelelője, de nem az
 
 \begin_layout Section
 Lineáris egyenletrendszerek megoldása, osztályozása
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+tételeket át kell nézni! mi maradjon, mi ne?! bizonyítás vagy hivatkozás...
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
