@@ -1869,7 +1869,17 @@ Vektornormák és mátrixnormák
 \end_layout
 
 \begin_layout Standard
-Gyakran akarunk vektorokat vagy mátrixokat a méretük alapján összehasonlítani.
+Gyakran akarunk vektorokat vagy 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+vagy helyett és/vagy?
+\end_layout
+
+\end_inset
+
+mátrixokat a méretük alapján összehasonlítani.
  Pl.
  ha egy iteráló algoritmussal 
 \begin_inset Note Note
@@ -1883,7 +1893,25 @@ a megoldás az mi itt? iteráló algoritmus kifejezés nem nagyon van máshol
 \end_inset
 
 közelítünk egy elméleti megoldáshoz, a közelítés és az elméleti megoldás
- mérete közötti különbség jó ha gyorsan csökken.
+ mérete
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+meg mi az hogy a megoldás 
+\begin_inset Quotes pld
+\end_inset
+
+mérete
+\begin_inset Quotes prd
+\end_inset
+
+????
+\end_layout
+
+\end_inset
+
+ közötti különbség jó ha gyorsan csökken.
  A norma a vektorokhoz és a mátrixokhoz egy skalárt rendel.
 \end_layout
 
