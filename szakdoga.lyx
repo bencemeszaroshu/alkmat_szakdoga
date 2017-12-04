@@ -2333,19 +2333,6 @@ vá válik.
 Sajátértékek és sajátvektorok
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-kedves olvasó tájékoztatása
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Definition*
 Legyen 
 \begin_inset Formula $\boldsymbol{A}$
@@ -2386,11 +2373,15 @@ Legyen
 
  négyzetes mátrix.
  Az 
-\begin_inset Formula $\boldsymbol{x}$
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
 \end_inset
 
  vektor, ami mellett 
-\begin_inset Formula $(\boldsymbol{A}-\lambda\boldsymbol{I})\boldsymbol{x}=\boldsymbol{0},$
+\begin_inset Formula 
+\begin{equation}
+(\boldsymbol{A}-\lambda\boldsymbol{I})\boldsymbol{x}=\boldsymbol{0},\label{eq:jobbsajatv}
+\end{equation}
+
 \end_inset
 
  az 
@@ -2414,11 +2405,15 @@ Legyen
 
  négyzetes mátrix.
  Az 
-\begin_inset Formula $\boldsymbol{y}$
+\begin_inset Formula $\boldsymbol{y}\neq\boldsymbol{0}$
 \end_inset
 
  vektor, ami mellett 
-\begin_inset Formula $\boldsymbol{y}^{T}(\boldsymbol{A}-\lambda\boldsymbol{I})=\boldsymbol{0}^{T},$
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{y}^{T}(\boldsymbol{A}-\lambda\boldsymbol{I})=\boldsymbol{0}^{T},\label{eq:balsajatv}
+\end{equation}
+
 \end_inset
 
  az 
@@ -2429,20 +2424,13 @@ Legyen
 \end_layout
 
 \begin_layout Standard
-Az 
+Ha az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix sajátvektorának szorzása az 
-\series bold
-
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- 
-\series default
-mátrixszal, a sajátvektor és a hozzá tartozó sajátérték szorzatát adja,
- 
+ mátrixszal szorozzuk a sajátvektorát, a sajátvektor mérete változhat, iránya
+ azonban nem változik, legfeljebb ellenkezőjére fordul.
+ Azaz 
 \begin_inset Formula $\boldsymbol{Ax}=\lambda\boldsymbol{x}$
 \end_inset
 
@@ -2450,42 +2438,22 @@ mátrixszal, a sajátvektor és a hozzá tartozó sajátérték szorzatát adja,
 \begin_inset Formula $\boldsymbol{y}^{T}\boldsymbol{A}=\lambda\boldsymbol{y}$
 \end_inset
 
-.
- Valós mátrixokhoz gyakran tartozik komplex sajátérték és sajátvektor.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-krylow sorozat?
-\end_layout
+ a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:jobbsajatv"
 
 \end_inset
 
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ebben a fejezetben example? Máshol?
-\end_layout
+ és 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:balsajatv"
 
 \end_inset
 
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-sokszor irtam n-ed rendü helyett, hogy negyzetes, ez valszeg nem allja meg
- a helyet
-\end_layout
-
-\end_inset
-
-
+ jelölésekkel.
+ A sajátértékek és sajátvektorok a mátrixok fontos jellemzői.
 \end_layout
 
 \begin_layout Theorem
@@ -2493,6 +2461,8 @@ Minden négyzetes mátrixnak van legalább egy sajátértéke.
 \end_layout
 
 \begin_layout Standard
+\noindent
+Valós mátrixokhoz gyakran tartozik komplex sajátérték és sajátvektor.
 \begin_inset Separator plain
 \end_inset
 
@@ -2555,6 +2525,7 @@ A Hermite-féle mátrixnak minden sajátértéke valós.
 \end_layout
 
 \begin_layout Standard
+\noindent
 A Hermite-féle mátrixot ezért a valós szimmetrikus mátrix komplex megfelelőjének
  tekintjük.
 \end_layout
@@ -2999,6 +2970,7 @@ Legyen
 
 \begin_layout Theorem
 A mátrixhoz tartozó sajátértékek összege egyenlő a mátrix nyomával.
+ 
 \end_layout
 
 \begin_layout Standard
