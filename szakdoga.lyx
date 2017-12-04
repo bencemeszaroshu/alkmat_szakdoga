@@ -2800,7 +2800,7 @@ Minden
 \end_layout
 
 \begin_layout Standard
-A 
+Az 
 \begin_inset Formula $n$
 \end_inset
 
@@ -2906,6 +2906,20 @@ Itt van 3 következmény a 87.
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+84.
+ oldal 5.3 Elementary Properties of Eigenvectors felyezet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Definition*
 Legyen 
 \begin_inset Formula $\boldsymbol{A}$
@@ -3001,8 +3015,6 @@ The Practical Evaluation of Eigenvalues and Eigenvectors
 \end_inset
 
  még nem lett feldolgozva.
- Vagy ide (talán inkább ide, vagy a lin.egyenletrendszeres köv fejezetben
- kellene.
 \end_layout
 
 \end_inset
@@ -3015,16 +3027,24 @@ Konvergens mátrixok
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Szöveg 92.
- oldal
-\end_layout
-
+A különböző iteratív eljárások konvergenciája gyakran egy 
+\begin_inset Formula $\boldsymbol{A}^{r}$
 \end_inset
 
+ mátrix viselkedésétől függ, miközben 
+\begin_inset Formula $r$
+\end_inset
+
+ tart a végtelenhez.
+ Bizonyos iteratív eljárások akkor és csak akkor konvergensek, ha 
+\begin_inset Formula $\boldsymbol{A}^{r}$
+\end_inset
+
+ a nullmátrixhoz konvergál, ahogy növekszik 
+\begin_inset Formula $r$
+\end_inset
+
+.
  
 \end_layout
 
