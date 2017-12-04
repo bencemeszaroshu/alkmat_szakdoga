@@ -11,9 +11,11 @@
 \use_default_options true
 \begin_modules
 theorems-ams
-figs-within-sections
 theorems-ams-extended
 theorems-sec
+eqs-within-sections
+figs-within-sections
+tabs-within-sections
 \end_modules
 \maintain_unincluded_children false
 \language magyar
@@ -1654,7 +1656,7 @@ Legyen
 \end_inset
 
  négyzetes mátrix.
- Ha a következő ekvivalens állítások teljesülnek, az 
+ Ha a következő ekvivalens állítások teljesülnek, akkor az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -2208,6 +2210,87 @@ tételeket át kell nézni! mi maradjon, mi ne?! bizonyítás vagy hivatkozás..
 
 \end_layout
 
+\begin_layout Standard
+A megoldása az
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{Ax=b}\label{eq:axb}
+\end{equation}
+
+\end_inset
+
+alakú egyenletrendszernek, ahol 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű nemszinguláris mátrix, 
+\series bold
+
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+
+\series default
+ tetszőleges vektor, az egyik leggyakoribb feladat.
+ A megoldási módszerek két fő osztálya az indirekt és direkt megoldási módszerek.
+ A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:axb"
+
+\end_inset
+
+ egyenletrendszer megoldása 
+\begin_inset Formula $\boldsymbol{A}^{-1}\boldsymbol{b}$
+\end_inset
+
+.
+ Az indirekt megoldási módszereknél az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix lényegében változatlan marad és közelítő 
+\begin_inset Formula $\boldsymbol{x}_{i}$
+\end_inset
+
+ (
+\begin_inset Formula $i=1,2,...$
+\end_inset
+
+) megoldásokat generálunk.
+ Azt reméljük, hogy az 
+\begin_inset Formula $\{\boldsymbol{x}_{i}\}$
+\end_inset
+
+ sorozat a megoldáshoz konvergál.
+ A direkt módszerek alapja az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:axb"
+
+\end_inset
+
+ egyenletrendszer sorozatos transzformációja, amíg a megoldás könnyen számolható
+vá válik.
+ A direkt módszereknél 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix tulajdonságai gyakran megváltoznak, de minden általános célú megoldási
+ módszer direkt típusú, mert a szükséges megoldási kapacitás akár előre
+ számolható és a megoldás pontos, leszámítva a kerekítési hibát.
+ Az egyetlen feltétel, hogy az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix nemszinguláris legyen.
+ 
+\end_layout
+
 \begin_layout Subsection
 Sajátértékek és sajátvektorok
 \end_layout
@@ -2335,7 +2418,7 @@ mátrixszal, a sajátvektor és a hozzá tartozó sajátérték szorzatát adja,
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 krylow sorozat?
@@ -2345,7 +2428,7 @@ krylow sorozat?
 
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Ebben a fejezetben example? Máshol?
@@ -2454,7 +2537,11 @@ Legyen
 \begin_inset Formula $\boldsymbol{P}$
 \end_inset
 
- n-ed rendű mátrix.
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű mátrix.
  Legyen 
 \series bold
 
