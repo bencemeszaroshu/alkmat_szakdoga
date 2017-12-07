@@ -1735,11 +1735,11 @@ Az
 
 \begin_layout Definition*
 Az 
-\begin_inset Formula $\boldsymbol{U}=[u_{ij}]$
+\begin_inset Formula $\boldsymbol{L}=[l_{ij}]$
 \end_inset
 
  négyzetes mátrix alsó háromszögmátrix, ha 
-\begin_inset Formula $u_{ij}=0$
+\begin_inset Formula $l_{ij}=0$
 \end_inset
 
  minden 
@@ -1770,6 +1770,13 @@ Az
 \end_inset
 
 -re.
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Unemszingularis"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2249,7 +2256,7 @@ reference "eq:axb"
  egyenletrendszer megoldása 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{A}^{-1}\boldsymbol{b.}
+\boldsymbol{A}^{-1}\boldsymbol{b}\,.
 \end{equation}
 
 \end_inset
@@ -2305,14 +2312,164 @@ vá válik.
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix tulajdonságai gyakran megváltoznak, de a legtöbb általános célú
- megoldási módszer direkt típusú, mert a szükséges megoldási kapacitás akár
- előre számolható, és a megoldás pontos, leszámítva a kerekítési hibákat.
+ mátrix tulajdonságai gyakran megváltoznak, de a szükséges műveletigény
+ akár előre számolható, a lépésszám véges, és a megoldás pontos, leszámítva
+ a kerekítési hibákat.
  Az egyetlen feltétel, hogy az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
  mátrix nemszinguláris legyen.
+ A direkt módszerek műveletigénye nagy mátrixoknál igen nagy lehet.
+\end_layout
+
+\begin_layout Subsubsection*
+Az LU felbontás
+\end_layout
+
+\begin_layout Standard
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix LU felbontásán az
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{A=LU}
+\end{equation}
+
+\end_inset
+
+felbontást értjük, ahol 
+\begin_inset Formula $\boldsymbol{L}$
+\end_inset
+
+ alsó háromszögmátrix és 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ felső háromszögmátrix.
+ Ezután az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:axb"
+
+\end_inset
+
+ egyenletrendszer megoldása az
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{Ly=b}
+\end{equation}
+
+\end_inset
+
+és
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{Ux=y}\label{eq:Uxb}
+\end{equation}
+
+\end_inset
+
+háromszög alakú egyenletrendszerek megoldására egyszerűsödik, ahol 
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+ vektor a felbontás egy köztes eredménye.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+hivatkozásokat átnézni 
+\begin_inset Formula $u_{ii}\neq0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Legyen 
+\begin_inset Formula $\boldsymbol{U}=[u_{ij}]$
+\end_inset
+
+, 
+\begin_inset Formula $\boldsymbol{x}=[x_{i}]$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{y}=[y_{i}]$
+\end_inset
+
+ (
+\begin_inset Formula $i=1,2,...,n)$
+\end_inset
+
+ ekkor
+\begin_inset Formula 
+\begin{equation}
+x_{i}=(y_{i}-\sum_{j=i+1}^{n}u_{ij}x_{j})/u_{ii}\,,
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $u_{ii}\neq0.$
+\end_inset
+
+ Ahhoz, hogy a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Uxb"
+
+\end_inset
+
+ egyenletrendszernek tetszőleges 
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+-ra legyen megoldása, feltételezzük, hogy 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ mátrix nemszinguláris.
+ Így a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Unemszingularis"
+
+\end_inset
+
+-es tételből következik, hogy 
+\begin_inset Formula $u_{ii}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ nemszinguláris mátrix felbontható 
+\begin_inset Formula $\boldsymbol{LU}$
+\end_inset
+
+ mátrixok szorzatára, ahol 
+\begin_inset Formula $\boldsymbol{L}$
+\end_inset
+
+ alsó háromszögmátrix, 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ felső háromszögmátrix, ha 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ minden főátlójában lévő részmátrixa nemszinguláris.
 \end_layout
 
 \begin_layout Subsection
