@@ -342,9 +342,9 @@ nek és az oszlopvektor
 
 -nak
 \begin_inset Formula 
-\[
+\begin{equation}
 \boldsymbol{x}^{T}\boldsymbol{y}=\sum_{i=1}^{n}x_{i}y_{i}.
-\]
+\end{equation}
 
 \end_inset
 
@@ -551,9 +551,9 @@ mátrix és
 
  vektor mátrix-vektor szorzata és 
 \begin_inset Formula 
-\[
+\begin{equation}
 y_{i}=\boldsymbol{a}_{i}^{T}\boldsymbol{x.}
-\]
+\end{equation}
 
 \end_inset
 
@@ -626,9 +626,9 @@ Legyen
 
 -s mátrix, ahol 
 \begin_inset Formula 
-\[
+\begin{equation}
 c_{ij}=\boldsymbol{a}_{i}^{T}\boldsymbol{b}_{j.}
-\]
+\end{equation}
 
 \end_inset
 
@@ -673,9 +673,9 @@ Legyenek
 .
  A 
 \begin_inset Formula 
-\[
+\begin{equation}
 \sum_{i=1}^{n}\boldsymbol{p}_{i}y_{i}
-\]
+\end{equation}
 
 \end_inset
 
@@ -1034,9 +1034,9 @@ A
 
  komplex vektor Hermite-féle transzponáltja 
 \begin_inset Formula 
-\[
+\begin{equation}
 \boldsymbol{z}^{H}=\overline{\boldsymbol{z}}^{T}=\boldsymbol{x}^{T}-i\boldsymbol{y}^{T}.
-\]
+\end{equation}
 
 \end_inset
 
@@ -1057,9 +1057,9 @@ Az
 
  komplex mátrix Hermite-féle transzponáltja 
 \begin_inset Formula 
-\[
+\begin{equation}
 \boldsymbol{A}^{H}=\overline{\boldsymbol{A}}^{T}=\boldsymbol{B}^{T}-i\boldsymbol{C}^{T}.
-\]
+\end{equation}
 
 \end_inset
 
@@ -1163,9 +1163,9 @@ Az
  skalárok, amelyek nem mindegyike zérus, és a velük képzett lineáris kombinációr
 a fennáll, hogy
 \begin_inset Formula 
-\[
+\begin{equation}
 \sum_{i=1}^{n}\boldsymbol{a}_{i}x_{i}=\boldsymbol{0}.
-\]
+\end{equation}
 
 \end_inset
 
@@ -2018,9 +2018,9 @@ Itt a normák praktikus kiszámolásárol nem kéne megemlékezni?
 -ed rendű nem nulla vektor.
  Az
 \begin_inset Formula 
-\[
+\begin{equation}
 |\boldsymbol{x}^{T}\boldsymbol{y}|\leq\left\Vert \boldsymbol{x}\right\Vert _{2}\left\Vert \boldsymbol{y}\right\Vert _{2}
-\]
+\end{equation}
 
 \end_inset
 
@@ -2113,9 +2113,9 @@ Az
 
  indukált normájának definíciója
 \begin_inset Formula 
-\[
+\begin{equation}
 \boldsymbol{A}=\max_{x\neq0}\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{p}}{\left\Vert \boldsymbol{x}\right\Vert _{p}},
-\]
+\end{equation}
 
 \end_inset
 
@@ -2143,9 +2143,9 @@ Az indukált mátrixnormákra mindig igaz, hogy
 
  indukált mátrixnormát explicit az 
 \begin_inset Formula 
-\[
+\begin{equation}
 \left\Vert \boldsymbol{A}\right\Vert _{1}=\max_{j}\sum_{i}|a_{ij}|
-\]
+\end{equation}
 
 \end_inset
 
@@ -2156,9 +2156,9 @@ Az indukált mátrixnormákra mindig igaz, hogy
 
  indukált mátrixnormát az 
 \begin_inset Formula 
-\[
+\begin{equation}
 \left\Vert \boldsymbol{A}\right\Vert _{\infty}=\max_{i}\sum_{j}|a_{ij}|
-\]
+\end{equation}
 
 \end_inset
 
@@ -2179,9 +2179,9 @@ Az
 
  mátrix Frobenius normájának definíciója
 \begin_inset Formula 
-\[
+\begin{equation}
 \left\Vert \boldsymbol{A}\right\Vert _{F}=(\sum_{i,j}|a_{ij}|^{2})^{\frac{1}{2}}.
-\]
+\end{equation}
 
 \end_inset
 
@@ -2442,11 +2442,11 @@ Ha az
  mátrixszal szorozzuk a sajátvektorát, a sajátvektor mérete változhat, iránya
  azonban nem változik, legfeljebb ellenkezőjére fordul.
  Azaz 
-\begin_inset Formula $\boldsymbol{Ax}=\lambda\boldsymbol{x}$
-\end_inset
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{Ax}=\lambda\boldsymbol{x}
+\end{equation}
 
- és 
-\begin_inset Formula $\boldsymbol{y}^{T}\boldsymbol{A}=\lambda\boldsymbol{y}$
 \end_inset
 
  a 
@@ -2456,15 +2456,19 @@ reference "eq:jobbsajatv"
 
 \end_inset
 
- és 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:balsajatv"
+ jelölésekkel.
+ A sajátértékek és sajátvektorok a mátrixok fontos jellemzői.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Miért? SVDs cikk?
+\end_layout
 
 \end_inset
 
- jelölésekkel.
- A sajátértékek és sajátvektorok a mátrixok fontos jellemzői.
+
 \end_layout
 
 \begin_layout Theorem
