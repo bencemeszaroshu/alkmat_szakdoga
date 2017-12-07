@@ -2239,7 +2239,6 @@ alakú egyenletrendszernek, ahol
 
 \series default
  tetszőleges vektor, az egyik leggyakoribb feladat.
- A megoldási módszerek két fő osztálya az iteratív és direkt megoldási módszerek.
  A 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -2248,29 +2247,52 @@ reference "eq:axb"
 \end_inset
 
  egyenletrendszer megoldása 
-\begin_inset Formula $\boldsymbol{A}^{-1}\boldsymbol{b}$
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{A}^{-1}\boldsymbol{b.}
+\end{equation}
+
 \end_inset
 
-.
- Az iteratív megoldási módszereknél az 
+Az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix lényegében változatlan marad és közelítő 
-\begin_inset Formula $\boldsymbol{x}_{i}$
+ mátrix inverzének számolása a gyakorlatban nem célszerű, mert túl műveletigénye
+s.
+ A megoldási módszerek két fő osztálya az iteratív és direkt megoldási módszerek.
+ Fontos jellemzője még az egyenletrendszernek az 
+\begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- (
-\begin_inset Formula $i=1,2,...$
+ mátrix a sajátértékei és sajátvektorai.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+A továbbiakban mégis mire számíthat a kedves olvasó? :) 
+\begin_inset Quotes pld
 \end_inset
 
-) megoldásokat generálunk.
- Azt reméljük, hogy az 
-\begin_inset Formula $\{\boldsymbol{x}_{i}\}$
+Fontos szerepet játszanak még az A mátrix sajátértékek és sajátvektorai
+ és ezek tulajdonságai.
+\begin_inset Quotes prd
 \end_inset
 
- sorozat a megoldáshoz konvergál.
- A direkt módszerek alapja az 
+ vagy vmi ilyesmi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Direkt módszerek
+\end_layout
+
+\begin_layout Standard
+A direkt módszerek alapja az 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:axb"
@@ -2291,25 +2313,31 @@ vá válik.
 \end_inset
 
  mátrix nemszinguláris legyen.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-A továbbiakban mégis mire számíthat a kedves olvasó? :)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Direkt módszerek
 \end_layout
 
 \begin_layout Subsection
 Iteratív módszerek
+\end_layout
+
+\begin_layout Standard
+Az iteratív megoldási módszereknél az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix lényegében változatlan marad és közelítő 
+\begin_inset Formula $\boldsymbol{x}_{i}$
+\end_inset
+
+ (
+\begin_inset Formula $i=1,2,...$
+\end_inset
+
+) megoldásokat generálunk.
+ Azt reméljük, hogy az 
+\begin_inset Formula $\{\boldsymbol{x}_{i}\}$
+\end_inset
+
+ sorozat a megoldáshoz konvergál.
 \end_layout
 
 \begin_layout Subsection
@@ -2977,13 +3005,12 @@ The Practical Evaluation of Eigenvalues and Eigenvectors
 
 \end_layout
 
-\begin_layout Subsection
-Konvergens mátrixok 
-\begin_inset Note Note
-status collapsed
+\begin_layout Standard
+\begin_inset Note Comment
+status open
 
 \begin_layout Plain Layout
-Ez most a sajatvektorokhoz kiegeszites vagy mihez?
+KONVERGENS MÁTRIXOK
 \end_layout
 
 \end_inset
