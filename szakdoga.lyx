@@ -2220,7 +2220,7 @@ tételeket át kell nézni! mi maradjon, mi ne?! bizonyítás vagy hivatkozás..
 A megoldása az
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{Ax=b}\label{eq:axb}
+\boldsymbol{Ax}=\boldsymbol{b}\label{eq:axb}
 \end{equation}
 
 \end_inset
@@ -2306,9 +2306,18 @@ reference "eq:axb"
 
 \end_inset
 
- egyenletrendszer sorozatos transzformációja, amíg a megoldás könnyen számolható
-vá válik.
- A direkt módszereknél 
+ egyenletrendszer sorozatos transzformációja
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+mi az a sorozatos transzformáció?
+\end_layout
+
+\end_inset
+
+, amíg a megoldás könnyen számolhatóvá válik.
+ A direkt módszereknél az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -2335,7 +2344,7 @@ Az
  mátrix LU felbontásán az
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{A=LU}
+\boldsymbol{A}=\boldsymbol{LU}
 \end{equation}
 
 \end_inset
@@ -2359,7 +2368,7 @@ reference "eq:axb"
  egyenletrendszer megoldása az
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{Ly=b}
+\boldsymbol{Ly}=\boldsymbol{b}
 \end{equation}
 
 \end_inset
@@ -2367,7 +2376,7 @@ reference "eq:axb"
 és
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{Ux=y}\label{eq:Uxb}
+\boldsymbol{Ux}=\boldsymbol{y}\label{eq:Uxb}
 \end{equation}
 
 \end_inset
@@ -3316,6 +3325,17 @@ Felhasznált irodalom
 Basic Matrices
 \shape default
 , The Macmillan Press Ltd, 1975.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+referenciákat megcsinálni normálisan
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
