@@ -464,6 +464,20 @@ A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
 \end_inset
 
 -val jelöljük.
+ Egy mátrixra akkor mondjuk, hogy ritka, ha viszonylag kevés nullától különböző
+ eleme van.
+ Egy mátrixra akkor mondjuk, hogy kitöltött, ha viszonylag kevés nulla eleme
+ van.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Ezeket itt szétbontani definiciokra? (transzponált, rend pl..)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition*
@@ -1432,8 +1446,16 @@ A bizonyítást lásd C.G.
 \end_layout
 
 \begin_layout Definition*
-Egy mátrix lineárisan független oszlopainak vagy sorainak maximum darabszáma
- a mátrix rangja.
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix lineárisan független oszlopainak maximum darabszáma az mátrix rangja.
+ Jelölése 
+\begin_inset Formula $r\left(\boldsymbol{A}\right).$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1441,6 +1463,18 @@ Egy mátrix lineárisan független oszlopainak vagy sorainak maximum darabszáma
 \end_inset
 
 
+\end_layout
+
+\begin_layout Definition*
+A lineárisan független 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű vektorok halmazát, amelyből bármely 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű vektor kifejezhető, bázisnak nevezzük.
 \end_layout
 
 \begin_layout Subsection
@@ -1860,7 +1894,7 @@ Az
 \end_layout
 
 \begin_layout Theorem
-Ha 
+Ha az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -2339,11 +2373,15 @@ Az egyenletrendszer megoldásánál számolnunk kell különböző hibaforrások
 \end_layout
 
 \begin_layout Subsection
-Direkt módszerek
+Direkt eljárások
 \end_layout
 
 \begin_layout Standard
-A direkt módszerek alapja az 
+A direkt eljárások mentesek a képlethibától, és a megoldást véges sok lépésben
+ állítják elő.
+ Elméletben a megoldás pontos, a gyakorlatban azonban ez mégsem teljesül,
+ a számítások közben keletkező kerekítési hibák miatt.
+ A direkt eljárások alapja az 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:axb"
@@ -2361,19 +2399,11 @@ mi az a sorozatos transzformáció?
 \end_inset
 
 , amíg a megoldás könnyen számolhatóvá válik.
- A direkt módszereknél az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
+ 
+\end_layout
 
- mátrix tulajdonságai gyakran megváltoznak, de a szükséges műveletigény
- akár előre számolható, a lépésszám véges, és a megoldás pontos, leszámítva
- a kerekítési hibákat.
- Az egyetlen feltétel, hogy az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- mátrix nemszinguláris legyen.
- A direkt módszerek műveletigénye nagy mátrixoknál igen nagy lehet.
+\begin_layout Subsubsection*
+A Gauss-féle elimináció
 \end_layout
 
 \begin_layout Subsubsection*
@@ -2412,7 +2442,7 @@ reference "eq:axb"
  egyenletrendszer megoldása az
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{Ly}=\boldsymbol{b}
+\boldsymbol{Ly}=\boldsymbol{b}\label{eq:Lyb}
 \end{equation}
 
 \end_inset
@@ -2420,7 +2450,7 @@ reference "eq:axb"
 és
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{Ux}=\boldsymbol{y}\label{eq:Uxb}
+\boldsymbol{Ux}=\boldsymbol{y}\label{eq:Uxy}
 \end{equation}
 
 \end_inset
@@ -2430,19 +2460,14 @@ háromszög alakú egyenletrendszerek megoldására egyszerűsödik, ahol
 \end_inset
 
  vektor a felbontás egy köztes eredménye.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-hivatkozásokat átnézni 
-\begin_inset Formula $u_{ii}\neq0$
-\end_inset
-
-
-\end_layout
+ Először a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Uxy"
 
 \end_inset
 
+ egyenletrendszert oldjuk meg.
  Legyen 
 \begin_inset Formula $\boldsymbol{U}=[u_{ij}]$
 \end_inset
@@ -2474,7 +2499,7 @@ ahol
  Ahhoz, hogy a 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:Uxb"
+reference "eq:Uxy"
 
 \end_inset
 
@@ -2499,6 +2524,18 @@ reference "thm:Unemszingularis"
 \end_inset
 
 .
+ A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Lyb"
+
+\end_inset
+
+ egyenletrendszer 
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+ ismeretében hasonlóan oldható meg.
 \end_layout
 
 \begin_layout Theorem
@@ -2525,8 +2562,21 @@ Az
  minden főátlójában lévő részmátrixa nemszinguláris.
 \end_layout
 
+\begin_layout Proof
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+
+Ide kell bizonyítás.
+\end_layout
+
 \begin_layout Subsection
-Iteratív módszerek
+Iteratív eljárások
 \end_layout
 
 \begin_layout Standard
@@ -2550,8 +2600,30 @@ Az iteratív megoldási módszereknél az
  sorozat a megoldáshoz konvergál.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A köv fejezetekben két iterácios eljárással foglalkozunk részletesebben,
+ bla bla Broyden kutatásainak eredményeit.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Sajátértékek és sajátvektorok
+\end_layout
+
+\begin_layout Standard
+Fontos jellemzője még az egyenletrendszernek az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix a sajátértékei és sajátvektorai
 \end_layout
 
 \begin_layout Definition*
