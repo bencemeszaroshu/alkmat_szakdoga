@@ -2237,7 +2237,11 @@ alakú egyenletrendszernek, ahol
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
- ismeretlen vektor, 
+ ismeretlen 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű vektor, 
 \series bold
 
 \begin_inset Formula $\boldsymbol{b}$
@@ -2245,7 +2249,16 @@ alakú egyenletrendszernek, ahol
 
 
 \series default
- tetszőleges vektor, az egyik leggyakoribb feladat.
+ tetszőleges 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű vektor, az egyik leggyakoribb feladat.
+ Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix az egyenletrendszer együtthatómátrixa.
  A 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -2253,7 +2266,29 @@ reference "eq:axb"
 
 \end_inset
 
- egyenletrendszer megoldása 
+ egyenletrendszernek akkor és csak akkor létezik megoldása, ha a 
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+ vektor lineárisan kifejezhető az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix oszlopvektoraiból.
+ Vagy másként fogalmazva, a 
+\series bold
+
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+
+\series default
+ vektor és az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix oszlopvektorai nem lineárisan függetlenek.
+ Ekkor az egyenletrendszer megoldása 
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{A}^{-1}\boldsymbol{b}\,.
@@ -2261,37 +2296,46 @@ reference "eq:axb"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 Az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
  mátrix inverzének számolása a gyakorlatban nem célszerű, mert túl műveletigénye
 s.
- A megoldási módszerek két fő osztálya az iteratív és direkt megoldási módszerek.
- Fontos jellemzője még az egyenletrendszernek az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- mátrix a sajátértékei és sajátvektorai.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-A továbbiakban mégis mire számíthat a kedves olvasó? :) 
-\begin_inset Quotes pld
-\end_inset
-
-Fontos szerepet játszanak még az A mátrix sajátértékek és sajátvektorai
- és ezek tulajdonságai.
-\begin_inset Quotes prd
-\end_inset
-
- vagy vmi ilyesmi
+ A megoldási módszerek két fő osztálya az iteratív eljárások és direkt eljárások.
+ Egy megoldási módszer hatékonysága két fő szempont alapján bírálható el:
 \end_layout
 
+\begin_layout Enumerate
+A megoldási módszer mennyire gyors, azaz mennyire műveletigényes?
+\end_layout
+
+\begin_layout Enumerate
+Mennyire pontos a kiszámított megoldás?
+\end_layout
+
+\begin_layout Standard
+A gyakorlatban előforduló együtthatómátrixok általában vagy kitöltöttek
+ és alacsony rendszámúak (pl.
+ a rendszám kisebb mint 30), vagy ritkák és nagy rendszámúak.
+ A direkt eljárások általában előnyösebbek a kis rendszámú kitöltött mátrixoknál
+, míg az iteratív eljárások általában előnyösebbek a nagy rendszámú ritka
+ mátrixoknál.
+ 
+\end_layout
+
+\begin_layout Standard
+Az egyenletrendszer megoldásánál számolnunk kell különböző hibaforrásokkal.
+ Hibaforrás lehet az együtthatómátrix vagy a jobboldali 
+\begin_inset Formula $\boldsymbol{b}$
 \end_inset
 
-
+ vektor elemeinek hibája, a számítások közben keletkező kerekítési hibák,
+ és a megoldási módszer képlethibája.
 \end_layout
 
 \begin_layout Subsection
