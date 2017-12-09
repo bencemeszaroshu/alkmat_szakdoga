@@ -283,6 +283,7 @@ A vektorokat a szakdolgozatban vastag kisbetűvel jelöljük.
 \end_inset
 
 -edik elemét jelöli.
+ Oszlopvektoron vektort, sorvektoron vektor transzponáltat értünk.
  Az 
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
@@ -292,15 +293,58 @@ A vektorokat a szakdolgozatban vastag kisbetűvel jelöljük.
 \end_inset
 
 -vel jelöljük.
- Oszlopvektoron vektort, sorvektoron vektor transzponáltat értünk.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-i és n tisztázása?
 \end_layout
 
+\begin_layout Example*
+Ha 
+\begin_inset Formula $\boldsymbol{x}=\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{array}\right]$
+\end_inset
+
+, akkor 
+\begin_inset Formula $\boldsymbol{x}^{T}=\left[\begin{array}{ccc}
+x_{1} & x_{2} & x_{3}\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Legyenek 
+\begin_inset Formula $\boldsymbol{x}=[x_{i}]$
+\end_inset
+
+, 
+\begin_inset Formula $\boldsymbol{y}=[y_{i}]$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{z}=[z_{i}]$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű vektorok.
+ Legyen 
+\begin_inset Formula $\boldsymbol{z}=\boldsymbol{x}+\boldsymbol{y}$
+\end_inset
+
+.
+ Ekkor 
+\begin_inset Formula $z_{i}=x_{i}+y_{i}\,$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
@@ -328,7 +372,7 @@ Legyen
 \end_inset
 
 -ed rendű valós vektor.
- A belső szorzata vagy skalár szorzata a sorvektor 
+ A belső szorzata vagy más néven skalár szorzata a sorvektor 
 \series bold
 
 \begin_inset Formula $\boldsymbol{x}{}^{T}$
@@ -343,7 +387,7 @@ nek és az oszlopvektor
 -nak
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{x}^{T}\boldsymbol{y}=\sum_{i=1}^{n}x_{i}y_{i}.
+\boldsymbol{x}^{T}\boldsymbol{y}=\sum_{i=1}^{n}x_{i}y_{i}\,.
 \end{equation}
 
 \end_inset
@@ -387,6 +431,20 @@ A valós mátrix azonos rendű valós vektorok egy rendezett halmaza.
 
 \begin_layout Standard
 A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
+ Egy 
+\begin_inset Formula $\ensuremath{m{\times}n}$
+\end_inset
+
+-es mátrixot értelmezhetünk úgy, mint 
+\begin_inset Formula $m$
+\end_inset
+
+ darab sorvektor, vagy mint 
+\begin_inset Formula $n$
+\end_inset
+
+ darab oszlopvektor.
+ Röviden azt mondjuk, hogy a mátrix sorai és oszlopai.
  Az 
 \begin_inset Formula $\boldsymbol{A}=[a_{ij}]$
 \end_inset
@@ -408,11 +466,20 @@ A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
 \end_inset
 
 -edik eleme.
- Ha a mátrix 
+ 
+\end_layout
+
+\begin_layout Example*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}=[a_{ij}]$
+\end_inset
+
+ 
 \begin_inset Formula $\ensuremath{m{\times}n}$
 \end_inset
 
--es, 
+-es mátrix.
+ Ekkor 
 \begin_inset Formula $i=1,2,...,m$
 \end_inset
 
@@ -421,21 +488,39 @@ A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
 \end_inset
 
 .
- Egy 
-\begin_inset Formula $\ensuremath{m{\times}n}$
+\begin_inset Formula 
+\[
+\boldsymbol{A}=\left[\begin{array}{cccc}
+a_{11} & a_{12} & ... & a_{1n}\\
+a_{21} & a_{22} & ... & a_{2n}\\
+\begin{array}{c}
+.\\
+.\\
+.
+\end{array} & \begin{array}{c}
+.\\
+.\\
+.
+\end{array} & \begin{array}{ccc}
+.\\
+ & .\\
+ &  & .
+\end{array} & \begin{array}{c}
+.\\
+.\\
+.
+\end{array}\\
+a_{m1} & a_{m2} & ... & a_{mn}
+\end{array}\right]
+\]
+
 \end_inset
 
--es mátrixot értelmezhetünk, mint 
-\begin_inset Formula $m$
-\end_inset
 
- darab sorvektor, vagy mint 
-\begin_inset Formula $n$
-\end_inset
+\end_layout
 
- darab oszlopvektor.
- Röviden azt mondjuk, hogy a mátrix sorai és oszlopai.
- Az 
+\begin_layout Definition*
+Az 
 \series bold
 
 \begin_inset Formula $\boldsymbol{A}=[a_{ij}]$
@@ -452,14 +537,67 @@ A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
 \end_inset
 
  azaz a mátrix sorainak és oszlopainak felcserélésével kapott mátrix.
- Az 
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}=[a_{ij}]$
+\end_inset
+
+
+\series default
+ mátrix.
+ A mátrix diagonális elemei azok az elemek, ahol 
 \begin_inset Formula $i=j$
 \end_inset
 
- elemek a mátrix diagonális elemei.
- Ha a mátrixnak ugyanannyi sora és oszlopa van, négyzetes mátrixnak nevezzük.
- A négyzetes mátrix rendje az oszlopainak száma.
- A csupa nullából álló mátrixot, vektort 
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Ha a mátrixnak ugyanannyi sora és oszlopa van, négyzetes mátrixnak nevezzük.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+A négyzetes mátrix rendje az oszlopainak száma.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A csupa nullából álló mátrixot vagy vektort 
 \begin_inset Formula $\boldsymbol{0}$
 \end_inset
 
@@ -499,6 +637,47 @@ Az
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyenek 
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}=[a_{ij}]$
+\end_inset
+
+, 
+\begin_inset Formula $\boldsymbol{B}=[b_{ij}]$
+\end_inset
+
+ 
+\series default
+és 
+\begin_inset Formula $\boldsymbol{C}=[c_{ij}]$
+\end_inset
+
+ 
+\begin_inset Formula $\ensuremath{m{\times}n}$
+\end_inset
+
+-es mátrixok.
+ Legyen 
+\begin_inset Formula $\boldsymbol{C}=\boldsymbol{A}+\boldsymbol{B}$
+\end_inset
+
+.
+ Ekkor 
+\begin_inset Formula $c_{ij}=a_{ij}+b_{ij}\,.$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -566,12 +745,12 @@ mátrix és
  vektor mátrix-vektor szorzata és 
 \begin_inset Formula 
 \begin{equation}
-y_{i}=\boldsymbol{a}_{i}^{T}\boldsymbol{x.}
+y_{i}=\boldsymbol{a}_{i}^{T}\boldsymbol{x}\,.
 \end{equation}
 
 \end_inset
 
-A mátrix-vektor szorzás disztributív.
+A mátrix-vektor szorzás az összeadásra nézve disztributív.
 \end_layout
 
 \begin_layout Standard
@@ -641,7 +820,7 @@ Legyen
 -s mátrix, ahol 
 \begin_inset Formula 
 \begin{equation}
-c_{ij}=\boldsymbol{a}_{i}^{T}\boldsymbol{b}_{j.}
+c_{ij}=\boldsymbol{a}_{i}^{T}\boldsymbol{b}_{j}\,.
 \end{equation}
 
 \end_inset
@@ -663,7 +842,7 @@ Az
 \end_inset
 
  mátrix sorainak számával, hogy a megfelelő sorvektorok és oszlopvektorok
- belső szorzatai definiálva legyenek.
+ belső szorzatai jól definiáltak legyenek.
  A mátrixszorzás nem kommutatív, 
 \begin_inset Formula $\boldsymbol{AB}\neq\boldsymbol{BA}$
 \end_inset
@@ -676,7 +855,7 @@ Legyenek
 \begin_inset Formula $\boldsymbol{p}_{i}$
 \end_inset
 
- vektorok, 
+ vektorok és 
 \begin_inset Formula $y_{i}$
 \end_inset
 
@@ -872,6 +1051,82 @@ Mátrixokat is részmátrixokra particionálhatunk.
  Ennek nagy jelentősége, hogy nagy mátrixokat egyszerűbben kezelhetünk.
  A művelettartás a részmátrixokra két particionált mátrix között azonban
  nem feltétlenül definiált.
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\begin_inset Formula $\ensuremath{n{\times}n}$
+\end_inset
+
+-es mátrix.
+ Ha az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix úgy particionált, hogy a részmátrixok a főátlóra szimmetrikusan
+ helyezkednek el, a részmátrixokat főrészmátrixoknak nevezzük.
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{A}=\begin{bmatrix}\boldsymbol{A}_{11} & \boldsymbol{A}_{12}\\
+\boldsymbol{A}_{21} & \boldsymbol{A}_{22}
+\end{bmatrix}\label{eq:foreszmatrixok}
+\end{equation}
+
+\end_inset
+
+Ha a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:foreszmatrixok"
+
+\end_inset
+
+ mátrixnak 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ 
+\begin_inset Formula $\ensuremath{r{\times}r}$
+\end_inset
+
+-es (
+\begin_inset Formula $r<n)$
+\end_inset
+
+ főrészmátrixa, akkor 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix első 
+\begin_inset Formula $r$
+\end_inset
+
+-ed rendű főrészmátrixa.
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+broyden p.17 Def 1.12
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition*
@@ -2563,16 +2818,26 @@ Az
 \end_layout
 
 \begin_layout Proof
-\begin_inset Note Note
-status open
+Particionáljuk 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
 
-\begin_layout Plain Layout
-TODO
-\end_layout
+-t úgy, hogy
+\begin_inset Formula 
+\[
+\boldsymbol{A}=\left[\begin{array}{cc}
+\boldsymbol{A}_{11} & \boldsymbol{A}_{12}\\
+\boldsymbol{A}_{21} & \boldsymbol{A}_{22}
+\end{array}\right],
+\]
 
 \end_inset
 
-Ide kell bizonyítás.
+ahol 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2632,7 +2897,7 @@ Az
  mátrix felosztásának nevezzük.
 \end_layout
 
-\begin_layout Definition*
+\begin_layout Standard
 Legyen az 
 \begin_inset Formula $\boldsymbol{A}=\boldsymbol{P}-\boldsymbol{Q}$
 \end_inset
