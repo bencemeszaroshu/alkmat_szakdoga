@@ -2380,7 +2380,7 @@ Direkt eljárások
 A direkt eljárások mentesek a képlethibától, és a megoldást véges sok lépésben
  állítják elő.
  Elméletben a megoldás pontos, a gyakorlatban azonban ez mégsem teljesül,
- a számítások közben keletkező kerekítési hibák miatt.
+ a lépések közben keletkező kerekítési hibák miatt.
  A direkt eljárások alapja az 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -2481,7 +2481,7 @@ reference "eq:Uxy"
 \end_inset
 
  (
-\begin_inset Formula $i=1,2,...,n)$
+\begin_inset Formula $i,j=1,2,...,n)$
 \end_inset
 
  ekkor
@@ -2507,7 +2507,7 @@ reference "eq:Uxy"
 \begin_inset Formula $\boldsymbol{y}$
 \end_inset
 
--ra legyen megoldása, feltételezzük, hogy 
+ vektorra legyen megoldása, feltételezzük, hogy 
 \begin_inset Formula $\boldsymbol{U}$
 \end_inset
 
@@ -2535,7 +2535,7 @@ reference "eq:Lyb"
 \begin_inset Formula $\boldsymbol{y}$
 \end_inset
 
- ismeretében hasonlóan oldható meg.
+ vektor ismeretében hasonlóan oldható meg.
 \end_layout
 
 \begin_layout Theorem
@@ -2580,11 +2580,18 @@ Iteratív eljárások
 \end_layout
 
 \begin_layout Standard
-Az iteratív megoldási módszereknél az 
+Az iteratív megoldási módszereknél a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:axb"
+
+\end_inset
+
+ egyenletrendszer 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix lényegében változatlan marad és közelítő 
+ mátrixa lényegében változatlan marad és közelítő 
 \begin_inset Formula $\boldsymbol{x}_{i}$
 \end_inset
 
@@ -2598,6 +2605,308 @@ Az iteratív megoldási módszereknél az
 \end_inset
 
  sorozat a megoldáshoz konvergál.
+ 
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixot 
+\series bold
+
+\begin_inset Formula $\boldsymbol{P-Q}$
+\end_inset
+
+
+\series default
+ alakban kifejezve, ahol 
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+ nemszinguláris, az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix felosztásának nevezzük.
+\end_layout
+
+\begin_layout Definition*
+Legyen az 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{P}-\boldsymbol{Q}$
+\end_inset
+
+ olyan felosztás, hogy a 
+\begin_inset Formula $\boldsymbol{Py}=\boldsymbol{c}$
+\end_inset
+
+ egyenletrendszer egyszerűen megoldható.
+ Írjuk a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:axb"
+
+\end_inset
+
+ egyenletrendszert
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{Px}=\boldsymbol{b}+\boldsymbol{Qx}\label{eq:Px=b+Qx}
+\end{equation}
+
+\end_inset
+
+alakban.
+ Az 
+\series bold
+
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+
+\series default
+ vektort úgy próbáljuk meghatározni, hogy egy tetszőleges 
+\begin_inset Formula $\boldsymbol{x}_{0}$
+\end_inset
+
+ becslésből kiindulva egy 
+\begin_inset Formula $\{\boldsymbol{x}_{i}\}$
+\end_inset
+
+ sorozatot generálunk, a
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{P}\boldsymbol{x}_{i+1}=\boldsymbol{b}+\boldsymbol{Q}\boldsymbol{x}_{i}\label{eq:it_xi+1}
+\end{equation}
+
+\end_inset
+
+egyenletrendszer sorozatos megoldásával.
+\end_layout
+
+\begin_layout Theorem
+A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:it_xi+1"
+
+\end_inset
+
+ egyenletrendszerből képzett 
+\begin_inset Formula $\{\boldsymbol{x}_{i}\}$
+\end_inset
+
+ sorozat a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:axb"
+
+\end_inset
+
+ egyenletrendszer megoldásához konvergál, ha 
+\begin_inset Formula $\left\Vert \boldsymbol{P}^{-1}\boldsymbol{Q}\right\Vert <1$
+\end_inset
+
+, tetszőleges normával.
+\end_layout
+
+\begin_layout Proof
+Legyen a hibavektor 
+\begin_inset Formula $\boldsymbol{e}_{i}=\boldsymbol{x}_{i}-\boldsymbol{x}$
+\end_inset
+
+, ahol 
+\begin_inset Formula $\boldsymbol{x}=\boldsymbol{A}^{-1}\boldsymbol{b}$
+\end_inset
+
+, a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:axb"
+
+\end_inset
+
+ egyenletrendszer megoldása.
+ A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Px=b+Qx"
+
+\end_inset
+
+ összefüggést kivonva a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:it_xi+1"
+
+\end_inset
+
+ összefüggésből és balról 
+\begin_inset Formula $\boldsymbol{P}^{-1}$
+\end_inset
+
+-el szorozva kapjuk, hogy 
+\begin_inset Formula $\boldsymbol{e}_{i+1}=\boldsymbol{P}^{-1}\boldsymbol{Q}\boldsymbol{e}_{i}\,$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Legyen 
+\begin_inset Formula $\left\Vert \boldsymbol{P}^{-1}\boldsymbol{Q}\right\Vert =\alpha$
+\end_inset
+
+, ekkor 
+\begin_inset Formula $\left\Vert \boldsymbol{e}_{i+1}\right\Vert \leq\alpha\left\Vert \boldsymbol{e}_{i}\right\Vert $
+\end_inset
+
+, és ebből következik, hogy 
+\begin_inset Formula $\left\Vert \boldsymbol{e}_{i}\right\Vert \leq\alpha^{i}\left\Vert \boldsymbol{e}_{0}\right\Vert $
+\end_inset
+
+.
+ Tehát ha 
+\begin_inset Formula $\alpha<1$
+\end_inset
+
+, elég nagy 
+\begin_inset Formula $i$
+\end_inset
+
+-re 
+\begin_inset Formula $\left\Vert \boldsymbol{e}_{i}\right\Vert $
+\end_inset
+
+ tetszőlegesen kicsi.
+ Azaz 
+\begin_inset Formula $\lim_{i\rightarrow\infty}\boldsymbol{x}_{i}=\boldsymbol{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A fentiekben feltételeztük, hogy az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix felosztása, a 
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+ és a 
+\begin_inset Formula $\boldsymbol{Q}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $i$
+\end_inset
+
+-től függetlenek.
+\end_layout
+
+\begin_layout Definition*
+Az iterációs eljárást stacionáriusnak nevezzük, ha az iterációs felosztás
+ nem függ 
+\begin_inset Formula $i$
+\end_inset
+
+-től
+\end_layout
+
+\begin_layout Standard
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ nemszinguláris mátrix és legyen 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{D}-\boldsymbol{L}-\boldsymbol{U}$
+\end_inset
+
+, ahol 
+\begin_inset Formula $\boldsymbol{D}$
+\end_inset
+
+ diagonális mátrix, 
+\begin_inset Formula $\boldsymbol{L}$
+\end_inset
+
+ alsó háromszögmátrix és 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ felső háromszögmátrix.
+ Néhány példa stacionárius iterációs eljárásokra:
+\end_layout
+
+\begin_layout Itemize
+Jacobi-iteráció: 
+\begin_inset Formula $\boldsymbol{P}=\boldsymbol{D}$
+\end_inset
+
+,
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\begin_inset Formula $\boldsymbol{Q}=\boldsymbol{L}+\boldsymbol{U}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+Gauss-Seidel eljárás: 
+\begin_inset Formula $\boldsymbol{P}=\boldsymbol{D}-\boldsymbol{L}$
+\end_inset
+
+,
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\begin_inset Formula $\boldsymbol{Q}=\boldsymbol{U}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+felső relaxációs eljárás: 
+\begin_inset Formula $\boldsymbol{P}=\omega^{-1}\boldsymbol{D}-\boldsymbol{L}$
+\end_inset
+
+,
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\begin_inset Formula $\boldsymbol{Q}=\boldsymbol{U}+(\omega^{-1}-1)\boldsymbol{D}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A felső relaxációs eljárással külön fejezetben részletesen foglalkozunk.
+ Az 
+\begin_inset Formula $\omega$
+\end_inset
+
+ skalárral a konvergenciát gyorsítjuk.
+ Ez általában azt jelenti, hogy 
+\begin_inset Formula $1\leq\omega<2$
+\end_inset
+
+.
+ Ha 
+\begin_inset Formula $\omega=1$
+\end_inset
+
+ a módszer pontosan a Gauss-Seidel eljárás.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2704,7 +3013,7 @@ Legyen
  vektor, ami mellett 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{y}^{T}(\boldsymbol{A}-\lambda\boldsymbol{I})=\boldsymbol{0}^{T},\label{eq:balsajatv}
+\boldsymbol{y}^{T}(\boldsymbol{A}-\lambda\boldsymbol{I})=\boldsymbol{0},\label{eq:balsajatv}
 \end{equation}
 
 \end_inset
