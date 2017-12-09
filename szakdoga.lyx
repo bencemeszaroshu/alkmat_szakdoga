@@ -1418,7 +1418,7 @@ A lineáris függetlenség alapvető fogalom nem csak a mátrix algebrában.
 
 \begin_layout Definition*
 Az 
-\begin_inset Formula $\boldsymbol{a}_{i}$
+\begin_inset Formula $\boldsymbol{a}_{i}\,$
 \end_inset
 
 , 
@@ -1592,21 +1592,16 @@ Ha az
  mátrix sorait felcseréljük.
 \end_layout
 
-\begin_layout Standard
-A következő tételeket csak kimondjuk és hivatkozunk a bizonyításukra.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ezzel a köv tételeket csak kimondjuk a bizonyítást lásd stílussal nem feltétlen
- szimpatizálok.
- MÉG ITT ÁT KELL ÍRNI!!
-\end_layout
-
+\begin_layout Definition*
+A lineárisan független 
+\begin_inset Formula $n$
 \end_inset
 
+-ed rendű vektorok halmazát, amelyből lineáris kombinációként bármely 
+\begin_inset Formula $n$
+\end_inset
 
+-ed rendű vektor kifejezhető, bázisnak nevezzük.
 \end_layout
 
 \begin_layout Theorem
@@ -1621,11 +1616,22 @@ Az
 -ed rendű vektor lineárisan összefüggő.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
+\noindent
+Ide kell biz.
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
 \noindent
 A bizonyítást lásd, C.G.
  Broyden - Basic Matrices, Theorem 2.2, 29.
  oldal.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1649,51 +1655,27 @@ Legyen
  vektorok egyértelmű lineáris kombinációjaként.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
+\noindent
+Ide kell biz.
+ 
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
 \noindent
 A bizonyítást lásd, C.G.
  Broyden - Basic Matrices, Lemma 2.2, 30.
  oldal.
-\begin_inset Separator plain
-\end_inset
-
-
 \end_layout
 
-\begin_layout Theorem
-Legyen 
-\begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- tetszőleges mátrix.
- Mindig létezik olyan négyzetes 
-\begin_inset Formula $\boldsymbol{G}$
-\end_inset
 
- és 
-\begin_inset Formula $\boldsymbol{H}$
-\end_inset
-
- mátrix, hogy a 
-\begin_inset Formula $\boldsymbol{G}$
-\end_inset
-
- mátrix oszlopai és a 
-\begin_inset Formula $\boldsymbol{H}$
-\end_inset
-
- mátrix sorai lineárisan függetlenek, és 
-\begin_inset Formula $\boldsymbol{A}=\boldsymbol{GH}$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
 \noindent
-A bizonyítást lásd C.G.
- Broyden - Basic Matrices, Theorem 7.1, 124.
- oldal.
 \begin_inset Separator plain
 \end_inset
 
@@ -1713,39 +1695,11 @@ Az
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition*
-A lineárisan független 
-\begin_inset Formula $n$
-\end_inset
-
--ed rendű vektorok halmazát, amelyből bármely 
-\begin_inset Formula $n$
-\end_inset
-
--ed rendű vektor kifejezhető, bázisnak nevezzük.
-\end_layout
-
 \begin_layout Subsection
 Nemszinguláris mátrixok
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Tételeket át kell írni, nézni!
-\end_layout
-
-\end_inset
-
 Definiáljuk a nemszinguláris mátrixot.
  Ehhez megvizsgáljuk a mátrix oszlopainak illetve sorainak lineáris függőségét,
  definiáljuk a mátrix inverzét, és megvizsgáljuk a lineáris függőség és
@@ -1920,6 +1874,21 @@ Ha egy négyzetes mátrixnak vannak lineárisan független oszlopai, akkor jobbo
 i inverze egyértelmű.
 \end_layout
 
+\begin_layout Proof
+Ide kell biz.
+ 
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Broyden p.31 theorem 2.4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1930,6 +1899,21 @@ i inverze egyértelmű.
 \begin_layout Theorem
 Ha egy négyzetes mátrixnak létezik egyértelmű jobboldali inverze, akkor
  az megegyezik a baloldali inverzével.
+\end_layout
+
+\begin_layout Proof
+Ide kell biz.
+ 
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Broyden p.31 theorem 2.5
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2068,50 +2052,19 @@ name "thm:Unemszingularis"
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
+\begin_layout Proof
+Ide kell biz.
+ 
+\begin_inset Note Comment
+status open
 
-
+\begin_layout Plain Layout
+Broyden p.34 theorem 2.6
 \end_layout
 
-\begin_layout Theorem
-Legyen 
-\begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- négyzetes mátrix, ahol
-\begin_inset Formula 
-\[
-\boldsymbol{A}=\begin{bmatrix}\boldsymbol{A}_{11} & \boldsymbol{A}_{12}\\
-\boldsymbol{0} & \boldsymbol{A}_{22}
-\end{bmatrix},
-\]
 
-\end_inset
-
- és 
-\begin_inset Formula $\boldsymbol{A}_{11}$
-\end_inset
-
- és 
-\begin_inset Formula $\boldsymbol{A}_{22}$
-\end_inset
-
- is négyzetes mátrixok.
- Ekkor 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- akkor és csak akkor nemszinguláris, ha 
-\begin_inset Formula $\boldsymbol{A}_{11}$
-\end_inset
-
- és 
-\begin_inset Formula $\boldsymbol{A}_{22}$
-\end_inset
-
- nemszinguláris.
 \end_layout
 
 \begin_layout Standard
@@ -2158,6 +2111,21 @@ Ha az
 \end_inset
 
  pozitív definit.
+\end_layout
+
+\begin_layout Proof
+Ide kell biz.
+ 
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Broyden p.34 lemma 2.5
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
