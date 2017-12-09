@@ -1704,18 +1704,6 @@ Definiáljuk a nemszinguláris mátrixot.
  Ehhez megvizsgáljuk a mátrix oszlopainak illetve sorainak lineáris függőségét,
  definiáljuk a mátrix inverzét, és megvizsgáljuk a lineáris függőség és
  a mátrix inverze közötti kapcsolatot.
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-Tanár úr itt kifogásolta, hogy a mátix méreteket hanyagolom, de Broyden
- se ír méretekről.
- Rá kell majd kérdezni!
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Theorem
@@ -1774,16 +1762,20 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix.
+ négyzetes mátrix.
  Ha létezik olyan 
 \begin_inset Formula $\boldsymbol{X}$
 \end_inset
 
  mátrix, hogy 
-\begin_inset Formula $\boldsymbol{AX}=\boldsymbol{I}$
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{AX}=\boldsymbol{I},
+\end{equation}
+
 \end_inset
 
-, akkor 
+akkor 
 \series bold
 
 \begin_inset Formula $\boldsymbol{X}$
@@ -1801,10 +1793,14 @@ Legyen
 \end_inset
 
  mátrix, hogy 
-\begin_inset Formula $\boldsymbol{YA}=\boldsymbol{I}$
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{YA}=\boldsymbol{I},
+\end{equation}
+
 \end_inset
 
-, akkor 
+akkor 
 \series bold
 
 \begin_inset Formula $\boldsymbol{Y}$
@@ -1831,16 +1827,20 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix.
+ négyzetes mátrix.
  Ha létezik olyan 
 \begin_inset Formula $\boldsymbol{X}$
 \end_inset
 
  mátrix, hogy 
-\begin_inset Formula $\boldsymbol{AX}=\boldsymbol{X}\boldsymbol{A}=\boldsymbol{I}$
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{AX}=\boldsymbol{X}\boldsymbol{A}=\boldsymbol{I},
+\end{equation}
+
 \end_inset
 
-, akkor 
+akkor 
 \series bold
 
 \begin_inset Formula $\boldsymbol{X}$
@@ -2060,6 +2060,120 @@ status open
 
 \begin_layout Plain Layout
 Broyden p.34 theorem 2.6
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Négyzetes mátrixok szorzata akkor és csak akkor nemszinguláris, ha a szorzat
+ minden tényezője nemszinguláris.
+\end_layout
+
+\begin_layout Proof
+Legyenek 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+, 
+\begin_inset Formula $\boldsymbol{B}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{C}$
+\end_inset
+
+ négyzetes mátrixok.
+ Legyen 
+\begin_inset Formula $\boldsymbol{C}=\boldsymbol{AB}$
+\end_inset
+
+.
+ Tegyük fel, hogy 
+\begin_inset Formula $\boldsymbol{B}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{C}$
+\end_inset
+
+ mátrixok nemszingulárisak, de 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix szinguláris.
+ Mivel 
+\begin_inset Formula $\boldsymbol{C}$
+\end_inset
+
+ nemszinguláris, létezik inverze, és 
+\begin_inset Formula $\boldsymbol{C}\boldsymbol{C}^{-1}=\boldsymbol{I}$
+\end_inset
+
+.
+ Ebből következik, hogy 
+\begin_inset Formula $(\boldsymbol{AB})\boldsymbol{C}^{-1}=\boldsymbol{I}.$
+\end_inset
+
+ De ez csak akkor lehetséges, ha 
+\begin_inset Formula $\boldsymbol{C}^{-1}=\boldsymbol{B}^{-1}\boldsymbol{A}^{-1}$
+\end_inset
+
+, amivel ellentmondáshoz jutottunk.
+ 
+\end_layout
+
+\begin_layout Theorem
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ négyzetes mátrix, és legyen
+\begin_inset Formula 
+\[
+\boldsymbol{A}=\left[\begin{array}{cc}
+\boldsymbol{A}_{11} & \boldsymbol{A}_{12}\\
+\boldsymbol{0} & \boldsymbol{A}_{22}
+\end{array}\right],
+\]
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{A}_{22}$
+\end_inset
+
+ részmátrixok is négyzetes mátrixok.
+ Ekkor az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix akkor és csak akkor nemszinguláris, ha 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{A}_{22}$
+\end_inset
+
+ részmátrixok nemszingulárisak.
+\end_layout
+
+\begin_layout Proof
+Ide kell biz.
+ 
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Broyden p.33.
+ lemma 2.4
 \end_layout
 
 \end_inset
