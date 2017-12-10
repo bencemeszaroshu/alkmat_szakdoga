@@ -1239,7 +1239,8 @@ Legyen
 \begin_inset Formula $\ensuremath{n{\times}n}$
 \end_inset
 
--es mátrix és legyen 
+-es mátrix.
+ Legyen 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -1320,10 +1321,15 @@ Az
 \end_inset
 
  mátrix elsőrendű felső főrészmátrixa 
-\begin_inset Formula $\left[a_{11}\right],$
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+a_{11}\end{array}\right],
+\]
+
 \end_inset
 
- a másodrendű felső főrészmátrixa 
+a másodrendű felső főrészmátrixa 
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
