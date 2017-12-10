@@ -1054,82 +1054,6 @@ Mátrixokat is részmátrixokra particionálhatunk.
 \end_layout
 
 \begin_layout Definition*
-Legyen 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- 
-\begin_inset Formula $\ensuremath{n{\times}n}$
-\end_inset
-
--es mátrix.
- Ha az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- mátrix úgy particionált, hogy a részmátrixok a főátlóra szimmetrikusan
- helyezkednek el, a részmátrixokat főrészmátrixoknak nevezzük.
-\begin_inset Formula 
-\begin{equation}
-\boldsymbol{A}=\begin{bmatrix}\boldsymbol{A}_{11} & \boldsymbol{A}_{12}\\
-\boldsymbol{A}_{21} & \boldsymbol{A}_{22}
-\end{bmatrix}\label{eq:foreszmatrixok}
-\end{equation}
-
-\end_inset
-
-Ha a 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:foreszmatrixok"
-
-\end_inset
-
- mátrixnak 
-\begin_inset Formula $\boldsymbol{A}_{11}$
-\end_inset
-
- 
-\begin_inset Formula $\ensuremath{r{\times}r}$
-\end_inset
-
--es (
-\begin_inset Formula $r<n)$
-\end_inset
-
- főrészmátrixa, akkor 
-\begin_inset Formula $\boldsymbol{A}_{11}$
-\end_inset
-
- az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- mátrix első 
-\begin_inset Formula $r$
-\end_inset
-
--ed rendű főrészmátrixa.
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-broyden p.17 Def 1.12
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition*
 Mátrixok egy halmaza egy művelet szerint jól particionált, ha a mátrixok
  részmátrixai között a művelet jól definiált.
 \end_layout
@@ -1262,6 +1186,155 @@ Az összeadás szerint
 \end_inset
 
 
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\begin_inset Formula $\ensuremath{n{\times}n}$
+\end_inset
+
+-es mátrix.
+ Legyen 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix egy particionálásának részmátrixa.
+ Ha az 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ részmátrix elemei az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix főátlójára szimmetrikusan helyezkednek el, az 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ részmátrixot főrészmátrixnak nevezzük.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\begin_inset Formula $\ensuremath{n{\times}n}$
+\end_inset
+
+-es mátrix és legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ egy particionálása
+\begin_inset Formula 
+\[
+\boldsymbol{A}=\left[\begin{array}{cc}
+\boldsymbol{A}_{11} & \boldsymbol{A}_{12}\\
+\boldsymbol{A}_{21} & \boldsymbol{A}_{22}
+\end{array}\right],
+\]
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ 
+\begin_inset Formula $\ensuremath{r{\times}r}$
+\end_inset
+
+-es (
+\begin_inset Formula $r<n)$
+\end_inset
+
+ főrészmátrix.
+ Ekkor 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $r$
+\end_inset
+
+-ed rendű felső főrészmátrixa.
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+broyden p.17 Def 1.12
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Ezt majd a tanár úrral tisztázni kell, hogy van ez jelen a magyar irodalomban
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Legyen
+\begin_inset Formula 
+\[
+\boldsymbol{A}=\left[\begin{array}{ccc}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{array}\right].
+\]
+
+\end_inset
+
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix elsőrendű felső főrészmátrixa 
+\begin_inset Formula $\left[a_{11}\right],$
+\end_inset
+
+ a másodrendű felső főrészmátrixa 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+a_{11} & a_{12}\\
+a_{21} & a_{22}
+\end{array}\right],
+\]
+
+\end_inset
+
+és a harmadrendű felső főrészmátrixa önmaga.
 \end_layout
 
 \begin_layout Standard
@@ -3360,7 +3433,7 @@ Legyen
  vektor, ami mellett 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{y}^{T}(\boldsymbol{A}-\lambda\boldsymbol{I})=\boldsymbol{0},\label{eq:balsajatv}
+\boldsymbol{y}^{T}(\boldsymbol{A}-\lambda\boldsymbol{I})=\boldsymbol{0}^{T},\label{eq:balsajatv}
 \end{equation}
 
 \end_inset
