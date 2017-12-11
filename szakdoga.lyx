@@ -261,7 +261,19 @@ Vektorok és mátrixok
 
 \begin_layout Definition*
 A valós vektor a valós számok egy rendezett halmaza.
- A vektor elemeinek a száma a vektor rendje, vagy más szóval a vektor dimenziója.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Egy vektor elemeinek a száma a vektor rendje, vagy más szóval a vektor dimenziój
+a.
 \end_layout
 
 \begin_layout Standard
@@ -819,7 +831,7 @@ Legyen
 -s mátrix, ahol 
 \begin_inset Formula 
 \begin{equation}
-c_{ij}=\boldsymbol{a}_{i}^{T}\boldsymbol{b}_{j}\,.
+c_{ij}=\boldsymbol{a}_{i}^{T}\boldsymbol{b}_{j}\,.\label{eq:matrixszorzat}
 \end{equation}
 
 \end_inset
@@ -828,15 +840,15 @@ c_{ij}=\boldsymbol{a}_{i}^{T}\boldsymbol{b}_{j}\,.
 \end_layout
 
 \begin_layout Standard
-Azaz 
+Azaz képezzük az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix sorait szorozzuk a 
+ mátrix sorainak és a 
 \begin_inset Formula $\boldsymbol{B}$
 \end_inset
 
- mátrix oszlopaival.
+ mátrix oszlopainak belső szorozatát.
  Az 
 \begin_inset Formula $\boldsymbol{AB}$
 \end_inset
@@ -1109,20 +1121,14 @@ A szorzás szerint
 \begin_inset Formula $\boldsymbol{F}_{1}$
 \end_inset
 
- nem jól particionáltak, mert
-\end_layout
-
-\begin_layout Example*
-\begin_inset Formula 
-\[
-\boldsymbol{E}_{1}\boldsymbol{F}_{1}\neq\begin{bmatrix}\boldsymbol{AJ}+\boldsymbol{BL} & \boldsymbol{AK}+\boldsymbol{BM}\\
-\boldsymbol{CJ}+\boldsymbol{DL} & \boldsymbol{CK}+\boldsymbol{DM}
-\end{bmatrix}.
-\]
+ nem jól particionáltak, mert a megfelelő részmátrixok szorzata 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:matrixszorzat"
 
 \end_inset
 
-
+ szerint nem képezhető.
 \end_layout
 
 \begin_layout Standard
@@ -1166,12 +1172,25 @@ j_{31} & k_{31} & k_{32} & k_{33}\\
 
 \end_inset
 
+A szorzés eredménye
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula 
+\[
+\boldsymbol{E}_{1}\boldsymbol{F}_{1}=\begin{bmatrix}\boldsymbol{AJ}+\boldsymbol{BL} & \boldsymbol{AK}+\boldsymbol{BM}\\
+\boldsymbol{CJ}+\boldsymbol{DL} & \boldsymbol{CK}+\boldsymbol{DM}
+\end{bmatrix}.
+\]
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Example*
 \noindent
-Az összeadás szerint 
+Azonban az összeadás szerint 
 \begin_inset Formula $\boldsymbol{E}_{2}$
 \end_inset
 
@@ -1179,20 +1198,7 @@ Az összeadás szerint
 \begin_inset Formula $\boldsymbol{F}_{2}$
 \end_inset
 
- nem jól particionáltak, mert
-\end_layout
-
-\begin_layout Example*
-\begin_inset Formula 
-\[
-\boldsymbol{E}_{2}+\boldsymbol{F}_{2}\neq\begin{bmatrix}\boldsymbol{A}+\boldsymbol{J} & \boldsymbol{K}+\boldsymbol{B}\\
-\boldsymbol{C}+\boldsymbol{L} & \boldsymbol{D}+\boldsymbol{M}
-\end{bmatrix}.
-\]
-
-\end_inset
-
-
+ nem jól particionáltak, mert a megfelelő részmátrixok összege nem képezhető.
 \end_layout
 
 \begin_layout Definition*
