@@ -689,6 +689,15 @@ Legyenek
 
 \begin_layout Definition*
 Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\begin_inset Formula $\ensuremath{m{\times}n}$
+\end_inset
+
+-es mátrix.
+ Legyen 
 \begin_inset Formula $\boldsymbol{x}=[x_{i}]$
 \end_inset
 
@@ -704,15 +713,7 @@ Legyen
 \begin_inset Formula $m$
 \end_inset
 
--ed rendű vektor, és 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- 
-\begin_inset Formula $\ensuremath{m{\times}n}$
-\end_inset
-
--es mátrix.
+-ed rendű vektor.
  Jelöle 
 \begin_inset Formula $\boldsymbol{a}_{i}^{T}$
 \end_inset
@@ -727,10 +728,6 @@ Legyen
 
 -edik sorát.
  Az 
-\begin_inset Formula $\boldsymbol{y}=\boldsymbol{Ax}$
-\end_inset
-
- az 
 \series bold
 
 \begin_inset Formula $\boldsymbol{A}$
@@ -742,7 +739,11 @@ mátrix és
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
- vektor mátrix-vektor szorzata és 
+ vektor mátrix-vektor szorzata 
+\begin_inset Formula $\boldsymbol{y}=\boldsymbol{Ax}$
+\end_inset
+
+ és 
 \begin_inset Formula 
 \begin{equation}
 y_{i}=\boldsymbol{a}_{i}^{T}\boldsymbol{x}\,.
@@ -769,8 +770,7 @@ Legyen
 \begin_inset Formula $\ensuremath{m{\times}n}$
 \end_inset
 
--es mátrix.
- Jelöle 
+-es mátrix és jelöle 
 \begin_inset Formula $\boldsymbol{a}_{i}^{T}$
 \end_inset
 
@@ -791,8 +791,7 @@ Legyen
 \begin_inset Formula $\ensuremath{n{\times}p}$
 \end_inset
 
--s mátrix.
- Jelöle 
+-s mátrix és jelöle 
 \begin_inset Formula $\boldsymbol{b}_{j}$
 \end_inset
 
@@ -829,11 +828,20 @@ c_{ij}=\boldsymbol{a}_{i}^{T}\boldsymbol{b}_{j}\,.
 \end_layout
 
 \begin_layout Standard
-Az 
+Azaz 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix sorait szorozzuk a 
+\begin_inset Formula $\boldsymbol{B}$
+\end_inset
+
+ mátrix oszlopaival.
+ Az 
 \begin_inset Formula $\boldsymbol{AB}$
 \end_inset
 
- esetén az 
+ mátrixszorzat esetén az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -970,7 +978,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{x}_{2}^{T}=[x_{r+1},x_{r+2},...,x_{n}]$
 \end_inset
 
- és
+ és 
 \begin_inset Formula $1\leq r<n$
 \end_inset
 
@@ -1011,8 +1019,7 @@ Legyenek
 \begin_inset Formula $\boldsymbol{u}=\boldsymbol{x}+\boldsymbol{y}$
 \end_inset
 
-.
- Ha 
+.Ha 
 \begin_inset Formula $\boldsymbol{x}_{1}=[x_{1},x_{2},...,x_{r}]$
 \end_inset
 
