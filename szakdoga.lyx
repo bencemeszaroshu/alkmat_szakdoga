@@ -438,6 +438,42 @@ Az
 \end_layout
 
 \begin_layout Definition*
+Legyenek 
+\begin_inset Formula $\boldsymbol{p}_{i}$
+\end_inset
+
+ vektorok és 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ skalárok, 
+\begin_inset Formula $i=1,2,...,n$
+\end_inset
+
+.
+ A 
+\begin_inset Formula 
+\begin{equation}
+\sum_{i=1}^{n}\boldsymbol{p}_{i}y_{i}
+\end{equation}
+
+\end_inset
+
+ vektor a 
+\begin_inset Formula $\boldsymbol{p}_{i}$
+\end_inset
+
+ vektorok lineáris kombinációja.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
 A valós mátrix azonos rendű valós vektorok egy rendezett halmaza.
 \end_layout
 
@@ -478,7 +514,15 @@ A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
 \end_inset
 
 -edik eleme.
- 
+ A csupa nullából álló mátrixot vagy vektort 
+\begin_inset Formula $\boldsymbol{0}$
+\end_inset
+
+-val jelöljük.
+ Egy mátrixra akkor mondjuk, hogy ritka, ha viszonylag kevés nullától különböző
+ eleme van.
+ Egy mátrixra akkor mondjuk, hogy kitöltött, ha viszonylag kevés nulla eleme
+ van
 \end_layout
 
 \begin_layout Example*
@@ -532,6 +576,30 @@ a_{m1} & a_{m2} & ... & a_{mn}
 \end_layout
 
 \begin_layout Definition*
+Ha a mátrixnak ugyanannyi sora és oszlopa van, négyzetes mátrixnak nevezzük.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+A négyzetes mátrix rendje az oszlopainak száma.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
 Az 
 \series bold
 
@@ -550,6 +618,34 @@ Az
 
  azaz a mátrix sorainak és oszlopainak felcserélésével kapott mátrix.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix szimmetrikus, ha 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{A}^{T}$
+\end_inset
+
+.
+ Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix antiszimmetrikus, ha 
+\begin_inset Formula $\boldsymbol{A}=-\boldsymbol{A}^{T}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -585,70 +681,63 @@ Legyen
 \end_layout
 
 \begin_layout Definition*
-Ha a mátrixnak ugyanannyi sora és oszlopa van, négyzetes mátrixnak nevezzük.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition*
-A négyzetes mátrix rendje az oszlopainak száma.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-A csupa nullából álló mátrixot vagy vektort 
-\begin_inset Formula $\boldsymbol{0}$
-\end_inset
-
--val jelöljük.
- Egy mátrixra akkor mondjuk, hogy ritka, ha viszonylag kevés nullától különböző
- eleme van.
- Egy mátrixra akkor mondjuk, hogy kitöltött, ha viszonylag kevés nulla eleme
- van.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Ezeket itt szétbontani definiciokra? (transzponált, rend pl..)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition*
 Az 
-\begin_inset Formula $\boldsymbol{A}$
+\begin_inset Formula $\ensuremath{n{\times}n}$
 \end_inset
 
- mátrix szimmetrikus, ha 
-\begin_inset Formula $\boldsymbol{A}=\boldsymbol{A}^{T}$
+-es 
+\begin_inset Formula $\boldsymbol{D}=[d_{ij}]$
 \end_inset
 
-.
- Az 
-\begin_inset Formula $\boldsymbol{A}$
+ mátrix diagonális, ha 
+\begin_inset Formula $d_{ij}=0$
 \end_inset
 
- mátrix antiszimmetrikus, ha 
-\begin_inset Formula $\boldsymbol{A}=-\boldsymbol{A}^{T}$
+ minden 
+\begin_inset Formula $i\neq j$
 \end_inset
 
-.
+ indexre.
+ A diagonális mátrixot 
+\begin_inset Formula $diag(d_{i})$
+\end_inset
+
+-vel jelöljük, ahol 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+ az 
+\begin_inset Formula $i$
+\end_inset
+
+-edik diagonális elem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+A 
+\begin_inset Formula $diag(d_{i})$
+\end_inset
+
+ mátrixot, ahol 
+\begin_inset Formula $d_{i}=1$
+\end_inset
+
+ minden 
+\begin_inset Formula $i$
+\end_inset
+
+-re, egységmátrixnak nevezzük, és 
+\begin_inset Formula $\boldsymbol{I}$
+\end_inset
+
+-vel jelöljük.
 \end_layout
 
 \begin_layout Standard
@@ -871,109 +960,6 @@ Azaz képezzük az
 \end_layout
 
 \begin_layout Definition*
-Legyenek 
-\begin_inset Formula $\boldsymbol{p}_{i}$
-\end_inset
-
- vektorok és 
-\begin_inset Formula $y_{i}$
-\end_inset
-
- skalárok, 
-\begin_inset Formula $i=1,2,...,n$
-\end_inset
-
-.
- A 
-\begin_inset Formula 
-\begin{equation}
-\sum_{i=1}^{n}\boldsymbol{p}_{i}y_{i}
-\end{equation}
-
-\end_inset
-
- vektor a 
-\begin_inset Formula $\boldsymbol{p}_{i}$
-\end_inset
-
- vektorok lineáris kombinációja.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition*
-Az 
-\begin_inset Formula $\ensuremath{n{\times}n}$
-\end_inset
-
--es 
-\begin_inset Formula $\boldsymbol{D}=[d_{ij}]$
-\end_inset
-
- mátrix diagonális, ha 
-\begin_inset Formula $d_{ij}=0$
-\end_inset
-
- minden 
-\begin_inset Formula $i\neq j$
-\end_inset
-
- indexre.
- A diagonális mátrixot 
-\begin_inset Formula $diag(d_{i})$
-\end_inset
-
--vel jelöljük, ahol 
-\begin_inset Formula $d_{i}$
-\end_inset
-
- az 
-\begin_inset Formula $i$
-\end_inset
-
--edik diagonális elem.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition*
-A 
-\begin_inset Formula $diag(d_{i})$
-\end_inset
-
- mátrixot, ahol 
-\begin_inset Formula $d_{i}=1$
-\end_inset
-
- minden 
-\begin_inset Formula $i$
-\end_inset
-
--re egységmátrixnak nevezzük, és 
-\begin_inset Formula $\boldsymbol{I}$
-\end_inset
-
--vel jelöljük.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition*
 Legyen 
 \begin_inset Formula $\boldsymbol{x}^{T}=[\boldsymbol{x}_{1}^{T}\;\boldsymbol{x}_{2}^{T}]$
 \end_inset
@@ -1069,7 +1055,7 @@ Legyenek
 Mátrixokat is részmátrixokra particionálhatunk.
  Ennek nagy jelentősége, hogy nagy mátrixokat egyszerűbben kezelhetünk.
  A művelettartás a részmátrixokra két particionált mátrix között azonban
- nem feltétlenül definiált.
+ nem feltétlen jól definiált.
 \end_layout
 
 \begin_layout Definition*
@@ -1289,11 +1275,11 @@ ahol
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix 
+ mátrix első 
 \begin_inset Formula $r$
 \end_inset
 
--ed rendű felső főrészmátrixa.
+-ed rendű főrészmátrixa.
 \begin_inset Note Comment
 status collapsed
 
@@ -1333,7 +1319,7 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix elsőrendű felső főrészmátrixa 
+ mátrix első elsőrendű főrészmátrixa 
 \begin_inset Formula 
 \[
 \left[\begin{array}{c}
@@ -1342,7 +1328,7 @@ a_{11}\end{array}\right],
 
 \end_inset
 
-a másodrendű felső főrészmátrixa 
+az első másodrendű főrészmátrixa 
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
@@ -1353,7 +1339,7 @@ a_{21} & a_{22}
 
 \end_inset
 
-és a harmadrendű felső főrészmátrixa önmaga.
+és az első harmadrendű főrészmátrixa önmaga.
 \end_layout
 
 \begin_layout Standard
