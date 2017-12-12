@@ -1816,35 +1816,17 @@ Mivel
  sorai is lineárisan összefüggők.
 \end_layout
 
-\begin_layout Proof
+\begin_layout Corollary*
 \noindent
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\noindent
-Ide kell biz.
- Itt egyébként pl a definicióból nem látszik, hogy az n-ed rendű vektorok
- bázisa mindig n darab vektor.
- Ez vhogy következményként lehetne közölni.
-\end_layout
-
+Az 
+\begin_inset Formula $n$
 \end_inset
 
- 
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-\noindent
-A bizonyítást lásd, C.G.
- Broyden - Basic Matrices, Theorem 2.2, 29.
- oldal.
-\end_layout
-
+-ed rendű vektorok bázisa mindig 
+\begin_inset Formula $n$
 \end_inset
 
-
+ darab vektor.
 \end_layout
 
 \begin_layout Standard
@@ -1870,8 +1852,116 @@ Legyen
 
 \begin_layout Proof
 \noindent
-Ide kell biz.
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
  
+\begin_inset Formula $n{\times}r$
+\end_inset
+
+-es mátrix és 
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű vektor.
+ Legyenek az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix oszlopai lineárisan függetlenek.
+ Legyen a 
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+ vektor az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix oszlopaival lineárisan összefüggő.
+ Mivel ez az összesen 
+\begin_inset Formula $r+1$
+\end_inset
+
+ darab lineárisan összefüggő vektor, létezik olyan 
+\begin_inset Formula $r$
+\end_inset
+
+-ed rendű 
+\series bold
+
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+
+\series default
+ vektor és 
+\begin_inset Formula $\eta$
+\end_inset
+
+ skalár, hogy 
+\begin_inset Formula $\boldsymbol{A}\boldsymbol{y}+\boldsymbol{b}\eta=\boldsymbol{0}$
+\end_inset
+
+.
+ A skalár 
+\begin_inset Formula $\eta$
+\end_inset
+
+ nem lehet nulla, mert akkor 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix oszlopai lineárisan összefüggők lennének, ami ellent mond a hipotézisnek.
+ Így az 
+\begin_inset Formula $\boldsymbol{y}\eta^{-1}$
+\end_inset
+
+ vektor létezik, és ha 
+\begin_inset Formula $\boldsymbol{x}=\boldsymbol{y}\eta^{-1}$
+\end_inset
+
+, akkor 
+\begin_inset Formula $\boldsymbol{b}=\boldsymbol{Ax}$
+\end_inset
+
+.
+ Azt kell belátni, hogy az 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ vektor egyértelmű.
+ Tegyük fel, hogy létezik olyan 
+\begin_inset Formula $\boldsymbol{z}$
+\end_inset
+
+ vektor, hogy 
+\begin_inset Formula $\boldsymbol{b}=\boldsymbol{Az}$
+\end_inset
+
+.
+ Ha ezt kivonjuk az előző egyenlőségből, kapjuk, hogy 
+\begin_inset Formula $\boldsymbol{0}=\boldsymbol{A}(\boldsymbol{x}-\boldsymbol{z})$
+\end_inset
+
+.
+ Mivel 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix oszlopai lineárisan függetlenek, ez csak akkor lehetséges, ha 
+\begin_inset Formula $\boldsymbol{x}=\boldsymbol{z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\noindent
 \begin_inset Note Comment
 status open
 
