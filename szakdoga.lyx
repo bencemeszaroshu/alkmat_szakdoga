@@ -576,7 +576,7 @@ a_{m1} & a_{m2} & ... & a_{mn}
 \end_layout
 
 \begin_layout Definition*
-Ha a mátrixnak ugyanannyi sora és oszlopa van, négyzetes mátrixnak nevezzük.
+Ha egy mátrixnak ugyanannyi sora és oszlopa van, négyzetes mátrixnak nevezzük.
  
 \end_layout
 
@@ -1700,9 +1700,126 @@ Az
 \end_layout
 
 \begin_layout Proof
+Indukcióval bizonyítunk.
+ Megmutatjuk, hogy ha bármely 
+\begin_inset Formula $(r-1){\times}r$
+\end_inset
+
+-es mátrix oszlopai lineárisan összefüggő, akkor bármely 
+\begin_inset Formula $r{\times}(r+1)$
+\end_inset
+
+-es mátrix oszlopai is lineárisan összefüggők.
+ Legyen 
+\begin_inset Formula $\boldsymbol{A}_{1}$
+\end_inset
+
+ 
+\begin_inset Formula $r{\times}(r+1)$
+\end_inset
+
+-es mátrix és
+\begin_inset Formula 
+\[
+\boldsymbol{A}_{1}=\left[\begin{array}{cc}
+\boldsymbol{A} & \boldsymbol{b}\\
+\boldsymbol{c}^{T} & \delta
+\end{array}\right],
+\]
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\begin_inset Formula $(r-1){\times}r$
+\end_inset
+
+-es mátrix, 
+\series bold
+
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+
+\series default
+ oszlopvektor, 
+\begin_inset Formula $\boldsymbol{c}^{T}$
+\end_inset
+
+ sorvektor és 
+\begin_inset Formula $\delta$
+\end_inset
+
+ skalár.
+ Az 
+\begin_inset Formula $\boldsymbol{A}-\boldsymbol{b}\delta^{-1}\boldsymbol{c}^{T}$
+\end_inset
+
+ egy 
+\begin_inset Formula $(r-1){\times}r$
+\end_inset
+
+-es mátrix, és az indukciós feltétel szerint bármely 
+\begin_inset Formula $(r-1){\times}r$
+\end_inset
+
+-es mátrix oszlopai lineárisan összefüggők.
+ Ezért létezik egy olyan 
+\begin_inset Formula $\boldsymbol{x}\neq0$
+\end_inset
+
+ vektor, hogy
+\begin_inset Formula 
+\[
+(\boldsymbol{A}-\boldsymbol{b}\delta^{-1}\boldsymbol{c}^{T})\boldsymbol{x}=\boldsymbol{0}.
+\]
+
+\end_inset
+
+Ebből következik, hogy
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+\boldsymbol{A} & \boldsymbol{b}\\
+\boldsymbol{c}^{T} & \delta
+\end{array}\right]\left[\begin{array}{c}
+\boldsymbol{x}\\
+\delta^{-1}\boldsymbol{c}^{T}
+\end{array}\right]=\left[\begin{array}{c}
+\boldsymbol{0}\\
+\boldsymbol{0}
+\end{array}\right].
+\]
+
+\end_inset
+
+Mivel 
+\begin_inset Formula $\boldsymbol{x}\neq0$
+\end_inset
+
+, léteznie kell egy olyan 
+\begin_inset Formula $\boldsymbol{y}\neq0$
+\end_inset
+
+ vektornak, hogy 
+\begin_inset Formula $\boldsymbol{A}_{1}\boldsymbol{y}=\boldsymbol{0}$
+\end_inset
+
+.
+ Tehát 
+\begin_inset Formula $\boldsymbol{A}_{1}$
+\end_inset
+
+ sorai is lineárisan összefüggők.
+\end_layout
+
+\begin_layout Proof
 \noindent
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
