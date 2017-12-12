@@ -952,8 +952,13 @@ Azaz képezzük az
 
  mátrix sorainak számával, hogy a megfelelő sorvektorok és oszlopvektorok
  belső szorzatai jól definiáltak legyenek.
- A mátrixszorzás nem kommutatív, 
+ A mátrixszorzás általában nem kommutatív, 
 \begin_inset Formula $\boldsymbol{AB}\neq\boldsymbol{BA}$
+\end_inset
+
+.
+ Egy mátrixot az egységmátrixszal szorozva önmagát kapjuk, 
+\begin_inset Formula $\boldsymbol{AI}=\boldsymbol{IA}=\boldsymbol{A}$
 \end_inset
 
 .
@@ -1696,9 +1701,22 @@ Az
 
 \begin_layout Proof
 \noindent
-Ide kell biz.
-\begin_inset Note Comment
+\begin_inset Note Note
 status open
+
+\begin_layout Plain Layout
+\noindent
+Ide kell biz.
+ Itt egyébként pl a definicióból nem látszik, hogy az n-ed rendű vektorok
+ bázisa mindig n darab vektor.
+ Ez vhogy következményként lehetne közölni.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Comment
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
