@@ -2328,18 +2328,44 @@ Ha egy négyzetes mátrix oszlopai lineárisan függetlenek, akkor jobboldali
 \end_layout
 
 \begin_layout Proof
-Ide kell biz.
- 
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-Broyden p.31 theorem 2.4
-\end_layout
-
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
+ négyzetes mátrix és legyenek az oszlopai lineárisan függetlenek.
+ Tegyük fel, hogy az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
 
+ mátrix jobboldali inverze nem egyértelmű, azaz léteznek olyan 
+\begin_inset Formula $\boldsymbol{X}\neq\boldsymbol{Y}$
+\end_inset
+
+ mátrixok, hogy 
+\begin_inset Formula $\boldsymbol{AX}=\boldsymbol{I}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{AY}=\boldsymbol{I}$
+\end_inset
+
+.
+ Vonjuk ki a két egyenlőséget egymásból, így kapjuk, hogy 
+\begin_inset Formula $\boldsymbol{A}(\boldsymbol{X}-\boldsymbol{Y})=\boldsymbol{0}$
+\end_inset
+
+.
+ Ez azonban az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix oszlopainak lineáris függetlensége miatt csak akkor lehetséges,
+ ha 
+\begin_inset Formula $\boldsymbol{X}=\boldsymbol{Y}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
