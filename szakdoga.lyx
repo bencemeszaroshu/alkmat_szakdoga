@@ -1982,6 +1982,30 @@ Definiáljuk a nemszinguláris mátrixot.
  Ehhez megvizsgáljuk a mátrix oszlopainak illetve sorainak lineáris függőségét,
  definiáljuk a mátrix inverzét, és megvizsgáljuk a lineáris függőség és
  a mátrix inverze közötti kapcsolatot.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+itt a mátrix sorai oszlopai lin függetlenek az ugyanaz kérdéskörről nem
+ szólok semmit, pedig felmerülhet mint kérdés, az olvasóban.
+ Broyden , 31.
+ oldal körül, theorem 2.3 alatt talán
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Illetve arról se esik szó, hogy miért csak négyzetes mátrixnak van inverze
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Theorem
@@ -2181,7 +2205,7 @@ Legyen
 \begin_inset Formula $n{\times}n$
 \end_inset
 
--es mátrix és legyenek az oszlopai lineárisan függetlenek.
+-es négyzetes mátrix, és legyenek az oszlopai lineárisan függetlenek.
  Legyenek 
 \begin_inset Formula $\boldsymbol{A}_{i}$
 \end_inset
@@ -2332,7 +2356,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- négyzetes mátrix és legyenek az oszlopai lineárisan függetlenek.
+ négyzetes mátrix, és legyenek az oszlopai lineárisan függetlenek.
  Tegyük fel, hogy az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
@@ -2381,18 +2405,38 @@ Ha egy négyzetes mátrixnak létezik egyértelmű jobboldali inverze, akkor
 \end_layout
 
 \begin_layout Proof
-Ide kell biz.
- 
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-Broyden p.31 theorem 2.5
-\end_layout
-
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
+ négyzetes mátrix, és legyenek az oszlopai lineárisan függetlenek.
+ Legyen 
+\begin_inset Formula $\boldsymbol{AX=I}$
+\end_inset
 
+.
+ Az egyenlőséget jobbról 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixszal szorozva kapjuk, hogy 
+\begin_inset Formula $\boldsymbol{AXA}=\boldsymbol{A}$
+\end_inset
+
+, átrendezve 
+\begin_inset Formula $\boldsymbol{A}(\boldsymbol{XA}-\boldsymbol{I})=\boldsymbol{0}$
+\end_inset
+
+.
+ Ebből 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix oszlopainak lineáris függetlensége miatt következik, hogy 
+\begin_inset Formula $\boldsymbol{XA}=\boldsymbol{I}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
