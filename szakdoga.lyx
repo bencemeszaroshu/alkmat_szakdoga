@@ -1697,6 +1697,13 @@ Az
 \end_inset
 
 -ed rendű vektor lineárisan összefüggő.
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:fundamentalthm"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -1829,13 +1836,6 @@ Az
  darab vektor.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
 \begin_layout Theorem
 Legyen 
 \begin_inset Formula $r$
@@ -1958,31 +1958,6 @@ Legyen
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Proof
-\noindent
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\noindent
-A bizonyítást lásd, C.G.
- Broyden - Basic Matrices, Lemma 2.2, 30.
- oldal.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\begin_inset Separator plain
-\end_inset
-
-
 \end_layout
 
 \begin_layout Definition*
@@ -2173,8 +2148,183 @@ Egy mátrix invertálható, ha létezik inverze.
 \end_layout
 
 \begin_layout Theorem
-Ha egy négyzetes mátrixnak vannak lineárisan független oszlopai, akkor jobboldal
-i inverze egyértelmű.
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű négyzetes mátrix.
+ Ha az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix oszlopai lineárisan függetlenek, létezik olyan 
+\begin_inset Formula $\boldsymbol{X}$
+\end_inset
+
+ mátrix, hogy 
+\begin_inset Formula $\boldsymbol{AX}=\boldsymbol{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\begin_inset Formula $n{\times}n$
+\end_inset
+
+-es mátrix és legyenek az oszlopai lineárisan függetlenek.
+ Legyenek 
+\begin_inset Formula $\boldsymbol{A}_{i}$
+\end_inset
+
+ (
+\begin_inset Formula $i=1,2,...,n-1)$
+\end_inset
+
+ 
+\begin_inset Formula $(n-1){\times}n$
+\end_inset
+
+-es mátrixok.
+ Az 
+\begin_inset Formula $\boldsymbol{A}_{i}$
+\end_inset
+
+ mátrix mindig legyen az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $i$
+\end_inset
+
+-edik sorának elhagyásával kapott mátrix.
+ Azaz 
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}_{i}$
+\end_inset
+
+
+\series default
+ 
+\begin_inset Formula $j$
+\end_inset
+
+-edik sora az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $j$
+\end_inset
+
+-edik sora, ha 
+\begin_inset Formula $1\leq j\leq i-1$
+\end_inset
+
+, de a (
+\begin_inset Formula $j+1$
+\end_inset
+
+)-edik sora, ha 
+\begin_inset Formula $i\leq j\leq n-1$
+\end_inset
+
+.
+ A 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:fundamentalthm"
+
+\end_inset
+
+-es tételből következik, hogy mindig létezik olyan 
+\begin_inset Formula $\boldsymbol{x}_{i}\neq\boldsymbol{0}$
+\end_inset
+
+, hogy 
+\begin_inset Formula $\boldsymbol{A}_{i}\boldsymbol{x}_{i}=\boldsymbol{0}$
+\end_inset
+
+.
+ Mivel létezik olyan 
+\begin_inset Formula $\boldsymbol{x}_{i\,}$
+\end_inset
+
+, hogy 
+\begin_inset Formula $\boldsymbol{A}_{i}\boldsymbol{x}_{i}=\boldsymbol{0}$
+\end_inset
+
+, de 
+\begin_inset Formula $\boldsymbol{A}\boldsymbol{x}_{i}\neq\boldsymbol{0}$
+\end_inset
+
+, így az 
+\begin_inset Formula $\boldsymbol{A}\boldsymbol{x}_{i}$
+\end_inset
+
+ vektornak egyedül az 
+\begin_inset Formula $i$
+\end_inset
+
+-edik eleme nem nulla.
+ Minden 
+\begin_inset Formula $i$
+\end_inset
+
+-re választhatjuk 
+\begin_inset Formula $\boldsymbol{x}_{i}$
+\end_inset
+
+-t úgy, hogy 
+\begin_inset Formula $\boldsymbol{A}\boldsymbol{x}_{i}=\boldsymbol{e}_{i}$
+\end_inset
+
+ legyen, ahol 
+\begin_inset Formula $\boldsymbol{e}_{i}$
+\end_inset
+
+ az 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű egységmátrix 
+\begin_inset Formula $i$
+\end_inset
+
+-edik oszlopa.
+ Legyen 
+\begin_inset Formula $\boldsymbol{X}=\left[\boldsymbol{x}_{1},\boldsymbol{x}_{2},...,\boldsymbol{x}_{n}\right]$
+\end_inset
+
+, így 
+\begin_inset Formula $\boldsymbol{AX}=\boldsymbol{I}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Ha egy négyzetes mátrix oszlopai lineárisan függetlenek, akkor jobboldali
+ inverze egyértelmű.
 \end_layout
 
 \begin_layout Proof
