@@ -628,34 +628,6 @@ Az
 \end_layout
 
 \begin_layout Definition*
-Az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- mátrix szimmetrikus, ha 
-\begin_inset Formula $\boldsymbol{A}=\boldsymbol{A}^{T}$
-\end_inset
-
-.
- Az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- mátrix antiszimmetrikus, ha 
-\begin_inset Formula $\boldsymbol{A}=-\boldsymbol{A}^{T}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition*
 Legyen 
 \series bold
 
@@ -962,6 +934,48 @@ Azaz képezzük az
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix szimmetrikus, ha 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{A}^{T}$
+\end_inset
+
+.
+ Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix antiszimmetrikus, ha 
+\begin_inset Formula $\boldsymbol{A}=-\boldsymbol{A}^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Mivel 
+\begin_inset Formula $(\boldsymbol{A}^{T})^{T}=\boldsymbol{A}$
+\end_inset
+
+ és 
+\begin_inset Formula $(\boldsymbol{A}\boldsymbol{B})^{T}=\boldsymbol{B}^{T}\boldsymbol{A}^{T}$
+\end_inset
+
+, ezért 
+\begin_inset Formula $(\boldsymbol{A}^{T}\boldsymbol{A})^{T}=\boldsymbol{A}^{T}(\boldsymbol{A}^{T})^{T}=\boldsymbol{A}^{T}\boldsymbol{A}$
+\end_inset
+
+.
+ Azaz az 
+\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{A}$
+\end_inset
+
+ valós mátrix mindig szimmetrikus.
 \end_layout
 
 \begin_layout Definition*
@@ -1377,6 +1391,18 @@ Az alkalmazásokban gyakran szükség van komplex vektorokra, mátrixokra.
 \end_inset
 
 -val jelöljük.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Mi az a Hermite féle mátrix? ATA mindig szimmetrikus és AHA hermite féle,
+ ezeket valahol közölni kellene
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition*
@@ -2903,26 +2929,15 @@ Ha az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrixnak vannak lineárisan független oszlopai, akkor 
+ 
+\begin_inset Formula $m{\times}n$
+\end_inset
+
+-es valós mátrixnak vannak lineárisan független oszlopai, akkor 
 \begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{A}$
 \end_inset
 
  pozitív definit.
-\end_layout
-
-\begin_layout Proof
-Ide kell biz.
- 
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-Broyden p.34 lemma 2.5
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
