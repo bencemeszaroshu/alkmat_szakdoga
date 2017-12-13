@@ -2832,6 +2832,13 @@ reference "thm:matrix_nemszing_ha_foreszmatrixok"
 \begin_layout Theorem
 Négyzetes mátrixok szorzata akkor és csak akkor nemszinguláris, ha a szorzat
  minden tényezője nemszinguláris.
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Négyzetes-mátrixok-szorzata_nemszing_ha_nemszing"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -3508,7 +3515,7 @@ A Gauss-féle elimináció
 Az LU felbontás
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition*
 Az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
@@ -3530,7 +3537,11 @@ felbontást értjük, ahol
 \end_inset
 
  felső háromszögmátrix.
- Ezután az 
+ 
+\end_layout
+
+\begin_layout Standard
+Az LU felbontással az 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:axb"
@@ -3553,7 +3564,7 @@ reference "eq:axb"
 
 \end_inset
 
-háromszög alakú egyenletrendszerek megoldására egyszerűsödik, ahol 
+háromszög alakú egyenletrendszerek megoldására egyszerűsíthető, ahol 
 \begin_inset Formula $\boldsymbol{y}$
 \end_inset
 
@@ -3641,27 +3652,30 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- nemszinguláris mátrix felbontható 
-\begin_inset Formula $\boldsymbol{LU}$
-\end_inset
-
- mátrixok szorzatára, ahol 
-\begin_inset Formula $\boldsymbol{L}$
-\end_inset
-
- alsó háromszögmátrix, 
-\begin_inset Formula $\boldsymbol{U}$
-\end_inset
-
- felső háromszögmátrix, ha 
+ nemszinguláris mátrixnak akkor és csak akkor létezik LU felbontása, ha
+ az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- minden főátlójában lévő részmátrixa nemszinguláris.
+ mátrix minden főrészmátrixa nemszinguláris.
 \end_layout
 
 \begin_layout Proof
-Particionáljuk 
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix nemszinguláris.
+ Megmutatjuk, hogy ha az 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{LU}$
+\end_inset
+
+ felbontás létezik, akkor az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix főrészmátrixai szükségképpen nemszingulárisak.
+ Particionáljuk 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -3680,7 +3694,391 @@ ahol
 \begin_inset Formula $\boldsymbol{A}_{11}$
 \end_inset
 
+ az első tetszőleges rendű főrészmátrixa az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
 
+ mátrixnak.
+ Particionáljuk az 
+\begin_inset Formula $\boldsymbol{L}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ mátrixokat hasonlóan.
+ Azaz 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+\boldsymbol{L}_{11} & \boldsymbol{0}\\
+\boldsymbol{L}_{21} & \boldsymbol{L}_{22}
+\end{array}\right]\left[\begin{array}{cc}
+\boldsymbol{U}_{11} & \boldsymbol{U}_{12}\\
+\boldsymbol{0} & \boldsymbol{U}_{22}
+\end{array}\right]=\left[\begin{array}{cc}
+\boldsymbol{A}_{11} & \boldsymbol{A}_{12}\\
+\boldsymbol{A}_{21} & \boldsymbol{A}_{22}
+\end{array}\right]
+\]
+
+\end_inset
+
+és 
+\begin_inset Formula 
+\[
+\boldsymbol{L}_{11}\boldsymbol{U}_{11}=\boldsymbol{A}_{11}\,.
+\]
+
+\end_inset
+
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix nemszingulárs, így a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Négyzetes-mátrixok-szorzata_nemszing_ha_nemszing"
+
+\end_inset
+
+-es tétel miatt 
+\begin_inset Formula $\boldsymbol{L}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ mátrixok is nemszingulárisak.
+ A 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrix_nemszing_ha_foreszmatrixok"
+
+\end_inset
+
+-es tétel miatt 
+\begin_inset Formula $\boldsymbol{L}_{11}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{U}_{11}$
+\end_inset
+
+ szintén nemszingulárisak, így 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ nemszinguláris.
+ Mivel 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ az első tetszőleges rendű főrészmátrixa az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixnak, így az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix szükségképpen nemszinguláris.
+ 
+\end_layout
+
+\begin_layout Proof
+Legyen
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{A}_{r}=\boldsymbol{L}_{r}\boldsymbol{U}_{r}\,,\label{eq:Ar=LrUr}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\boldsymbol{A}_{r},\boldsymbol{L_{r}}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{U}_{r}$
+\end_inset
+
+ az 
+\begin_inset Formula $\boldsymbol{A},\boldsymbol{L}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ mátrixok 
+\begin_inset Formula $r$
+\end_inset
+
+-ed rendű főrészmátrixai.
+ Megmutatjuk, hogy ha 
+\begin_inset Formula $\boldsymbol{A}_{r}$
+\end_inset
+
+ nemszinguláris, akkor 
+\begin_inset Formula $\boldsymbol{A}_{r+1}$
+\end_inset
+
+ is szükségképpen nemszinguláris.
+ Indukcióval bizonyítunk.
+ Particionáljuk 
+\begin_inset Formula $\boldsymbol{A}_{r+1}$
+\end_inset
+
+-t úgy, hogy
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{A}_{r+1}=\left[\begin{array}{cc}
+\boldsymbol{A}_{r} & \boldsymbol{b}_{r}\\
+\boldsymbol{c}_{r}^{T} & \delta_{r}
+\end{array}\right],\label{eq:Ar+1}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\boldsymbol{b}_{r}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{c}_{r}$
+\end_inset
+
+ 
+\begin_inset Formula $r$
+\end_inset
+
+-ed rendű vektorok és 
+\begin_inset Formula $\delta_{r}$
+\end_inset
+
+ skalár.
+ Particionáljuk 
+\begin_inset Formula $\boldsymbol{L}_{r+1}$
+\end_inset
+
+-et és 
+\begin_inset Formula $\boldsymbol{U}_{r+1}$
+\end_inset
+
+-et úgy, hogy
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{L}_{r+1}=\left[\begin{array}{cc}
+\boldsymbol{L}_{r} & \boldsymbol{0}\\
+\boldsymbol{p}_{r} & \lambda_{r}
+\end{array}\right]\label{eq:Lr+1}
+\end{equation}
+
+\end_inset
+
+és
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{U}_{r+1}=\left[\begin{array}{cc}
+\boldsymbol{U}_{r} & \boldsymbol{v}_{r}\\
+\boldsymbol{0}^{T} & \mu_{r}
+\end{array}\right].\label{eq:Ur+1}
+\end{equation}
+
+\end_inset
+
+Ekkor található olyan 
+\begin_inset Formula $\boldsymbol{p}_{r},\lambda_{r},\boldsymbol{v}_{r}$
+\end_inset
+
+ és 
+\begin_inset Formula $\mu_{r}$
+\end_inset
+
+, hogy
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{L}_{r+1}\boldsymbol{U}_{r+1}=\boldsymbol{A}_{r+1}\,.\label{eq:Ar+1=Lr1Ur1}
+\end{equation}
+
+\end_inset
+
+A particionált 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Ar+1"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Lr+1"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Ur+1"
+
+\end_inset
+
+ mátrixokkal felírva a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Ar+1=Lr1Ur1"
+
+\end_inset
+
+ egyenlőséget
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+\boldsymbol{L}_{r} & \boldsymbol{0}\\
+\boldsymbol{p}_{r} & \lambda_{r}
+\end{array}\right]\left[\begin{array}{cc}
+\boldsymbol{U}_{r} & \boldsymbol{v}_{r}\\
+\boldsymbol{0}^{T} & \mu_{r}
+\end{array}\right]=\left[\begin{array}{cc}
+\boldsymbol{A}_{r} & \boldsymbol{b}_{r}\\
+\boldsymbol{c}_{r}^{T} & \delta_{r}
+\end{array}\right].
+\]
+
+\end_inset
+
+A szorzás elvégzése utána kapjuk a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Ar=LrUr"
+
+\end_inset
+
+ egyenlőséget és az
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{L}_{r}\boldsymbol{v}_{r}=\boldsymbol{b}_{r}\,,\label{eq:Lvrbr}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{p}_{r}^{T}\boldsymbol{U}_{r}=\boldsymbol{c}_{r}^{T}\label{eq:pTrUrcTr}
+\end{equation}
+
+\end_inset
+
+és
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{p}_{r}^{T}\boldsymbol{v}_{r}+\lambda_{r}\mu_{r}=\delta_{r}\,,\label{eq:pTrvr+..dr}
+\end{equation}
+
+\end_inset
+
+egyenlőségeket.
+ Mivel a hipotézis szerint 
+\begin_inset Formula $\boldsymbol{A}_{r}$
+\end_inset
+
+ nemszinguláris, a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Ar=LrUr"
+
+\end_inset
+
+ egyenlőségből következik, hogy 
+\begin_inset Formula $\boldsymbol{L}_{r}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{U}_{r}$
+\end_inset
+
+ szintén nemszingulárisak.
+ Ezért léteznek olyan egyértelmű 
+\begin_inset Formula $\boldsymbol{p}_{r}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{v}_{r}$
+\end_inset
+
+ vektorok, amelyek kielégítik a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Lvrbr"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pTrUrcTr"
+
+\end_inset
+
+ egyenlőségeket.
+ Mivel találhatók olyan 
+\begin_inset Formula $\lambda_{r}$
+\end_inset
+
+ és 
+\begin_inset Formula $\mu_{r}$
+\end_inset
+
+ skalárok, amik kielégítik a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pTrvr+..dr"
+
+\end_inset
+
+ egyenlőséget, létezik olyan 
+\begin_inset Formula $\boldsymbol{L}_{r+1}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{U}_{r+1},$
+\end_inset
+
+ amik kielégítik a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Ar+1=Lr1Ur1"
+
+\end_inset
+
+ egyenlőséget.
+ Tehát, ha az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix első 
+\begin_inset Formula $r$
+\end_inset
+
+-ed rendű főrészmátrixa nemszinguláris, és az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixnak létezik LU felbontása, akkor az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix első 
+\begin_inset Formula $r+1$
+\end_inset
+
+-ed rendű főrészmátrixa is nemszinguláris.
 \end_layout
 
 \begin_layout Subsection
