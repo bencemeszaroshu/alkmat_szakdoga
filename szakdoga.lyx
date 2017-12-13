@@ -2543,19 +2543,108 @@ name "thm:matrix_nemszing_ha_foreszmatrixok"
 \end_layout
 
 \begin_layout Proof
-Ide kell biz.
- 
-\begin_inset Note Comment
-status open
+Legyenek 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
 
-\begin_layout Plain Layout
-Broyden p.33.
- lemma 2.4
-\end_layout
+ és 
+\begin_inset Formula $\boldsymbol{A}_{22}$
+\end_inset
+
+ részmátrixok nemszingulárisak.
+ Ekkor
+\begin_inset Formula 
+\[
+\boldsymbol{A}^{-1}=\left[\begin{array}{cc}
+\boldsymbol{A}_{11}^{-1} & \boldsymbol{A}_{11}^{-1}\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\\
+\boldsymbol{0} & \boldsymbol{A}_{22}^{-1}
+\end{array}\right].
+\]
 
 \end_inset
 
+Tehát 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
 
+ inverz létezik, mert 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{A}_{22}$
+\end_inset
+
+ inverzek léteznek.
+ Ebből következik, hogy az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix nemszinguláris.
+\end_layout
+
+\begin_layout Proof
+Legyen 
+\begin_inset Formula $\boldsymbol{A_{11}}$
+\end_inset
+
+ részmátrix szinguláris.
+ Ekkor mindig létezik olyan 
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
+\end_inset
+
+ vektor, hogy 
+\begin_inset Formula $\boldsymbol{A}_{11}\boldsymbol{x}=\boldsymbol{0}$
+\end_inset
+
+.
+ Ekkor az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix szingularitása csak 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ részmátrixtól függ, mert 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+\boldsymbol{A}_{11} & \boldsymbol{A}_{12}\\
+\boldsymbol{0} & \boldsymbol{A}_{22}
+\end{array}\right]\left[\begin{array}{c}
+\boldsymbol{x}\\
+\boldsymbol{0}
+\end{array}\right]=\left[\begin{array}{c}
+\boldsymbol{0}\\
+\boldsymbol{0}
+\end{array}\right].
+\]
+
+\end_inset
+
+Ezért, ha 
+\begin_inset Formula $\boldsymbol{A_{11}}$
+\end_inset
+
+ részmátrix szinguláris, akkor az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix szinguláris.
+ Hasonlóan, ha 
+\begin_inset Formula $\boldsymbol{A}_{22}$
+\end_inset
+
+ részmátrix szinguláris, mindig létezik olyan 
+\begin_inset Formula $\boldsymbol{y}\neq\boldsymbol{0}$
+\end_inset
+
+ vektor, hogy 
+\begin_inset Formula $\boldsymbol{y}^{T}\boldsymbol{A}_{22}=\boldsymbol{0}^{T}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Definition*
