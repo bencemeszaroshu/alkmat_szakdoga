@@ -52,8 +52,8 @@ tabs-within-sections
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine natbib
-\cite_engine_type numerical
+\cite_engine basic
+\cite_engine_type default
 \biblio_style plain
 \use_bibtopic false
 \use_indices false
@@ -5256,7 +5256,7 @@ Függelék
 LatexCommand bibtex
 btprint "btPrintAll"
 bibfiles "szakdoga"
-options "bibtotoc,plain"
+options "bibtotoc,unsrt"
 
 \end_inset
 
