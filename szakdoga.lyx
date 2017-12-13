@@ -20,7 +20,7 @@ tabs-within-sections
 \maintain_unincluded_children false
 \language magyar
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -5256,19 +5256,11 @@ Felhasznált irodalom
 \end_layout
 
 \begin_layout Standard
-[1] C.G.
- Broyden, 
-\shape italic
-Basic Matrices
-\shape default
-, The Macmillan Press Ltd, 1975.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-referenciákat megcsinálni normálisan
-\end_layout
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "szakdoga"
+options "bibtotoc,huplain"
 
 \end_inset
 
