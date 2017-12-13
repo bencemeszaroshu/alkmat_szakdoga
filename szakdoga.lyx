@@ -1177,7 +1177,7 @@ j_{31} & k_{31} & k_{32} & k_{33}\\
 
 \end_inset
 
-A szorzés eredménye
+A szorzás eredménye
 \end_layout
 
 \begin_layout Example*
@@ -1464,13 +1464,6 @@ Az
  
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
 \begin_layout Example*
 \begin_inset Formula $\boldsymbol{A}^{H}\boldsymbol{z}=(\boldsymbol{B}^{T}-i\boldsymbol{C}^{T})(\boldsymbol{x}+i\boldsymbol{y})=\boldsymbol{B}^{T}\boldsymbol{x}+\boldsymbol{C}^{T}\boldsymbol{y}+i(\boldsymbol{B}^{T}\boldsymbol{y}-\boldsymbol{C}^{T}\boldsymbol{x})$
 \end_inset
@@ -1479,10 +1472,14 @@ Az
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
+A komplex Hermite-mátrixot így a valós szimmetrikus mátrix analógiájára
+ definiáltuk.
+ Hasonlóan a valós szimmetrikus esethez, a komplex esetre is igaz, hogy
+ 
+\begin_inset Formula $(\boldsymbol{A}^{H}\boldsymbol{A})^{H}=\boldsymbol{A}^{H}\boldsymbol{A}$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Definition*
