@@ -3998,8 +3998,7 @@ felső relaxációs eljárás:
 \end_layout
 
 \begin_layout Standard
-A felső relaxációs eljárással külön fejezetben részletesen foglalkozunk.
- Az 
+Az 
 \begin_inset Formula $\omega$
 \end_inset
 
@@ -4013,7 +4012,14 @@ A felső relaxációs eljárással külön fejezetben részletesen foglalkozunk.
 \begin_inset Formula $\omega=1$
 \end_inset
 
- a módszer pontosan a Gauss-Seidel eljárás.
+, a módszer pontosan a Gauss-Seidel eljárás.
+ 
+\end_layout
+
+\begin_layout Standard
+A következő fejezetekben két iterációs eljárással fogunk részletesen foglalkozni
+, Broyden kutatásainak eredményeire támaszkodva.
+ A felső relaxációs eljárással és a blokk konjugált gradiens módszerrel.
  
 \end_layout
 
