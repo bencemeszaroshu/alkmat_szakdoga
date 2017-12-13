@@ -2428,7 +2428,7 @@ Legyen
 \end_inset
 
 .
- Ebből 
+ Ebből az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -2493,6 +2493,69 @@ Legyen
 \begin_layout Standard
 Definiálunk és megvizsgálunk néhány elméleti vagy gyakorlati szempontból
  fontos nemszinguláris mátrixot.
+\end_layout
+
+\begin_layout Theorem
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ négyzetes mátrix, és legyen
+\begin_inset Formula 
+\[
+\boldsymbol{A}=\left[\begin{array}{cc}
+\boldsymbol{A}_{11} & \boldsymbol{A}_{12}\\
+\boldsymbol{0} & \boldsymbol{A}_{22}
+\end{array}\right],
+\]
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{A}_{22}$
+\end_inset
+
+ részmátrixok is négyzetes mátrixok.
+ Ekkor az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix akkor és csak akkor nemszinguláris, ha 
+\begin_inset Formula $\boldsymbol{A}_{11}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{A}_{22}$
+\end_inset
+
+ részmátrixok nemszingulárisak.
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:matrix_nemszing_ha_foreszmatrixok"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Ide kell biz.
+ 
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Broyden p.33.
+ lemma 2.4
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition*
@@ -2576,18 +2639,82 @@ name "thm:Unemszingularis"
 \end_layout
 
 \begin_layout Proof
-Ide kell biz.
- 
-\begin_inset Note Comment
-status open
+Legyen 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
 
-\begin_layout Plain Layout
-Broyden p.34 theorem 2.6
-\end_layout
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű felső háromszögmátrix.
+ Legyen 
+\begin_inset Formula $\boldsymbol{U}_{i}$
+\end_inset
+
+ az első 
+\begin_inset Formula $i$
+\end_inset
+
+-ed rendű főrészmátrixa 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+-nak., azaz 
+\begin_inset Formula $\boldsymbol{U}=\boldsymbol{U}_{n}$
+\end_inset
+
+.
+ Legyen
+\begin_inset Formula 
+\[
+\boldsymbol{U}=\left[\begin{array}{cc}
+\boldsymbol{U}_{i-1} & \boldsymbol{v}_{i}\\
+\boldsymbol{0} & u_{ii}
+\end{array}\right],\quad2\leq i\leq n
+\]
 
 \end_inset
 
+és 
+\begin_inset Formula $\boldsymbol{v}_{i}^{T}=[u_{1i,}u_{2i},...,u_{(i-1)i}]$
+\end_inset
 
+.
+ A 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrix_nemszing_ha_foreszmatrixok"
+
+\end_inset
+
+-es tételből következik, hogy 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ akkor és csak akkor nemszinguláris, ha minden 
+\begin_inset Formula $\boldsymbol{U}_{i}$
+\end_inset
+
+ főrészmátrix nemszinguláris.
+ Ha 
+\begin_inset Formula $u_{ii}\neq0$
+\end_inset
+
+ bármely 
+\begin_inset Formula $1\leq i\leq n$
+\end_inset
+
+ esetén, akkor 
+\begin_inset Formula $\boldsymbol{U}_{1},\boldsymbol{U}_{2},...,\boldsymbol{U}_{n}$
+\end_inset
+
+ főrészmátrixok nemszingulárisak, azaz 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ nemszinguláris.
+ 
 \end_layout
 
 \begin_layout Theorem
@@ -2646,62 +2773,6 @@ Legyenek
 
 , amivel ellentmondáshoz jutottunk.
  
-\end_layout
-
-\begin_layout Theorem
-Legyen 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- négyzetes mátrix, és legyen
-\begin_inset Formula 
-\[
-\boldsymbol{A}=\left[\begin{array}{cc}
-\boldsymbol{A}_{11} & \boldsymbol{A}_{12}\\
-\boldsymbol{0} & \boldsymbol{A}_{22}
-\end{array}\right],
-\]
-
-\end_inset
-
-ahol 
-\begin_inset Formula $\boldsymbol{A}_{11}$
-\end_inset
-
- és 
-\begin_inset Formula $\boldsymbol{A}_{22}$
-\end_inset
-
- részmátrixok is négyzetes mátrixok.
- Ekkor az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- mátrix akkor és csak akkor nemszinguláris, ha 
-\begin_inset Formula $\boldsymbol{A}_{11}$
-\end_inset
-
- és 
-\begin_inset Formula $\boldsymbol{A}_{22}$
-\end_inset
-
- részmátrixok nemszingulárisak.
-\end_layout
-
-\begin_layout Proof
-Ide kell biz.
- 
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-Broyden p.33.
- lemma 2.4
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
