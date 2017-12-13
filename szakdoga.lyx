@@ -52,8 +52,8 @@ tabs-within-sections
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
+\cite_engine natbib
+\cite_engine_type numerical
 \biblio_style plain
 \use_bibtopic false
 \use_indices false
@@ -5251,16 +5251,12 @@ Konklúzió
 Függelék
 \end_layout
 
-\begin_layout Section
-Felhasznált irodalom
-\end_layout
-
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintAll"
 bibfiles "szakdoga"
-options "bibtotoc,huplain"
+options "bibtotoc,plain"
 
 \end_inset
 
