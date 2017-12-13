@@ -2903,7 +2903,7 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- nemszinguláris és 
+ nemszinguláris, és 
 \begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}>0$
 \end_inset
 
@@ -2922,7 +2922,7 @@ Az
 \end_layout
 
 \begin_layout Theorem
-Ha az 
+Legyen 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -2930,11 +2930,64 @@ Ha az
 \begin_inset Formula $m{\times}n$
 \end_inset
 
--es valós mátrixnak vannak lineárisan független oszlopai, akkor 
+-es valós mátrix lineárisan független oszlopokkal.
+ Ekkor 
 \begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{A}$
 \end_inset
 
  pozitív definit.
+\end_layout
+
+\begin_layout Proof
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\begin_inset Formula $m{\times}n$
+\end_inset
+
+-es valós mátrix lineárisan független oszlopokkal.
+ Az 
+\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{A}$
+\end_inset
+
+ mátrix szimmetrikus.
+ Legyen 
+\begin_inset Formula $\boldsymbol{y}=\boldsymbol{Ax}$
+\end_inset
+
+, így 
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{A}^{T}\boldsymbol{Ax}=\boldsymbol{y}^{T}\boldsymbol{y}>0$
+\end_inset
+
+, akkor és csak akkor, ha 
+\begin_inset Formula $\boldsymbol{y}\neq\boldsymbol{0}$
+\end_inset
+
+.
+ Mivel az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix oszlopai lineárisan függetlenek, 
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+ akkor és csak akkor nulla, ha 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ is nulla.
+ Az 
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{A}^{T}\boldsymbol{Ax}$
+\end_inset
+
+ akkor és csak akkor nulla, ha 
+\begin_inset Formula $\boldsymbol{x}=\boldsymbol{0}.$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -3266,6 +3319,19 @@ A Frobenius norma az euklideszi vektornorma mátrix megfelelője, de nem az
  euklideszi vektornorma által indukált mátrixnorma.
  Nem vektornorma által indukált mátrixnorma, ezért a gyakorlatban sokszor
  szükségtelenül pontatlan eredményekhez vezet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Kondíciószámról nyilatkozni kell!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
