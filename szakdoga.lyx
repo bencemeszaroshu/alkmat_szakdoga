@@ -3167,6 +3167,16 @@ egyenlőtlenség akkor és csak akkor igaz, ha
 
  vektornak.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ide referenciát kell betenni!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3508,10 +3518,6 @@ mi az a sorozatos transzformáció?
 \end_layout
 
 \begin_layout Subsubsection*
-A Gauss-féle elimináció
-\end_layout
-
-\begin_layout Subsubsection*
 Az LU felbontás
 \end_layout
 
@@ -3679,7 +3685,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
--t úgy, hogy
+ mátrixot úgy, hogy
 \begin_inset Formula 
 \[
 \boldsymbol{A}=\left[\begin{array}{cc}
@@ -4079,6 +4085,338 @@ reference "eq:Ar+1=Lr1Ur1"
 \end_inset
 
 -ed rendű főrészmátrixa is nemszinguláris.
+\end_layout
+
+\begin_layout Subsubsection*
+A Gauss-féle elimináció
+\end_layout
+
+\begin_layout Standard
+Az egyik legrégebbi és legjobb módszer a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:axb"
+
+\end_inset
+
+ egyenletrendszer megoldására a Gauss-féle elimináció.
+ Az első, második, stb.
+ egyenlőség megfelelő skalárszorosát kivonjuk a többi egyenlőségből, úgy
+ hogy ezzel az ismeretlen változókat elimináljuk.
+ Ezt addig folytatjuk, amíg az utolsó egyenlőségben már csak egy ismeretlen
+ változó marad.
+ ekkor a kapott egyenlőségek felső háromszög alakúak.
+ A módszert először egy példán mutatjuk be.
+\end_layout
+
+\begin_layout Example*
+Oldjuk meg a
+\begin_inset Formula 
+\[
+\begin{array}{cccccc}
+\quad2x_{1} & +x_{2} & +3x_{3} & -x_{4} & = & \:3\\
+-4x_{1} & -3x_{2} & -4x_{3} & +5x_{4} & = & \:2\\
+\quad6x_{1} & +4x_{2} & +4x_{3} & -5x_{4} & = & -1\\
+-4x_{1} & -3x_{2} & +2x_{3} & +4x_{4} & = & \:7
+\end{array}
+\]
+
+\end_inset
+
+egyenletrendszert! Vonjuk ki az 
+\begin_inset Formula $1.$
+\end_inset
+
+ egyenlőség 
+\begin_inset Formula $(-2)-$
+\end_inset
+
+szeresét a második és negyedik egyenlőségből, és a 
+\begin_inset Formula $3$
+\end_inset
+
+-szorosát a harmadik egyenlőségből.
+ Így ezekből az egyenlőségekből az 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ ismeretlent elimináltuk, és a
+\begin_inset Formula 
+\[
+\begin{array}{cccccc}
+\quad2x_{1} & +x_{2} & +3x_{3} & -x_{4} & = & \:3\\
+ & -x_{2} & +2x_{3} & +3x_{4} & = & \:8\\
+ & \quad x_{2} & -5x_{3} & -2x_{4} & = & -10\\
+ & -3x & +8x_{3} & +2x_{4} & = & \;13
+\end{array}
+\]
+
+\end_inset
+
+új egyenletrendszert kaptuk.
+ Az új egyenletrendszerben az 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ ismeretlen eliminálásához vonjuk ki a 
+\begin_inset Formula $2.$
+\end_inset
+
+ egyenlőség 
+\begin_inset Formula $(-1)$
+\end_inset
+
+-szeresét a harmadik egyenlőségből, és az 
+\begin_inset Formula $1$
+\end_inset
+
+-szeresét a negyedik egyenlőségből.
+ Így ezekből az egyenlőségekből az 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ ismeretlent elimináltuk, és a
+\begin_inset Formula 
+\[
+\begin{array}{cccccc}
+\quad2x_{1} & +x_{2} & +3x_{3} & -x_{4} & = & \:3\\
+ & -x_{2} & +2x_{3} & +3x_{4} & = & \:8\\
+ &  & -3x_{3} & \quad x_{4} & = & -2\\
+ &  & +6x_{3} & \quad x_{4} & = & \;5
+\end{array}
+\]
+
+\end_inset
+
+új egyenletrendszert kaptuk.
+ Végül vonjuk ki a 
+\begin_inset Formula $3.$
+\end_inset
+
+ egyenlőség 
+\begin_inset Formula $(-2)$
+\end_inset
+
+-szeresét a negyedik egyenlőségből.
+ Így a negyedik egyenlőségből 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+-t elimináltuk, és a
+\begin_inset Formula 
+\[
+\begin{array}{cccccc}
+\quad2x_{1} & +x_{2} & +3x_{3} & -x_{4} & = & \:3\\
+ & -x_{2} & +2x_{3} & +3x_{4} & = & \:8\\
+ &  & -3x_{3} & \quad x_{4} & = & -2\\
+ &  &  & \quad x_{4} & = & \;1
+\end{array}
+\]
+
+\end_inset
+
+új egyenletrendszert kaptuk.
+ Visszahelyettesítve az 
+\begin_inset Formula $x_{4}=1$
+\end_inset
+
+-et kapjuk, hogy 
+\begin_inset Formula $x_{3}=1$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}=-3$
+\end_inset
+
+ és 
+\begin_inset Formula $x_{1}=2$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Az látszik valahonnan az előzményekből, hogy ez az egyenletrendszer ugyanaz
+ mint az eredeti?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+
+\begin_inset Formula $^{(r-1)}=[a_{ij}^{(r-1)}]$
+\end_inset
+
+ a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:axb"
+
+\end_inset
+
+ egyenletrendszer Gauss-féle eliminációval való megoldásakor az 
+\begin_inset Formula $(r-1)$
+\end_inset
+
+-edik eliminációs lépés után kapott együtthatómátrix.
+ Legyen 
+\begin_inset Formula $\boldsymbol{M}_{r}=[m_{ij}]$
+\end_inset
+
+ és 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{A}^{(r)}=\boldsymbol{M}_{r}\boldsymbol{A}^{(r-1)}.\label{eq:Mr-1A(r-1)=Ar}
+\end{equation}
+
+\end_inset
+
+A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Mr-1A(r-1)=Ar"
+
+\end_inset
+
+ egyenlőségben az 
+\begin_inset Formula $\boldsymbol{M}_{r}$
+\end_inset
+
+ mátrixot úgy választjuk, hogy a szorzás eredményeként az 
+\begin_inset Formula $\boldsymbol{A}^{(r)}$
+\end_inset
+
+ együtthatómátrix 
+\begin_inset Formula $r$
+\end_inset
+
+-edik oszlopában az 
+\begin_inset Formula $r$
+\end_inset
+
+-edik sor alatt az együtthatókra nullákat kapjunk.
+ Ekkor az 
+\begin_inset Formula $\boldsymbol{A}^{(r)}$
+\end_inset
+
+ mátrixot úgy számolhatjuk, hogy kivonjuk az 
+\begin_inset Formula $\boldsymbol{A}^{(r-1)}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $r$
+\end_inset
+
+-edik sorának 
+\begin_inset Formula $m_{ir}$
+\end_inset
+
+-szeresét az 
+\begin_inset Formula $\boldsymbol{A}^{(r-1)}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $i$
+\end_inset
+
+-edik sorából minden 
+\begin_inset Formula $i$
+\end_inset
+
+-re, ahol 
+\begin_inset Formula $i=r+1,r+2,...,n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition*
+A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Mr-1A(r-1)=Ar"
+
+\end_inset
+
+ egyenlőségben az 
+\begin_inset Formula $m_{ir}$
+\end_inset
+
+ elemeket multiplikátoroknak hívjuk.
+ Az 
+\begin_inset Formula $a_{rr}^{(r-1)}$
+\end_inset
+
+ elemeket pedig 
+\begin_inset Formula $r$
+\end_inset
+
+-edik pivot, vagy 
+\begin_inset Formula $r$
+\end_inset
+
+-edik főelemnek hívjuk.
+ 
+\end_layout
+
+\begin_layout Definition*
+A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Mr-1A(r-1)=Ar"
+
+\end_inset
+
+ egyenlőségben
+\begin_inset Formula 
+\begin{equation}
+m_{ir}=\frac{a_{ir}^{(r-1)}}{a_{rr}^{(r-1)}}\,.\label{eq:multiplikator}
+\end{equation}
+
+\end_inset
+
+és
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{M}_{r}=\boldsymbol{I}-\boldsymbol{m}_{r}\boldsymbol{e}_{r}^{T}\,,
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{m}_{r}=[0,0,...,0,m_{r+1,r},m_{r+2,r},..,m_{nr}]^{T}\,.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:multiplikator"
+
+\end_inset
+
+ egyenlőségből következik, hogy a pivot elemek nem lehetnek nullák.
+ 
 \end_layout
 
 \begin_layout Subsection
