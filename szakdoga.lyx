@@ -2677,15 +2677,6 @@ Az
 \end_layout
 
 \begin_layout Standard
-ddasd
-\end_layout
-
-\begin_layout Definition*
-A felső háromszögmátrix felső egység háromszögmátrix, ha minden diagonális
- eleme egy.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
@@ -4316,6 +4307,10 @@ Legyen
 \begin_inset Formula $^{(r-1)}=[a_{ij}^{(r-1)}]$
 \end_inset
 
+, 
+\begin_inset Formula $1\leq r\leq n$
+\end_inset
+
  a 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -4354,7 +4349,7 @@ reference "eq:Mr-1A(r-1)=Ar"
 \begin_inset Formula $\boldsymbol{M}_{r}$
 \end_inset
 
- mátrixot úgy választjuk, hogy a szorzás eredményeként az 
+ mátrixot mindig úgy választjuk, hogy a szorzás eredményeként az 
 \begin_inset Formula $\boldsymbol{A}^{(r)}$
 \end_inset
 
@@ -4367,6 +4362,50 @@ reference "eq:Mr-1A(r-1)=Ar"
 \end_inset
 
 -edik sor alatt az együtthatókra nullákat kapjunk.
+ Ehhez a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Mr-1A(r-1)=Ar"
+
+\end_inset
+
+ egyenlőségben
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{M}_{r}=\boldsymbol{I}-\boldsymbol{m}_{r}\boldsymbol{e}_{r}^{T}\,,\label{eq:mr=I-mreTr}
+\end{equation}
+
+\end_inset
+
+ahol
+\begin_inset Formula 
+\[
+\boldsymbol{m}_{r}=[0,0,...,0,m_{r+1,r},m_{r+2,r},..,m_{nr}]^{T}
+\]
+
+\end_inset
+
+és
+\begin_inset Formula 
+\begin{equation}
+m_{ir}=\frac{a_{ir}^{(r-1)}}{a_{rr}^{(r-1)}},\qquad a_{rr}^{(r-1)}\neq0,\label{eq:multiplikator}
+\end{equation}
+
+\end_inset
+
+ az 
+\begin_inset Formula $\boldsymbol{e}_{r}$
+\end_inset
+
+ vektor pedig az 
+\begin_inset Formula $r$
+\end_inset
+
+-edik oszlopa az 
+\begin_inset Formula $\boldsymbol{I}$
+\end_inset
+
+ egységmátrixnak.
  Ekkor az 
 \begin_inset Formula $\boldsymbol{A}^{(r)}$
 \end_inset
@@ -4415,8 +4454,7 @@ reference "eq:Mr-1A(r-1)=Ar"
 \begin_inset Formula $m_{ir}$
 \end_inset
 
- elemeket multiplikátoroknak hívjuk.
- Az 
+ elemeket multiplikátoroknak hívjuk, az 
 \begin_inset Formula $a_{rr}^{(r-1)}$
 \end_inset
 
@@ -4432,18 +4470,51 @@ reference "eq:Mr-1A(r-1)=Ar"
  
 \end_layout
 
-\begin_layout Definition*
-A 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:Mr-1A(r-1)=Ar"
+\begin_layout Standard
+\noindent
+A módszer az alkalmazásakor az
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{A}^{(r)}\boldsymbol{x}=\boldsymbol{b}^{(r)}\label{eq:arx=br}
+\end{equation}
 
 \end_inset
 
- egyenlőségben
+egyenlőségrendszereket generálja, ahol 
+\begin_inset Formula $\boldsymbol{b}^{(r)}=\boldsymbol{M}_{r}\boldsymbol{b}^{(r-1)}$
+\end_inset
+
+.
+ Az
 \begin_inset Formula 
 \begin{equation}
-m_{ir}=\frac{a_{ir}^{(r-1)}}{a_{rr}^{(r-1)}}\,.\label{eq:multiplikator}
+\boldsymbol{A}^{(n-1)}=\boldsymbol{M}_{n-1}\boldsymbol{M}_{n-2}...\boldsymbol{M}_{1}\boldsymbol{A},
+\end{equation}
+
+\end_inset
+
+felbontásban 
+\begin_inset Formula $\boldsymbol{A}^{(n-1)}$
+\end_inset
+
+ felső háromszögmátrix, és 
+\begin_inset Formula $\boldsymbol{M}_{r}$
+\end_inset
+
+ a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:mr=I-mreTr"
+
+\end_inset
+
+ egyenlőség miatt mindig alsó egység háromszögmátrix.
+ Mivel alsó egység háromszögmátrix inverze alsó egység háromszögmátrix és
+ alsó egység háromszögmátrixok szorzata is alsó egység háromszögmátrix,
+ így ha
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{U}=\boldsymbol{A}^{(n-1)}
 \end{equation}
 
 \end_inset
@@ -4451,23 +4522,43 @@ m_{ir}=\frac{a_{ir}^{(r-1)}}{a_{rr}^{(r-1)}}\,.\label{eq:multiplikator}
 és
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{M}_{r}=\boldsymbol{I}-\boldsymbol{m}_{r}\boldsymbol{e}_{r}^{T}\,,
+\boldsymbol{L}=(\boldsymbol{M}_{n-1}\boldsymbol{M}_{n-2}...\boldsymbol{M}_{1})^{-1},
 \end{equation}
 
 \end_inset
 
-ahol 
-\begin_inset Formula 
-\begin{equation}
-\boldsymbol{m}_{r}=[0,0,...,0,m_{r+1,r},m_{r+2,r},..,m_{nr}]^{T}\,.
-\end{equation}
+a módszer eredménye az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ együtthatómátrix LU-felbontását adja.
+ Mivel 
+\begin_inset Formula $\boldsymbol{L}$
+\end_inset
+
+ alsó egység háromszögmátrix, az LU-felbontás egyértelmű.
+ Ha 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ kielégíti a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:arx=br"
 
 \end_inset
 
+ egyenlőséget, akkor kielégíti a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:axb"
 
+\end_inset
+
+ egyenlőséget is.
 \end_layout
 
-\begin_layout Definition*
+\begin_layout Standard
 A 
 \begin_inset CommandInset ref
 LatexCommand eqref
