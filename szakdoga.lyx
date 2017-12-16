@@ -134,15 +134,14 @@ február 3.
 \begin_inset space \space{}
 \end_inset
 
-május 20.) szerény családi háttérrel rendelkezett.
- Angliában született, édesapja gyári munkásként, édesanyja háztartásbeliként
- dolgozott.
+május 20.) szerény családi háttérrel, Angliában született.
+ Édesapja gyári munkásként, édesanyja háztartásbeliként dolgozott.
  Szülei ennek ellenére a kezdetektől tanulásra biztatták.
- Charles már gyerekként rengeteget olvasott, jó tanuló volt.
- Édesapja sajnálatos módon meghalt tuberkulózisban, mikor ő még csak 11
- éves volt.
- Ez még jobban megnehezítette családi helyzetüket, de édesanyja még így
- is arra biztatta, hogy egyetemre menjen.
+ Charles már gyerekként rengeteget olvasott, az iskolában jól teljesített.
+ Édesapja sajnálatos módon meghalt tuberkulózisban, mikor Charles még csak
+ 11 éves volt.
+ Ez még jobban megnehezítette családi helyzetüket, de édesanyja így is arra
+ biztatta, hogy egyetemre menjen.
  A King's College London egyetemen szerzett fizikus diplomát 1955-ben.
  A következő 10 évet az iparban töltötte.
  Ezután 1965-1967 között az Aberystwyth Egyetemen tanított, majd a University
@@ -175,7 +174,7 @@ Mint például?
 \end_layout
 
 \begin_layout Standard
-Az iparban töltött évei alatt Broyden a Davidon–Fletcher–Powell (DFP) módszert
+Az iparban töltött évei alatt Broyden a Davidon-Fletcher-Powell (DFP) módszert
  adaptálta nemlineáris problémákra.
  Ez vezetett az 1965-ös klasszikus "A class of methods for solving nonlinear
  simultaneous equations" cikkéhez a Mathematics of Computation folyóiratban.
@@ -188,31 +187,12 @@ Az iparban töltött évei alatt Broyden a Davidon–Fletcher–Powell (DFP) mó
  A kutatása 1970-ben egy új, továbbfejlesztett módszerhez vezetett.
  Tőle függetlenül, nagyjából egy időben, Fletcher, Donald Goldfarb, és David
  Shanno is ugyanerre az eredményre jutott.
- Ezért az új módszert BFGS 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Miért BFGS a neve?
-\end_layout
-
-\end_inset
-
-módszernek nevezték el.
+ Ezért az új módszert a neveik kezdőbetűiből BFGS módszernek nevezték el.
  Más kutatások folytatták a kvázi-Newton módszerek optimalizálását, de a
  BFGS módszer még ma is a leginkább választott, ha a Hessian mátrix kiszámítása
  túl költséges.
- 1981-től Abaffy Józseffel és Emilio Spedicato-val az ABS 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Mi az, hogy ABS?
-\end_layout
-
-\end_inset
-
-módszereken dolgozott.
+ 1981-től Abaffy Józseffel és Emilio Spedicato-val az ABS (Abaffy-Broyden-Spedic
+ato) módszereken dolgozott.
  Később a numerikus lineáris algebrára fókuszált, ezen belül is a konjugált
  gradiens módszerekre és ezek rendszertanára.
  A szakdolgozat legfőképp kutatásának a konjugált gradiens módszerekkel
@@ -223,19 +203,9 @@ módszereken dolgozott.
 \begin_layout Standard
 Feleségével, Joan-nal, 1959-ben házasodtak össze.
  Négy gyerekük született, a legidősebb, Robbie, 4 éves korában meghalt.
- Broyden nagy örömét lelte családjában, gyermekeiben, Christopher, Jane
+ Broyden nagy örömét lelte családjában, gyermekeiben, Christopher-ben, Jane-ben
  és Nicholas-ban.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
--ban -ban -ban?
-\end_layout
-
-\end_inset
-
-Szeretett madárlesre járni, zenével foglalkozni, kórusban énekelni, vitorlázni.
+ Szeretett madárlesre járni, zenével foglalkozni, kórusban énekelni, vitorlázni.
  A helyi közösség és az egyházi közösség aktív tagja volt.
  Hét unokája született.
  A legidősebb unokája, Tom, az Oxford egyetemen tanult matematikát, a második
