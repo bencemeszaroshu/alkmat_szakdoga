@@ -3526,6 +3526,7 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
+ mátrix LU-felbontásán az
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{A}=\boldsymbol{LU}
