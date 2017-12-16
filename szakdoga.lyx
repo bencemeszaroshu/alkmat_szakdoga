@@ -2677,6 +2677,15 @@ Az
 \end_layout
 
 \begin_layout Standard
+ddasd
+\end_layout
+
+\begin_layout Definition*
+A felső háromszögmátrix felső egység háromszögmátrix, ha minden diagonális
+ eleme egy.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
@@ -2697,6 +2706,18 @@ Az
 \end_inset
 
 -re.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az alsó háromszögmátrix alsó egység háromszögmátrix, ha minden diagonális
+ eleme egy.
 \end_layout
 
 \begin_layout Standard
