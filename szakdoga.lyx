@@ -4087,6 +4087,66 @@ reference "eq:Ar+1=Lr1Ur1"
 -ed rendű főrészmátrixa is nemszinguláris.
 \end_layout
 
+\begin_layout Corollary*
+Ha 
+\begin_inset Formula $\boldsymbol{L}$
+\end_inset
+
+ alsó egység háromszögmátrix, az LU-felbontás egyértelmű.
+\end_layout
+
+\begin_layout Proof
+Ha 
+\begin_inset Formula $\boldsymbol{L}$
+\end_inset
+
+ alsó egység háromszögmátrix, akkor a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Lr+1"
+
+\end_inset
+
+ felbontásban 
+\begin_inset Formula $\lambda_{r}=1$
+\end_inset
+
+ minden 
+\begin_inset Formula $r$
+\end_inset
+
+-re.
+ Ebből következik, hogy 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Ur+1"
+
+\end_inset
+
+ felbontásban 
+\begin_inset Formula $\mu_{r}$
+\end_inset
+
+ egyértelmű minden 
+\begin_inset Formula $r$
+\end_inset
+
+-re.
+ Mivel 
+\begin_inset Formula $\boldsymbol{p}_{r}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{v}_{r}$
+\end_inset
+
+ egyértelmű minden 
+\begin_inset Formula $r$
+\end_inset
+
+-re, következik az eredmény.
+\end_layout
+
 \begin_layout Subsubsection
 A Gauss-féle elimináció
 \end_layout
