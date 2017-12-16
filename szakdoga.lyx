@@ -42,7 +42,7 @@ tabs-within-sections
 \use_hyperref true
 \pdf_bookmarks true
 \pdf_bookmarksnumbered true
-\pdf_bookmarksopen true
+\pdf_bookmarksopen false
 \pdf_bookmarksopenlevel 1
 \pdf_breaklinks false
 \pdf_pdfborder false
@@ -79,7 +79,7 @@ tabs-within-sections
 \rightmargin 2.5cm
 \bottommargin 4cm
 \secnumdepth 3
-\tocdepth 3
+\tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language polish
@@ -3496,7 +3496,7 @@ mi az a sorozatos transzformáció?
  
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 Az LU felbontás
 \end_layout
 
@@ -4066,7 +4066,7 @@ reference "eq:Ar+1=Lr1Ur1"
 -ed rendű főrészmátrixa is nemszinguláris.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 A Gauss-féle elimináció
 \end_layout
 
