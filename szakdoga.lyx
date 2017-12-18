@@ -5146,40 +5146,37 @@ Legyen
 \end_layout
 
 \begin_layout Standard
-Ha az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- mátrixszal szorozzuk a sajátvektorát, a sajátvektor mérete változhat, iránya
- azonban nem változik, legfeljebb ellenkezőjére fordul.
- Azaz 
-\begin_inset Formula 
-\begin{equation}
-\boldsymbol{Ax}=\lambda\boldsymbol{x}
-\end{equation}
-
-\end_inset
-
- a 
+A 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:jobbsajatv"
 
 \end_inset
 
- jelölésekkel.
- A sajátértékek és sajátvektorok a mátrixok fontos jellemzői.
- 
-\begin_inset Note Note
-status open
+ egyenlőségből látszik, hogy az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
 
-\begin_layout Plain Layout
-Miért? SVDs cikk?
-\end_layout
+ mátrix sajátvektorát 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixszal szorozva, a sajátvektorhoz tartozó sajátértékszeresét kapjuk
+ a sajátvektornak.
+ Azaz
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{Ax}=\lambda\boldsymbol{x}.
+\end{equation}
 
 \end_inset
 
+Valós mátrixokhoz gyakran tartozik komplex sajátérték és sajátvektor, ezért
+ a fejezetben a továbbiakban feltesszük, hogy 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
 
+ komplex négyzetes mátrix.
 \end_layout
 
 \begin_layout Theorem
@@ -5188,7 +5185,6 @@ Minden négyzetes mátrixnak van legalább egy sajátértéke.
 
 \begin_layout Standard
 \noindent
-Valós mátrixokhoz gyakran tartozik komplex sajátérték és sajátvektor.
 \begin_inset Separator plain
 \end_inset
 
@@ -5236,17 +5232,6 @@ Legyen
 \end_layout
 
 \begin_layout Theorem
-A valós szimmetrikus mátrixnak minden sajátértéke valós.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Theorem
 A Hermite-féle mátrixnak minden sajátértéke valós.
 \end_layout
 
@@ -5254,127 +5239,7 @@ A Hermite-féle mátrixnak minden sajátértéke valós.
 \noindent
 A Hermite-féle mátrixot ezért a valós szimmetrikus mátrix komplex megfelelőjének
  tekintjük.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition*
-Legyen 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- és 
-\begin_inset Formula $\boldsymbol{P}$
-\end_inset
-
- 
-\begin_inset Formula $n$
-\end_inset
-
--ed rendű mátrix.
- Legyen 
-\series bold
-
-\begin_inset Formula $\boldsymbol{P}$
-\end_inset
-
-
-\series default
- nemszinguláris.
- A 
-\begin_inset Formula $\boldsymbol{PA}\boldsymbol{P}^{-1}$
-\end_inset
-
- transzformáció hasonlósági transzformáció, az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- és 
-\begin_inset Formula $\boldsymbol{PA}\boldsymbol{P}^{-1}$
-\end_inset
-
- mátrixok hasonlóak.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Theorem
-A hasonlósági transzformáció nem változtatja meg a mátrix sajátértékeit.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition*
-Legyen 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- és 
-\begin_inset Formula $\boldsymbol{P}$
-\end_inset
-
- n-ed rendű mátrix.
- Legyen 
-\series bold
-
-\begin_inset Formula $\boldsymbol{P}$
-\end_inset
-
-
-\series default
- nemszinguláris.
- A 
-\begin_inset Formula $\boldsymbol{PA}\boldsymbol{P}^{-1}$
-\end_inset
-
- hasonlósági transzformáció ortogonális transzformáció, ha 
-\begin_inset Formula $\boldsymbol{P}$
-\end_inset
-
- mátrix ortogonális.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Obádovicsban 
-\begin_inset Quotes pld
-\end_inset
-
-ortogonálisan hasonlók
-\begin_inset Quotes prd
-\end_inset
-
- van.
- 308.
- oldalnál kezdődik
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+ Bevezetjük a valós ortogonális mátrix komplex megfelelőjét, az unitér mátrixot.
 \end_layout
 
 \begin_layout Definition*
@@ -5405,8 +5270,11 @@ Legyen
 \begin_inset Formula $\boldsymbol{P}$
 \end_inset
 
- n-ed rendű mátrix.
- Legyen 
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű mátrix és legyen 
 \series bold
 
 \begin_inset Formula $\boldsymbol{P}$
@@ -5419,29 +5287,24 @@ Legyen
 \begin_inset Formula $\boldsymbol{PA}\boldsymbol{P}^{-1}$
 \end_inset
 
- hasonlósági transzformáció unitér transzformáció, ha 
+ transzformációt hasonlósági transzformációnak, az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{PA}\boldsymbol{P}^{-1}$
+\end_inset
+
+ mátrixokat hasonlónak nevezzük.
+ Ezenfelül, ha 
 \begin_inset Formula $\boldsymbol{P}$
 \end_inset
 
- mátrix unitér..
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Obádovicsban 
-\begin_inset Quotes pld
+ mátrix ortogonális (unitér), a 
+\begin_inset Formula $\boldsymbol{PA}\boldsymbol{P}^{-1}$
 \end_inset
 
-unitériálisan hasonlók
-\begin_inset Quotes prd
-\end_inset
-
- van
-\end_layout
-
-\end_inset
-
-
+ hasonlósági transzformációt ortogonális (unitér) transzformációnak nevezzük.
 \end_layout
 
 \begin_layout Standard
@@ -5449,6 +5312,25 @@ unitériálisan hasonlók
 \end_inset
 
 
+\end_layout
+
+\begin_layout Theorem
+A hasonlósági transzformáció nem változtatja meg a mátrix sajátértékeit.
+\end_layout
+
+\begin_layout Standard
+Az 
+\begin_inset Formula $n$
+\end_inset
+
+ darab sajátérték nem feltétlen különböző.
+ Megmutatjuk, hogy minden 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű négyzetes mátrixot hasonlósági transzformációval felső háromszögmátrix
+szá alakíthatunk.
+ A felső háromszögmátrix sajátértékei pedig a főátló elemei.
 \end_layout
 
 \begin_layout Theorem
@@ -5494,32 +5376,6 @@ Minden
 
 \series default
  darab sajátérték tartozik.
-\end_layout
-
-\begin_layout Standard
-Az 
-\begin_inset Formula $n$
-\end_inset
-
- darab sajátérték lehet nem különböző.
- Minden 
-\begin_inset Formula $n$
-\end_inset
-
--ed rendű négyzetes mátrixot hasonlósági transzformációval felső háromszögmátrix
-szá alakíthatunk, melynek sajátértékei a főátló elemei.
- A felső háromszögmátrix sajátértékei a főátló elemei.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-??
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Definition*
@@ -5699,38 +5555,8 @@ A mátrixhoz tartozó sajátértékek összege egyenlő a mátrix nyomával.
  
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-A fejezet 
-\begin_inset Quotes pld
-\end_inset
-
-The Practical Evaluation of Eigenvalues and Eigenvectors
-\begin_inset Quotes prd
-\end_inset
-
- még nem lett feldolgozva.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-KONVERGENS MÁTRIXOK
-\end_layout
-
-\end_inset
-
-
+\begin_layout Subsection
+Kovergens mátrixok
 \end_layout
 
 \begin_layout Standard
