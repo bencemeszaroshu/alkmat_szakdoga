@@ -1318,31 +1318,11 @@ ahol
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix első 
+ mátrix bal felső 
 \begin_inset Formula $r$
 \end_inset
 
--ed rendű főminormátrixa.
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-broyden p.17 Def 1.12
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Ezt majd a tanár úrral tisztázni kell, hogy van ez jelen a magyar irodalomban
-\end_layout
-
-\end_inset
-
-
+-ed rendű sarokminormátrixa.
 \end_layout
 
 \begin_layout Example*
@@ -1362,7 +1342,7 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix első elsőrendű főminormátrixa 
+ mátrix bal felső elsőrendű sarokminormátrixa 
 \begin_inset Formula 
 \[
 \left[\begin{array}{c}
@@ -1371,7 +1351,7 @@ a_{11}\end{array}\right],
 
 \end_inset
 
-az első másodrendű főminormátrixa 
+a bal felső másodrendű sarokminormátrixa 
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
@@ -1382,7 +1362,7 @@ a_{21} & a_{22}
 
 \end_inset
 
-és az első harmadrendű főminormátrixa önmaga.
+és a bal felső harmadrendű sarokminormátrixa önmaga.
 \end_layout
 
 \begin_layout Standard
@@ -2800,11 +2780,11 @@ Legyen
 \begin_inset Formula $\boldsymbol{U}_{i}$
 \end_inset
 
- az első 
+ a bal felső 
 \begin_inset Formula $i$
 \end_inset
 
--ed rendű főminormátrixa 
+-ed rendű sarokminormátrixa 
 \begin_inset Formula $\boldsymbol{U}$
 \end_inset
 
@@ -2844,7 +2824,7 @@ reference "thm:matrix_nemszing_ha_foreszmatrixok"
 \begin_inset Formula $\boldsymbol{U}_{i}$
 \end_inset
 
- főminormátrix nemszinguláris.
+ sarokminormátrix nemszinguláris.
  Ha 
 \begin_inset Formula $u_{ii}\neq0$
 \end_inset
@@ -2857,7 +2837,7 @@ reference "thm:matrix_nemszing_ha_foreszmatrixok"
 \begin_inset Formula $\boldsymbol{U}_{1},\boldsymbol{U}_{2},...,\boldsymbol{U}_{n}$
 \end_inset
 
- főminormátrixok nemszingulárisak, azaz 
+ sarokminormátrixok nemszingulárisak, azaz 
 \begin_inset Formula $\boldsymbol{U}$
 \end_inset
 
@@ -3767,7 +3747,7 @@ ahol
 \begin_inset Formula $\boldsymbol{A}_{11}$
 \end_inset
 
- az első tetszőleges rendű főminormátrixa az 
+ az első tetszőleges rendű bal felső sarokminormátrixa az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -3850,7 +3830,7 @@ reference "thm:matrix_nemszing_ha_foreszmatrixok"
 \begin_inset Formula $\boldsymbol{A}_{11}$
 \end_inset
 
- az első tetszőleges rendű főminormátrixa az 
+ a bal felső tetszőleges rendű sarokminormátrixa az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -3891,7 +3871,7 @@ ahol
 \begin_inset Formula $r$
 \end_inset
 
--ed rendű főminormátrixai.
+-ed rendű bal felső sarokminormátrixai.
  Megmutatjuk, hogy ha 
 \begin_inset Formula $\boldsymbol{A}_{r}$
 \end_inset
@@ -4135,11 +4115,11 @@ reference "eq:Ar+1=Lr1Ur1"
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix első 
+ mátrix bal felső 
 \begin_inset Formula $r$
 \end_inset
 
--ed rendű főminormátrixa nemszinguláris, és az 
+-ed rendű sarokminormátrixa nemszinguláris, és az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -4147,11 +4127,11 @@ reference "eq:Ar+1=Lr1Ur1"
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix első 
+ mátrix bal felső 
 \begin_inset Formula $r+1$
 \end_inset
 
--ed rendű főminormátrixa is nemszinguláris.
+-ed rendű sarokminormátrixa is nemszinguláris.
 \end_layout
 
 \begin_layout Corollary*
@@ -4647,7 +4627,7 @@ reference "eq:multiplikator"
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix első főminormátrixa szinguláris.
+ mátrix bal felső sarokminormátrixa szinguláris.
  Ebből következik, hogy az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
