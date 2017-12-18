@@ -1216,7 +1216,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}_{11}$
 \end_inset
 
- részmátrixot főrészmátrixnak nevezzük.
+ részmátrixot főminormátrixnak nevezzük.
  
 \end_layout
 
@@ -1264,7 +1264,7 @@ ahol
 \begin_inset Formula $r<n)$
 \end_inset
 
- főrészmátrix.
+ főminormátrix.
  Ekkor 
 \begin_inset Formula $\boldsymbol{A}_{11}$
 \end_inset
@@ -1277,7 +1277,7 @@ ahol
 \begin_inset Formula $r$
 \end_inset
 
--ed rendű főrészmátrixa.
+-ed rendű főminormátrixa.
 \begin_inset Note Comment
 status collapsed
 
@@ -1317,7 +1317,7 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix első elsőrendű főrészmátrixa 
+ mátrix első elsőrendű főminormátrixa 
 \begin_inset Formula 
 \[
 \left[\begin{array}{c}
@@ -1326,7 +1326,7 @@ a_{11}\end{array}\right],
 
 \end_inset
 
-az első másodrendű főrészmátrixa 
+az első másodrendű főminormátrixa 
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
@@ -1337,7 +1337,7 @@ a_{21} & a_{22}
 
 \end_inset
 
-és az első harmadrendű főrészmátrixa önmaga.
+és az első harmadrendű főminormátrixa önmaga.
 \end_layout
 
 \begin_layout Standard
@@ -2759,7 +2759,7 @@ Legyen
 \begin_inset Formula $i$
 \end_inset
 
--ed rendű főrészmátrixa 
+-ed rendű főminormátrixa 
 \begin_inset Formula $\boldsymbol{U}$
 \end_inset
 
@@ -2799,7 +2799,7 @@ reference "thm:matrix_nemszing_ha_foreszmatrixok"
 \begin_inset Formula $\boldsymbol{U}_{i}$
 \end_inset
 
- főrészmátrix nemszinguláris.
+ főminormátrix nemszinguláris.
  Ha 
 \begin_inset Formula $u_{ii}\neq0$
 \end_inset
@@ -2812,7 +2812,7 @@ reference "thm:matrix_nemszing_ha_foreszmatrixok"
 \begin_inset Formula $\boldsymbol{U}_{1},\boldsymbol{U}_{2},...,\boldsymbol{U}_{n}$
 \end_inset
 
- főrészmátrixok nemszingulárisak, azaz 
+ főminormátrixok nemszingulárisak, azaz 
 \begin_inset Formula $\boldsymbol{U}$
 \end_inset
 
@@ -3678,7 +3678,7 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix minden főrészmátrixa nemszinguláris.
+ mátrix minden főminormátrixa nemszinguláris.
 \begin_inset CommandInset label
 LatexCommand label
 name "thm:LUfelb-A--nemszinguláris"
@@ -3702,7 +3702,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix főrészmátrixai szükségképpen nemszingulárisak.
+ mátrix főminormátrixai szükségképpen nemszingulárisak.
  Particionáljuk 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
@@ -3722,7 +3722,7 @@ ahol
 \begin_inset Formula $\boldsymbol{A}_{11}$
 \end_inset
 
- az első tetszőleges rendű főrészmátrixa az 
+ az első tetszőleges rendű főminormátrixa az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -3805,7 +3805,7 @@ reference "thm:matrix_nemszing_ha_foreszmatrixok"
 \begin_inset Formula $\boldsymbol{A}_{11}$
 \end_inset
 
- az első tetszőleges rendű főrészmátrixa az 
+ az első tetszőleges rendű főminormátrixa az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -3846,7 +3846,7 @@ ahol
 \begin_inset Formula $r$
 \end_inset
 
--ed rendű főrészmátrixai.
+-ed rendű főminormátrixai.
  Megmutatjuk, hogy ha 
 \begin_inset Formula $\boldsymbol{A}_{r}$
 \end_inset
@@ -4094,7 +4094,7 @@ reference "eq:Ar+1=Lr1Ur1"
 \begin_inset Formula $r$
 \end_inset
 
--ed rendű főrészmátrixa nemszinguláris, és az 
+-ed rendű főminormátrixa nemszinguláris, és az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -4106,7 +4106,7 @@ reference "eq:Ar+1=Lr1Ur1"
 \begin_inset Formula $r+1$
 \end_inset
 
--ed rendű főrészmátrixa is nemszinguláris.
+-ed rendű főminormátrixa is nemszinguláris.
 \end_layout
 
 \begin_layout Corollary*
@@ -4602,7 +4602,7 @@ reference "eq:multiplikator"
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix első főrészmátrixa szinguláris.
+ mátrix első főminormátrixa szinguláris.
  Ebből következik, hogy az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
