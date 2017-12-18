@@ -3173,6 +3173,16 @@ Ide referenciát kell betenni!
 \begin_layout Standard
 A Cauchy-egyenlőtlenség komplex vektorokra is igaz, ha a transzponáltat
  Hermite-féle transzponáltra cseréjük.
+ A tételt nem bizonyítjuk, a bizonyítás megtalálható 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BasicMatrices"
+
+\end_inset
+
+ 42.
+ oldalán.
+ 
 \end_layout
 
 \begin_layout Definition*
