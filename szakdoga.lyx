@@ -3655,6 +3655,13 @@ Az
 \end_inset
 
  mátrix minden főrészmátrixa nemszinguláris.
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:LUfelb-A--nemszinguláris"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -4567,7 +4574,85 @@ reference "eq:multiplikator"
 \end_inset
 
  egyenlőségből látszik, hogy a pivot elemek nem lehetnek nullák.
+ Ha bármelyik pivot elem nulla, akkor az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix első főrészmátrixa szinguláris.
+ Ebből következik, hogy az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixnak nem létezik LU-felbontása (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:LUfelb-A--nemszinguláris"
+
+\end_inset
+
+-es tétel).
+\end_layout
+
+\begin_layout Standard
+A nulla értékű 
+\begin_inset Formula $r$
+\end_inset
+
+-edik pivot elem kiküszöbölésének egy módja, ha az 
+\begin_inset Formula $\boldsymbol{A}^{(r-1)}$
+\end_inset
+
+ mátrix sorait felcseréljük, úgy hogy az 
+\begin_inset Formula $r$
+\end_inset
+
+-edik pivot elem helyén ne nullát kapjunk.
+ Ezt úgy érhetjük el, ha az 
+\begin_inset Formula $\boldsymbol{A}^{(r-1)}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $r$
+\end_inset
+
+-edik oszlopában az 
+\begin_inset Formula $a_{rr}^{(r-1)}$
+\end_inset
+
+ elemtől lefelé megkeressük az első nem nulla elemet, legyen ez pl.
  
+\begin_inset Formula $a_{ir}^{(r-1)}$
+\end_inset
+
+, majd felcseréljük az 
+\begin_inset Formula $\boldsymbol{A}^{(r-1)}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $r$
+\end_inset
+
+-edik sorát az 
+\begin_inset Formula $i$
+\end_inset
+
+-edik sorával.
+ Ezt megtehetjük, mert 
+\begin_inset Formula $i>r$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Mert?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
