@@ -1050,9 +1050,54 @@ Legyenek
 \end_layout
 
 \begin_layout Standard
-Mátrixokat is minormátrixokra particionálhatunk.
+Mátrixokat is részmátrixokra particionálhatunk.
  Ennek nagy jelentősége, hogy nagy mátrixokat egyszerűbben kezelhetünk.
- A művelettartás a minormátrixokra két particionált mátrix között azonban
+ 
+\end_layout
+
+\begin_layout Definition*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 
+\begin_inset Formula $\ensuremath{m{\times}n}$
+\end_inset
+
+-es mátrix.
+ Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixból annak 
+\begin_inset Formula $k$
+\end_inset
+
+ számú sora 
+\begin_inset Formula $(1\leq k\leq m-1)$
+\end_inset
+
+ és 
+\begin_inset Formula $l$
+\end_inset
+
+ számú oszlopa 
+\begin_inset Formula $(1\leq l\leq n-1)$
+\end_inset
+
+ törlésével előállított 
+\begin_inset Formula $(\ensuremath{m-k){\times}(n-l)}$
+\end_inset
+
+-es részmátrixot az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix minormátrixának nevezzük.
+\end_layout
+
+\begin_layout Standard
+A művelettartás a minormátrixokra két particionált mátrix között azonban
  nem feltétlen jól definiált.
 \end_layout
 
