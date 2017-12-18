@@ -5580,6 +5580,19 @@ A mátrixhoz tartozó sajátértékek összege egyenlő a mátrix nyomával.
  
 \end_layout
 
+\begin_layout Theorem
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Hogyan számoljuk ki módszerek megemlítése
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Kovergens mátrixok
 \end_layout
@@ -5649,6 +5662,104 @@ Legyen
 
  és 
 \begin_inset Formula $\left\Vert \boldsymbol{BUB}^{-1}\right\Vert _{1}<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Legyen 
+\begin_inset Formula $\boldsymbol{U}=[u_{ij}]$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű felső háromszögmátrix.
+ Legyen 
+\begin_inset Formula $\boldsymbol{B}=diag(1,\beta,\beta^{2},...,\beta^{n-1})$
+\end_inset
+
+, ahol válasszunk 
+\begin_inset Formula $\beta>1$
+\end_inset
+
+ skalárt úgy, hogy
+\begin_inset Formula 
+\begin{equation}
+\beta^{j-i}>\frac{(n-1)\left|u_{ij}\right|}{1-\rho(\boldsymbol{U})}\qquad(j>i)\label{eq:bji_konv}
+\end{equation}
+
+\end_inset
+
+teljesüljön.
+ Legyen 
+\begin_inset Formula $\boldsymbol{V}=[v_{ij}]=\boldsymbol{BU}\boldsymbol{B}^{-1}$
+\end_inset
+
+.
+ Ekkor 
+\begin_inset Formula $j>i$
+\end_inset
+
+-re 
+\begin_inset Formula $v_{ij}=u_{ij}/\beta^{j.i}$
+\end_inset
+
+ és a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:bji_konv"
+
+\end_inset
+
+ egyenlőtlenség miatt
+\begin_inset Formula 
+\begin{equation}
+\left|v_{ij}\right|<\frac{1-\rho(\boldsymbol{U})}{n-1}\,.\qquad(j>i)\label{eq:vij_konv}
+\end{equation}
+
+\end_inset
+
+De 
+\begin_inset Formula $\left|v_{ii}\right|=\left|u_{ii}\right|\leq\rho(\boldsymbol{U})$
+\end_inset
+
+ és 
+\begin_inset Formula $v_{ij}=0$
+\end_inset
+
+ minden 
+\begin_inset Formula $i>j$
+\end_inset
+
+-re.
+ Ezért
+\begin_inset Formula 
+\[
+\left\Vert \boldsymbol{V}\right\Vert _{\infty}\leq\rho(\boldsymbol{U})+\max_{i}\sum_{j=i+1}^{n}\left|v_{ij}\right|
+\]
+
+\end_inset
+
+és így az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:vij_konv"
+
+\end_inset
+
+ egyenlőtlenség miatt
+\begin_inset Formula 
+\[
+\left\Vert \boldsymbol{V}\right\Vert _{\infty}\leq\rho(\boldsymbol{U})+(n-1)\left[\frac{1-\rho(\boldsymbol{U})}{n-1}\right]<1\,.
+\]
+
+\end_inset
+
+Hasonlóan, 
+\begin_inset Formula $\left\Vert V\right\Vert _{1}<1$
 \end_inset
 
 .
