@@ -5136,18 +5136,8 @@ Legyen
 \end_inset
 
  mátrix jobboldali sajátvektora.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition*
-Legyen 
-\begin_inset Formula $\boldsymbol{A}$
+ Legyen 
+\begin_inset Formula $\boldsymbol{B}$
 \end_inset
 
  négyzetes mátrix.
@@ -5158,13 +5148,13 @@ Legyen
  vektor, ami mellett 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{y}^{T}(\boldsymbol{A}-\lambda\boldsymbol{I})=\boldsymbol{0}^{T},\label{eq:balsajatv}
+\boldsymbol{y}^{T}(\boldsymbol{B}-\lambda\boldsymbol{I})=\boldsymbol{0}^{T},\label{eq:balsajatv}
 \end{equation}
 
 \end_inset
 
- az 
-\begin_inset Formula $\boldsymbol{A}$
+ a 
+\begin_inset Formula $\boldsymbol{B}$
 \end_inset
 
  mátrix baloldali sajátvektora.
@@ -5182,7 +5172,7 @@ reference "eq:jobbsajatv"
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix sajátvektorát 
+ mátrix sajátvektorát az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -5196,24 +5186,314 @@ reference "eq:jobbsajatv"
 
 \end_inset
 
-Valós mátrixokhoz gyakran tartozik komplex sajátérték és sajátvektor, ezért
- a fejezetben a továbbiakban feltesszük, hogy 
+
+\end_layout
+
+\begin_layout Definition*
+Legyen 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- komplex négyzetes mátrix.
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű négyzetes mátrix és 
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
+\end_inset
+
+ tetszőleges 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű vektor.
+ Ekkor az 
+\begin_inset Formula 
+\[
+\boldsymbol{x},\boldsymbol{A}\boldsymbol{x},\boldsymbol{A}^{2}\boldsymbol{x},...
+\]
+
+\end_inset
+
+sorozatot Krylov sorozatnak nevezzük.
 \end_layout
 
 \begin_layout Theorem
 Minden négyzetes mátrixnak van legalább egy sajátértéke.
 \end_layout
 
-\begin_layout Standard
-\noindent
-\begin_inset Separator plain
+\begin_layout Proof
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
+ 
+\begin_inset Formula $n$
+\end_inset
 
+-ed rendű négyzetes mátrix és 
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
+\end_inset
+
+ tetszőleges 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű vektor.
+ Az 
+\begin_inset Formula $\boldsymbol{x},\boldsymbol{A}\boldsymbol{x},\boldsymbol{A}^{2}\boldsymbol{x},...,\boldsymbol{A}^{k}\boldsymbol{x}$
+\end_inset
+
+ Krylov sorozat vektorai 
+\begin_inset Formula $k>n$
+\end_inset
+
+ esetén lineárisan összefüggők a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:fundamentalthm"
+
+\end_inset
+
+-es tétel miatt, de nem zárhatjuk ki, hogy a sorozat ennél kevesebb vektora
+ is lineárisan összefüggő.
+ Tegyük fel, hogy a sorozat első 
+\begin_inset Formula $r\leq n$
+\end_inset
+
+ vektora lineárisan független, de az első 
+\begin_inset Formula $r+1$
+\end_inset
+
+ darab vektora lineárisan összefüggő.
+ Ekkor léteznek olyan 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=0,1,...,r$
+\end_inset
+
+, nem mind nulla, 
+\begin_inset Formula $r+1$
+\end_inset
+
+ darab skalárok, hogy
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{x}\alpha_{0}+\boldsymbol{Ax}\alpha_{1}+...+\boldsymbol{A}^{r}\boldsymbol{x}\alpha_{r}=\boldsymbol{0}.\label{eq:_Krylov_ArxAlfar}
+\end{equation}
+
+\end_inset
+
+Különösen 
+\begin_inset Formula $\alpha_{r}\neq0$
+\end_inset
+
+, mert ebből a sorozat első 
+\begin_inset Formula $r+1$
+\end_inset
+
+ darab vektorának lineáris függetlensége következne, ami ellent mond a hipotézis
+nek.
+ Ezért a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:_Krylov_ArxAlfar"
+
+\end_inset
+
+ egyenlőség átirtható a
+\begin_inset Formula 
+\begin{equation}
+\left(\frac{\alpha_{0}}{\alpha_{r}}\boldsymbol{I}+\frac{\alpha_{1}}{\alpha_{r}}\boldsymbol{A}+\frac{\alpha_{2}}{\alpha_{r}}\boldsymbol{A}^{2}+...+\boldsymbol{A}^{r}\right)\boldsymbol{x}=\boldsymbol{0}\label{eq:alfa0_alfar}
+\end{equation}
+
+\end_inset
+
+alakra.
+ Egyszerűbben
+\begin_inset Formula 
+\[
+p(\boldsymbol{A})\boldsymbol{x}=\boldsymbol{0},
+\]
+
+\end_inset
+
+ahol
+\begin_inset Formula 
+\begin{equation}
+p(\boldsymbol{A})=\frac{\alpha_{0}}{\alpha_{r}}\boldsymbol{I}+\frac{\alpha_{1}}{\alpha_{r}}\boldsymbol{A}+...+\boldsymbol{A}^{r}\,.\label{eq:pA_tortes}
+\end{equation}
+
+\end_inset
+
+Legyen 
+\begin_inset Formula 
+\begin{equation}
+p(\xi)=\frac{\alpha_{0}}{\alpha_{r}}+\frac{\alpha_{1}}{\alpha_{r}}\xi+...+\xi^{r}\,,
+\end{equation}
+
+\end_inset
+
+polinom, ahol 
+\begin_inset Formula $\xi$
+\end_inset
+
+ skalár.
+ Az algebra alaptételéből tudjuk, hogy 
+\begin_inset Formula 
+\begin{equation}
+p(\xi)=(\xi-\lambda_{1})(\xi-\lambda_{2})...(\xi-\lambda_{r})\,,\label{eq:pkszi}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\lambda_{1},\lambda_{1},...,\lambda_{r}$
+\end_inset
+
+ a (nem feltétlen különböző) gyökei a 
+\begin_inset Formula $p(\xi)=0$
+\end_inset
+
+ egyenletnek.
+ Láthatjuk, hogy
+\begin_inset Formula 
+\begin{equation}
+p(\boldsymbol{A})=(\boldsymbol{A}-\lambda_{1}\boldsymbol{I})(\boldsymbol{A}-\lambda_{2}\boldsymbol{I})...(\boldsymbol{A}-\lambda_{r}\boldsymbol{I})\,,\label{eq:pA}
+\end{equation}
+
+\end_inset
+
+ha a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pkszi"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pA"
+
+\end_inset
+
+ egyenlőségek jobboldalait kifejtjük, és összehasonlítjuk a 
+\begin_inset Formula $\xi^{i}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{A}^{i}$
+\end_inset
+
+ együtthatókat, ahol 
+\begin_inset Formula $0\leq i\leq r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Most megmutatjuk, hogy 
+\begin_inset Formula $(\boldsymbol{A}-\lambda_{1}\boldsymbol{I})$
+\end_inset
+
+ szinguláris.
+ Tegyük fel az ellenkezőjét.
+ Ekkor a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:alfa0_alfar"
+
+\end_inset
+
+ egyenlőséget balról 
+\begin_inset Formula $(\boldsymbol{A}-\lambda_{1}\boldsymbol{I})^{-1}$
+\end_inset
+
+-el megszorozva kapjuk, a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pA_tortes"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pA"
+
+\end_inset
+
+ egyenlőségeken keresztül, hogy
+\begin_inset Formula 
+\begin{equation}
+(\boldsymbol{A}-\lambda_{2}\boldsymbol{I})(\boldsymbol{A}-\lambda_{3}\boldsymbol{I})...(\boldsymbol{A}-\lambda_{r}\boldsymbol{I})\boldsymbol{x}=\boldsymbol{0}\,,\label{eq:59}
+\end{equation}
+
+\end_inset
+
+ahol most 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ 
+\begin_inset Formula $(r-1)$
+\end_inset
+
+-ed rendű.
+ A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:59"
+
+\end_inset
+
+ egyenlőség írható úgy is, hogy
+\begin_inset Formula 
+\[
+(\beta_{0}\boldsymbol{I}+\beta_{1}\boldsymbol{A}+...+\boldsymbol{A}^{r-1})\boldsymbol{x}=\boldsymbol{0},
+\]
+
+\end_inset
+
+vagy
+\begin_inset Formula 
+\[
+\boldsymbol{x}\beta_{0}+\boldsymbol{Ax}\beta_{1}+...+\boldsymbol{A}^{r-1}\boldsymbol{x}=\boldsymbol{0},
+\]
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+-k, 
+\begin_inset Formula $0\leq i\leq r-2$
+\end_inset
+
+, a megfelelő együtthatók.
+ Ez azt vonja maga után, hogy az 
+\begin_inset Formula $\boldsymbol{x},\boldsymbol{Ax},...$
+\end_inset
+
+ sorozat első 
+\begin_inset Formula $r$
+\end_inset
+
+ vektora lineárisan összefüggő, ami ellentmond a hipotézisnek.
+ Ez az ellentmondás garantálja az 
+\begin_inset Formula $(\boldsymbol{A}-\lambda_{1}\boldsymbol{I})$
+\end_inset
+
+ mátrix szingularitását, és az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix legalább egy sajátértékének létezését.
 \end_layout
 
 \begin_layout Theorem
@@ -5234,37 +5514,67 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
--nak, akkor 
+ mátrixnak, akkor 
 \begin_inset Formula $\overline{\lambda}$
 \end_inset
 
- sajátértéke, 
+ is sajátértéke, 
 \begin_inset Formula $\boldsymbol{\overline{x}}$
 \end_inset
 
- sajátvektora 
+ is sajátvektora 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
--nak.
+ mátrixnak.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\begin_layout Proof
+Mivel 
+\begin_inset Formula $\boldsymbol{Az}=\boldsymbol{z}\lambda$
 \end_inset
 
+, a komplex konjugáltakat véve 
+\begin_inset Formula $\overline{(\boldsymbol{Az})}=\overline{(\boldsymbol{z}\lambda)}$
+\end_inset
 
+.
+ A tétel következik abból, hogy 
+\begin_inset Formula $\overline{(\boldsymbol{Az})}=\overline{\boldsymbol{A}}\overline{z}$
+\end_inset
+
+ és 
+\begin_inset Formula $\overline{(\boldsymbol{z}\lambda)}=\overline{\lambda}\overline{z}$
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Theorem
-A Hermite-féle mátrixnak minden sajátértéke valós.
+\begin_layout Corollary*
+Ha 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ valós mátrix, és ha van komplex sajátértéke és sajátvektora, ezek mindig
+ komplex konjugált párokban jelentkeznek.
+\end_layout
+
+\begin_layout Proof
+Ha 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ valós, akkor 
+\begin_inset Formula $\boldsymbol{A}=\overline{\boldsymbol{A}}$
+\end_inset
+
+, és az eredmény a tételből közvetlenül következik.
+ 
 \end_layout
 
 \begin_layout Standard
 \noindent
-A Hermite-féle mátrixot ezért a valós szimmetrikus mátrix komplex megfelelőjének
- tekintjük.
- Bevezetjük a valós ortogonális mátrix komplex megfelelőjét, az unitér mátrixot.
+Bevezetjük a valós ortogonális mátrix komplex megfelelőjét, az unitér mátrixot.
 \end_layout
 
 \begin_layout Definition*
@@ -5280,10 +5590,10 @@ Az
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\noindent
+A Hermite-féle mátrixot ezért a valós szimmetrikus mátrix komplex megfelelőjének
+ tekintjük.
+ 
 \end_layout
 
 \begin_layout Definition*
@@ -5299,7 +5609,7 @@ Legyen
 \begin_inset Formula $n$
 \end_inset
 
--ed rendű mátrix és legyen 
+-ed rendű mátrix, és legyen 
 \series bold
 
 \begin_inset Formula $\boldsymbol{P}$
@@ -5332,24 +5642,71 @@ Legyen
  hasonlósági transzformációt ortogonális (unitér) transzformációnak nevezzük.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
 \begin_layout Theorem
 A hasonlósági transzformáció nem változtatja meg a mátrix sajátértékeit.
 \end_layout
 
-\begin_layout Standard
-Az 
+\begin_layout Proof
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+ 
 \begin_inset Formula $n$
 \end_inset
 
- darab sajátérték nem feltétlen különböző.
- Megmutatjuk, hogy minden 
+-ed rendű mátrix, és legyen 
+\series bold
+
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+
+\series default
+ nemszinguláris.
+ Legyen 
+\begin_inset Formula $\boldsymbol{Az}=\boldsymbol{z}\lambda$
+\end_inset
+
+.
+ Ekkor 
+\begin_inset Formula $\boldsymbol{PA}\boldsymbol{P}^{-1}\boldsymbol{Px}=\boldsymbol{Px}\lambda$
+\end_inset
+
+.
+ Ezért, ha 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixhoz tartozó sajátérték, és 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ a hozzátartozó sajátvektor, akkor 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ a 
+\begin_inset Formula $\boldsymbol{PA}\boldsymbol{P}^{-1}$
+\end_inset
+
+ mátrixnak is sajátértéke, és 
+\begin_inset Formula $\boldsymbol{Px}$
+\end_inset
+
+ a hozzátartozó sajátvektora.
+\end_layout
+
+\begin_layout Standard
+Megmutatjuk, hogy minden 
 \begin_inset Formula $n$
 \end_inset
 
@@ -5387,20 +5744,8 @@ Minden
  
 \end_layout
 
-\begin_layout Corollary*
-Minden 
-\begin_inset Formula $n$
-\end_inset
-
--ed rendű mátrixhoz 
-\series bold
-
-\begin_inset Formula $n$
-\end_inset
-
-
-\series default
- darab sajátérték tartozik.
+\begin_layout Proof
+ndsadasd
 \end_layout
 
 \begin_layout Definition*
@@ -5463,34 +5808,6 @@ van
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Itt van 3 következmény a 87.
- oldalon
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-84.
- oldal 5.3 Elementary Properties of Eigenvectors felyezet
 \end_layout
 
 \end_inset
@@ -5582,7 +5899,7 @@ A mátrixhoz tartozó sajátértékek összege egyenlő a mátrix nyomával.
 
 \begin_layout Theorem
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Hogyan számoljuk ki módszerek megemlítése
