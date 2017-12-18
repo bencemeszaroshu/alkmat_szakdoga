@@ -1050,15 +1050,15 @@ Legyenek
 \end_layout
 
 \begin_layout Standard
-Mátrixokat is részmátrixokra particionálhatunk.
+Mátrixokat is minormátrixokra particionálhatunk.
  Ennek nagy jelentősége, hogy nagy mátrixokat egyszerűbben kezelhetünk.
- A művelettartás a részmátrixokra két particionált mátrix között azonban
+ A művelettartás a minormátrixokra két particionált mátrix között azonban
  nem feltétlen jól definiált.
 \end_layout
 
 \begin_layout Definition*
 Mátrixok egy halmaza egy művelet szerint jól particionált, ha a mátrixok
- részmátrixai között a művelet jól definiált.
+ minormátrixai között a művelet jól definiált.
 \end_layout
 
 \begin_layout Example*
@@ -1105,7 +1105,7 @@ A szorzás szerint
 \begin_inset Formula $\boldsymbol{F}_{1}$
 \end_inset
 
- nem jól particionáltak, mert a megfelelő részmátrixok szorzata 
+ nem jól particionáltak, mert a megfelelő minormátrixok szorzata 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:matrixszorzat"
@@ -1182,7 +1182,7 @@ Azonban az összeadás szerint
 \begin_inset Formula $\boldsymbol{F}_{2}$
 \end_inset
 
- nem jól particionáltak, mert a megfelelő részmátrixok összege nem képezhető.
+ nem jól particionáltak, mert a megfelelő minormátrixok összege nem képezhető.
 \end_layout
 
 \begin_layout Definition*
@@ -1203,12 +1203,12 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix egy particionálásának részmátrixa.
+ mátrix egy particionálásának minormátrixa.
  Ha az 
 \begin_inset Formula $\boldsymbol{A}_{11}$
 \end_inset
 
- részmátrix elemei az 
+ minormátrix elemei az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -1216,7 +1216,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}_{11}$
 \end_inset
 
- részmátrixot főminormátrixnak nevezzük.
+ minormátrixot főminormátrixnak nevezzük.
  
 \end_layout
 
@@ -2521,7 +2521,7 @@ ahol
 \begin_inset Formula $\boldsymbol{A}_{22}$
 \end_inset
 
- részmátrixok is négyzetes mátrixok.
+ minormátrixok is négyzetes mátrixok.
  Ekkor az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
@@ -2534,7 +2534,7 @@ ahol
 \begin_inset Formula $\boldsymbol{A}_{22}$
 \end_inset
 
- részmátrixok nemszingulárisak.
+ minormátrixok nemszingulárisak.
 \begin_inset CommandInset label
 LatexCommand label
 name "thm:matrix_nemszing_ha_foreszmatrixok"
@@ -2553,7 +2553,7 @@ Legyenek
 \begin_inset Formula $\boldsymbol{A}_{22}$
 \end_inset
 
- részmátrixok nemszingulárisak.
+ minormátrixok nemszingulárisak.
  Ekkor
 \begin_inset Formula 
 \[
@@ -2590,7 +2590,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{A_{11}}$
 \end_inset
 
- részmátrix szinguláris.
+ minormátrix szinguláris.
  Ekkor mindig létezik olyan 
 \begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
 \end_inset
@@ -2608,7 +2608,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}_{11}$
 \end_inset
 
- részmátrixtól függ, mert 
+ minormátrixtól függ, mert 
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
@@ -2629,7 +2629,7 @@ Ezért, ha
 \begin_inset Formula $\boldsymbol{A_{11}}$
 \end_inset
 
- részmátrix szinguláris, akkor az 
+ minormátrix szinguláris, akkor az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -2638,7 +2638,7 @@ Ezért, ha
 \begin_inset Formula $\boldsymbol{A}_{22}$
 \end_inset
 
- részmátrix szinguláris, mindig létezik olyan 
+ minormátrix szinguláris, mindig létezik olyan 
 \begin_inset Formula $\boldsymbol{y}\neq\boldsymbol{0}$
 \end_inset
 
