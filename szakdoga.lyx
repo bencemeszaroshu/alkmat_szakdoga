@@ -3157,17 +3157,6 @@ egyenlőtlenség akkor és csak akkor igaz, ha
 \end_inset
 
  vektornak.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ide referenciát kell betenni!
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -3339,12 +3328,37 @@ A Frobenius norma az euklideszi vektornorma mátrix megfelelője, de nem az
  szükségtelenül pontatlan eredményekhez vezet.
 \end_layout
 
+\begin_layout Definition*
+A nemszinguláris 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix kondíciószámának jelölése 
+\begin_inset Formula $k(\boldsymbol{A})$
+\end_inset
+
+, és definíciója 
+\begin_inset Formula 
+\begin{equation}
+k(\boldsymbol{A})=\left\Vert \boldsymbol{A}\right\Vert \left\Vert \boldsymbol{A}^{-1}\right\Vert \,,
+\end{equation}
+
+\end_inset
+
+ahol tetszőleges norma választható.
+\end_layout
+
 \begin_layout Standard
+A kondíciószám mérete jellemzi a mátrix szingularitásának mértékét.
+ Ha a kondíciószám kicsi, szokás a mátrixot jól kondicionáltnak hívni, ha
+ a kondíciószám nagy, szokás a mátrixot rosszul kondicionáltnak hívni.
+ 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-Kondíciószámról nyilatkozni kell!
+Itt a 47 oldaltól még ez elég jól részletezve van, külön a 3.5 és 3.6-os fejezetek
+ben
 \end_layout
 
 \end_inset
