@@ -4541,7 +4541,7 @@ egyenlőségrendszereket generálja, ahol
 \end_inset
 
 .
- Az
+ 
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{A}^{(n-1)}=\boldsymbol{M}_{n-1}\boldsymbol{M}_{n-2}...\boldsymbol{M}_{1}\boldsymbol{A},
@@ -4549,7 +4549,7 @@ egyenlőségrendszereket generálja, ahol
 
 \end_inset
 
-felbontásban 
+ahol 
 \begin_inset Formula $\boldsymbol{A}^{(n-1)}$
 \end_inset
 
@@ -4565,9 +4565,8 @@ reference "eq:mr=I-mreTr"
 \end_inset
 
  egyenlőség miatt mindig alsó egység háromszögmátrix.
- Mivel alsó egység háromszögmátrix inverze alsó egység háromszögmátrix és
- alsó egység háromszögmátrixok szorzata is alsó egység háromszögmátrix,
- így ha
+ Alsó egység háromszögmátrix inverze alsó egység háromszögmátrix, és alsó
+ egység háromszögmátrixok szorzata is alsó egység háromszögmátrix, így ha
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{U}=\boldsymbol{A}^{(n-1)}
@@ -5705,6 +5704,93 @@ Legyen
  a hozzátartozó sajátvektora.
 \end_layout
 
+\begin_layout Theorem
+Minden 
+\begin_inset Formula $k$
+\end_inset
+
+-ad rendű 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixhoz létezik olyan 
+\begin_inset Formula $\boldsymbol{X}$
+\end_inset
+
+ unitér mátrix, hogy 
+\begin_inset Formula $\boldsymbol{X}^{H}\boldsymbol{AX}$
+\end_inset
+
+ első oszlopa a 
+\begin_inset Formula $k$
+\end_inset
+
+-ad rendű egységmátrix első oszlopának többszöröse.
+\begin_inset CommandInset label
+LatexCommand label
+name "XHAX_elso_oszlopa_e1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Legyen 
+\begin_inset Formula $\boldsymbol{Ax}=\lambda\boldsymbol{x}$
+\end_inset
+
+, ahol 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ normalizált, azaz 
+\begin_inset Formula $\boldsymbol{x}^{H}\boldsymbol{x}=1$
+\end_inset
+
+.
+ Legyen 
+\begin_inset Formula $\boldsymbol{X}$
+\end_inset
+
+ olyan unitér mátrix, aminek az első oszlopa 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+itt hiányzik lemma 5.1-re hivatkozás
+\end_layout
+
+\end_inset
+
+ Ekkor 
+\begin_inset Formula $\boldsymbol{x}=\boldsymbol{X}\boldsymbol{e}_{1}$
+\end_inset
+
+, így 
+\begin_inset Formula $\boldsymbol{AX}\boldsymbol{e}_{1}=\boldsymbol{X}\boldsymbol{e}_{1}\lambda$
+\end_inset
+
+.
+ Balról szorozva 
+\begin_inset Formula $\boldsymbol{X}^{H}$
+\end_inset
+
+ mátrixszal kapjuk, hogy
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{X}^{H}\boldsymbol{AX}\boldsymbol{e}_{1}=\boldsymbol{e}_{1}\lambda\,.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 Megmutatjuk, hogy minden 
 \begin_inset Formula $n$
@@ -5745,7 +5831,212 @@ Minden
 \end_layout
 
 \begin_layout Proof
-ndsadasd
+Indukcióval bizonyítunk.
+ Tegyük fel, hogy létezik olyan 
+\begin_inset Formula $\boldsymbol{Q}_{r}$
+\end_inset
+
+ unitér mátrix, hogy
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{Q}_{r}^{H}\boldsymbol{AQ}_{r}=\left[\begin{array}{cc}
+\boldsymbol{U}_{r} & \boldsymbol{B}_{r}\\
+\boldsymbol{0} & \boldsymbol{C}_{r}
+\end{array}\right],\label{eq:QHAQ_Ur}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\boldsymbol{U}_{r}$
+\end_inset
+
+ 
+\begin_inset Formula $r$
+\end_inset
+
+-ed rendű felső háromszögmátrix.
+ Megmutatjuk, hogy ekkor a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:QHAQ_Ur"
+
+\end_inset
+
+ egyenlőség 
+\begin_inset Formula $(r+1)$
+\end_inset
+
+-re is igaz.
+ Mivel 
+\begin_inset Formula $\boldsymbol{C}_{r}$
+\end_inset
+
+ négyzetes, a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "XHAX_elso_oszlopa_e1"
+
+\end_inset
+
+-os tétel miatt létezik olyan 
+\begin_inset Formula $\boldsymbol{X}_{r}$
+\end_inset
+
+ unitér mátrix, hogy
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{X}_{r}^{H}\boldsymbol{C}_{r}\boldsymbol{X}_{r}\boldsymbol{e}_{1}=\boldsymbol{e}_{1}\lambda\,,\label{eq:XRHCRXe1}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ a 
+\begin_inset Formula $\boldsymbol{C}_{r}$
+\end_inset
+
+ részmátrix sajátértéke.
+ Legyen
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{P}_{r}=\left[\begin{array}{cc}
+\boldsymbol{I} & \boldsymbol{0}\\
+\boldsymbol{0} & \boldsymbol{X}_{r}
+\end{array}\right].\label{eq:Pr=IXr}
+\end{equation}
+
+\end_inset
+
+Mivel 
+\begin_inset Formula $\boldsymbol{P}_{r}$
+\end_inset
+
+ unitér mátrix, a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:QHAQ_Ur"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Pr=IXr"
+
+\end_inset
+
+ egyenlőségből következik, hogy
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{P}_{r}\boldsymbol{Q}_{r}^{H}\boldsymbol{A}\boldsymbol{Q}_{r}\boldsymbol{P}_{r}=\left[\begin{array}{cc}
+\boldsymbol{U}_{r} & \boldsymbol{B}_{r}\boldsymbol{X}_{r}\\
+\boldsymbol{0} & \boldsymbol{X}_{r}\boldsymbol{C}_{r}\boldsymbol{X}_{r}
+\end{array}\right].\label{eq:PRQRHAQR...}
+\end{equation}
+
+\end_inset
+
+Így a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:XRHCRXe1"
+
+\end_inset
+
+ egyenlőség miatt a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PRQRHAQR..."
+
+\end_inset
+
+ egyenlőség jobb oldala írható úgy, hogy
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+\boldsymbol{U}_{r+1} & \boldsymbol{B}_{r+1}\\
+\boldsymbol{0} & \boldsymbol{C}_{r+1}
+\end{array}\right].
+\]
+
+\end_inset
+
+Legyen 
+\begin_inset Formula $\boldsymbol{Q}_{r+1}=\boldsymbol{Q}_{r}\boldsymbol{P}_{r}$
+\end_inset
+
+, ekkor 
+\begin_inset Formula $\boldsymbol{Q}_{r+1}$
+\end_inset
+
+ unitér, mert két unitér mátrix szorzata unitér.
+ Így a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:QHAQ_Ur"
+
+\end_inset
+
+ egyenlőség 
+\begin_inset Formula $(r+1)$
+\end_inset
+
+-re is igaz.
+ Mivel a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:QHAQ_Ur"
+
+\end_inset
+
+ egyenlőség 
+\begin_inset Formula $r=1$
+\end_inset
+
+ esetén igaz a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "XHAX_elso_oszlopa_e1"
+
+\end_inset
+
+-os tétel miatt, így minden 
+\begin_inset Formula $r$
+\end_inset
+
+-re, 
+\begin_inset Formula $1\leq r\leq n-1$
+\end_inset
+
+ , igaz.
+ Ha 
+\begin_inset Formula $r=n-1$
+\end_inset
+
+ a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:QHAQ_Ur"
+
+\end_inset
+
+ egyenlőség jobb oldala felső háromszög mátrix, ezt 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+-val jelölve és 
+\begin_inset Formula $\boldsymbol{Q}_{n-1}$
+\end_inset
+
+-et 
+\begin_inset Formula $\boldsymbol{Q}$
+\end_inset
+
+-val jelölve, kapjuk a tétel állítását.
 \end_layout
 
 \begin_layout Definition*
