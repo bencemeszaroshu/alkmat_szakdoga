@@ -2743,6 +2743,11 @@ Az alsó háromszögmátrix alsó egység háromszögmátrix, ha minden diagoná
 
 \end_layout
 
+\begin_layout Definition*
+A felső háromszögmátrix felső egység háromszögmátrix, ha minden diagonális
+ eleme egy.
+\end_layout
+
 \begin_layout Theorem
 Az 
 \begin_inset Formula $\boldsymbol{U}=[u_{ij}]$
@@ -6030,6 +6035,7 @@ reference "eq:QHAQ_Ur"
 \end_layout
 
 \begin_layout Standard
+\noindent
 A tétel következményeit bizonyítás nélkül közöljük, a bizonyítások megtalálhatók
  
 \begin_inset CommandInset citation
@@ -6052,10 +6058,11 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- négyzetes mátrixnak n darab sajátvektora van.
+ négyzetes mátrixnak n darab sajátértéke van.
 \end_layout
 
 \begin_layout Standard
+\noindent
 A tétel következő következménye előtt bevezetjük a normálmátrix fogalmát.
 \end_layout
 
@@ -6088,7 +6095,7 @@ Az
 \end_inset
 
  négyzetes mátrix diagonális mátrixszá transzformálható egy unitér transzformáci
-óval akkor és csak akkor, ha 
+óval akkor és csak akkor, ha az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -6103,7 +6110,7 @@ Az
 \end_layout
 
 \begin_layout Corollary*
-Ha 
+Ha az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -6133,11 +6140,11 @@ reference "eq:HQAQ=U"
 \end_layout
 
 \begin_layout Corollary*
-Ha 
+Ha az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix és minden sajátértéke valós, akkor 
+ mátrix és minden sajátértéke valós, akkor az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -6154,11 +6161,11 @@ val.
 \end_layout
 
 \begin_layout Corollary*
-Ha 
+Ha az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix valós és szimmetrikus, akkor 
+ mátrix valós és szimmetrikus, akkor az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -6166,10 +6173,52 @@ Ha
 \end_layout
 
 \begin_layout Standard
+Megmutattuk, hogy az 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ négyzetes mátrixnak n darab sajátértéke van, de ezek a sajátértékek nem
+ feltétlen különbözőek.
+ Most megnézzük hány darab különböző, azaz lineárisan független sajátvektora
+ van egy mátrixnak.
+ Kiemelt fontosságú, hogy egy 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű négyzetes mátrixnak van-e 
+\begin_inset Formula $n$
+\end_inset
+
+ darab lineárisan független sajátvektora.
+ Ha igen, akkor ezek a lineárisan független sajátvektorok bázist alkotnak.
+\end_layout
+
+\begin_layout Definition*
+Ha egy mátrix sajátvektorai nem alkotnak bázist, akkor a mátrixot defektív
+ mátrixnak nevezzük.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
 
+\end_layout
+
+\begin_layout Definition*
+A mátrixot amelynek oszlopai egy nem-defektív mátrix sajátvektorai, modálmátrixn
+ak nevezzük.
+\end_layout
+
+\begin_layout Standard
+\noindent
+A modálmátrix nem egyértelmű.
+ Egyrészt nincs meghatározva a mátrix oszlopainak sorrendje, másrészt a
+ sajátvektorok tetszőlegesen méretezhetők.
 \end_layout
 
 \begin_layout Theorem
@@ -6181,11 +6230,11 @@ Legyen
 \begin_inset Formula $n$
 \end_inset
 
--ed rendű mátrix és tartozzon hozzá 
+-ed rendű mátrix és legyen 
 \begin_inset Formula $m$
 \end_inset
 
- darab különböző sajátérték, 
+ darab különböző sajátértéke, 
 \begin_inset Formula $m\leq n$
 \end_inset
 
@@ -6194,37 +6243,376 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrixhoz legalább 
+ mátrixnak legalább 
 \begin_inset Formula $m$
 \end_inset
 
- lineárisan független sajátvektor tartozik.
-\begin_inset Note Note
-status collapsed
+ darab lineárisan független sajátvektora van.
+\end_layout
 
-\begin_layout Plain Layout
-ez meg nézni, hogy mindenhol 
-\begin_inset Quotes pld
+\begin_layout Proof
+A tételt először az 
+\begin_inset Formula $\boldsymbol{U}=[u_{ij}]$
 \end_inset
 
-tartozik
-\begin_inset Quotes prd
+ felső háromszögmátrixra bizonyítjuk.
+ Jelölje 
+\begin_inset Formula $\lambda_{i}$
 \end_inset
 
--ot hasznalok e, vagy 
-\begin_inset Quotes pld
+ az 
+\begin_inset Formula $\boldsymbol{U}$
 \end_inset
 
-van
-\begin_inset Quotes prd
+ mátrix sajátértékeit, 
+\begin_inset Formula $\lambda_{k}$
+\end_inset
+
+ pedig a többszörös sajátértékeit.
+ Legyen
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{U}=\left[\begin{array}{cc}
+\boldsymbol{U}_{11} & \boldsymbol{U}_{12}\\
+\boldsymbol{0} & \boldsymbol{U}_{22}
+\end{array}\right],\label{eq:UU11U120U122}
+\end{equation}
+
+\end_inset
+
+ ahol 
+\begin_inset Formula $\boldsymbol{U}_{11}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{U}_{22}$
+\end_inset
+
+ négyzetes mátrixok.
+ 
+\end_layout
+
+\begin_layout Proof
+Particionáljuk úgy, hogy 
+\begin_inset Formula $\boldsymbol{U}_{11}$
+\end_inset
+
+ mátrixnak ne legyen 
+\begin_inset Formula $\lambda_{k}$
+\end_inset
+
+ diagonális eleme, az 
+\begin_inset Formula $\boldsymbol{U}_{22}$
+\end_inset
+
+ mátrixnak pedig legyen az első diagonális eleme 
+\begin_inset Formula $\lambda_{k}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Legyen 
+\begin_inset Formula $(\boldsymbol{U}-\lambda_{k}\boldsymbol{I})=\boldsymbol{0}$
+\end_inset
+
+, amit írhatunk az
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{cc}
+\boldsymbol{U}_{11}-\lambda_{k}\boldsymbol{I} & \boldsymbol{U}_{12}\\
+\boldsymbol{0} & \boldsymbol{U}_{22}-\lambda_{k}\boldsymbol{I}
+\end{array}\right]\left[\begin{array}{c}
+\boldsymbol{x}_{1}\\
+\boldsymbol{x}_{2}
+\end{array}\right]=\left[\begin{array}{c}
+\boldsymbol{0}\\
+\boldsymbol{0}
+\end{array}\right],\label{eq:441}
+\end{equation}
+
+\end_inset
+
+vagy a
+\begin_inset Formula 
+\begin{equation}
+(\boldsymbol{U}_{11}-\lambda_{k}\boldsymbol{I})\boldsymbol{x}_{1}=-\boldsymbol{U}_{12}\boldsymbol{x}_{2}\label{eq:442}
+\end{equation}
+
+\end_inset
+
+és
+\begin_inset Formula 
+\begin{equation}
+(\boldsymbol{U}_{22}-\lambda_{k}\boldsymbol{I})\boldsymbol{x}_{2}=\boldsymbol{0}\label{eq:443}
+\end{equation}
+
+\end_inset
+
+alakban.
+ 
+\end_layout
+
+\begin_layout Proof
+Particionáljuk a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:UU11U120U122"
+
+\end_inset
+
+ egyenlőségben úgy, hogy az 
+\begin_inset Formula $(\boldsymbol{U}_{22}-\lambda_{k}\boldsymbol{I})$
+\end_inset
+
+ mátrix első oszlopa nulla legyen, és emiatt 
+\begin_inset Formula $\boldsymbol{x}_{2}=\boldsymbol{e}_{1}$
+\end_inset
+
+, ahol 
+\begin_inset Formula $\boldsymbol{e}_{1}$
+\end_inset
+
+ a megfelelő rendű egységmátrix első oszlopa.
+ Particionáljuk a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:UU11U120U122"
+
+\end_inset
+
+ egyenlőségben úgy, hogy 
+\begin_inset Formula $(\boldsymbol{U}_{11}-\lambda_{k}\boldsymbol{I})\boldsymbol{x}_{1}$
+\end_inset
+
+ legyen nemszinguláris.
+ Ekkor az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:442"
+
+\end_inset
+
+ egyenlőségből
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{x}_{1}=-(\boldsymbol{U}_{11}-\lambda_{k}\boldsymbol{I})^{-1}\boldsymbol{U}_{12}\boldsymbol{e}_{2}\,.
+\end{equation}
+
 \end_inset
 
 
 \end_layout
 
+\begin_layout Proof
+A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:441"
+
+\end_inset
+
+ egyenlőségből látszik, hogy ha 
+\begin_inset Formula $\boldsymbol{U}_{11}$
+\end_inset
+
+ 
+\begin_inset Formula $(r-1)$
+\end_inset
+
+-ed rendű, akkor az 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ sajátvektor az 
+\begin_inset Formula $r$
+\end_inset
+
+-edik oszlopa valamilyen 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű felső egység háromszögmátrixnak.
+ Így az 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $m$
+\end_inset
+
+ darab különböző sajátértékéhez tartozik különböző sajátvektor, amelyek
+ egy felső egység háromszögmátrix oszlopai.
+ Mivel a felső egység háromszögmátrix nemszinguláris, tehát sajátvektorok
+ lineárisan függetlenek.
+ 
+\end_layout
+
+\begin_layout Proof
+Hogy a tételt az általános 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixra belássuk, legyen
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{Q}^{H}\boldsymbol{A}\boldsymbol{Q}=\boldsymbol{U},\label{eq:QHAQ=U2}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\boldsymbol{Q}$
+\end_inset
+
+ unitér mátrix.
+ Legyen 
+\begin_inset Formula $\boldsymbol{V}$
+\end_inset
+
+ 
+\begin_inset Formula $n{\times}m$
+\end_inset
+
+-es mátrix a 
+\begin_inset Formula $\lambda_{1},\lambda_{2},...,\lambda_{m}$
+\end_inset
+
+ különböző sajátértékekhez tartozó lineárisan független sajátvektorok mátrixa.
+ Legyen 
+\begin_inset Formula $\boldsymbol{\varLambda}_{1}=diag(\lambda_{i})$
+\end_inset
+
+ az 
+\begin_inset Formula $m$
+\end_inset
+
+-ed rendű diagonális mátrix a 
+\begin_inset Formula $\lambda_{1},\lambda_{2},...,\lambda_{m}$
+\end_inset
+
+ különböző sajátértékkel.
+ Ekkor
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{UV}=\boldsymbol{V}\boldsymbol{\varLambda}_{1}\,.\label{eq:UVVA}
+\end{equation}
+
+\end_inset
+
+A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:QHAQ=U2"
+
+\end_inset
+
+ és a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:UVVA"
+
+\end_inset
+
+ egyenlőségekből következik, hogy
+\begin_inset Formula 
+\[
+\boldsymbol{AQV}=\boldsymbol{QV}\boldsymbol{\varLambda}_{1\,}.
+\]
+
+\end_inset
+
+Azaz a 
+\begin_inset Formula $\boldsymbol{QV}$
+\end_inset
+
+ mátrix oszlopai az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixnak a 
+\begin_inset Formula $\lambda_{1},\lambda_{2},...,\lambda_{m}$
+\end_inset
+
+ különböző sajátértékeihez tartozó lineárisan független sajátvektorok mátrixa.
+ Mivel 
+\begin_inset Formula $\boldsymbol{V}$
+\end_inset
+
+ mátrix oszlopai lineárisan függetlenek és 
+\begin_inset Formula $\boldsymbol{Q}$
+\end_inset
+
+ unitér mátrix, így a 
+\begin_inset Formula $\boldsymbol{QV}$
+\end_inset
+
+ mátrix nemszinguláris, tehát a sajátvektorok lineárisan függetlenek.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+A tétel következményeit bizonyítás nélkül közöljük, a bizonyítások megtalálhatók
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "88. oldal"
+key "BasicMatrices"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Corollary*
+Ha egy 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű mátrixnak 
+\begin_inset Formula $n$
+\end_inset
+
+ darab különböző sajátértéke van, akkor nem defektív mátrix.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
+\end_layout
+
+\begin_layout Corollary*
+Ha egy mátrix sajátértéke egyszeres, a hozzátartozó sajátvektor egyértelmű,
+ a méretezést leszámítva.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary*
+Ha egy mátrix sajátértéke 
+\begin_inset Formula $r$
+\end_inset
+
+-szeres, akkor legfeljebb 
+\begin_inset Formula $r$
+\end_inset
+
+ darab lineárisan független sajátvektor tartozik hozzá.
+\end_layout
+
+\begin_layout Standard
+dasdsad
 \end_layout
 
 \begin_layout Definition*
@@ -6254,13 +6642,6 @@ Legyen
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
 \end_layout
 
 \begin_layout Theorem
