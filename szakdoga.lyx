@@ -7030,6 +7030,15 @@ Hasonlóan,
 \end_layout
 
 \begin_layout Theorem
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Ezt a tételt majd még át kell nézni illetve felfogni !
+\end_layout
+
+\end_inset
+
 Az 
 \begin_inset Formula $n$
 \end_inset
@@ -7058,7 +7067,10 @@ reference "thm:Schur"
 \end_inset
 
 -es tétellel kiterjesztjük a bizonyítást tetszőleges négyzetes mátrixra.
- Az 
+\end_layout
+
+\begin_layout Proof
+Az 
 \begin_inset Formula $i$
 \end_inset
 
@@ -7104,10 +7116,7 @@ reference "thm:Schur"
 \begin_inset Formula $u_{ii}^{r}$
 \end_inset
 
- hatványok folyamatosan csökkennek, míg nem 
-\begin_inset Formula $u_{ii}^{r}=0.$
-\end_inset
-
+ hatványok folyamatosan csökkennek.
  Mivel 
 \begin_inset Formula $\rho(\boldsymbol{U})=\max_{i}\left|u_{ii}\right|$
 \end_inset
@@ -7145,12 +7154,12 @@ reference "thm:411_BUB"
 \end_inset
 
 .
- Így 
+ Mivel 
 \begin_inset Formula $\boldsymbol{U}\boldsymbol{=B}^{-1}\boldsymbol{VB}$
 \end_inset
 
-, és 
-\begin_inset Formula $\boldsymbol{U}^{r}\boldsymbol{=B}^{-1}\boldsymbol{V}^{r}\boldsymbol{B},$
+, ezért 
+\begin_inset Formula $\boldsymbol{U}^{r}\boldsymbol{=B}^{-1}\boldsymbol{V}^{r}\boldsymbol{B}$
 \end_inset
 
  és 
@@ -7158,27 +7167,24 @@ reference "thm:411_BUB"
 \end_inset
 
 .
- Ezekből
-\begin_inset Formula 
-\[
-\left\Vert \boldsymbol{U}^{r}\right\Vert _{2}\leq\beta^{n-1}\left\Vert \boldsymbol{V}\right\Vert _{2}^{r}\,.
-\]
-
+ Ezekből következik, hogy 
+\begin_inset Formula $\left\Vert \boldsymbol{U}^{r}\right\Vert _{2}\leq\beta^{n-1}\left\Vert \boldsymbol{V}\right\Vert _{2}^{r}\,$
 \end_inset
 
-Ezért 
+.
+ Ezért, mivel 
 \begin_inset Formula $\left\Vert \boldsymbol{V}\right\Vert _{2}<1$
 \end_inset
 
-, 
+ és 
 \begin_inset Formula $\lim_{r\rightarrow\infty}\left\Vert \boldsymbol{U}^{r}\right\Vert =0$
 \end_inset
 
-, és 
+, az 
 \begin_inset Formula $\boldsymbol{U}$
 \end_inset
 
- konvergens.
+ mátrix konvergens.
  
 \end_layout
 
@@ -7194,66 +7200,24 @@ reference "thm:Schur"
 \begin_inset Formula $\boldsymbol{Q}^{H}\boldsymbol{AQ}=\boldsymbol{U}$
 \end_inset
 
-, így 
+, ezért 
 \begin_inset Formula $\boldsymbol{A}=\boldsymbol{QU}\boldsymbol{Q}^{H}$
 \end_inset
 
-, és 
+ és 
 \begin_inset Formula $\boldsymbol{A}^{r}=\boldsymbol{QU}^{r}\boldsymbol{Q}^{H}$
 \end_inset
 
 .
- Mivel 
+ A 
 \begin_inset Formula $\left\Vert \boldsymbol{Q}\right\Vert _{2}\left\Vert \boldsymbol{Q}^{H}\right\Vert _{2}=1$
 \end_inset
 
-, 
+ és 
 \begin_inset Formula $\left\Vert \boldsymbol{A}^{r}\right\Vert _{2}=\left\Vert \boldsymbol{U}^{r}\right\Vert _{2}$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Proof
-Most vizsgáljuk meg 
-\begin_inset Formula $\boldsymbol{A}^{r}$
-\end_inset
-
- viselkedését, ahogyan 
-\begin_inset Formula $r$
-\end_inset
-
- növekszik, miközben 
-\begin_inset Formula $\rho(\boldsymbol{A})<1$
-\end_inset
-
-, és 
-\begin_inset Formula $\left\Vert \boldsymbol{A}\right\Vert $
-\end_inset
-
->1.
- Mivel 
-\begin_inset Formula $\rho(\boldsymbol{A})<1$
-\end_inset
-
-, következik, hogy 
-\begin_inset Formula $\lim_{r\rightarrow\infty}\left\Vert \boldsymbol{A}^{r}\right\Vert =0$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-mátrix kondicioszamat majd definialni kell
-\end_layout
-
-\end_inset
-
-
+ egyenlőségből következik, hogy a tétel általános esetben is igaz.
 \end_layout
 
 \begin_layout Section
