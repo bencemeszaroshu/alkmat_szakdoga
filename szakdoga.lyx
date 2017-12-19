@@ -5813,6 +5813,13 @@ Minden
 \end_inset
 
  unitér mátrix, hogy 
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Schur"
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{Q}^{H}\boldsymbol{AQ}=\boldsymbol{U},\label{eq:HQAQ=U}
@@ -6769,11 +6776,11 @@ Bármilyen
  A 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:HQAQ=U"
+reference "thm:Schur"
 
 \end_inset
 
--ös tételből tudjuk, hogy 
+-es tételből tudjuk, hogy 
 \begin_inset Formula $\boldsymbol{Q}^{H}\boldsymbol{AQ}=\boldsymbol{U}$
 \end_inset
 
@@ -6847,10 +6854,10 @@ Az
 \end_inset
 
  mátrix konvergens, ha 
-\begin_inset Formula $\lim_{r\rightarrow\infty}\left\Vert \boldsymbol{A}^{r}\right\Vert =0.$
+\begin_inset Formula $\lim_{r\rightarrow\infty}\left\Vert \boldsymbol{A}^{r}\right\Vert =0$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -6861,6 +6868,12 @@ Az
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:411_BUB"
+
+\end_inset
+
 Legyen 
 \begin_inset Formula $\boldsymbol{U}$
 \end_inset
@@ -6977,7 +6990,7 @@ reference "eq:vij_konv"
 \end_inset
 
 Hasonlóan, 
-\begin_inset Formula $\left\Vert V\right\Vert _{1}<1$
+\begin_inset Formula $\left\Vert \boldsymbol{V}\right\Vert _{1}<1$
 \end_inset
 
 .
@@ -6992,11 +7005,213 @@ Hasonlóan,
 
 \begin_layout Theorem
 Az 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
  mátrix konvergenciájának szükséges és elégséges feltétele, hogy 
 \begin_inset Formula $\rho(\boldsymbol{A})<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+A tételt először egy 
+\begin_inset Formula $\boldsymbol{U}=[u_{ij}]$
+\end_inset
+
+ felső háromszögmátrixra bizonyítjuk, majd a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Schur"
+
+\end_inset
+
+-es tétellel kiterjesztjük a bizonyítást tetszőleges négyzetes mátrixra.
+ Az 
+\begin_inset Formula $i$
+\end_inset
+
+-edik diagonális eleme 
+\begin_inset Formula $\boldsymbol{U}^{r}$
+\end_inset
+
+ mátrixnak 
+\begin_inset Formula $u_{ii}^{r}$
+\end_inset
+
+, ezért 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ nem lehet konverges, ha 
+\begin_inset Formula $u_{ii}\ge1$
+\end_inset
+
+ bármilyen 
+\begin_inset Formula $i$
+\end_inset
+
+-re.
+ Ekkor ugyanis az 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ mátrix hatványozásakor az aktuális 
+\begin_inset Formula $u_{ii}^{r}$
+\end_inset
+
+ hatványok folyamatosan nőnek.
+ Ha 
+\begin_inset Formula $u_{ii}\leq1$
+\end_inset
+
+, az 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ mátrix hatványozásakor az aktuális 
+\begin_inset Formula $u_{ii}^{r}$
+\end_inset
+
+ hatványok folyamatosan csökkennek, míg nem 
+\begin_inset Formula $u_{ii}^{r}=0.$
+\end_inset
+
+ Mivel 
+\begin_inset Formula $\rho(\boldsymbol{U})=\max_{i}\left|u_{ii}\right|$
+\end_inset
+
+, ezért 
+\begin_inset Formula $\rho(\boldsymbol{U})<1$
+\end_inset
+
+ szükséges feltétele a konvergenciának.
+\end_layout
+
+\begin_layout Proof
+Bizonyítjuk a feltétel elégségességet.
+ A 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:411_BUB"
+
+\end_inset
+
+-es tétel következménye, hogy ha 
+\begin_inset Formula $\rho(\boldsymbol{U})<1$
+\end_inset
+
+, akkor létezik olyan 
+\begin_inset Formula $\boldsymbol{B}$
+\end_inset
+
+ diagonális mátrix, hogy 
+\begin_inset Formula $\boldsymbol{V}\boldsymbol{=BUB}^{-1}$
+\end_inset
+
+ és 
+\begin_inset Formula $\left\Vert \boldsymbol{V}\right\Vert _{2}<1$
+\end_inset
+
+.
+ Így 
+\begin_inset Formula $\boldsymbol{U}\boldsymbol{=B}^{-1}\boldsymbol{VB}$
+\end_inset
+
+, és 
+\begin_inset Formula $\boldsymbol{U}^{r}\boldsymbol{=B}^{-1}\boldsymbol{V}^{r}\boldsymbol{B},$
+\end_inset
+
+ és 
+\begin_inset Formula $\left\Vert \boldsymbol{B}\right\Vert _{2}\left\Vert \boldsymbol{B}^{-1}\right\Vert _{2}=\beta^{n-1}$
+\end_inset
+
+.
+ Ezekből
+\begin_inset Formula 
+\[
+\left\Vert \boldsymbol{U}^{r}\right\Vert _{2}\leq\beta^{n-1}\left\Vert \boldsymbol{V}\right\Vert _{2}^{r}\,.
+\]
+
+\end_inset
+
+Ezért 
+\begin_inset Formula $\left\Vert \boldsymbol{V}\right\Vert _{2}<1$
+\end_inset
+
+, 
+\begin_inset Formula $\lim_{r\rightarrow\infty}\left\Vert \boldsymbol{U}^{r}\right\Vert =0$
+\end_inset
+
+, és 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ konvergens.
+ 
+\end_layout
+
+\begin_layout Proof
+Általános esetben, a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Schur"
+
+\end_inset
+
+-es tételből 
+\begin_inset Formula $\boldsymbol{Q}^{H}\boldsymbol{AQ}=\boldsymbol{U}$
+\end_inset
+
+, így 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{QU}\boldsymbol{Q}^{H}$
+\end_inset
+
+, és 
+\begin_inset Formula $\boldsymbol{A}^{r}=\boldsymbol{QU}^{r}\boldsymbol{Q}^{H}$
+\end_inset
+
+.
+ Mivel 
+\begin_inset Formula $\left\Vert \boldsymbol{Q}\right\Vert _{2}\left\Vert \boldsymbol{Q}^{H}\right\Vert _{2}=1$
+\end_inset
+
+, 
+\begin_inset Formula $\left\Vert \boldsymbol{A}^{r}\right\Vert _{2}=\left\Vert \boldsymbol{U}^{r}\right\Vert _{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Most vizsgáljuk meg 
+\begin_inset Formula $\boldsymbol{A}^{r}$
+\end_inset
+
+ viselkedését, ahogyan 
+\begin_inset Formula $r$
+\end_inset
+
+ növekszik, miközben 
+\begin_inset Formula $\rho(\boldsymbol{A})<1$
+\end_inset
+
+, és 
+\begin_inset Formula $\left\Vert \boldsymbol{A}\right\Vert $
+\end_inset
+
+>1.
+ Mivel 
+\begin_inset Formula $\rho(\boldsymbol{A})<1$
+\end_inset
+
+, következik, hogy 
+\begin_inset Formula $\lim_{r\rightarrow\infty}\left\Vert \boldsymbol{A}^{r}\right\Vert =0$
 \end_inset
 
 .
