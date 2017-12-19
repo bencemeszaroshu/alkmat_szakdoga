@@ -4710,6 +4710,13 @@ Mert?
 
 \begin_layout Subsection
 Iteratív eljárások
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Iteratív-eljárások"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6183,7 +6190,7 @@ Megmutattuk, hogy az
 
  négyzetes mátrixnak n darab sajátértéke van, de ezek a sajátértékek nem
  feltétlen különbözőek.
- Most megnézzük hány darab különböző, azaz lineárisan független sajátvektora
+ Most megvizsgáljuk hány darab különböző, azaz lineárisan független sajátvektora
  van egy mátrixnak.
  Kiemelt fontosságú, hogy egy 
 \begin_inset Formula $n$
@@ -6612,7 +6619,17 @@ Ha egy mátrix sajátértéke
 \end_layout
 
 \begin_layout Standard
-dasdsad
+A 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:Iteratív-eljárások"
+
+\end_inset
+
+ fejezetben láttuk, hogy az iteratív eljárások konvergenciája összefügg
+ a mátrixok normájával.
+ Megvizsgálunk néhány, a sajátértékek és a mátrixok normája közötti összefüggést.
+ 
 \end_layout
 
 \begin_layout Definition*
@@ -6657,6 +6674,43 @@ Legyen
  tetszőleges normával.
 \end_layout
 
+\begin_layout Proof
+Legyen 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix egy sajátvektora és legyen 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ a hozzátartozó sajátérték, azaz 
+\begin_inset Formula $\boldsymbol{Ax}=\lambda\boldsymbol{x}$
+\end_inset
+
+.
+ Így a normák tulajdonságai alapján
+\begin_inset Formula 
+\[
+\left\Vert \lambda\boldsymbol{x}\right\Vert =\left\Vert \lambda\right\Vert \left\Vert \boldsymbol{x}\right\Vert =\left\Vert \boldsymbol{Ax}\right\Vert \leq\left\Vert \boldsymbol{A}\right\Vert \left\Vert \boldsymbol{x}\right\Vert .
+\]
+
+\end_inset
+
+Mivel 
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
+\end_inset
+
+, így 
+\begin_inset Formula $\left|\lambda\right|\leq\left\Vert \boldsymbol{A}\right\Vert $
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Definition*
 Legyen 
 \begin_inset Formula $\boldsymbol{A}=[a_{ij}]$
@@ -6690,12 +6744,66 @@ A mátrixhoz tartozó sajátértékek összege egyenlő a mátrix nyomával.
  
 \end_layout
 
-\begin_layout Theorem
+\begin_layout Proof
+Bármilyen 
+\begin_inset Formula $\boldsymbol{B}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{C}$
+\end_inset
+
+ mátrixokra, amelyeknek a 
+\begin_inset Formula $\boldsymbol{BC}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{CB}$
+\end_inset
+
+ szorzatuk definiálva van, 
+\begin_inset Formula $tr(\boldsymbol{BC})=tr(\boldsymbol{CB})$
+\end_inset
+
+.
+ A 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:HQAQ=U"
+
+\end_inset
+
+-ös tételből tudjuk, hogy 
+\begin_inset Formula $\boldsymbol{Q}^{H}\boldsymbol{AQ}=\boldsymbol{U}$
+\end_inset
+
+.
+ Ezért
+\begin_inset Formula 
+\[
+tr(\boldsymbol{U})=tr((\boldsymbol{Q}^{H}\boldsymbol{A})\boldsymbol{Q})=tr(\boldsymbol{Q}(\boldsymbol{Q}^{H}\boldsymbol{A}))=tr(\boldsymbol{A}),
+\]
+
+\end_inset
+
+az 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ mátrix nyoma pedig megegyezik az 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ mátrix sajátvektorainak összegével.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Hogyan számoljuk ki módszerek megemlítése
+Hogyan számoljuk ki módszerek megemlítése? Broydenből, vagy Bevezetés NumAnalba
+ is van sok módszer
 \end_layout
 
 \end_inset
