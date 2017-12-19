@@ -640,7 +640,7 @@ Az
 \begin_inset Formula $\boldsymbol{D}=[d_{ij}]$
 \end_inset
 
- mátrix diagonális, ha 
+ mátrix diagonális mátrix, ha 
 \begin_inset Formula $d_{ij}=0$
 \end_inset
 
@@ -3189,13 +3189,13 @@ A Cauchy-egyenlőtlenség komplex vektorokra is igaz, ha a transzponáltat
  Hermite-féle transzponáltra cseréjük.
  A tételt nem bizonyítjuk, a bizonyítás megtalálható 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand cite
+after "42. oldal"
 key "BasicMatrices"
 
 \end_inset
 
- 42.
- oldalán.
+.
  
 \end_layout
 
@@ -5053,20 +5053,6 @@ A következő fejezetekben két iterációs eljárással fogunk részletesen fog
  
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-A köv fejezetekben két iterácios eljárással foglalkozunk részletesebben,
- bla bla Broyden kutatásainak eredményeit.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Sajátértékek és sajátvektorok
 \end_layout
@@ -5815,7 +5801,11 @@ Minden
 \end_inset
 
  unitér mátrix, hogy 
-\begin_inset Formula $\boldsymbol{Q}^{H}\boldsymbol{AQ}=\boldsymbol{U},$
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{Q}^{H}\boldsymbol{AQ}=\boldsymbol{U},\label{eq:HQAQ=U}
+\end{equation}
+
 \end_inset
 
  ahol 
@@ -6039,16 +6029,147 @@ reference "eq:QHAQ_Ur"
 -val jelölve, kapjuk a tétel állítását.
 \end_layout
 
+\begin_layout Standard
+A tétel következményeit bizonyítás nélkül közöljük, a bizonyítások megtalálhatók
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "80-82. oldal"
+key "BasicMatrices"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Corollary*
+Az 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ négyzetes mátrixnak n darab sajátvektora van.
+\end_layout
+
+\begin_layout Standard
+A tétel következő következménye előtt bevezetjük a normálmátrix fogalmát.
+\end_layout
+
 \begin_layout Definition*
 Az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix normál mátrix, ha 
+ mátrix normálmátrix, ha 
 \begin_inset Formula $\boldsymbol{A}^{H}\boldsymbol{A}=\boldsymbol{A}\boldsymbol{A}^{H}$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary*
+Az 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ négyzetes mátrix diagonális mátrixszá transzformálható egy unitér transzformáci
+óval akkor és csak akkor, ha 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix normálmátrix.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary*
+Ha 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ Hermite-féle mátrix, az 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ mátrix a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:HQAQ=U"
+
+\end_inset
+
+ egyenlőségben valós diagonális mátrix, ezért az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix sajátértékei valósak.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary*
+Ha 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix és minden sajátértéke valós, akkor 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix valós felső háromszögmátrixszá alakítható egy ortogonális transzformáció
+val.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary*
+Ha 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix valós és szimmetrikus, akkor 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix valós diagonális mátrixszá alakítható egy ortogonális transzformációval
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Theorem
