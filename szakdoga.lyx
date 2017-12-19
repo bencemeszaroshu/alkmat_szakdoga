@@ -5070,11 +5070,37 @@ Sajátértékek és sajátvektorok
 \end_layout
 
 \begin_layout Standard
-Fontos jellemzője még az egyenletrendszernek az 
+Ha az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix a sajátértékei és sajátvektorai
+ mátrix négyzetes és nemszinguláris, akkor az 
+\begin_inset Formula $\boldsymbol{Ax}=\boldsymbol{b}$
+\end_inset
+
+ egyenletrendszernek egyértelmű a megoldása.
+ Ilyen egyenletrendszerek sokszor előfordulnak, amikor valamilyen rendszer
+ statikus viselkedését vizsgáljuk, ahol a rendszer válasza a valamilyen
+ stimulusra a 
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+ vektor.
+ Azonban ha az ilyen rendszerek dinamikus viselkedését akarjuk vizsgálni,
+ meg kell határoznunk azokat a 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ skalárokat, amelyekre az 
+\begin_inset Formula $(\boldsymbol{A}-\boldsymbol{I}\lambda)$
+\end_inset
+
+ mátrix szinguláris.
+ Ezek a 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ skalárok a vizsgált rendszer belső tulajdonságaival függenek össze.
 \end_layout
 
 \begin_layout Definition*
