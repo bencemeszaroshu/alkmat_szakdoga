@@ -5086,7 +5086,7 @@ Ha az
 \end_inset
 
  vektor.
- Azonban ha az ilyen rendszerek dinamikus viselkedését akarjuk vizsgálni,
+ Azonban, ha az ilyen rendszerek dinamikus viselkedését akarjuk vizsgálni,
  meg kell határoznunk azokat a 
 \begin_inset Formula $\lambda$
 \end_inset
