@@ -363,7 +363,7 @@ Legyen
 \end_inset
 
 -ed rendű valós vektor.
- A belső szorzata vagy más néven skalár szorzata a sorvektor 
+ A belső szorzata vagy más néven skaláris szorzata a sorvektor 
 \series bold
 
 \begin_inset Formula $\boldsymbol{x}{}^{T}$
@@ -501,7 +501,7 @@ A mátrixokat a szakdolgozatban vastag nagybetűvel jelöljük.
  Egy mátrixra akkor mondjuk, hogy ritka, ha viszonylag kevés nullától különböző
  eleme van.
  Egy mátrixra akkor mondjuk, hogy kitöltött, ha viszonylag kevés nulla eleme
- van
+ van.
 \end_layout
 
 \begin_layout Example*
@@ -766,7 +766,7 @@ Legyen
 \end_inset
 
 -ed rendű vektor.
- Jelöle 
+ Jelölje 
 \begin_inset Formula $\boldsymbol{a}_{i}^{T}$
 \end_inset
 
@@ -803,7 +803,7 @@ y_{i}=\boldsymbol{a}_{i}^{T}\boldsymbol{x}\,.
 
 \end_inset
 
-A mátrix-vektor szorzás az összeadásra nézve disztributív.
+
 \end_layout
 
 \begin_layout Standard
@@ -1015,7 +1015,8 @@ Legyenek
 \begin_inset Formula $\boldsymbol{u}=\boldsymbol{x}+\boldsymbol{y}$
 \end_inset
 
-.Ha 
+.
+ Ha 
 \begin_inset Formula $\boldsymbol{x}_{1}=[x_{1},x_{2},...,x_{r}]$
 \end_inset
 
