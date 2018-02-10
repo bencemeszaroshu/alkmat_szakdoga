@@ -115,6 +115,20 @@ LatexCommand tableofcontents
 Bevezetés
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Itt majd írni arról, hogy Broyden hogyan közelíti meg a lin.algebrát.
+ (Nem lesznek determinánsok.)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Broyden életrajza
 \end_layout
@@ -166,7 +180,7 @@ május 20.) szerény családi háttérrel, Angliában született.
  A kvázi-Newton módszerek kifejlesztésére irányuló munka az 1960-as és 1970-es
  években zajlott, a nemlineáris optimalizálás egy izgalmas időszakában.
  A kutatásban részt vett még például Bill Davidon, Roger Flecher és Mike
- Powell.
+ Powell például.
  A kutatás eredményeként valódi ipari alkalmazások nemlineáris optimalizálási
  problémáinak megoldására adtak eszközöket.
  
@@ -1249,7 +1263,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix egy particionálásának minormátrixa.
+ mátrix egy minormátrixa.
  Ha az 
 \begin_inset Formula $\boldsymbol{A}_{11}$
 \end_inset
