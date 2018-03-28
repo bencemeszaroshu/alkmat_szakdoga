@@ -1535,7 +1535,7 @@ Lineáris függetlenség
 \end_layout
 
 \begin_layout Standard
-A lineáris függetlenség alapvető fogalom nem csak a mátrix algebrában.
+A lineáris függetlenség alapvető fogalom.
  A következő fejezetekben nagyban fogunk annak a következményeire támaszkodni,
  hogy vektorok lineárisan függetlenek-e, vagy sem.
  
@@ -1588,7 +1588,7 @@ Az
 \end_inset
 
  vektorok lineárisan összefüggők, mert 
-\begin_inset Formula $3\boldsymbol{a}_{1}+2\boldsymbol{a}_{2}-1\boldsymbol{a}_{3}=0$
+\begin_inset Formula $3\boldsymbol{a}_{1}+2\boldsymbol{a}_{2}-\boldsymbol{a}_{3}=0$
 \end_inset
 
  .
@@ -1620,7 +1620,7 @@ Az
  vektorok lineárisan függetlenek, mert 
 \begin_inset Formula 
 \[
-\sum_{i=1}^{n}\boldsymbol{a}_{i}x_{i}=\begin{bmatrix}x_{1}+x_{2}+x_{3}\\
+\sum_{i=1}^{n}\boldsymbol{a}_{i}x_{i}=\begin{bmatrix}x_{1}+x_{2}-x_{3}\\
 x_{2}+x_{3}\\
 x_{3}
 \end{bmatrix}=\begin{bmatrix}0\\
@@ -1644,7 +1644,7 @@ Ebből következik, hogy
 \begin_inset Formula $x_{1}+x_{2}+x_{3}=0$
 \end_inset
 
- akkor és csak akkor teljesül, ha 
+ akkor és csak akkor, ha 
 \begin_inset Formula $x_{1}$
 \end_inset
 
@@ -1677,7 +1677,7 @@ Az
 \begin_inset Formula $\boldsymbol{Ax}=\boldsymbol{0}.$
 \end_inset
 
-
+ Ha nem létezik ilyen vektor, akkor a mátrix oszlopai lineárisan függetlenek.
 \end_layout
 
 \begin_layout Standard
@@ -1700,8 +1700,8 @@ Ha az
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
- vektor nem egyértelmű, mert skalárral szorzása nem változtat az ortogonalitáson
-, így 
+ vektor nem egyértelmű, mert a skalárral szorzása nem változtat az ortogonalitás
+on, így 
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
@@ -1722,7 +1722,8 @@ A lineárisan független
 \begin_inset Formula $n$
 \end_inset
 
--ed rendű vektorok halmazát, amelyből lineáris kombinációként bármely 
+-ed rendű vektorok halmazát, amelyből lineáris kombinációként bármely más
+ 
 \begin_inset Formula $n$
 \end_inset
 
@@ -1754,7 +1755,7 @@ Indukcióval bizonyítunk.
 \begin_inset Formula $(r-1){\times}r$
 \end_inset
 
--es mátrix oszlopai lineárisan összefüggő, akkor bármely 
+-es mátrix oszlopai lineárisan összefüggők, akkor bármely 
 \begin_inset Formula $r{\times}(r+1)$
 \end_inset
 
