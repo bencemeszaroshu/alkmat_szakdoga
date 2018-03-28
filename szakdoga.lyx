@@ -2043,29 +2043,6 @@ Definiáljuk a nemszinguláris mátrixot.
  definiáljuk a mátrix inverzét, és megvizsgáljuk a lineáris függőség és
  a mátrix inverze közötti kapcsolatot.
  
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-itt a mátrix sorai oszlopai lin függetlenek az ugyanaz kérdéskörről nem
- szólok semmit, pedig felmerülhet mint kérdés, az olvasóban.
- Broyden , 31.
- oldal körül, theorem 2.3 alatt talán
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Illetve arról se esik szó, hogy miért csak négyzetes mátrixnak van inverze
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Theorem
@@ -2086,6 +2063,15 @@ Nem létezik olyan
 \end_inset
 
  mátrix sorai lineárisan összefüggők.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "30. oldal, Lemma 2.3"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -2250,6 +2236,15 @@ Legyen
 \end_inset
 
 .
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "30. oldal, Theorem 2.3"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -2405,6 +2400,15 @@ reference "thm:fundamentalthm"
 \begin_layout Theorem
 Ha egy négyzetes mátrix oszlopai lineárisan függetlenek, akkor jobboldali
  inverze egyértelmű.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "31. oldal, Theorem 2.4"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -2458,6 +2462,15 @@ Legyen
 \begin_layout Theorem
 Ha egy négyzetes mátrixnak létezik egyértelmű jobboldali inverze, akkor
  az megegyezik a baloldali inverzével.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "31. oldal, Theorem 2.5"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -2583,6 +2596,14 @@ name "thm:matrix_nemszing_ha_foreszmatrixok"
 
 \end_inset
 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "33. oldal, Lemma 2.4"
+key "BasicMatrices"
+
+\end_inset
+
 
 \end_layout
 
@@ -2602,25 +2623,12 @@ Legyenek
 \boldsymbol{A}^{-1}=\left[\begin{array}{cc}
 \boldsymbol{A}_{11}^{-1} & \boldsymbol{A}_{11}^{-1}\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\\
 \boldsymbol{0} & \boldsymbol{A}_{22}^{-1}
-\end{array}\right].
+\end{array}\right]\,,
 \]
 
 \end_inset
 
-Tehát 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- inverz létezik, mert 
-\begin_inset Formula $\boldsymbol{A}_{11}$
-\end_inset
-
- és 
-\begin_inset Formula $\boldsymbol{A}_{22}$
-\end_inset
-
- inverzek léteznek.
- Ebből következik, hogy az 
+tehát az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -2790,6 +2798,14 @@ name "thm:Unemszingularis"
 
 \end_inset
 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "34. oldal, Theorem 2.6"
+key "BasicMatrices"
+
+\end_inset
+
 
 \end_layout
 
@@ -2881,7 +2897,7 @@ name "thm:Négyzetes-mátrixok-szorzata_nemszing_ha_nemszing"
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Proof
@@ -2953,7 +2969,7 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- nemszinguláris, és 
+ szimmetrikus, és 
 \begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}>0$
 \end_inset
 
@@ -2986,6 +3002,15 @@ Legyen
 \end_inset
 
  pozitív definit.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "34. oldal, Lemma 2.5"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
