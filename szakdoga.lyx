@@ -251,7 +251,8 @@ Mátrixok alapvető jellemzése
 \end_layout
 
 \begin_layout Standard
-Ebben a fejezetben további fejezetekhez szükséges fogalmakat vezetünk be.
+Ebben a fejezetben a további fejezetekhez szükséges fogalmakat vezetünk
+ be.
  Definíciókat adunk meg és tételeket mondunk ki.
  Tisztázzuk a jelöléseket.
 \end_layout
@@ -385,7 +386,7 @@ Legyen
 \end_inset
 
 -ed rendű valós vektor.
- A belső szorzata vagy más néven skaláris szorzata a sorvektor 
+ A belső szorzata, vagy más néven skaláris szorzata a sorvektor 
 \series bold
 
 \begin_inset Formula $\boldsymbol{x}{}^{T}$
@@ -902,16 +903,8 @@ c_{ij}=\boldsymbol{a}_{i}^{T}\boldsymbol{b}_{j}\,.\label{eq:matrixszorzat}
 \end_layout
 
 \begin_layout Standard
-Azaz képezzük az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- mátrix sorainak és a 
-\begin_inset Formula $\boldsymbol{B}$
-\end_inset
-
- mátrix oszlopainak belső szorozatát.
- Az 
+\noindent
+Az 
 \begin_inset Formula $\boldsymbol{AB}$
 \end_inset
 
@@ -1033,7 +1026,8 @@ Legyenek
 \begin_inset Formula $n$
 \end_inset
 
--ed rendű vektorok és 
+-ed rendű vektorok.
+ Legyen 
 \begin_inset Formula $\boldsymbol{u}=\boldsymbol{x}+\boldsymbol{y}$
 \end_inset
 
@@ -1120,13 +1114,14 @@ Legyen
 \end_layout
 
 \begin_layout Standard
-A művelettartás a minormátrixokra két particionált mátrix között azonban
- nem feltétlen jól definiált.
+\noindent
+A művelettartás a minormátrixokra két particionált mátrix között nem feltétlen
+ jól definiált.
 \end_layout
 
 \begin_layout Definition*
-Mátrixok egy halmaza egy művelet szerint jól particionált, ha a mátrixok
- minormátrixai között a művelet jól definiált.
+Particionált mátrixok egy halmaza egy művelet szerint jól particionált,
+ ha a mátrixok minormátrixai között a művelet jól definiált.
 \end_layout
 
 \begin_layout Example*
@@ -1220,19 +1215,6 @@ j_{21} & k_{21} & k_{22} & k_{23}\\
 j_{31} & k_{31} & k_{32} & k_{33}\\
 \hline l_{11} & m_{11} & m_{12} & m_{13}
 \end{array}
-\]
-
-\end_inset
-
-A szorzás eredménye
-\end_layout
-
-\begin_layout Example*
-\begin_inset Formula 
-\[
-\boldsymbol{E}_{1}\boldsymbol{F}_{1}=\begin{bmatrix}\boldsymbol{AJ}+\boldsymbol{BL} & \boldsymbol{AK}+\boldsymbol{BM}\\
-\boldsymbol{CJ}+\boldsymbol{DL} & \boldsymbol{CK}+\boldsymbol{DM}
-\end{bmatrix}.
 \]
 
 \end_inset
@@ -1366,15 +1348,10 @@ Az
 \end_inset
 
  mátrix bal felső elsőrendű sarokminormátrixa 
-\begin_inset Formula 
-\[
-\left[\begin{array}{c}
-a_{11}\end{array}\right],
-\]
-
+\begin_inset Formula $[a_{11}]\,,$
 \end_inset
 
-a bal felső másodrendű sarokminormátrixa 
+ a bal felső másodrendű sarokminormátrixa 
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
@@ -1397,36 +1374,41 @@ Az alkalmazásokban gyakran szükség van komplex vektorokra, mátrixokra.
  magával vett belső szorzata valós, nem negatív, és csak akkor nulla, ha
  a vektor nulla.
  Definiáljuk a belső szorzatot komplex vektorokra is.
- A 
-\begin_inset Formula $\boldsymbol{w}$
-\end_inset
-
- komplex vektor konjugáltját 
-\begin_inset Formula $\overline{\boldsymbol{w}}$
-\end_inset
-
--vel, az 
-\series bold
-
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
-
-\series default
- komplex mátrix konjugáltját 
-\begin_inset Formula $\overline{\boldsymbol{A}}$
-\end_inset
-
--val jelöljük.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Mi az a Hermite féle mátrix? ATA mindig szimmetrikus és AHA hermite féle,
- ezeket valahol közölni kellene
 \end_layout
 
+\begin_layout Definition*
+A 
+\begin_inset Formula $\boldsymbol{z}=\boldsymbol{x}+i\boldsymbol{y}$
+\end_inset
+
+ komplex vektor konjugáltja 
+\begin_inset Formula $\boldsymbol{\overline{z}}=\boldsymbol{x}-i\boldsymbol{y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}=[a_{ij}]$
+\end_inset
+
+ komplex mátrix konjugáltja 
+\begin_inset Formula $\overline{\boldsymbol{A}}=[\overline{a_{ij}}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
@@ -1492,6 +1474,16 @@ Az
 \end_layout
 
 \begin_layout Example*
+Legyen 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{B}+i\boldsymbol{C}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{z}=\boldsymbol{x}+i\boldsymbol{y}$
+\end_inset
+
+.
+ Ekkor 
 \begin_inset Formula $\boldsymbol{A}^{H}\boldsymbol{z}=(\boldsymbol{B}^{T}-i\boldsymbol{C}^{T})(\boldsymbol{x}+i\boldsymbol{y})=\boldsymbol{B}^{T}\boldsymbol{x}+\boldsymbol{C}^{T}\boldsymbol{y}+i(\boldsymbol{B}^{T}\boldsymbol{y}-\boldsymbol{C}^{T}\boldsymbol{x})$
 \end_inset
 
@@ -1514,7 +1506,7 @@ A
 \begin_inset Formula $\boldsymbol{w}$
 \end_inset
 
- és a 
+ komplex vektor és a 
 \begin_inset Formula $\boldsymbol{z}$
 \end_inset
 
