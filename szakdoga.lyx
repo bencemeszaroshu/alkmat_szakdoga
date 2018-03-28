@@ -2224,11 +2224,7 @@ akkor
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\noindent
-Egy mátrix invertálható, ha létezik inverze.
+ Egy mátrix invertálható, ha létezik inverze.
 \end_layout
 
 \begin_layout Theorem
@@ -2543,18 +2539,6 @@ Legyen
 \end_layout
 
 \end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Definiálunk és megvizsgálunk néhány elméleti vagy gyakorlati szempontból
- fontos nemszinguláris mátrixot.
-\end_layout
-
 \begin_layout Theorem
 Legyen 
 \begin_inset Formula $\boldsymbol{A}$
@@ -2705,6 +2689,11 @@ Ezért, ha
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+Most definiálunk és megvizsgálunk néhány elméleti vagy gyakorlati szempontból
+ fontos nemszinguláris mátrixot.
 \end_layout
 
 \begin_layout Definition*
