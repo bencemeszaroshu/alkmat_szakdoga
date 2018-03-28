@@ -1746,6 +1746,14 @@ name "thm:fundamentalthm"
 
 \end_inset
 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "29. oldal, Theorem 2.2"
+key "BasicMatrices"
+
+\end_inset
+
 
 \end_layout
 
@@ -1891,6 +1899,15 @@ Legyen
 \end_inset
 
  vektorok egyértelmű lineáris kombinációjaként.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "30. oldal, Lemma 2.2"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -1926,7 +1943,7 @@ Legyen
 \end_inset
 
  mátrix oszlopaival lineárisan összefüggő.
- Mivel ez az összesen 
+ Mivel ez összesen 
 \begin_inset Formula $r+1$
 \end_inset
 
@@ -1987,7 +2004,7 @@ Legyen
 \end_inset
 
 .
- Ha ezt kivonjuk az előző egyenlőségből, kapjuk, hogy 
+ Ha ezt kivonjuk az előző egyenlőségből, azt kapjuk, hogy 
 \begin_inset Formula $\boldsymbol{0}=\boldsymbol{A}(\boldsymbol{x}-\boldsymbol{z})$
 \end_inset
 
