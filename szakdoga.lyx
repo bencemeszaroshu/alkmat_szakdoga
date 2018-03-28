@@ -3596,18 +3596,16 @@ reference "eq:axb"
 
 \end_inset
 
- egyenletrendszer sorozatos transzformációja
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-mi az a sorozatos transzformáció?
-\end_layout
+ egyenletrendszer sorozatos transzformációja, amíg a megoldás könnyen számolható
+vá válik.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BevNumAnal"
 
 \end_inset
 
-, amíg a megoldás könnyen számolhatóvá válik.
- 
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -3744,6 +3742,14 @@ reference "eq:Lyb"
 \end_inset
 
  vektor ismeretében hasonlóan oldható meg.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Theorem
@@ -3756,10 +3762,18 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix minden főminormátrixa nemszinguláris.
+ mátrix minden bal felső sarokminormátrixa nemszinguláris.
 \begin_inset CommandInset label
 LatexCommand label
 name "thm:LUfelb-A--nemszinguláris"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "56. oldal, Theorem 4.1"
+key "BasicMatrices"
 
 \end_inset
 
@@ -3780,7 +3794,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix főminormátrixai szükségképpen nemszingulárisak.
+ mátrix bal felső sarokminormátrixai szükségképpen nemszingulárisak.
  Particionáljuk 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
@@ -3814,7 +3828,11 @@ ahol
 \end_inset
 
  mátrixokat hasonlóan.
- Azaz 
+ A hipotézis szerint 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{LU}$
+\end_inset
+
+, azaz 
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
@@ -4193,6 +4211,15 @@ Ha
 \end_inset
 
  alsó egység háromszögmátrix, az LU-felbontás egyértelmű.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "57. oldal, Corollary"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
