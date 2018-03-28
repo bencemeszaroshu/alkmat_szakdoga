@@ -180,9 +180,9 @@ május 20.) szerény családi háttérrel, Angliában született.
  A kvázi-Newton módszerek kifejlesztésére irányuló munka az 1960-as és 1970-es
  években zajlott, a nemlineáris optimalizálás egy izgalmas időszakában.
  A kutatásban részt vett még például Bill Davidon, Roger Flecher és Mike
- Powell például.
- A kutatás eredményeként valódi ipari alkalmazások nemlineáris optimalizálási
- problémáinak megoldására adtak eszközöket.
+ Powell.
+ A kutatások eredménye valódi ipari alkalmazások problémáinak megoldására
+ adott eszközöket.
  
 \begin_inset Note Note
 status collapsed
@@ -216,16 +216,20 @@ Az iparban töltött évei alatt Broyden a Davidon-Fletcher-Powell (DFP) módsze
  túl költséges.
  1981-től Abaffy Józseffel és Emilio Spedicato-val az ABS (Abaffy-Broyden-Spedic
 ato) módszereken dolgozott.
- Később a numerikus lineáris algebrára fókuszált, ezen belül is a konjugált
+ 
+\end_layout
+
+\begin_layout Standard
+Később a numerikus lineáris algebrára fókuszált, ezen belül is a konjugált
  gradiens módszerekre és ezek rendszertanára.
- A szakdolgozat legfőképp kutatásának a konjugált gradiens módszerekkel
- kapcsolatos részét öleli fel.
+ A szakdolgozat kutatásainak a konjugált gradiens módszerekkel kapcsolatos
+ részét öleli fel.
  2011-ben 78 évesen, egy szívroham komplikációiba belehalt.
 \end_layout
 
 \begin_layout Standard
 Feleségével, Joan-nal, 1959-ben házasodtak össze.
- Négy gyerekük született, a legidősebb, Robbie, 4 éves korában meghalt.
+ Négy gyerekük született, a legidősebb, Robbie, sajnos 4 éves korában meghalt.
  Broyden nagy örömét lelte családjában, gyermekeiben, Christopher-ben, Jane-ben
  és Nicholas-ban.
  Szeretett madárlesre járni, zenével foglalkozni, kórusban énekelni, vitorlázni.
@@ -235,7 +239,11 @@ Feleségével, Joan-nal, 1959-ben házasodtak össze.
  legidősebb unokája, Matt, a Warwick Egyetemen tanul matematikát, Ben pedig
  mérnöknek tanul a Swansea Egyetemen.
  Így nagyapjuk nyomában járnak.
- Köszönet Joan Broyden-nek a életrajzban nyújtott segítségéért.
+ 
+\end_layout
+
+\begin_layout Standard
+Köszönet Joan Broyden-nek a életrajzban nyújtott segítségéért.
 \end_layout
 
 \begin_layout Section
