@@ -3187,16 +3187,6 @@ Az
 
 \end_deeper
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Itt a normák praktikus kiszámolásárol nem kéne megemlékezni?
-\end_layout
-
-\end_inset
-
-
 \begin_inset Separator plain
 \end_inset
 
@@ -3234,20 +3224,21 @@ egyenlőtlenség akkor és csak akkor igaz, ha
 \end_inset
 
  vektornak.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "42. oldal, Cauchy's Inequality"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 A Cauchy-egyenlőtlenség komplex vektorokra is igaz, ha a transzponáltat
  Hermite-féle transzponáltra cseréjük.
- A tételt nem bizonyítjuk, a bizonyítás megtalálható 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "42. oldal"
-key "BasicMatrices"
-
-\end_inset
-
-.
+ A tételt itt nem bizonyítjuk.
  
 \end_layout
 
@@ -3430,17 +3421,6 @@ A kondíciószám mérete jellemzi a mátrix szingularitásának mértékét.
  Ha a kondíciószám kicsi, szokás a mátrixot jól kondicionáltnak hívni, ha
  a kondíciószám nagy, szokás a mátrixot rosszul kondicionáltnak hívni.
  
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Itt a 47 oldaltól még ez elég jól részletezve van, külön a 3.5 és 3.6-os fejezetek
-ben
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
