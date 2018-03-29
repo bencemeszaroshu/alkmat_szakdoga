@@ -4289,14 +4289,7 @@ reference "eq:axb"
 \end_layout
 
 \begin_layout Example*
-\begin_inset CommandInset citation
-LatexCommand cite
-after "60. oldal, Example 4.3"
-key "BasicMatrices"
-
-\end_inset
-
- Oldjuk meg a
+Oldjuk meg a
 \begin_inset Formula 
 \[
 \begin{array}{cccccc}
@@ -4419,6 +4412,15 @@ szeresét a második és negyedik egyenlőségből, és a
 \end_inset
 
 .
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "60. oldal, Example 4.3"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
