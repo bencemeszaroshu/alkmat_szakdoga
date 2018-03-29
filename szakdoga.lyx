@@ -4293,11 +4293,18 @@ reference "eq:axb"
  Ezt addig folytatjuk, amíg az utolsó egyenlőségben már csak egy ismeretlen
  változó marad.
  ekkor a kapott egyenlőségek felső háromszög alakúak.
- A módszert először egy példán mutatjuk be.
+ A módszert egy példán mutatjuk be.
 \end_layout
 
 \begin_layout Example*
-Oldjuk meg a
+\begin_inset CommandInset citation
+LatexCommand cite
+after "60. oldal, Example 4.3"
+key "BasicMatrices"
+
+\end_inset
+
+ Oldjuk meg a
 \begin_inset Formula 
 \[
 \begin{array}{cccccc}
@@ -4420,18 +4427,6 @@ szeresét a második és negyedik egyenlőségből, és a
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Az látszik valahonnan az előzményekből, hogy ez az egyenletrendszer ugyanaz
- mint az eredeti?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -4576,6 +4571,13 @@ m_{ir}=\frac{a_{ir}^{(r-1)}}{a_{rr}^{(r-1)}},\qquad a_{rr}^{(r-1)}\neq0,\label{e
 
 .
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition*
@@ -4691,6 +4693,14 @@ reference "eq:axb"
 \end_inset
 
  egyenlőséget is.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4719,6 +4729,14 @@ reference "thm:LUfelb-A--nemszinguláris"
 \end_inset
 
 -es tétel).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4771,12 +4789,9 @@ A nulla értékű
 
 .
  
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Mert?
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BasicMatrices"
 
 \end_inset
 
@@ -4820,9 +4835,9 @@ reference "eq:axb"
 \end_inset
 
  sorozat a megoldáshoz konvergál.
- 
+  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Mikor áll le? Milyen hibák vannak?
