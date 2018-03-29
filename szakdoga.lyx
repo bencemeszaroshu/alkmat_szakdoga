@@ -5185,7 +5185,7 @@ Ha az
 
  vektor.
  Azonban, ha az ilyen rendszerek dinamikus viselkedését akarjuk vizsgálni,
- meg kell határoznunk azokat a 
+ akkor meg kell határoznunk azokat a 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -5199,6 +5199,14 @@ Ha az
 \end_inset
 
  skalárok a vizsgált rendszer belső tulajdonságaival függenek össze.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition*
@@ -5282,6 +5290,7 @@ Legyen
 \end_layout
 
 \begin_layout Standard
+\noindent
 A 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -5289,17 +5298,7 @@ reference "eq:jobbsajatv"
 
 \end_inset
 
- egyenlőségből látszik, hogy az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- mátrix sajátvektorát az 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- mátrixszal szorozva, a sajátvektorhoz tartozó sajátértékszeresét kapjuk
- a sajátvektornak.
- Azaz
+ egyenlőségből
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{Ax}=\lambda\boldsymbol{x}.
@@ -5639,7 +5638,7 @@ Legyen
 \begin_inset Formula $\overline{\lambda}$
 \end_inset
 
- is sajátértéke, 
+ is sajátértéke és 
 \begin_inset Formula $\boldsymbol{\overline{x}}$
 \end_inset
 
@@ -5694,7 +5693,6 @@ Ha
 \end_layout
 
 \begin_layout Standard
-\noindent
 Bevezetjük a valós ortogonális mátrix komplex megfelelőjét, az unitér mátrixot.
 \end_layout
 
@@ -5881,7 +5879,7 @@ Legyen
 
 .
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 itt hiányzik lemma 5.1-re hivatkozás
@@ -6348,12 +6346,11 @@ Ha egy mátrix sajátvektorai nem alkotnak bázist, akkor a mátrixot defektív
 \end_layout
 
 \begin_layout Definition*
-A mátrixot amelynek oszlopai egy nem-defektív mátrix sajátvektorai, modálmátrixn
-ak nevezzük.
+A mátrixot amelynek oszlopai egy nemdefektív mátrix sajátvektorai, modálmátrixna
+k nevezzük.
 \end_layout
 
 \begin_layout Standard
-\noindent
 A modálmátrix nem egyértelmű.
  Egyrészt nincs meghatározva a mátrix oszlopainak sorrendje, másrészt a
  sajátvektorok tetszőlegesen méretezhetők.
@@ -6427,11 +6424,11 @@ A tételt először az
 \end_inset
 
  négyzetes mátrixok.
- 
-\end_layout
+ Az 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
 
-\begin_layout Proof
-Particionáljuk úgy, hogy 
+ mátrixot úgy particionáljuk, hogy 
 \begin_inset Formula $\boldsymbol{U}_{11}$
 \end_inset
 
@@ -6490,18 +6487,14 @@ vagy a
 \end_inset
 
 alakban.
- 
-\end_layout
-
-\begin_layout Proof
-Particionáljuk a 
+ Particionáljuk a 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:UU11U120U122"
 
 \end_inset
 
- egyenlőségben úgy, hogy az 
+ egyenlőséget úgy, hogy az 
 \begin_inset Formula $(\boldsymbol{U}_{22}-\lambda_{k}\boldsymbol{I})$
 \end_inset
 
@@ -6534,6 +6527,16 @@ reference "eq:442"
 \end_inset
 
  egyenlőségből
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ezt az egészet itt nagyon át kell nézni
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{x}_{1}=-(\boldsymbol{U}_{11}-\lambda_{k}\boldsymbol{I})^{-1}\boldsymbol{U}_{12}\boldsymbol{e}_{2}\,.
@@ -6759,7 +6762,7 @@ reference "subsec:Iteratív-eljárások"
 
  fejezetben láttuk, hogy az iteratív eljárások konvergenciája összefügg
  a mátrixok normájával.
- Megvizsgálunk néhány, a sajátértékek és a mátrixok normája közötti összefüggést.
+ Megvizsgálunk néhány, a sajátérték és mátrix norma közötti összefüggést.
  
 \end_layout
 
