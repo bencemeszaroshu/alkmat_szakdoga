@@ -1976,7 +1976,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix oszlopai lineárisan összefüggők lennének, ami ellent mond a hipotézisnek.
+ mátrix oszlopai lineárisan összefüggők lennének, ami ellentmond a hipotézisnek.
  Így az 
 \begin_inset Formula $\boldsymbol{y}\eta^{-1}$
 \end_inset
@@ -5340,6 +5340,15 @@ sorozatot Krylov sorozatnak nevezzük.
 
 \begin_layout Theorem
 Minden négyzetes mátrixnak van legalább egy sajátértéke.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "76. oldal, Theorem 5.1"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -5410,12 +5419,12 @@ Különösen
 \begin_inset Formula $\alpha_{r}\neq0$
 \end_inset
 
-, mert ebből a sorozat első 
+, ugyanis ebből a sorozat első 
 \begin_inset Formula $r+1$
 \end_inset
 
- darab vektorának lineáris függetlensége következne, ami ellent mond a hipotézis
-nek.
+ darab vektorának lineáris függetlensége következne, ami ellentmond a hipotézisn
+ek.
  Ezért a 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -5451,7 +5460,7 @@ p(\boldsymbol{A})=\frac{\alpha_{0}}{\alpha_{r}}\boldsymbol{I}+\frac{\alpha_{1}}{
 Legyen 
 \begin_inset Formula 
 \begin{equation}
-p(\xi)=\frac{\alpha_{0}}{\alpha_{r}}+\frac{\alpha_{1}}{\alpha_{r}}\xi+...+\xi^{r}\,,
+p(\xi)=\frac{\alpha_{0}}{\alpha_{r}}+\frac{\alpha_{1}}{\alpha_{r}}\xi+...+\xi^{r}
 \end{equation}
 
 \end_inset
@@ -5478,15 +5487,7 @@ ahol
 \end_inset
 
  egyenletnek.
- Láthatjuk, hogy
-\begin_inset Formula 
-\begin{equation}
-p(\boldsymbol{A})=(\boldsymbol{A}-\lambda_{1}\boldsymbol{I})(\boldsymbol{A}-\lambda_{2}\boldsymbol{I})...(\boldsymbol{A}-\lambda_{r}\boldsymbol{I})\,,\label{eq:pA}
-\end{equation}
-
-\end_inset
-
-ha a 
+ Láthatjuk, ha a 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:pkszi"
@@ -5512,7 +5513,15 @@ reference "eq:pA"
 \begin_inset Formula $0\leq i\leq r$
 \end_inset
 
-.
+, hogy
+\begin_inset Formula 
+\begin{equation}
+p(\boldsymbol{A})=(\boldsymbol{A}-\lambda_{1}\boldsymbol{I})(\boldsymbol{A}-\lambda_{2}\boldsymbol{I})...(\boldsymbol{A}-\lambda_{r}\boldsymbol{I})\,.\label{eq:pA}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -5547,7 +5556,7 @@ reference "eq:pA"
 
 \end_inset
 
- egyenlőségeken keresztül, hogy
+ egyenlőséget felhasználva, hogy
 \begin_inset Formula 
 \begin{equation}
 (\boldsymbol{A}-\lambda_{2}\boldsymbol{I})(\boldsymbol{A}-\lambda_{3}\boldsymbol{I})...(\boldsymbol{A}-\lambda_{r}\boldsymbol{I})\boldsymbol{x}=\boldsymbol{0}\,,\label{eq:59}
@@ -5571,7 +5580,7 @@ reference "eq:59"
 
 \end_inset
 
- egyenlőség írható úgy is, hogy
+ egyenlőség úgy is írható, hogy
 \begin_inset Formula 
 \[
 (\beta_{0}\boldsymbol{I}+\beta_{1}\boldsymbol{A}+...+\boldsymbol{A}^{r-1})\boldsymbol{x}=\boldsymbol{0},
@@ -5588,15 +5597,15 @@ vagy
 \end_inset
 
 ahol 
-\begin_inset Formula $\beta_{i}$
-\end_inset
-
--k, 
 \begin_inset Formula $0\leq i\leq r-2$
 \end_inset
 
-, a megfelelő együtthatók.
- Ez azt vonja maga után, hogy az 
+, és 
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+-k a megfelelő együtthatók.
+ Ebből az következik, hogy az 
 \begin_inset Formula $\boldsymbol{x},\boldsymbol{Ax},...$
 \end_inset
 
@@ -5626,11 +5635,11 @@ Legyen
 \begin_inset Formula $\lambda$
 \end_inset
 
- sajátértéke, 
+ sajátértéke és 
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
- sajátvektora 
+ sajátvektora az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -5647,6 +5656,15 @@ Legyen
 \end_inset
 
  mátrixnak.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "77. oldal, Theorem 5.2"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -5659,7 +5677,7 @@ Mivel
 \end_inset
 
 .
- A tétel következik abból, hogy 
+ 
 \begin_inset Formula $\overline{(\boldsymbol{Az})}=\overline{\boldsymbol{A}}\overline{z}$
 \end_inset
 
@@ -5684,11 +5702,12 @@ Ha
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- valós, akkor 
+ valós mátrix, akkor 
 \begin_inset Formula $\boldsymbol{A}=\overline{\boldsymbol{A}}$
 \end_inset
 
-, és az eredmény a tételből közvetlenül következik.
+.
+ Az eredmény a tételből közvetlenül következik.
  
 \end_layout
 
@@ -5763,6 +5782,15 @@ Legyen
 
 \begin_layout Theorem
 A hasonlósági transzformáció nem változtatja meg a mátrix sajátértékeit.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "79. oldal, Theorem 5.3"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -5788,7 +5816,7 @@ Legyen
 \series default
  nemszinguláris.
  Legyen 
-\begin_inset Formula $\boldsymbol{Az}=\boldsymbol{z}\lambda$
+\begin_inset Formula $\boldsymbol{Ax}=\boldsymbol{x}\lambda$
 \end_inset
 
 .
@@ -5852,6 +5880,14 @@ name "XHAX_elso_oszlopa_e1"
 
 \end_inset
 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "79. oldal, Lemma 5.2"
+key "BasicMatrices"
+
+\end_inset
+
 
 \end_layout
 
@@ -5878,15 +5914,6 @@ Legyen
 \end_inset
 
 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-itt hiányzik lemma 5.1-re hivatkozás
-\end_layout
-
-\end_inset
-
  Ekkor 
 \begin_inset Formula $\boldsymbol{x}=\boldsymbol{X}\boldsymbol{e}_{1}$
 \end_inset
@@ -5941,7 +5968,7 @@ name "thm:Schur"
 
 \end_inset
 
-
+ 
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{Q}^{H}\boldsymbol{AQ}=\boldsymbol{U},\label{eq:HQAQ=U}
@@ -5959,6 +5986,14 @@ name "thm:Schur"
 \series default
  felső háromszögmátrix.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+after "80. oldal, Theorem 5.4 (Schur's theorem)"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -5987,14 +6022,7 @@ ahol
 \end_inset
 
 -ed rendű felső háromszögmátrix.
- Megmutatjuk, hogy ekkor a 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:QHAQ_Ur"
-
-\end_inset
-
- egyenlőség 
+ Megmutatjuk, hogy ekkor az egyenlőség 
 \begin_inset Formula $(r+1)$
 \end_inset
 
@@ -6060,7 +6088,7 @@ reference "eq:Pr=IXr"
 
 \end_inset
 
- egyenlőségből következik, hogy
+ egyenlőségekből következik, hogy
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{P}_{r}\boldsymbol{Q}_{r}^{H}\boldsymbol{A}\boldsymbol{Q}_{r}\boldsymbol{P}_{r}=\left[\begin{array}{cc}
@@ -6250,7 +6278,7 @@ Ha az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- Hermite-féle mátrix, az 
+ Hermite-féle mátrix, akkor az 
 \begin_inset Formula $\boldsymbol{U}$
 \end_inset
 
@@ -6261,7 +6289,7 @@ reference "eq:HQAQ=U"
 
 \end_inset
 
- egyenlőségben valós diagonális mátrix, ezért az 
+ egyenlőségben valós diagonális mátrix, és ezért az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -6280,7 +6308,7 @@ Ha az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix és minden sajátértéke valós, akkor az 
+ mátrix valós, és minden sajátértéke valós, akkor az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -6383,6 +6411,15 @@ Legyen
 \end_inset
 
  darab lineárisan független sajátvektora van.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "86. oldal, Theorem 5.6"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -6424,19 +6461,19 @@ A tételt először az
 \end_inset
 
  négyzetes mátrixok.
- Az 
+ Particionáljuk úgy az 
 \begin_inset Formula $\boldsymbol{U}$
 \end_inset
 
- mátrixot úgy particionáljuk, hogy 
+ mátrixot, hogy 
 \begin_inset Formula $\boldsymbol{U}_{11}$
 \end_inset
 
- mátrixnak ne legyen 
+ mátrixnak ne legyen diagonális eleme 
 \begin_inset Formula $\lambda_{k}$
 \end_inset
 
- diagonális eleme, az 
+, az 
 \begin_inset Formula $\boldsymbol{U}_{22}$
 \end_inset
 
@@ -6445,15 +6482,11 @@ A tételt először az
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Proof
-Legyen 
+ Tekintsük az 
 \begin_inset Formula $(\boldsymbol{U}-\lambda_{k}\boldsymbol{I})=\boldsymbol{0}$
 \end_inset
 
-, amit írhatunk az
+ egyenlőséget, amit írhatunk az
 \begin_inset Formula 
 \begin{equation}
 \left[\begin{array}{cc}
@@ -6487,18 +6520,11 @@ vagy a
 \end_inset
 
 alakban.
- Particionáljuk a 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:UU11U120U122"
-
-\end_inset
-
- egyenlőséget úgy, hogy az 
+ A particionálás miatt az 
 \begin_inset Formula $(\boldsymbol{U}_{22}-\lambda_{k}\boldsymbol{I})$
 \end_inset
 
- mátrix első oszlopa nulla legyen, és emiatt 
+ mátrix első oszlopa nulla, ezért 
 \begin_inset Formula $\boldsymbol{x}_{2}=\boldsymbol{e}_{1}$
 \end_inset
 
@@ -6507,18 +6533,11 @@ reference "eq:UU11U120U122"
 \end_inset
 
  a megfelelő rendű egységmátrix első oszlopa.
- Particionáljuk a 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:UU11U120U122"
-
-\end_inset
-
- egyenlőségben úgy, hogy 
+ A particionálás miatt az 
 \begin_inset Formula $(\boldsymbol{U}_{11}-\lambda_{k}\boldsymbol{I})\boldsymbol{x}_{1}$
 \end_inset
 
- legyen nemszinguláris.
+ nemszinguláris.
  Ekkor az 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -6527,16 +6546,6 @@ reference "eq:442"
 \end_inset
 
  egyenlőségből
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ezt az egészet itt nagyon át kell nézni
-\end_layout
-
-\end_inset
-
-
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{x}_{1}=-(\boldsymbol{U}_{11}-\lambda_{k}\boldsymbol{I})^{-1}\boldsymbol{U}_{12}\boldsymbol{e}_{2}\,.
@@ -6585,9 +6594,9 @@ reference "eq:441"
 \end_inset
 
  darab különböző sajátértékéhez tartozik különböző sajátvektor, amelyek
- egy felső egység háromszögmátrix oszlopai.
- Mivel a felső egység háromszögmátrix nemszinguláris, tehát sajátvektorok
- lineárisan függetlenek.
+ egy felső egység háromszögmátrix különböző oszlopai.
+ Mivel a felső egység háromszögmátrix nemszinguláris, a sajátvektorok lineárisan
+ függetlenek.
  
 \end_layout
 
@@ -6762,7 +6771,7 @@ reference "subsec:Iteratív-eljárások"
 
  fejezetben láttuk, hogy az iteratív eljárások konvergenciája összefügg
  a mátrixok normájával.
- Megvizsgálunk néhány, a sajátérték és mátrix norma közötti összefüggést.
+ Megvizsgálunk néhány, a sajátérték és a mátrix norma közötti összefüggést.
  
 \end_layout
 
@@ -6806,6 +6815,15 @@ Legyen
 \end_inset
 
  tetszőleges normával.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "89. oldal, Theorem 5.7"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -6876,6 +6894,14 @@ Legyen
 \begin_layout Theorem
 A mátrixhoz tartozó sajátértékek összege egyenlő a mátrix nyomával.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+after "91. oldal, Theorem 5.9"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
