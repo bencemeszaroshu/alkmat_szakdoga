@@ -7088,7 +7088,7 @@ Legyen
  skalárt úgy, hogy
 \begin_inset Formula 
 \begin{equation}
-\beta^{j-i}>\frac{(n-1)\left|u_{ij}\right|}{1-\rho(\boldsymbol{U})}\qquad(j>i)\label{eq:bji_konv}
+\beta^{j-i}>\frac{(n-1)\left|u_{ij}\right|}{1-\rho(\boldsymbol{U})}\,,\qquad j>i\label{eq:bji_konv}
 \end{equation}
 
 \end_inset
@@ -7117,7 +7117,7 @@ reference "eq:bji_konv"
  egyenlőtlenség miatt
 \begin_inset Formula 
 \begin{equation}
-\left|v_{ij}\right|<\frac{1-\rho(\boldsymbol{U})}{n-1}\,.\qquad(j>i)\label{eq:vij_konv}
+\left|v_{ij}\right|<\frac{1-\rho(\boldsymbol{U})}{n-1}\,,\qquad j>i.\label{eq:vij_konv}
 \end{equation}
 
 \end_inset
@@ -7138,7 +7138,7 @@ De
  Ezért
 \begin_inset Formula 
 \[
-\left\Vert \boldsymbol{V}\right\Vert _{\infty}\leq\rho(\boldsymbol{U})+\max_{i}\sum_{j=i+1}^{n}\left|v_{ij}\right|
+\left\Vert \boldsymbol{V}\right\Vert _{\infty}\leq\rho(\boldsymbol{U})+\max_{i}\sum_{j=i+1}^{n}\left|v_{ij}\right|\,,
 \]
 
 \end_inset
@@ -7173,15 +7173,6 @@ Hasonlóan,
 \end_layout
 
 \begin_layout Theorem
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ezt a tételt majd még át kell nézni illetve felfogni !
-\end_layout
-
-\end_inset
-
 Az 
 \begin_inset Formula $n$
 \end_inset
@@ -7219,10 +7210,7 @@ reference "thm:Schur"
 \end_inset
 
 -es tétellel kiterjesztjük a bizonyítást tetszőleges négyzetes mátrixra.
-\end_layout
-
-\begin_layout Proof
-Az 
+ Az 
 \begin_inset Formula $i$
 \end_inset
 
@@ -7278,10 +7266,7 @@ Az
 \end_inset
 
  szükséges feltétele a konvergenciának.
-\end_layout
-
-\begin_layout Proof
-Bizonyítjuk a feltétel elégségességet.
+ Bizonyítjuk a feltétel elégségességet.
  A 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -7306,15 +7291,15 @@ reference "thm:411_BUB"
 \end_inset
 
 .
- Mivel 
+ Ezért 
 \begin_inset Formula $\boldsymbol{U}\boldsymbol{=B}^{-1}\boldsymbol{VB}$
 \end_inset
 
-, ezért 
+ és 
 \begin_inset Formula $\boldsymbol{U}^{r}\boldsymbol{=B}^{-1}\boldsymbol{V}^{r}\boldsymbol{B}$
 \end_inset
 
- és 
+, mivel 
 \begin_inset Formula $\left\Vert \boldsymbol{B}\right\Vert _{2}\left\Vert \boldsymbol{B}^{-1}\right\Vert _{2}=\beta^{n-1}$
 \end_inset
 
@@ -7324,7 +7309,7 @@ reference "thm:411_BUB"
 \end_inset
 
 .
- Ezért, mivel 
+ Mivel 
 \begin_inset Formula $\left\Vert \boldsymbol{V}\right\Vert _{2}<1$
 \end_inset
 
@@ -7361,15 +7346,16 @@ reference "thm:Schur"
 \end_inset
 
 .
- A 
+ Mivel 
 \begin_inset Formula $\left\Vert \boldsymbol{Q}\right\Vert _{2}\left\Vert \boldsymbol{Q}^{H}\right\Vert _{2}=1$
 \end_inset
 
- és 
+, 
 \begin_inset Formula $\left\Vert \boldsymbol{A}^{r}\right\Vert _{2}=\left\Vert \boldsymbol{U}^{r}\right\Vert _{2}$
 \end_inset
 
- egyenlőségből következik, hogy a tétel általános esetben is igaz.
+.
+ Ebből az egyenlőségből következik, hogy a tétel általános esetben is igaz.
 \end_layout
 
 \begin_layout Section
