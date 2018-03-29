@@ -6206,12 +6206,12 @@ A tétel következményeit bizonyítás nélkül közöljük, a bizonyítások m
  
 \begin_inset CommandInset citation
 LatexCommand cite
-after "80-82. oldal"
 key "BasicMatrices"
 
 \end_inset
 
-.
+ 80-82.
+ oldalán.
  
 \end_layout
 
@@ -6711,12 +6711,12 @@ A tétel következményeit bizonyítás nélkül közöljük, a bizonyítások m
  
 \begin_inset CommandInset citation
 LatexCommand cite
-after "88. oldal"
 key "BasicMatrices"
 
 \end_inset
 
-.
+ 88.
+ oldalán.
  
 \end_layout
 
