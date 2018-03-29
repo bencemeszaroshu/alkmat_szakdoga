@@ -6969,6 +6969,13 @@ A különböző iteratív eljárások konvergenciája gyakran egy
 
 .
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition*
@@ -7023,6 +7030,15 @@ Legyen
 \end_inset
 
 .
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "92. oldal, Theorem 5.10"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -7132,7 +7148,7 @@ Hasonlóan,
 
 \begin_layout Theorem
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Ezt a tételt majd még át kell nézni illetve felfogni !
@@ -7153,6 +7169,15 @@ Az
 \end_inset
 
 .
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "93. oldal, Theorem 5.11"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
