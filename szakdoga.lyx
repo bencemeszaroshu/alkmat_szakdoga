@@ -3814,7 +3814,7 @@ ahol
 \begin_inset Formula $\boldsymbol{A}_{11}$
 \end_inset
 
- az első tetszőleges rendű bal felső sarokminormátrixa az 
+ egy tetszőleges rendű bal felső sarokminormátrixa az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -3901,7 +3901,7 @@ reference "thm:matrix_nemszing_ha_foreszmatrixok"
 \begin_inset Formula $\boldsymbol{A}_{11}$
 \end_inset
 
- a bal felső tetszőleges rendű sarokminormátrixa az 
+ egy tetszőleges rendű bal felső sarokminormátrixa az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -4076,7 +4076,7 @@ reference "eq:Ar+1=Lr1Ur1"
 
 \end_inset
 
-A szorzás elvégzése utána kapjuk a 
+A szorzás elvégzése után a 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:Ar=LrUr"
@@ -4107,7 +4107,7 @@ reference "eq:Ar=LrUr"
 
 \end_inset
 
-egyenlőségeket.
+egyenlőségeket kapjuk.
  Mivel a hipotézis szerint 
 \begin_inset Formula $\boldsymbol{A}_{r}$
 \end_inset
@@ -4151,7 +4151,7 @@ reference "eq:pTrUrcTr"
 \end_inset
 
  egyenlőségeket.
- Mivel találhatók olyan 
+ Mivel léteznek olyan 
 \begin_inset Formula $\lambda_{r}$
 \end_inset
 
