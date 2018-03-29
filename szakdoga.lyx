@@ -4835,7 +4835,14 @@ reference "eq:axb"
 \end_inset
 
  sorozat a megoldáshoz konvergál.
-  
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BasicMatrices"
+
+\end_inset
+
+ 
 \begin_inset Note Note
 status open
 
@@ -4923,6 +4930,14 @@ alakban.
 \end_inset
 
 egyenletrendszer sorozatos megoldásával.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Theorem
@@ -4949,6 +4964,15 @@ reference "eq:axb"
 \end_inset
 
 , tetszőleges normával.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "68. oldal, Theorem 4.3"
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -5040,7 +5064,7 @@ A fentiekben feltételeztük, hogy az
 \begin_inset Formula $\boldsymbol{Q}$
 \end_inset
 
- mátrix 
+ mátrixok 
 \begin_inset Formula $i$
 \end_inset
 
@@ -5053,7 +5077,7 @@ Az iterációs eljárást stacionáriusnak nevezzük, ha az iterációs feloszt�
 \begin_inset Formula $i$
 \end_inset
 
--től
+-től.
 \end_layout
 
 \begin_layout Standard
@@ -5127,6 +5151,14 @@ felső relaxációs eljárás:
 \end_inset
 
 .
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
