@@ -3598,14 +3598,6 @@ reference "eq:axb"
 
  egyenletrendszer sorozatos transzformációja, amíg a megoldás könnyen számolható
 vá válik.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BevNumAnal"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -4835,24 +4827,8 @@ reference "eq:axb"
 \end_inset
 
  sorozat a megoldáshoz konvergál.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BasicMatrices"
-
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Mikor áll le? Milyen hibák vannak?
-\end_layout
-
-\end_inset
-
-
+ A közelítő megoldások generálásának leállítását, azaz az iterációk leállítását,
+ kilépési feltételhez, feltételekhez kötjük.
 \end_layout
 
 \begin_layout Definition*
