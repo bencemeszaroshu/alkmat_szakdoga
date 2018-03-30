@@ -7382,9 +7382,9 @@ key "BroydenSORkonvergencia"
 \begin_layout Standard
 Legyen 
 \begin_inset Formula 
-\begin{equation}
+\[
 \boldsymbol{Mx}=\boldsymbol{c}
-\end{equation}
+\]
 
 \end_inset
 
@@ -7406,9 +7406,9 @@ lineáris egyenletrendszer, ahol
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
+\[
 \boldsymbol{A}=\boldsymbol{DM},\qquad\boldsymbol{b}=\boldsymbol{Dc},
-\end{equation}
+\]
 
 \end_inset
 
@@ -7535,25 +7535,25 @@ Ekkor az
 
  maradéktag,
 \begin_inset Formula 
-\begin{equation}
+\[
 \boldsymbol{\epsilon}_{i}=\boldsymbol{A}\boldsymbol{x}_{i}-\boldsymbol{b}.
-\end{equation}
+\]
 
 \end_inset
 
 Ezért
 \begin_inset Formula 
-\begin{equation}
+\[
 \boldsymbol{\epsilon}_{i+1}=\boldsymbol{A}\boldsymbol{x}_{i+1}-\boldsymbol{b}.
-\end{equation}
+\]
 
 \end_inset
 
 és
 \begin_inset Formula 
-\begin{equation}
-A^{-1}(\boldsymbol{\epsilon}_{i+1}-\boldsymbol{\epsilon}_{i})=\boldsymbol{x}_{i+1}-\boldsymbol{x}_{i}.
-\end{equation}
+\[
+\boldsymbol{A}^{-1}(\boldsymbol{\epsilon}_{i+1}-\boldsymbol{\epsilon}_{i})=\boldsymbol{x}_{i+1}-\boldsymbol{x}_{i}.
+\]
 
 \end_inset
 
@@ -7567,7 +7567,7 @@ reference "eq:SOR2.2"
  egyenlőségből
 \begin_inset Formula 
 \begin{equation}
-(\boldsymbol{I}+\omega\boldsymbol{L})A^{-1}(\boldsymbol{\epsilon}_{i+1}-\boldsymbol{\epsilon}_{i})=-\omega\boldsymbol{\epsilon}_{i}.\label{eq:SOR_2.3_felett}
+(\boldsymbol{I}+\omega\boldsymbol{L})\boldsymbol{A}^{-1}(\boldsymbol{\epsilon}_{i+1}-\boldsymbol{\epsilon}_{i})=-\omega\boldsymbol{\epsilon}_{i}.\label{eq:SOR_2.3_felett}
 \end{equation}
 
 \end_inset
@@ -7581,17 +7581,17 @@ reference "eq:SOR_2.3_felett"
 
  egyenlőségből
 \begin_inset Formula 
-\begin{equation}
-\boldsymbol{\epsilon}_{i+1}=\left[\boldsymbol{I}-\omega\boldsymbol{A}\left(\boldsymbol{I}+\omega\boldsymbol{L}\right)^{-1}\right]\epsilon_{i}\,.\label{eq:SOR_epszI+1}
-\end{equation}
+\[
+\boldsymbol{\epsilon}_{i+1}=\left[\boldsymbol{I}-\omega\boldsymbol{A}\left(\boldsymbol{I}+\omega\boldsymbol{L}\right)^{-1}\right]\epsilon_{i}\,.
+\]
 
 \end_inset
 
 Ezt az egyenlőséget írjuk az
 \begin_inset Formula 
-\begin{equation}
+\[
 \boldsymbol{\epsilon}_{i+1}=(\boldsymbol{I}-\boldsymbol{B})\boldsymbol{\epsilon}_{i}
-\end{equation}
+\]
 
 \end_inset
 
@@ -7599,7 +7599,63 @@ egyszerűbb formában.
 \end_layout
 
 \begin_layout Theorem
-fdsfds
+Azoknál az iteratív eljárásoknál, ahol a közelítő megoldások maradéktagja
+ kifejezhető az
+\begin_inset Formula 
+\[
+\boldsymbol{\epsilon}_{i+1}=(\boldsymbol{I}-\boldsymbol{B})\boldsymbol{\epsilon}_{i}
+\]
+
+\end_inset
+
+alakban, a konvergencia elégséges feltétele, hogy létezzen olyan 
+\begin_inset Formula $\boldsymbol{S}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ mátrix, hogy
+\begin_inset Formula 
+\[
+\boldsymbol{S}>0
+\]
+
+\end_inset
+
+és
+\begin_inset Formula 
+\[
+\boldsymbol{G}=\boldsymbol{B}^{T}\boldsymbol{S}+\boldsymbol{SB}-\boldsymbol{B}^{T}\boldsymbol{SB}>0.
+\]
+
+\end_inset
+
+Itt az 
+\begin_inset Formula $\boldsymbol{S}>0$
+\end_inset
+
+ jelölés jelentése, hogy 
+\begin_inset Formula $\boldsymbol{S}$
+\end_inset
+
+ szimmetrikus és pozitív definit.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ezt majd lehet ki kéne innen emelni, itt el van dugva.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
 \end_layout
 
 \begin_layout Section
