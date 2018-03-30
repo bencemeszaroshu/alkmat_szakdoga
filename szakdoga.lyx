@@ -7145,7 +7145,7 @@ De
 
 \end_inset
 
-és így az 
+és így a 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:vij_konv"
@@ -7362,6 +7362,244 @@ reference "thm:Schur"
 
 \begin_layout Section
 Felső relaxációs eljárás (SOR)
+\end_layout
+
+\begin_layout Standard
+A SOR módszer konvergencia kritériumát szimmetrikus együttható mátrixok
+ esetén Alexander Ostrowski fogalmazta meg 1954-ben.
+ Broyden elégséges konvergencia feltételeket adott 1964-ben 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+, szimmetrikus és nem szimmetrikus együttható mátrixok esetére.
+ Ebben a fejezetben röviden bemutatjuk a SOR módszert, és összefoglaljuk
+ Broyden konvergenciával kapcsolatos eredményeit.
+\end_layout
+
+\begin_layout Standard
+Legyen 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{Mx}=\boldsymbol{c}
+\end{equation}
+
+\end_inset
+
+lineáris egyenletrendszer, ahol 
+\begin_inset Formula $\boldsymbol{M}$
+\end_inset
+
+ nemszinguláris, valós mátrix, 
+\begin_inset Formula $\boldsymbol{c}$
+\end_inset
+
+ valós vektor, 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ ismeretlen vektor.
+ Legyen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{A}=\boldsymbol{DM},\qquad\boldsymbol{b}=\boldsymbol{Dc},
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\boldsymbol{D}$
+\end_inset
+
+ diagonális mátrix.
+ Így
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{Ax}=\boldsymbol{b}.\label{eq:SOR_Ax=b}
+\end{equation}
+
+\end_inset
+
+A 
+\begin_inset Formula $\boldsymbol{D}$
+\end_inset
+
+ mátrixot válasszuk úgy, hogy az 
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+
+\series default
+ mátrix főátlójában lévő összes elem egységelem legyen.
+ Ekkor az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixot kifejezhetjük három mátrix összegeként,
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{A}=\boldsymbol{I}+\boldsymbol{L}+\boldsymbol{U},\label{eq:SOR_A=ILU}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\boldsymbol{I}$
+\end_inset
+
+ az egység mátrix, 
+\begin_inset Formula $\boldsymbol{L}$
+\end_inset
+
+ alsó háromszög mátrix, 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ pedig felső háromszögmátrix.
+ 
+\end_layout
+
+\begin_layout Standard
+Legyen 
+\begin_inset Formula $\boldsymbol{x}_{i+1}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{x}_{i}$
+\end_inset
+
+ egymást követő közelítő megoldása a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_Ax=b"
+
+\end_inset
+
+ egyenletrendszernek.
+ Ekkor a SOR módszer szerint
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{x}_{i+1}=\boldsymbol{x}_{i}-\omega\left[\left(\boldsymbol{I}+\boldsymbol{U}\right)\boldsymbol{x}_{i}+\boldsymbol{L}\boldsymbol{x}_{i+1}-\boldsymbol{b}\right],\label{SOR_AILU_utan}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\omega$
+\end_inset
+
+ skalár.
+ Az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_A=ILU"
+
+\end_inset
+
+ egyenlőséget felhasználva, az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "SOR_AILU_utan"
+
+\end_inset
+
+ egyenlőségből az 
+\begin_inset Formula $\boldsymbol{U}$
+\end_inset
+
+ mátrix eliminálásával kapjuk, hogy
+\begin_inset Formula 
+\begin{equation}
+(\boldsymbol{I}+\omega\boldsymbol{L})(\boldsymbol{x}_{i+1}-\boldsymbol{x}_{i})=-\omega(\boldsymbol{A}\boldsymbol{x}_{i}-\boldsymbol{b}).\label{eq:SOR2.2}
+\end{equation}
+
+\end_inset
+
+Ekkor az 
+\begin_inset Formula $\boldsymbol{x}_{i}$
+\end_inset
+
+ közelítő megoldáshoz tartozó 
+\begin_inset Formula $\boldsymbol{\epsilon}_{i}$
+\end_inset
+
+ maradéktag,
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\epsilon}_{i}=\boldsymbol{A}\boldsymbol{x}_{i}-\boldsymbol{b}.
+\end{equation}
+
+\end_inset
+
+Ezért
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\epsilon}_{i+1}=\boldsymbol{A}\boldsymbol{x}_{i+1}-\boldsymbol{b}.
+\end{equation}
+
+\end_inset
+
+és
+\begin_inset Formula 
+\begin{equation}
+A^{-1}(\boldsymbol{\epsilon}_{i+1}-\boldsymbol{\epsilon}_{i})=\boldsymbol{x}_{i+1}-\boldsymbol{x}_{i}.
+\end{equation}
+
+\end_inset
+
+Így az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR2.2"
+
+\end_inset
+
+ egyenlőségből
+\begin_inset Formula 
+\begin{equation}
+(\boldsymbol{I}+\omega\boldsymbol{L})A^{-1}(\boldsymbol{\epsilon}_{i+1}-\boldsymbol{\epsilon}_{i})=-\omega\boldsymbol{\epsilon}_{i}.\label{eq:SOR_2.3_felett}
+\end{equation}
+
+\end_inset
+
+Az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_2.3_felett"
+
+\end_inset
+
+ egyenlőségből
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\epsilon}_{i+1}=\left[\boldsymbol{I}-\omega\boldsymbol{A}\left(\boldsymbol{I}+\omega\boldsymbol{L}\right)^{-1}\right]\epsilon_{i}\,.\label{eq:SOR_epszI+1}
+\end{equation}
+
+\end_inset
+
+Ezt az egyenlőséget írjuk az
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\epsilon}_{i+1}=(\boldsymbol{I}-\boldsymbol{B})\boldsymbol{\epsilon}_{i}
+\end{equation}
+
+\end_inset
+
+egyszerűbb formában.
+\end_layout
+
+\begin_layout Theorem
+fdsfds
 \end_layout
 
 \begin_layout Section
