@@ -7365,16 +7365,17 @@ Felső relaxációs eljárás (SOR)
 \end_layout
 
 \begin_layout Standard
-A SOR módszer konvergencia kritériumát szimmetrikus együttható mátrixok
- esetén Alexander Ostrowski fogalmazta meg 1954-ben.
- Broyden elégséges konvergencia feltételeket adott 1964-ben 
+A SOR módszer konvergencia kritériumát szimmetrikus együtthatómátrixok esetén
+ Alexander Ostrowski fogalmazta meg 1954-ben.
+ Broyden elégséges konvergencia feltételeket adott 1964-ben, szimmetrikus
+ és nem szimmetrikus együtthatómátrixok esetére is 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenSORkonvergencia"
 
 \end_inset
 
-, szimmetrikus és nem szimmetrikus együttható mátrixok esetére.
+.
  Ebben a fejezetben röviden bemutatjuk a SOR módszert, és összefoglaljuk
  Broyden konvergenciával kapcsolatos eredményeit.
 \end_layout
@@ -7599,6 +7600,12 @@ egyszerűbb formában.
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:SOR_Theorem1"
+
+\end_inset
+
 Azoknál az iteratív eljárásoknál, ahol a közelítő megoldások maradéktagja
  kifejezhető az
 \begin_inset Formula 
@@ -7632,7 +7639,7 @@ alakban, a konvergencia elégséges feltétele, hogy létezzen olyan
 
 \end_inset
 
-Itt az 
+Az 
 \begin_inset Formula $\boldsymbol{S}>0$
 \end_inset
 
@@ -7640,10 +7647,21 @@ Itt az
 \begin_inset Formula $\boldsymbol{S}$
 \end_inset
 
- szimmetrikus és pozitív definit.
+ mátrix szimmetrikus 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+A szimmetrikusság az kell a pozitiv definitséghez?! A 3as fejezet defben
+ ez van.
+\end_layout
+
+\end_inset
+
+és pozitív definit.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Ezt majd lehet ki kéne innen emelni, itt el van dugva.
@@ -7652,10 +7670,219 @@ Ezt majd lehet ki kéne innen emelni, itt el van dugva.
 \end_inset
 
 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 1"
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Theorem
+\begin_layout Proof
+Legyen 
+\begin_inset Formula $f_{i}=\boldsymbol{\epsilon}_{i}^{T}\boldsymbol{S}\boldsymbol{\epsilon}_{i}$
+\end_inset
 
+.
+ Mivel a hipotézis szerint 
+\begin_inset Formula $\boldsymbol{S}>0,$
+\end_inset
+
+ 
+\begin_inset Formula $f_{i}>0$
+\end_inset
+
+, minden 
+\begin_inset Formula $\epsilon_{i}\neq0$
+\end_inset
+
+ esetén.
+ A konvergencia szükséges és elégséges feltétele, ha 
+\begin_inset Formula $f_{i}\rightarrow0$
+\end_inset
+
+, miközben 
+\begin_inset Formula $i\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{align*}
+f_{i+1}= & \;\boldsymbol{\epsilon}_{i+1}^{T}\boldsymbol{S}\boldsymbol{\epsilon}_{i+1}\\
+= & \;\boldsymbol{\epsilon}_{i}^{T}(\boldsymbol{I}-\boldsymbol{B}^{T})\boldsymbol{S}(\boldsymbol{I}-\boldsymbol{B})\boldsymbol{\epsilon}_{i}\\
+= & \;\boldsymbol{\epsilon}_{i}^{T}(\boldsymbol{S}-\boldsymbol{G})\boldsymbol{\epsilon}_{i}\,.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Legyen 
+\begin_inset Formula $\phi_{i}=\boldsymbol{\epsilon}_{i}^{T}\boldsymbol{G}\boldsymbol{\epsilon}_{i}$
+\end_inset
+
+, ekkor 
+\begin_inset Formula $f_{i+1}=f_{i}-\phi_{i}$
+\end_inset
+
+.
+ Egy elégséges feltétele annak, hogy 
+\begin_inset Formula $f_{i}\rightarrow0$
+\end_inset
+
+, miközben 
+\begin_inset Formula $i\rightarrow\infty$
+\end_inset
+
+, ha létezik olyan 
+\begin_inset Formula $k$
+\end_inset
+
+ konstans, hogy
+\begin_inset Formula 
+\begin{equation}
+\phi_{i}\geq kf_{i}\,,\label{eq:SOR_fiI>kfi}
+\end{equation}
+
+\end_inset
+
+mert ekkor 
+\begin_inset Formula $f_{i+1}\leq(1-k)f_{i}$
+\end_inset
+
+, és az 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ sorozat konvergál.
+\end_layout
+
+\begin_layout Proof
+Az 
+\begin_inset Formula $\boldsymbol{S}$
+\end_inset
+
+ mátrix minden sajátértéke valós és pozitív, mert 
+\begin_inset Formula $\boldsymbol{S}>0$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+tétel hivatkozás ide?
+\end_layout
+
+\end_inset
+
+Ha 
+\begin_inset Formula $\lambda_{\max}$
+\end_inset
+
+ az 
+\begin_inset Formula $\boldsymbol{S}$
+\end_inset
+
+ mátrix legnagyobb sajátértéke, akkor
+\begin_inset Formula 
+\begin{equation}
+f_{i}\leq\lambda_{\max}\boldsymbol{\epsilon}_{i}^{T}\boldsymbol{\epsilon}_{i}\,.\label{eq:SOR_fi_lambdamax}
+\end{equation}
+
+\end_inset
+
+Mivel 
+\begin_inset Formula $\boldsymbol{S}=\boldsymbol{S}^{T}$
+\end_inset
+
+, a 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ mátrix szimmetrikus és a sajátértékei valósak.
+ Legyen a 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ mátrix legkisebb sajátértéke 
+\begin_inset Formula $\mu_{\min}$
+\end_inset
+
+.
+ Ekkor 
+\begin_inset Formula $\phi_{i}\geq\mu_{\min}\boldsymbol{\epsilon}_{i}^{T}\boldsymbol{\epsilon}_{i}$
+\end_inset
+
+.
+ Az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_fi_lambdamax"
+
+\end_inset
+
+ egyenlőségből
+\begin_inset Formula 
+\[
+\phi_{i}\geq\frac{\mu_{\min}}{\lambda_{\max}}f_{i}\,.
+\]
+
+\end_inset
+
+Ha 
+\begin_inset Formula $\boldsymbol{G}>0$
+\end_inset
+
+, akkor 
+\begin_inset Formula $\mu_{\min}>0$
+\end_inset
+
+, és teljesül az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_fiI>kfi"
+
+\end_inset
+
+ feltétel.
+\end_layout
+
+\begin_layout Corollary*
+Ha 
+\begin_inset Formula $\boldsymbol{S}>0$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{G}\leq0$
+\end_inset
+
+, azaz 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ negatív szemidefinit, akkor az iteratív eljárás sohasem konvergál.
+ 
+\end_layout
+
+\begin_layout Standard
+Most az 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:SOR_Theorem1"
+
+\end_inset
+
+-es tételt alkalmazzuk a SOR módszerre.
+ 
 \end_layout
 
 \begin_layout Section
