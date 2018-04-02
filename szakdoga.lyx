@@ -7407,9 +7407,9 @@ lineáris egyenletrendszer, ahol
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\boldsymbol{A}=\boldsymbol{DM},\qquad\boldsymbol{b}=\boldsymbol{Dc},
-\]
+\begin{equation}
+\boldsymbol{A}=\boldsymbol{DM},\qquad\boldsymbol{b}=\boldsymbol{Dc},\label{eq:SOR_ADM_bDc}
+\end{equation}
 
 \end_inset
 
@@ -7582,9 +7582,9 @@ reference "eq:SOR_2.3_felett"
 
  egyenlőségből
 \begin_inset Formula 
-\[
-\boldsymbol{\epsilon}_{i+1}=\left[\boldsymbol{I}-\omega\boldsymbol{A}\left(\boldsymbol{I}+\omega\boldsymbol{L}\right)^{-1}\right]\epsilon_{i}\,.
-\]
+\begin{equation}
+\boldsymbol{\epsilon}_{i+1}=\left[\boldsymbol{I}-\omega\boldsymbol{A}\left(\boldsymbol{I}+\omega\boldsymbol{L}\right)^{-1}\right]\epsilon_{i}\,.\label{eq:SOR_epsziI+1_2.3}
+\end{equation}
 
 \end_inset
 
@@ -7882,7 +7882,272 @@ reference "thm:SOR_Theorem1"
 \end_inset
 
 -es tételt alkalmazzuk a SOR módszerre.
+ Az 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SOR_epsziI+1_2.3"
+
+\end_inset
+
+ egyenlőség miatt, 
+\begin_inset Formula $\boldsymbol{B}=\omega\boldsymbol{A}(\boldsymbol{I}+\omega\boldsymbol{L})^{-1},$
+\end_inset
+
+ ezért a SOR módszer konvergenciájának egy elégséges feltétele, hogy létezik
+ olyan 
+\begin_inset Formula $\boldsymbol{S}>0$
+\end_inset
+
+ mátrix, hogy
+\begin_inset Formula 
+\begin{equation}
+\omega(\boldsymbol{I}+\omega\boldsymbol{L}^{T})^{-1}\boldsymbol{A}^{T}\boldsymbol{S}+\omega\boldsymbol{SA}(\boldsymbol{I}+\omega\boldsymbol{L})^{-1}-\omega^{2}(\boldsymbol{I}+\omega\boldsymbol{L}^{T})^{-1}\boldsymbol{A}^{T}\boldsymbol{SA}(\boldsymbol{I}+\omega\boldsymbol{L})^{-1}>0.\label{eq:SOR_hosszu_konv_feltetel}
+\end{equation}
+
+\end_inset
+
+Ezt a feltételt egyszerűsíthetjük a következő tétel felhasználásával.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:SOR_lemma"
+
+\end_inset
+
+A 
+\begin_inset Formula $\boldsymbol{P}>0$
+\end_inset
+
+ szükséges és elégséges feltétele, hogy 
+\begin_inset Formula $\boldsymbol{Q}^{T}\boldsymbol{PQ}>0,$
+\end_inset
+
+ ahol 
+\begin_inset Formula $\boldsymbol{Q}$
+\end_inset
+
+ tetszőleges nemszinguláris mátrix.
  
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+kell citation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Legyen 
+\begin_inset Formula $\boldsymbol{Qx}=\boldsymbol{z}$
+\end_inset
+
+.
+ Ekkor 
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Q}^{T}\boldsymbol{PQx}=\boldsymbol{z}^{T}\boldsymbol{P}\boldsymbol{z}$
+\end_inset
+
+.
+ Mivel 
+\begin_inset Formula $\boldsymbol{Q}$
+\end_inset
+
+ mátrix nemszinguláris, minden nem nulla 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ vektorra létezik nem nulla 
+\begin_inset Formula $\boldsymbol{z}$
+\end_inset
+
+ vektor, és fordítva.
+ 
+\end_layout
+
+\begin_layout Standard
+Mivel 
+\begin_inset Formula $(\boldsymbol{I}+\omega\boldsymbol{L})$
+\end_inset
+
+ nemszinguláris, ezért az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_hosszu_konv_feltetel"
+
+\end_inset
+
+ elégséges feltétel a rövidebb
+\begin_inset Formula 
+\begin{equation}
+\omega\left[\boldsymbol{A}^{T}\boldsymbol{S}(\boldsymbol{I}+\omega\boldsymbol{L})+(\boldsymbol{I}+\omega\boldsymbol{L}^{T})\boldsymbol{SA}-\omega\boldsymbol{A}^{T}\boldsymbol{S}\right]>0\label{eq:SOR_hosszu_konv_feltetel_rovidebben}
+\end{equation}
+
+\end_inset
+
+formában írható.
+\end_layout
+
+\begin_layout Subsection*
+Szimmetrikus mátrixok
+\end_layout
+
+\begin_layout Standard
+Tegyük fel, hogy az 
+\begin_inset Formula $\boldsymbol{M}$
+\end_inset
+
+ mátrix szimmetrikus.
+ Legyen 
+\begin_inset Formula $S=\boldsymbol{D}^{-1}\boldsymbol{M}^{-1}\boldsymbol{D}^{-1}$
+\end_inset
+
+.
+ Ekkor az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_hosszu_konv_feltetel"
+
+\end_inset
+
+ feltétel alakja,
+\begin_inset Formula 
+\begin{equation}
+\omega\left[\boldsymbol{D}^{-1}(\boldsymbol{I}+\omega\boldsymbol{L})+(\boldsymbol{I}+\omega\boldsymbol{L}^{T})\boldsymbol{D}^{-1}-\omega\boldsymbol{M}\right]>0.
+\end{equation}
+
+\end_inset
+
+Az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_ADM_bDc"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_A=ILU"
+
+\end_inset
+
+ egyenlőségekből, és 
+\series bold
+
+\begin_inset Formula $\boldsymbol{M}$
+\end_inset
+
+
+\series default
+ feltételezett szimmetrikussága miatt,
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{M}=\boldsymbol{D}^{-1}(\boldsymbol{I}+\boldsymbol{L}+\boldsymbol{U})=(\boldsymbol{I}+\boldsymbol{L}^{T}+\boldsymbol{U}^{T})\boldsymbol{D}^{-1}.\label{eq:SOR_M_két_reprezentacio}
+\end{equation}
+
+\end_inset
+
+Az 
+\begin_inset Formula $\boldsymbol{M}$
+\end_inset
+
+ mátrix az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_M_két_reprezentacio"
+
+\end_inset
+
+ egyenlőség szerinti két reprezentációjának felső háromszög partícióit egyenlővé
+ téve kapjuk, hogy
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{D}^{-1}\boldsymbol{U}=\boldsymbol{L}^{T}\boldsymbol{D}^{-1}.
+\end{equation}
+
+\end_inset
+
+Így az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_hosszu_konv_feltetel_rovidebben"
+
+\end_inset
+
+ feltétel az
+\begin_inset Formula 
+\begin{equation}
+\omega(2-\omega)\boldsymbol{D}^{-1}>0\label{eq:SOR_omega-2}
+\end{equation}
+
+\end_inset
+
+alakra egyszerűsödik.
+ Ha 
+\begin_inset Formula $\boldsymbol{M}>0$
+\end_inset
+
+ akkor az 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:SOR_lemma"
+
+\end_inset
+
+-es tételből következik, hogy 
+\begin_inset Formula $\boldsymbol{S}>0,$
+\end_inset
+
+ és mivel 
+\begin_inset Formula $\boldsymbol{M}>0,$
+\end_inset
+
+ ezért 
+\begin_inset Formula $\boldsymbol{D}>0,$
+\end_inset
+
+ és az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_omega-2"
+
+\end_inset
+
+ feltétel teljesül.
+ Ezért a SOR módszer konvergálni fog, ha 
+\begin_inset Formula $\boldsymbol{M}>0$
+\end_inset
+
+ és 
+\begin_inset Formula $0<\omega<2$
+\end_inset
+
+.
+ Azonban ha 
+\begin_inset Formula $\omega<0$
+\end_inset
+
+, vagy 
+\begin_inset Formula $\omega>2$
+\end_inset
+
+, a 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ mátrix negatív definitté válik, és a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:SOR_Theorem1"
+
+\end_inset
+
+-es tétel következménye miatt a SOR módszer nem fog konvergálni.
 \end_layout
 
 \begin_layout Section
