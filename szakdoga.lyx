@@ -8150,6 +8150,147 @@ reference "thm:SOR_Theorem1"
 -es tétel következménye miatt a SOR módszer nem fog konvergálni.
 \end_layout
 
+\begin_layout Subsection*
+Nemszimmetrikus mátrixok
+\end_layout
+
+\begin_layout Standard
+Legyen 
+\begin_inset Formula $\boldsymbol{S}=(\boldsymbol{A}^{T})^{-1}\boldsymbol{A}^{-1}$
+\end_inset
+
+ az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_hosszu_konv_feltetel_rovidebben"
+
+\end_inset
+
+ feltételben.
+ Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix nemszinguláris, ezért az 
+\begin_inset Formula $(\boldsymbol{A}^{T})^{-1}\boldsymbol{A}^{-1}$
+\end_inset
+
+ mátrix szimmetrikus és pozitív definit.
+ Ekkor a konvergencia feltétele,
+\begin_inset Formula 
+\[
+\omega\boldsymbol{A}^{-1}(\boldsymbol{I}+\omega\boldsymbol{L})+\omega(\boldsymbol{I}+\omega\boldsymbol{L}^{T})+(\boldsymbol{A}^{T})^{-1}-\omega^{2}\boldsymbol{I}>0.
+\]
+
+\end_inset
+
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix nemszinguláris, ezért az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "thm:SOR_lemma"
+
+\end_inset
+
+-es tételt felhasználva a feltétel a
+\begin_inset Formula 
+\[
+\omega(\boldsymbol{I}+\omega\boldsymbol{L})\boldsymbol{A}^{T}+\omega\boldsymbol{A}(\boldsymbol{I}+\omega\boldsymbol{L}^{T})-\omega^{2}\boldsymbol{AA}^{T}>0
+\]
+
+\end_inset
+
+alakra egyszerűsödik.
+ Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixot felbontva 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_A=ILU"
+
+\end_inset
+
+ szerint és egyszerűsítve,
+\begin_inset Formula 
+\begin{equation}
+\omega(\boldsymbol{A}+\boldsymbol{A}^{T})-\omega^{2}\left[(\boldsymbol{I}+\boldsymbol{U})(\boldsymbol{I}+\boldsymbol{U}^{T})-\boldsymbol{L}\boldsymbol{L}^{T}\right]>0.\label{eq:SOR_nemszim_konv_feltetel_1}
+\end{equation}
+
+\end_inset
+
+Legyen 
+\begin_inset Formula $\boldsymbol{S}=\boldsymbol{I}$
+\end_inset
+
+ az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_hosszu_konv_feltetel_rovidebben"
+
+\end_inset
+
+ feltételben.
+ Ekkor a konvergencia feltétele
+\begin_inset Formula 
+\[
+\omega\boldsymbol{A}^{T}(\boldsymbol{I}+\omega\boldsymbol{L})+\omega(\boldsymbol{I}+\omega\boldsymbol{L}^{T})\boldsymbol{A}-\omega^{2}\boldsymbol{A}^{T}\boldsymbol{A}>0.
+\]
+
+\end_inset
+
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixot felbontva 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_A=ILU"
+
+\end_inset
+
+ szerint és egyszerűsítve,
+\begin_inset Formula 
+\begin{equation}
+\omega(\boldsymbol{A}+\boldsymbol{A}^{T})-\omega^{2}\left[(\boldsymbol{I}+\boldsymbol{U}^{T})(\boldsymbol{I}+\boldsymbol{U})-\boldsymbol{L}^{T}\boldsymbol{L}\right]>0.\label{eq:SOR_nemszim_konv_feltetel_2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Most megmutatjuk, hogy ha 
+\begin_inset Formula $\boldsymbol{A}+\boldsymbol{A}^{T}>0$
+\end_inset
+
+, akkor létezik olyan pozitív 
+\begin_inset Formula $\omega$
+\end_inset
+
+, ami kielégíti az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_nemszim_konv_feltetel_1"
+
+\end_inset
+
+ és az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SOR_nemszim_konv_feltetel_2"
+
+\end_inset
+
+ feltételeket.
+\end_layout
+
 \begin_layout Section
 Blokk konjugált gradiens módszer (BlCG)
 \end_layout
