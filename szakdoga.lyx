@@ -9359,18 +9359,15 @@ ANGOL SZÖVEG!
 \end_layout
 
 \begin_layout Standard
-A bizonyítást itt nem közöljük, megtalálható itt meg ott.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-kell még ref!
-\end_layout
+A tétel bizonyítását itt nem közöljük, megtalálható 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "4. oldal"
+key "BroydenBlCG"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Subsection
