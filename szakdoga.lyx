@@ -3585,8 +3585,8 @@ Direkt eljárások
 \end_layout
 
 \begin_layout Standard
-A direkt eljárások mentesek a képlethibától, és a megoldást véges sok lépésben
- állítják elő.
+A direkt eljárások elvileg mentesek a képlethibától, és a megoldást véges
+ sok lépésben állítják elő.
  Elméletben a megoldás pontos, a gyakorlatban azonban ez mégsem teljesül,
  a lépések közben keletkező kerekítési hibák miatt.
  A direkt eljárások alapja az 
@@ -4846,15 +4846,11 @@ Az
 
 
 \series default
- alakban kifejezve, ahol 
-\begin_inset Formula $\boldsymbol{P}$
-\end_inset
-
- nemszinguláris, az 
+ alakban kifejezve, az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix felosztásának nevezzük.
+ mátrix egy felbontásának nevezzük.
 \end_layout
 
 \begin_layout Standard
@@ -4862,7 +4858,11 @@ Legyen az
 \begin_inset Formula $\boldsymbol{A}=\boldsymbol{P}-\boldsymbol{Q}$
 \end_inset
 
- olyan felosztás, hogy a 
+ olyan felbontás, ahol 
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+ nemszinguláris, és a 
 \begin_inset Formula $\boldsymbol{Py}=\boldsymbol{c}$
 \end_inset
 
@@ -5034,7 +5034,7 @@ A fentiekben feltételeztük, hogy az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix felosztása, a 
+ mátrix felbontása, a 
 \begin_inset Formula $\boldsymbol{P}$
 \end_inset
 
@@ -5050,8 +5050,8 @@ A fentiekben feltételeztük, hogy az
 \end_layout
 
 \begin_layout Definition*
-Az iterációs eljárást stacionáriusnak nevezzük, ha az iterációs felosztás
- nem függ 
+Az iterációs eljárást stacionáriusnak nevezzük, ha az együtthatómátrix felbontás
+a nem függ 
 \begin_inset Formula $i$
 \end_inset
 
@@ -5130,13 +5130,6 @@ felső relaxációs eljárás:
 
 .
  
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BasicMatrices"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -5156,6 +5149,13 @@ Az
 
 , a módszer pontosan a Gauss-Seidel eljárás.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BasicMatrices"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5163,6 +5163,27 @@ A következő fejezetekben két iterációs eljárással fogunk részletesen fog
 , Broyden kutatásainak eredményeire támaszkodva.
  A felső relaxációs eljárással és a blokk konjugált gradiens módszerrel.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -5181,7 +5202,7 @@ Ha az
  egyenletrendszernek egyértelmű a megoldása.
  Ilyen egyenletrendszerek sokszor előfordulnak, amikor valamilyen rendszer
  statikus viselkedését vizsgáljuk, ahol a rendszer válasza a valamilyen
- stimulusra a 
+ kísérletre a 
 \begin_inset Formula $\boldsymbol{b}$
 \end_inset
 
@@ -5417,7 +5438,7 @@ reference "thm:fundamentalthm"
 
 \end_inset
 
-Különösen 
+Az 
 \begin_inset Formula $\alpha_{r}\neq0$
 \end_inset
 
@@ -5489,7 +5510,15 @@ ahol
 \end_inset
 
  egyenletnek.
- Láthatjuk, ha a 
+ 
+\begin_inset Formula 
+\begin{equation}
+p(\boldsymbol{A})=(\boldsymbol{A}-\lambda_{1}\boldsymbol{I})(\boldsymbol{A}-\lambda_{2}\boldsymbol{I})...(\boldsymbol{A}-\lambda_{r}\boldsymbol{I})\,.\label{eq:pA}
+\end{equation}
+
+\end_inset
+
+Ezt onnan láthatjuk, ha a 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:pkszi"
@@ -5511,19 +5540,11 @@ reference "eq:pA"
 \begin_inset Formula $\boldsymbol{A}^{i}$
 \end_inset
 
- együtthatókat, ahol 
+ együtthatókat, 
 \begin_inset Formula $0\leq i\leq r$
 \end_inset
 
-, hogy
-\begin_inset Formula 
-\begin{equation}
-p(\boldsymbol{A})=(\boldsymbol{A}-\lambda_{1}\boldsymbol{I})(\boldsymbol{A}-\lambda_{2}\boldsymbol{I})...(\boldsymbol{A}-\lambda_{r}\boldsymbol{I})\,.\label{eq:pA}
-\end{equation}
-
-\end_inset
-
-
+.
 \end_layout
 
 \begin_layout Proof
@@ -6863,6 +6884,20 @@ Mivel
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Proof
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+IDE KELL BETENNI A THEOREM 5.8-at (89.oldal) + 4.11 és talán 4.12-ben hivatkozni
+ kell rá!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition*
@@ -9380,6 +9415,36 @@ Hegedüs és a bikonjugált gradiens módszer általánosítása
 
 \begin_layout Section
 A konjugált gradiens módszerek új rendszertana
+\end_layout
+
+\begin_layout Standard
+Az egyik leghatékonyabb módja az 
+\begin_inset Formula 
+\[
+Ax=b
+\]
+
+\end_inset
+
+ egyenletrendszer megoldásának, amikor az 
+\begin_inset Formula $A$
+\end_inset
+
+ együtthatómátrix nagy és ritka, a konjugált gradiens módszer és ennek különböző
+ származtatott változatai.
+ Az eredeti módszer 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+hivatkozás?
+\end_layout
+
+\end_inset
+
+ csak szimmetrikus pozitív definit együtthatómátrixok esetén alkalmazható,
+ de azóta számos változat született, amik nem csak szimmetrikus nemdefinit
+ mátrixok, de nemszimmetrikus mátrixok esetén is alkalmazhatók.
 \end_layout
 
 \begin_layout Section
