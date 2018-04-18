@@ -6886,18 +6886,253 @@ Mivel
 .
 \end_layout
 
-\begin_layout Proof
-\begin_inset Note Note
-status open
+\begin_layout Theorem
+Legyen 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
 
-\begin_layout Plain Layout
-IDE KELL BETENNI A THEOREM 5.8-at (89.oldal) + 4.11 és talán 4.12-ben hivatkozni
- kell rá!
-\end_layout
+ 
+\begin_inset Formula $\ensuremath{m{\times}n}$
+\end_inset
+
+-es valós mátrix.
+ Ekkor
+\begin_inset Formula 
+\[
+\left\Vert \boldsymbol{A}\right\Vert _{2}=\left[\rho(\boldsymbol{A}^{T}\boldsymbol{A})\right]^{1/2}.
+\]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Proof
+Az indukált mátrixnorma definíciójából,
+\begin_inset Formula 
+\begin{equation}
+\left\Vert \boldsymbol{A}\right\Vert _{2}^{2}=\left(\max_{\boldsymbol{x}\neq0}\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{2}}{\left\Vert \boldsymbol{x}\right\Vert _{2}}\right)^{2}=\max_{\boldsymbol{x}\neq0}\left(\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{2}}{\left\Vert \boldsymbol{x}\right\Vert _{2}}\right)^{2}=\max_{\boldsymbol{x}\neq0}\left(\frac{\boldsymbol{x}\boldsymbol{A}^{T}\boldsymbol{A}\boldsymbol{x}}{\boldsymbol{x}^{T}\boldsymbol{x}}\right).\label{eq:kettesnorma_es_matrixsugara}
+\end{equation}
+
+\end_inset
+
+Mivel az 
+\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{A}$
+\end_inset
+
+ mátrix valós és szimmetrikus, a sajátvektorai valósak és az 
+\begin_inset Formula $\boldsymbol{X}$
+\end_inset
+
+ modálmátrixa ortogonális, a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Schur"
+
+\end_inset
+
+-es tétel következményei miatt.
+ Legyen 
+\begin_inset Formula $\boldsymbol{\Lambda}$
+\end_inset
+
+ a 
+\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{A}$
+\end_inset
+
+ mátrix sajátvektorainak diagonális mátrixa, azaz 
+\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{AX}=\boldsymbol{X}\boldsymbol{\Lambda}$
+\end_inset
+
+.
+ Legyen 
+\begin_inset Formula $\boldsymbol{x}=\boldsymbol{Xz}$
+\end_inset
+
+.
+ Mivel 
+\begin_inset Formula $\boldsymbol{X}^{T}\boldsymbol{X}=\boldsymbol{I}$
+\end_inset
+
+, következik, hogy 
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{A}^{T}\boldsymbol{Ax}=\boldsymbol{z}^{T}\boldsymbol{\Lambda}\boldsymbol{z}$
+\end_inset
+
+, és 
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{x}=\boldsymbol{z}^{T}\boldsymbol{z}$
+\end_inset
+
+.
+ Így a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:kettesnorma_es_matrixsugara"
+
+\end_inset
+
+ egyenlőség alakja
+\begin_inset Formula 
+\begin{equation}
+\left\Vert \boldsymbol{A}\right\Vert _{2}^{2}=\max_{\boldsymbol{z}\neq0}\left(\frac{\boldsymbol{z}^{T}\boldsymbol{\Lambda}\boldsymbol{z}}{\boldsymbol{z}^{T}\boldsymbol{z}}\right)=\max_{\boldsymbol{z}\neq0}\left[\left(\sum_{i=1}^{n}\lambda_{i}\boldsymbol{z}_{i}^{2}\right)/\left(\sum_{i=1}^{n}\boldsymbol{z}_{i}^{2}\right)\right].\label{eq:kettesnorma_2}
+\end{equation}
+
+\end_inset
+
+Ezt egyszerűsíthetjük, legyen
+\begin_inset Formula 
+\[
+\theta_{i}=\frac{\boldsymbol{z}_{i}^{2}}{\sum_{i=j}^{n}\boldsymbol{z}_{j}^{2}}\,.
+\]
+
+\end_inset
+
+Ezt a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:kettesnorma_2"
+
+\end_inset
+
+ egyenlőségbe helyettesítve kapjuk.
+ hogy
+\begin_inset Formula 
+\[
+\left\Vert \boldsymbol{A}\right\Vert _{2}^{2}=\max\sum_{i}^{n}\theta_{i}\lambda_{i}\,,
+\]
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\theta\geq0$
+\end_inset
+
+ és 
+\begin_inset Formula $\sum_{i=1}^{n}\theta_{i}=1$
+\end_inset
+
+.
+ A 
+\begin_inset Formula $\sum_{i}^{n}\theta_{i}\lambda_{i}$
+\end_inset
+
+ kifejezést maximalizáljuk.
+ A legnagyobb pozitív 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+-hoz tartozó 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+-t válasszuk egynek, az összes többi 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+ pedig nullának.
+ Mivel az 
+\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{A}$
+\end_inset
+
+ mátrixhoz tartozó összes sajátérték pozitív, a legnagyobb pozitív sajátértéke
+ az 
+\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{A}$
+\end_inset
+
+ mátrixnak a spektrális sugara.
+ Azaz 
+\begin_inset Formula $\left\Vert \boldsymbol{A}\right\Vert _{2}^{2}=\rho(\boldsymbol{A}^{T}\boldsymbol{A})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary*
+Ha 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{A}^{T}$
+\end_inset
+
+, 
+\begin_inset Formula $\left\Vert \boldsymbol{A}\right\Vert _{2}=\rho(\boldsymbol{A})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ha 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{A}^{T}$
+\end_inset
+
+, akkor 
+\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{A}=\boldsymbol{A}^{2}$
+\end_inset
+
+.
+ Ha 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ sajátértéke az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixnak, akkor 
+\begin_inset Formula $\lambda^{2}$
+\end_inset
+
+ sajátértéke az 
+\begin_inset Formula $\boldsymbol{A}^{2}$
+\end_inset
+
+ mátrixnak.
+\end_layout
+
+\begin_layout Corollary*
+\begin_inset Formula $\left\Vert \boldsymbol{A}\right\Vert _{2}^{2}\leq\left\Vert \boldsymbol{A}\right\Vert _{1}\left\Vert \boldsymbol{A}\right\Vert _{\infty}\,.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Legyen 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ az 
+\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{A}$
+\end_inset
+
+ mátrix 
+\begin_inset Formula $\rho\left(\boldsymbol{A}^{T}\boldsymbol{A}\right)$
+\end_inset
+
+ sajátértékéhez tartozó sajátvektora.
+ Ekkor
+\begin_inset Formula 
+\[
+\boldsymbol{A}^{T}\boldsymbol{A}\boldsymbol{x}=\boldsymbol{x}\rho(\boldsymbol{A}^{T}\boldsymbol{A})\,,
+\]
+
+\end_inset
+
+és a tételt alkalmazva
+\begin_inset Formula 
+\[
+\left\Vert \boldsymbol{x}\rho(\boldsymbol{A}^{T}\boldsymbol{A})\right\Vert _{\infty}=\left\Vert \boldsymbol{x}\right\Vert _{\infty}\left\Vert \boldsymbol{A}\right\Vert _{2}^{2}=\left\Vert \boldsymbol{A}^{T}\boldsymbol{A}\boldsymbol{x}\right\Vert _{\infty}\leq\left\Vert \boldsymbol{A}^{T}\right\Vert _{\infty}\left\Vert \boldsymbol{A}\right\Vert _{\infty}\left\Vert \boldsymbol{x}\right\Vert _{\infty\,,}
+\]
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\left\Vert \boldsymbol{x}\right\Vert _{\infty}\neq0$
+\end_inset
+
+ és 
+\begin_inset Formula $\left\Vert \boldsymbol{A}^{T}\right\Vert _{\infty}=\left\Vert \boldsymbol{A}\right\Vert _{1}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Definition*
