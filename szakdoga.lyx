@@ -5766,6 +5766,85 @@ Ha
  
 \end_layout
 
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:pozitivdefinit_sajaterteke_pozitiv"
+
+\end_inset
+
+Legyen az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix pozitív definit.
+ Ekkor az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix minden sajátértéke pozitív.
+\end_layout
+
+\begin_layout Proof
+Tegyük fel, hogy 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ sajátértéke az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixnak, és 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ pozitív definit.
+ Ha 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+, akkor létezik az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixnak olyan 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ sajátvektora, hogy 
+\begin_inset Formula $\boldsymbol{Ax}=0$
+\end_inset
+
+.
+ De ekkor 
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{A}\boldsymbol{x}=0$
+\end_inset
+
+, ami ellentmondás.
+ Ha 
+\begin_inset Formula $\lambda<0$
+\end_inset
+
+, akkor létezik az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrixnak olyan 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ sajátvektora, hogy 
+\begin_inset Formula $\boldsymbol{Ax}=\lambda\boldsymbol{A}$
+\end_inset
+
+.
+ De ekkor 
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}=\lambda\left|\boldsymbol{x}\right|^{2}$
+\end_inset
+
+, ami negatív, így ellentmondás.
+\end_layout
+
 \begin_layout Standard
 Bevezetjük a valós ortogonális mátrix komplex megfelelőjét, az unitér mátrixot.
 \end_layout
