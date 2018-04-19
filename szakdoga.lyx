@@ -7442,7 +7442,7 @@ reference "eq:bji_konv"
 \end_inset
 
 De 
-\begin_inset Formula $\left|v_{ii}\right|=\left|u_{ii}\right|\leq\rho(\boldsymbol{U})$
+\begin_inset Formula $\left|v_{ii}\right|=\left|u_{ii}\right|<\rho(\boldsymbol{U})$
 \end_inset
 
  és 
@@ -7472,7 +7472,7 @@ reference "eq:vij_konv"
  egyenlőtlenség miatt
 \begin_inset Formula 
 \[
-\left\Vert \boldsymbol{V}\right\Vert _{\infty}\leq\rho(\boldsymbol{U})+(n-1)\left[\frac{1-\rho(\boldsymbol{U})}{n-1}\right]<1\,.
+\left\Vert \boldsymbol{V}\right\Vert _{\infty}\leq\rho(\boldsymbol{U})+(n-1)\left[\frac{1-\rho(\boldsymbol{U})}{n-1}\right]=1\,.
 \]
 
 \end_inset
@@ -7486,7 +7486,7 @@ Hasonlóan,
 
 \begin_layout Corollary*
 A tétel feltételei mellett 
-\begin_inset Formula $\left\Vert \boldsymbol{BU}\boldsymbol{B}^{-1}\right\Vert <1.$
+\begin_inset Formula $\left\Vert \boldsymbol{BU}\boldsymbol{B}^{-1}\right\Vert _{2}<1.$
 \end_inset
 
 
@@ -7512,7 +7512,7 @@ A tétel fontossága, hogy ha az
 \begin_inset Formula $1$
 \end_inset
 
-, akkor létezik olyan norma, amiben az 
+, akkor mindig létezik olyan norma, amiben az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
