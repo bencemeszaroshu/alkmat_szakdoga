@@ -2072,6 +2072,13 @@ key "BasicMatrices"
 \end_inset
 
 
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:lemma2.3"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -2391,10 +2398,27 @@ reference "thm:fundamentalthm"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
+Megmutattuk, hogy ha az 
+\begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
+ négyzetes mátrixnak az oszlopai lineárisan függetlenek, akkor létezik jobboldal
+i inverze.
+ A 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:lemma2.3"
 
+\end_inset
+
+-as tételből következik, hogy ekkor az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix sorai is lineárisan függetlenek.
+ Tehát a négyzetes mátrixok sorainak és oszlopainak lineáris függetlensége
+ egyenértékű.
+ 
 \end_layout
 
 \begin_layout Theorem
@@ -2531,24 +2555,27 @@ Legyen
 
 \begin_deeper
 \begin_layout Enumerate
+Az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
--nak vannak lineárisan független oszlopai.
+ mátrix oszlopai lineárisan függetlenek.
 \end_layout
 
 \begin_layout Enumerate
+Az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
--nak vannak lineárisan független sorai.
+ mátrix sorai lineárisan függetlenek.
 \end_layout
 
 \begin_layout Enumerate
+Az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- invertálható.
+ mátrix invertálható.
 \end_layout
 
 \end_deeper
@@ -6992,15 +7019,15 @@ reference "eq:kettesnorma_es_matrixsugara"
 
 \end_inset
 
-Ezt egyszerűsíthetjük, legyen
+Legyen
 \begin_inset Formula 
 \[
-\theta_{i}=\frac{\boldsymbol{z}_{i}^{2}}{\sum_{i=j}^{n}\boldsymbol{z}_{j}^{2}}\,.
+\theta_{i}=\frac{\boldsymbol{z}_{i}^{2}}{\sum_{i=j}^{n}\boldsymbol{z}_{j}^{2}}\,,
 \]
 
 \end_inset
 
-Ezt a 
+ezt a 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:kettesnorma_2"
@@ -7451,6 +7478,45 @@ Hasonlóan,
 .
 \end_layout
 
+\begin_layout Corollary*
+A tétel feltételei mellett 
+\begin_inset Formula $\left\Vert \boldsymbol{BU}\boldsymbol{B}^{-1}\right\Vert <1.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+A 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:KettesNormas_Broyden5.8"
+
+\end_inset
+
+-es tételből következik.
+\end_layout
+
+\begin_layout Standard
+A tétel fontossága, hogy ha az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix spektrális sugara kisebb mint 
+\begin_inset Formula $1$
+\end_inset
+
+, akkor létezik olyan norma, amiben az
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix normája kisebb mint 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -7557,6 +7623,13 @@ reference "thm:Schur"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:411_BUB"
+
+\end_inset
+
+-es és a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:KettesNormas_Broyden5.8"
 
 \end_inset
 
