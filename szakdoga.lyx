@@ -8245,18 +8245,15 @@ Az
 \begin_inset Formula $\boldsymbol{S}>0$
 \end_inset
 
-.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-tétel hivatkozás ide?
-\end_layout
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:pozitivdefinit_sajaterteke_pozitiv"
 
 \end_inset
 
-Ha 
+-ös tétel).
+ Ha 
 \begin_inset Formula $\lambda_{\max}$
 \end_inset
 
@@ -8440,6 +8437,7 @@ Legyen
 \end_layout
 
 \begin_layout Standard
+\noindent
 Mivel 
 \begin_inset Formula $(\boldsymbol{I}+\omega\boldsymbol{L})$
 \end_inset
