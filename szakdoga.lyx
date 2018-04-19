@@ -8029,13 +8029,14 @@ Az
 \end_inset
 
  közelítő megoldáshoz tartozó maradéktag 
-\begin_inset Formula $\boldsymbol{\epsilon}_{i}=\boldsymbol{A}\boldsymbol{x}_{i}-\boldsymbol{b}.$
+\begin_inset Formula $\boldsymbol{\epsilon}_{i}=\boldsymbol{A}\boldsymbol{x}_{i}-\boldsymbol{b}$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
+\noindent
 Ebből következik, hogy
 \begin_inset Formula 
 \[
@@ -8674,7 +8675,7 @@ Az
 
  mátrix nemszinguláris, ezért az 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "thm:SOR_lemma"
 
 \end_inset
@@ -8828,17 +8829,14 @@ Legyen
 \begin_inset Formula $\boldsymbol{P}>0$
 \end_inset
 
-, minden sajátértéke valós és pozitív
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-tétel hivatkozás
-\end_layout
+, minden sajátértéke valós és pozitív (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:pozitivdefinit_sajaterteke_pozitiv"
 
 \end_inset
 
-.
+-ös tétel).
  Jelölje 
 \begin_inset Formula $\lambda_{\min}$
 \end_inset
@@ -8857,12 +8855,12 @@ f_{1}\geq\lambda_{\min}\boldsymbol{x}^{T}\boldsymbol{x}.
 \end_inset
 
 A 
-\begin_inset Formula $Q$
+\begin_inset Formula $\boldsymbol{Q}$
 \end_inset
 
  mátrix szimmetrikus, ezért minden sajátértéke valós.
  Jelölje a 
-\begin_inset Formula $Q$
+\begin_inset Formula $\boldsymbol{Q}$
 \end_inset
 
  mátrix legkisebb sajátértékét 
