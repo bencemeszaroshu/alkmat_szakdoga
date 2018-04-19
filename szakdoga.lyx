@@ -6172,7 +6172,7 @@ reference "XHAX_elso_oszlopa_e1"
 
 \end_inset
 
--os tétel miatt létezik olyan 
+-es tétel miatt létezik olyan 
 \begin_inset Formula $\boldsymbol{X}_{r}$
 \end_inset
 
@@ -6297,7 +6297,7 @@ reference "XHAX_elso_oszlopa_e1"
 
 \end_inset
 
--os tétel miatt, így minden 
+-es tétel miatt, így minden 
 \begin_inset Formula $r$
 \end_inset
 
@@ -7057,7 +7057,7 @@ reference "thm:Schur"
 
 \end_inset
 
--es tétel következményei miatt.
+-as tétel következményei miatt.
  Legyen 
 \begin_inset Formula $\boldsymbol{\Lambda}$
 \end_inset
@@ -7331,7 +7331,7 @@ reference "thm:Schur"
 
 \end_inset
 
--es tételből tudjuk, hogy 
+-as tételből tudjuk, hogy 
 \begin_inset Formula $\boldsymbol{Q}^{H}\boldsymbol{AQ}=\boldsymbol{U}$
 \end_inset
 
@@ -7646,7 +7646,7 @@ reference "thm:Schur"
 
 \end_inset
 
--es tétellel kiterjesztjük a bizonyítást tetszőleges négyzetes mátrixra.
+-as tétellel kiterjesztjük a bizonyítást tetszőleges négyzetes mátrixra.
  Az 
 \begin_inset Formula $i$
 \end_inset
@@ -7777,7 +7777,7 @@ reference "thm:Schur"
 
 \end_inset
 
--es tételből 
+-as tételből 
 \begin_inset Formula $\boldsymbol{Q}^{H}\boldsymbol{AQ}=\boldsymbol{U}$
 \end_inset
 
