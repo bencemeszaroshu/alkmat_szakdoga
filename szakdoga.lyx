@@ -9334,16 +9334,16 @@ key "Orig_cg"
 
 .
  A módszer a legegyszerűbb formájában az 
-\begin_inset Formula $x$
+\begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
  vektor egy pozitív definit függvényét minimalizálja, a 
-\begin_inset Formula $p_{j}$
+\begin_inset Formula $\boldsymbol{p}_{j}$
 \end_inset
 
  vektorok mentén.
  A 
-\begin_inset Formula $p_{j}$
+\begin_inset Formula $\boldsymbol{p}_{j}$
 \end_inset
 
  vektorok sorozatát úgy választjuk, hogy a minimalizálások sorozata a függvény
@@ -9359,15 +9359,15 @@ reference "eq:BlCG_Ax=b"
  egyenletrendszer megoldásával.
  A módszer a legegyszerűbb formájában jól definiált, mert minden osztó az
  
-\begin_inset Formula $p_{j}^{T}Mp_{j}$
+\begin_inset Formula $\boldsymbol{p}_{j}^{T}\boldsymbol{M}\boldsymbol{p}_{j}$
 \end_inset
 
  alakú, ahol 
-\begin_inset Formula $p_{j}\neq0$
+\begin_inset Formula $\boldsymbol{p}_{j}\neq0$
 \end_inset
 
  és 
-\begin_inset Formula $M$
+\begin_inset Formula $\boldsymbol{M}$
 \end_inset
 
  egy pozitív definit mátrix, általában maga az 
@@ -9388,7 +9388,7 @@ A konjugált gradiens módszer publikálása óta több kísérlet volt a módsz
 
  mátrix szimmetrikus, de nem pozitív definit, a módszer nem alkalmazható,
  mert a 
-\begin_inset Formula $p_{j}^{T}Mp_{j}$
+\begin_inset Formula $\boldsymbol{p}_{j}^{T}\boldsymbol{M}\boldsymbol{p}_{j}$
 \end_inset
 
  osztók nagyon közel kerülhetnek nullához.
@@ -9400,7 +9400,7 @@ reference "eq:BlCG_Ax=b"
 \end_inset
 
  egyenletrendszert 
-\begin_inset Formula $A^{T}Ax=A^{T}b$
+\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{A}\boldsymbol{x}=\boldsymbol{A}^{T}\boldsymbol{b}$
 \end_inset
 
  alakúra alakítjuk.
@@ -9412,7 +9412,7 @@ reference "eq:BlCG_Ax=b"
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Itt még hiányzik a 2.
@@ -9426,7 +9426,7 @@ Itt még hiányzik a 2.
 
 \begin_layout Standard
 Legyen 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  
@@ -9435,45 +9435,57 @@ Legyen
 
 -ed rendű valós szimmetrikus mátrix.
  Legyen a 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- mátrix nem feltétlen pozitív definit, sőt nem feltétlen nemszinguláris.
+ mátrix nem feltétlen pozitív definit, sőt legyen nem feltétlen nemszinguláris.
  Legyen 
-\begin_inset Formula $b\in\mathbb{R}^{n}$
+\begin_inset Formula $\boldsymbol{b}\in\mathbb{R}^{n}$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+sehol mashol nincs 
+\backslash
+inR, viszont lejebb lényeges a dimenzio
+\end_layout
+
 \end_inset
 
  konstans vektor.
  A 
-\begin_inset Formula $\phi(x)$
+\begin_inset Formula $\phi(\boldsymbol{x})$
 \end_inset
 
  kvadratikus függvény legyen
 \begin_inset Formula 
 \begin{equation}
-\phi(x)=x^{T}Gx/2-b^{T}x.\label{eq:BlCG_kvadratikus_fv}
+\phi(\boldsymbol{x})=\frac{1}{2}\boldsymbol{x}^{T}\boldsymbol{G}\boldsymbol{x}-\boldsymbol{b}^{T}\boldsymbol{x}.\label{eq:BlCG_kvadratikus_fv}
 \end{equation}
 
 \end_inset
 
 Ha 
-\begin_inset Formula $g_{i}$
+\begin_inset Formula $\boldsymbol{g}_{i}$
 \end_inset
 
 -vel jelöljük az 
-\begin_inset Formula $x_{i}$
+\begin_inset Formula $\boldsymbol{x}_{i}$
 \end_inset
 
  pontban kiszámított gradienst, akkor
 \begin_inset Formula 
 \begin{equation}
-g_{i}=Gx_{i}-b.\label{eq:BlCG_6_gi}
+\boldsymbol{g}_{i}=\boldsymbol{G}\boldsymbol{x}_{i}-\boldsymbol{b}.\label{eq:BlCG_6_gi}
 \end{equation}
 
 \end_inset
 
 Legyen 
-\begin_inset Formula $S_{i}$
+\begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
  egy 
@@ -9484,16 +9496,28 @@ Legyen
 \begin_inset Formula $m(i)$
 \end_inset
 
- rangú mátrix, úgy, hogy
+ rangú mátrix 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+itt leírni hogy m(i) alatt azt értjük, hogy m értéke i-től függ .
+ 2.
+ itt lejebb le is van irva :)
+\end_layout
+
+\end_inset
+
+, úgy, hogy
 \begin_inset Formula 
 \begin{equation}
-S_{i}=[P_{1},P_{2},...,P_{i}]\,,\label{eq:BlCG_6_Si}
+\boldsymbol{S}_{i}=[\boldsymbol{P}_{1},\boldsymbol{P}_{2},...,\boldsymbol{P}_{i}]\,,\label{eq:BlCG_6_Si}
 \end{equation}
 
 \end_inset
 
 ahol 
-\begin_inset Formula $P_{j}$
+\begin_inset Formula $\boldsymbol{P}_{j}$
 \end_inset
 
 , 
@@ -9518,56 +9542,77 @@ ahol
 
 .
  Legyen 
-\begin_inset Formula $x_{i+1}$
+\begin_inset Formula $\boldsymbol{x}_{i+1}$
 \end_inset
 
  a 
 \begin_inset Formula $\phi$
 \end_inset
 
- függvény szintezője, amikor 
-\begin_inset Formula $x$
+ függvény szintezője 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+mi az a szintező? mit értün szintezés alatt?
+\end_layout
+
+\end_inset
+
+, amikor 
+\begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
  kielégíti a
 \begin_inset Formula 
 \begin{equation}
-x=x_{1}+S_{i}z\label{eq:BlCG_x1+Siz}
+\boldsymbol{x}=\boldsymbol{x}_{1}+\boldsymbol{S}_{i}\boldsymbol{z}\label{eq:BlCG_x1+Siz}
 \end{equation}
 
 \end_inset
 
 feltételt, ahol 
-\begin_inset Formula $x_{1}$
+\begin_inset Formula $\boldsymbol{x}_{1}$
 \end_inset
 
  egy tetszőleges értéke 
-\begin_inset Formula $x$
+\begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
--nek és 
-\begin_inset Formula $z$
+-nek és a 
+\begin_inset Formula $\boldsymbol{z}$
 \end_inset
 
  vektor 
 \begin_inset Formula $\mathbb{R}^{m(i)}$
 \end_inset
 
--beli változókból.
+-beli 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+itt
+\end_layout
+
+\end_inset
+
+változókból.
  Ekkor 
-\begin_inset Formula $x_{i+1}$
+\begin_inset Formula $\boldsymbol{x}_{i+1}$
 \end_inset
 
 -et úgy kapjuk, hogy 
 \begin_inset Formula $\phi$
 \end_inset
 
- első parciális deriváltjait nullára állítjuk 
-\begin_inset Formula $z$
+ első parciális deriváltjait nullára állítjuk a 
+\begin_inset Formula $\boldsymbol{z}$
 \end_inset
 
- függvényében, megoldjuk az így kapott lineáris egyenletrendszert 
-\begin_inset Formula $z$
+ vektor függvényében, megoldjuk az így kapott lineáris egyenletrendszert
+ 
+\begin_inset Formula $\boldsymbol{z}$
 \end_inset
 
 -re, és behelyettesítjük a kapott értékeket a 
@@ -9577,10 +9622,11 @@ reference "eq:BlCG_x1+Siz"
 
 \end_inset
 
- egyenletbe kapjuk, hogy
+ egyenletbe.
+ Azt kapjuk, hogy
 \begin_inset Formula 
 \begin{equation}
-x_{i+1}=x_{1}-S_{i}D_{i}^{-1}S_{i}^{T}g_{i}\,,\label{eq:BlCG_6_xi+1}
+\boldsymbol{x}_{i+1}=\boldsymbol{x}_{1}-\boldsymbol{S}_{i}\boldsymbol{D}_{i}^{-1}\boldsymbol{S}_{i}^{T}\boldsymbol{g}_{i}\,,\label{eq:BlCG_6_xi+1}
 \end{equation}
 
 \end_inset
@@ -9588,35 +9634,35 @@ x_{i+1}=x_{1}-S_{i}D_{i}^{-1}S_{i}^{T}g_{i}\,,\label{eq:BlCG_6_xi+1}
 ahol
 \begin_inset Formula 
 \[
-D_{i}=S_{i}^{T}GS_{i}\,.
+\boldsymbol{D}_{i}=\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{S}_{i}\,.
 \]
 
 \end_inset
 
 Feltételezzük, hogy a 
-\begin_inset Formula $D_{i}$
+\begin_inset Formula $\boldsymbol{D}_{i}$
 \end_inset
 
  mátrix nemszinguláris.
  A feltételezésből következik, hogy 
-\begin_inset Formula $GS_{i}$
+\begin_inset Formula $\boldsymbol{G}\boldsymbol{S}_{i}$
 \end_inset
 
 -nek az oszlopszáma a rangja, még akkor is, ha 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  mátrix szinguláris.
  A 
-\begin_inset Formula $D_{i}$
+\begin_inset Formula $\boldsymbol{D}_{i}$
 \end_inset
 
  mátrix mindig nemszinguláris, ha a 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  mátrix pozitív definit, abból a feltételezésből, hogy az 
-\begin_inset Formula $S_{i}$
+\begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
  mátrix rangja 
@@ -9625,11 +9671,11 @@ Feltételezzük, hogy a
 
 .
  A problémát a 
-\begin_inset Formula $D_{i}$
+\begin_inset Formula $\boldsymbol{D}_{i}$
 \end_inset
 
  mátrix szingularitása okozhatja, ha 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  nem pozitív definit.
@@ -9645,11 +9691,11 @@ reference "eq:BlCG_6_xi+1"
 \end_inset
 
  függvény 
-\begin_inset Formula $x_{i+1}$
+\begin_inset Formula $\boldsymbol{x}_{i+1}$
 \end_inset
 
 -hez tartozó, 
-\begin_inset Formula $g_{i+1}$
+\begin_inset Formula $\boldsymbol{g}_{i+1}$
 \end_inset
 
  gradiensét, direkt behelyettesítéssel a 
@@ -9662,7 +9708,7 @@ reference "eq:BlCG_6_gi"
  egyenlőségbe kapjuk, hogy
 \begin_inset Formula 
 \[
-g_{i+1}=Q_{i}g_{1}\,,
+\boldsymbol{g}_{i+1}=\boldsymbol{Q}_{i}\boldsymbol{g}_{1}\,,
 \]
 
 \end_inset
@@ -9670,7 +9716,7 @@ g_{i+1}=Q_{i}g_{1}\,,
 ahol
 \begin_inset Formula 
 \begin{equation}
-Q_{i}=I-GS_{i}D_{i}^{-1}S_{i}^{T}\,.\label{eq:BlCG_6_Qi}
+\boldsymbol{Q}_{i}=\boldsymbol{I}-\boldsymbol{G}\boldsymbol{S}_{i}\boldsymbol{D}_{i}^{-1}\boldsymbol{S}_{i}^{T}\,.\label{eq:BlCG_6_Qi}
 \end{equation}
 
 \end_inset
@@ -9683,11 +9729,11 @@ reference "eq:BlCG_6_Si"
 \end_inset
 
  egyenlőségből következik, hogy a 
-\begin_inset Formula $P_{j}$
+\begin_inset Formula $\boldsymbol{P}_{j}$
 \end_inset
 
  mátrix oszlopai egy részhalmaza az 
-\begin_inset Formula $S_{i}$
+\begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
  mátrix oszlopainak, mivel 
@@ -9697,7 +9743,7 @@ reference "eq:BlCG_6_Si"
 .
 \begin_inset Formula 
 \[
-P_{j}^{T}Q_{i}=0,
+\boldsymbol{P}_{j}^{T}\boldsymbol{Q}_{i}=0,
 \]
 
 \end_inset
@@ -9705,7 +9751,7 @@ P_{j}^{T}Q_{i}=0,
 
 \begin_inset Formula 
 \[
-Q_{i}GP_{j}=0,
+\boldsymbol{Q}_{i}\boldsymbol{G}\boldsymbol{P}_{j}=0,
 \]
 
 \end_inset
@@ -9732,7 +9778,7 @@ reference "eq:BlCG_6_Qi"
  egyenlőségekből,
 \begin_inset Formula 
 \[
-Q_{j}Q_{i}=Q_{i}Q_{j}=Q_{i}\,,
+\boldsymbol{Q}_{j}\boldsymbol{Q}_{i}=\boldsymbol{Q}_{i}\boldsymbol{Q}_{j}=\boldsymbol{Q}_{i}\,,
 \]
 
 \end_inset
@@ -9743,13 +9789,13 @@ ahol
 
 .
  Ebből következik, hogy a 
-\begin_inset Formula $Q_{i}$
+\begin_inset Formula $\boldsymbol{Q}_{i}$
 \end_inset
 
  mátrix idempotens.
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 idempotens nincs definiálva
@@ -9768,10 +9814,10 @@ A konjugált gradiens módszer folyamatosan növekvő dimenziójú manifoldokon
 ak konjugáltnak lenniük.
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
-bármi faszt is jelentsen ez....
+bármi is jelentsen ez....
 \end_layout
 
 \end_inset
@@ -9784,7 +9830,7 @@ Azt, hogy a vektorok konjugáltsága elégséges feltétel, a következő tétel
 Legyen
 \begin_inset Formula 
 \[
-S_{i}=[S_{i-1},P_{i}]\,,
+\boldsymbol{S}_{i}=[\boldsymbol{S}_{i-1},\boldsymbol{P}_{i}]\,,
 \]
 
 \end_inset
@@ -9798,16 +9844,16 @@ P_{i}^{T}GS_{i-1}=0,
 \end_inset
 
 és feltételezzük, hogy 
-\begin_inset Formula $S_{i-1}^{T}GS_{i-1}$
+\begin_inset Formula $\boldsymbol{S}_{i-1}^{T}\boldsymbol{G}\boldsymbol{S}_{i-1}$
 \end_inset
 
  és 
-\begin_inset Formula $P_{i}^{T}GP_{i}$
+\begin_inset Formula $\boldsymbol{P}_{i}^{T}\boldsymbol{G}\boldsymbol{P}_{i}$
 \end_inset
 
  nemszinguláris.
  Let 
-\begin_inset Formula $x_{i}$
+\begin_inset Formula $\boldsymbol{x}_{i}$
 \end_inset
 
  level 
@@ -9815,11 +9861,11 @@ P_{i}^{T}GS_{i-1}=0,
 \end_inset
 
  over 
-\begin_inset Formula $x(w)=x_{1}+S_{i-1}w$
+\begin_inset Formula $\boldsymbol{x}(w)=\boldsymbol{x}_{1}+\boldsymbol{S}_{i-1}\boldsymbol{w}$
 \end_inset
 
  és 
-\begin_inset Formula $x_{i+1}$
+\begin_inset Formula $\boldsymbol{x}_{i+1}$
 \end_inset
 
  level 
@@ -9827,7 +9873,7 @@ P_{i}^{T}GS_{i-1}=0,
 \end_inset
 
  over 
-\begin_inset Formula $x(y)=x_{i}+P_{i}y$
+\begin_inset Formula $\boldsymbol{x}(\boldsymbol{y})=\boldsymbol{x}_{i}+\boldsymbol{P}_{i}\boldsymbol{y}$
 \end_inset
 
 .
@@ -9841,7 +9887,7 @@ ANGOL SZÖVEG!
 \end_inset
 
  Ekkor 
-\begin_inset Formula $x_{i+1}$
+\begin_inset Formula $\boldsymbol{x}_{i+1}$
 \end_inset
 
  levels 
@@ -9849,7 +9895,7 @@ ANGOL SZÖVEG!
 \end_inset
 
  over 
-\begin_inset Formula $x(z)=x_{1}+S_{i}z$
+\begin_inset Formula $\boldsymbol{x}(\boldsymbol{z})=\boldsymbol{x}_{1}+\boldsymbol{S}_{i}\boldsymbol{z}$
 \end_inset
 
 .
@@ -9883,7 +9929,7 @@ A konjugált gradiens módszerek új rendszertana
 Az egyik leghatékonyabb módja az 
 \begin_inset Formula 
 \[
-Ax=b
+\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}
 \]
 
 \end_inset
