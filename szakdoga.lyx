@@ -7506,7 +7506,7 @@ A tétel fontossága, hogy ha az
 \begin_inset Formula $1$
 \end_inset
 
-, akkor létezik olyan norma, amiben az
+, akkor létezik olyan norma, amiben az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -7717,8 +7717,26 @@ reference "thm:Schur"
  Ebből az egyenlőségből következik, hogy a tétel általános esetben is igaz.
 \end_layout
 
+\begin_layout Proof
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+!! Még egyet itt érdemes lenne majd iterálni, spektrális sugár és konvergencia
+ kapcsolata, mit miért vettem be
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Felső relaxációs eljárás (SOR)
+\end_layout
+
+\begin_layout Standard
+A stacionárius iterációs eljárások konvergenciájának gyorsasága a spektrális
 \end_layout
 
 \begin_layout Standard
@@ -7742,26 +7760,6 @@ key "BroydenSORkonvergencia"
 .
  Ebben a fejezetben röviden bemutatjuk a SOR módszert, és összefoglaljuk
  Broyden a SOR módszer konvergenciájával kapcsolatos eredményeit.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-A numanal könyv 435-ödik oldalán van
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Illetve numanal 436-odik oldal, 9.7.5 szukcesszív túlrelaxálás
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
