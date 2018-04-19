@@ -9324,16 +9324,15 @@ egyenletrendszer megoldására, ahol
 \begin_inset Formula $n$
 \end_inset
 
--ed rendű valós szimmetrikus pozitív definit mátrix, már 1952 óta ismert.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-ref?
-\end_layout
+-ed rendű valós szimmetrikus pozitív definit mátrix, már 1952 óta ismert
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Orig_cg"
 
 \end_inset
 
+.
  A módszer a legegyszerűbb formájában az 
 \begin_inset Formula $x$
 \end_inset
