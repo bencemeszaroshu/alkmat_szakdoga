@@ -3005,6 +3005,11 @@ Az
 \end_inset
 
 -ra.
+ Jelölése 
+\begin_inset Formula $\boldsymbol{A}>0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -6821,7 +6826,8 @@ reference "subsec:Iteratív-eljárások"
 
  fejezetben láttuk, hogy az iteratív eljárások konvergenciája összefügg
  a mátrixok normájával.
- Megvizsgálunk néhány, a sajátérték és a mátrix norma közötti összefüggést.
+ Megvizsgálunk néhány, a sajátérték, a spektrális sugár és a mátrix norma
+ közötti összefüggést.
  
 \end_layout
 
@@ -7736,12 +7742,24 @@ Felső relaxációs eljárás (SOR)
 \end_layout
 
 \begin_layout Standard
-A stacionárius iterációs eljárások konvergenciájának gyorsasága a spektrális
+Stacionárius iterációs módszereknél minden olyan módosítás, ami csökkenti
+ a spektrális sugarat, meggyorsítja a konvergenciáját a lineáris egyenletrendsze
+r megoldásának.
+ A SOR módszer az egyik tagja annak a nagy módszercsaládnak, amelyet az
+ iterációs eljárások konvergenciájának gyorsítására dolgoztak ki 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BevNumAnal"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
 A SOR módszer konvergencia kritériumát szimmetrikus együtthatómátrixok esetén
- Alexander Ostrowski fogalmazta meg 1954-ben 
+ Alexander Ostrowski dolgozta ki 1954-ben 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Ostrowski"
@@ -7759,7 +7777,14 @@ key "BroydenSORkonvergencia"
 
 .
  Ebben a fejezetben röviden bemutatjuk a SOR módszert, és összefoglaljuk
- Broyden a SOR módszer konvergenciájával kapcsolatos eredményeit.
+ Broyden a SOR módszer konvergenciájával kapcsolatos eredményeit 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -7844,11 +7869,11 @@ ahol
 \begin_inset Formula $\boldsymbol{I}$
 \end_inset
 
- az egység mátrix, 
+ az egységmátrix, 
 \begin_inset Formula $\boldsymbol{L}$
 \end_inset
 
- alsó háromszög mátrix, 
+ alsó háromszögmátrix, 
 \begin_inset Formula $\boldsymbol{U}$
 \end_inset
 
@@ -7865,7 +7890,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{x}_{i}$
 \end_inset
 
- egymást követő közelítő megoldása a 
+ egymást követő közelítő megoldása az 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:SOR_Ax=b"
@@ -7931,7 +7956,7 @@ Ekkor az
 Ezért
 \begin_inset Formula 
 \[
-\boldsymbol{\epsilon}_{i+1}=\boldsymbol{A}\boldsymbol{x}_{i+1}-\boldsymbol{b}.
+\boldsymbol{\epsilon}_{i+1}=\boldsymbol{A}\boldsymbol{x}_{i+1}-\boldsymbol{b}
 \]
 
 \end_inset
@@ -7974,7 +7999,7 @@ reference "eq:SOR_2.3_felett"
 
 \end_inset
 
-Ezt az egyenlőséget írjuk az
+Írjuk ezt az egyenlőséget az
 \begin_inset Formula 
 \[
 \boldsymbol{\epsilon}_{i+1}=(\boldsymbol{I}-\boldsymbol{B})\boldsymbol{\epsilon}_{i}
@@ -7983,6 +8008,14 @@ Ezt az egyenlőséget írjuk az
 \end_inset
 
 egyszerűbb formában.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Theorem
@@ -8025,40 +8058,10 @@ alakban, a konvergencia elégséges feltétele, hogy létezzen olyan
 
 \end_inset
 
-Az 
-\begin_inset Formula $\boldsymbol{S}>0$
-\end_inset
-
- jelölés jelentése, hogy 
-\begin_inset Formula $\boldsymbol{S}$
-\end_inset
-
- mátrix szimmetrikus 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-A szimmetrikusság az kell a pozitiv definitséghez?! A 3as fejezet defben
- ez van.
-\end_layout
-
-\end_inset
-
-és pozitív definit.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Ezt majd lehet ki kéne innen emelni, itt el van dugva.
-\end_layout
-
-\end_inset
-
 
 \begin_inset CommandInset citation
 LatexCommand cite
-after "Theorem 1"
+after "137. oldal, Theorem 1"
 key "BroydenSORkonvergencia"
 
 \end_inset
@@ -8143,7 +8146,7 @@ mert ekkor
 \begin_inset Formula $f_{i+1}\leq(1-k)f_{i}$
 \end_inset
 
-, és az 
+ és az 
 \begin_inset Formula $f_{i}$
 \end_inset
 
@@ -8162,7 +8165,7 @@ Az
 .
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 tétel hivatkozás ide?
@@ -8316,12 +8319,10 @@ A
 
  tetszőleges nemszinguláris mátrix.
  
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-kell citation
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "138. oldal, Lemma"
+key "BroydenSORkonvergencia"
 
 \end_inset
 
@@ -8376,6 +8377,14 @@ reference "eq:SOR_hosszu_konv_feltetel"
 \end_inset
 
 formában írható.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -8534,6 +8543,14 @@ reference "thm:SOR_Theorem1"
 \end_inset
 
 -es tétel következménye miatt a SOR módszer nem fog konvergálni.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -8561,7 +8578,7 @@ reference "eq:SOR_hosszu_konv_feltetel_rovidebben"
 \begin_inset Formula $(\boldsymbol{A}^{T})^{-1}\boldsymbol{A}^{-1}$
 \end_inset
 
- mátrix szimmetrikus és pozitív definit.
+ mátrix pozitív definit.
  Ekkor a konvergencia feltétele,
 \begin_inset Formula 
 \[
@@ -8581,7 +8598,7 @@ reference "thm:SOR_lemma"
 
 \end_inset
 
--es tételt felhasználva a feltétel a
+-es tételt felhasználva, a feltétel a
 \begin_inset Formula 
 \[
 \omega(\boldsymbol{I}+\omega\boldsymbol{L})\boldsymbol{A}^{T}+\omega\boldsymbol{A}(\boldsymbol{I}+\omega\boldsymbol{L}^{T})-\omega^{2}\boldsymbol{AA}^{T}>0
@@ -8621,15 +8638,15 @@ reference "eq:SOR_hosszu_konv_feltetel_rovidebben"
 \end_inset
 
  feltételben.
- Ekkor a konvergencia feltétele
+ Ekkor a konvergencia elégséges feltétele
 \begin_inset Formula 
 \[
-\omega\boldsymbol{A}^{T}(\boldsymbol{I}+\omega\boldsymbol{L})+\omega(\boldsymbol{I}+\omega\boldsymbol{L}^{T})\boldsymbol{A}-\omega^{2}\boldsymbol{A}^{T}\boldsymbol{A}>0.
+\omega\boldsymbol{A}^{T}(\boldsymbol{I}+\omega\boldsymbol{L})+\omega(\boldsymbol{I}+\omega\boldsymbol{L}^{T})\boldsymbol{A}-\omega^{2}\boldsymbol{A}^{T}\boldsymbol{A}>0,
 \]
 
 \end_inset
 
-Az 
+az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -8675,6 +8692,14 @@ reference "eq:SOR_nemszim_konv_feltetel_2"
 \end_inset
 
  feltételeket.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Theorem
@@ -8701,12 +8726,20 @@ name "thm:SOR_Theorem2"
 
 \end_inset
 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "139. oldal, Theorem 2"
+key "BroydenSORkonvergencia"
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Proof
 Legyen 
-\begin_inset Formula $f_{1}=\boldsymbol{x}^{T}P\boldsymbol{x}$
+\begin_inset Formula $f_{1}=\boldsymbol{x}^{T}\boldsymbol{P}\boldsymbol{x}$
 \end_inset
 
 .
@@ -8714,7 +8747,17 @@ Legyen
 \begin_inset Formula $\boldsymbol{P}>0$
 \end_inset
 
-, minden sajátértéke valós és pozitív.
+, minden sajátértéke valós és pozitív
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+tétel hivatkozás
+\end_layout
+
+\end_inset
+
+.
  Jelölje 
 \begin_inset Formula $\lambda_{\min}$
 \end_inset
@@ -8749,7 +8792,7 @@ A
  Ha
 \begin_inset Formula 
 \[
-f_{2}=\boldsymbol{x}^{T}Q\boldsymbol{x},
+f_{2}=\boldsymbol{x}^{T}\boldsymbol{Q}\boldsymbol{x},
 \]
 
 \end_inset
@@ -8820,17 +8863,6 @@ ezért
 \end_inset
 
  esetén.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Ezt azért még erősen meg kell próbálni felfogni, hogy itt egyáltalán miről
- van szó....
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -8841,7 +8873,14 @@ reference "eq:SOR_nemszim_konv_feltetel_2"
 
 \end_inset
 
- feltételből is.
+ feltételből is 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+.
  Legyen
 \begin_inset Formula 
 \[
@@ -8887,6 +8926,14 @@ Ezért a SOR módszer konvergálni fog, ha
 \end_inset
 
 .
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -8929,7 +8976,7 @@ reference "eq:SOR_nemszim_konv_feltetel_2"
 \end_inset
 
  mátrix kifejezhető szimmetrikus és antiszimmetrikus mátrixok összegeként.
- Ezért, ha az 
+ Ezért ha az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -8938,7 +8985,7 @@ reference "eq:SOR_nemszim_konv_feltetel_2"
 \begin_inset Formula $\omega$
 \end_inset
 
--t találni, hogy a SOR módszer konvergálni fog.
+-t találni, hogy a SOR módszer konvergáljon.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -8973,7 +9020,7 @@ reference "eq:SOR_masmilyen_konvergencia"
 Ebből következik, hogy léteznek olyan mátrixok, amelyeknél az alsó háromszög
  domináltság fontos szempont a SOR módszer konvergenciájánál.
  A szélsőséges esetben, amikor 
-\begin_inset Formula $U$
+\begin_inset Formula $\boldsymbol{U}$
 \end_inset
 
  nulla lesz, az 
@@ -8993,15 +9040,22 @@ reference "eq:SOR_konkluzio_1_feltetel"
 
 , az egyenletek egy lépésben megoldódnak.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Azt, hogy a 
-\begin_inset Formula $P>0$
+\begin_inset Formula $\boldsymbol{P}>0$
 \end_inset
 
  és az 
-\begin_inset Formula $A+A^{T}>0$
+\begin_inset Formula $\boldsymbol{A}+\boldsymbol{A}^{T}>0$
 \end_inset
 
  feltételek nem ekvivalensek, legjobban két példával lehet szemléltetni.
@@ -9021,7 +9075,7 @@ Ebben az esetben az
 
  mátrix erősen antiszimmetrikus, és a szimmetrikus komponense 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Nem használom sehol, hogy 
@@ -9057,6 +9111,14 @@ komponens
 \end_inset
 
 .
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -9094,6 +9156,13 @@ Az
 
  esetén garantált.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -9118,17 +9187,7 @@ reference "eq:SOR_masmilyen_konvergencia"
 
 \end_inset
 
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-jók ezek a referenciák?
-\end_layout
-
-\end_inset
-
-feltételek elégségesek, de nem szükségesek.
+ feltételek elégségesek, de nem szükségesek.
  A 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -9149,22 +9208,20 @@ reference "eq:SOR_nemszim_konv_feltetel_2"
 
 , nem feltétlenül jelenti, hogy a SOR módszer divergálni fog.
  Viszont a feltételekből látszik, hogy létezik kettő igen különböző típusa
- a nemszimmetrikus mátrixoknak, melyekre a SOR módszer mindig konvergál
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-vagy konvergens!?!?
-\end_layout
-
-\end_inset
-
-, ha megfelelő 
+ a nemszimmetrikus mátrixoknak, melyekre a SOR módszer mindig konvergál,
+ ha megfelelő 
 \begin_inset Formula $\omega$
 \end_inset
 
  értéket választunk.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
