@@ -2030,7 +2030,11 @@ Az
 \begin_inset Formula $r\left(\boldsymbol{A}\right).$
 \end_inset
 
+ Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
 
+ mátrix teljes rangú, ha rangja megegyezik az oszlopainak számával.
 \end_layout
 
 \begin_layout Subsection
@@ -9311,17 +9315,17 @@ Blokk konjugált gradiens módszer (BlCG)
 A konjugált gradiens módszer az
 \begin_inset Formula 
 \begin{equation}
-Ax=b\label{eq:BlCG_Ax=b}
+\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}\label{eq:BlCG_Ax=b}
 \end{equation}
 
 \end_inset
 
 egyenletrendszer megoldására, ahol 
-\begin_inset Formula $A$
+\begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
  
-\begin_inset Formula $n$
+\begin_inset Formula $\boldsymbol{n}$
 \end_inset
 
 -ed rendű valós szimmetrikus pozitív definit mátrix, már 1952 óta ismert
