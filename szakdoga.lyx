@@ -8020,26 +8020,26 @@ reference "SOR_AILU_utan"
 
 \end_inset
 
-Ekkor az 
+
+\end_layout
+
+\begin_layout Definition*
+Az 
 \begin_inset Formula $\boldsymbol{x}_{i}$
 \end_inset
 
- közelítő megoldáshoz tartozó 
-\begin_inset Formula $\boldsymbol{\epsilon}_{i}$
+ közelítő megoldáshoz tartozó maradéktag 
+\begin_inset Formula $\boldsymbol{\epsilon}_{i}=\boldsymbol{A}\boldsymbol{x}_{i}-\boldsymbol{b}.$
 \end_inset
 
- maradéktag,
+
+\end_layout
+
+\begin_layout Standard
+Ebből következik, hogy
 \begin_inset Formula 
 \[
-\boldsymbol{\epsilon}_{i}=\boldsymbol{A}\boldsymbol{x}_{i}-\boldsymbol{b}.
-\]
-
-\end_inset
-
-Ezért
-\begin_inset Formula 
-\[
-\boldsymbol{\epsilon}_{i+1}=\boldsymbol{A}\boldsymbol{x}_{i+1}-\boldsymbol{b}
+\boldsymbol{\epsilon}_{i+1}=\boldsymbol{A}\boldsymbol{x}_{i+1}-\boldsymbol{b},
 \]
 
 \end_inset
