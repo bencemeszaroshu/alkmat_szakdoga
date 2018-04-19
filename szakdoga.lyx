@@ -7723,7 +7723,14 @@ Felső relaxációs eljárás (SOR)
 
 \begin_layout Standard
 A SOR módszer konvergencia kritériumát szimmetrikus együtthatómátrixok esetén
- Alexander Ostrowski fogalmazta meg 1954-ben.
+ Alexander Ostrowski fogalmazta meg 1954-ben 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ostrowski"
+
+\end_inset
+
+.
  Broyden elégséges konvergencia feltételeket adott 1964-ben, szimmetrikus
  és nemszimmetrikus együtthatómátrixok esetére is 
 \begin_inset CommandInset citation
