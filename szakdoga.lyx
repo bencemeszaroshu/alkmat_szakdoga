@@ -9966,6 +9966,28 @@ Hegedüs és a bikonjugált gradiens módszer általánosítása
 A konjugált gradiens módszerek új rendszertana
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Itt vhogy eddigi eredményekre kéne hivatkozni, és hogy ezt vitte tovább
+ Broyden
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Szimmetrikus mátrixok
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Section
 MATLAB tesztfeladatokon való összehasonlítás
 \end_layout
