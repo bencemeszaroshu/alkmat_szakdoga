@@ -9308,6 +9308,47 @@ Blokk konjugált gradiens módszer (BlCG)
 \end_layout
 
 \begin_layout Standard
+Az egyik leghatékonyabb módja az 
+\begin_inset Formula 
+\[
+\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}
+\]
+
+\end_inset
+
+ egyenletrendszer megoldásának, amikor az 
+\begin_inset Formula $A$
+\end_inset
+
+ együtthatómátrix nagy és ritka, a konjugált gradiens módszer és ennek különböző
+ származtatott változatai.
+ Az eredeti módszer 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+hivatkozás?
+\end_layout
+
+\end_inset
+
+ csak szimmetrikus pozitív definit együtthatómátrixok esetén alkalmazható,
+ de azóta számos változat született, amik nem csak szimmetrikus nemdefinit
+ mátrixok, de nemszimmetrikus mátrixok esetén is alkalmazhatók.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+EZ ITT a taxonomy bevezetőjéből van
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 A konjugált gradiens módszer az
 \begin_inset Formula 
 \begin{equation}
@@ -9923,36 +9964,6 @@ Hegedüs és a bikonjugált gradiens módszer általánosítása
 
 \begin_layout Section
 A konjugált gradiens módszerek új rendszertana
-\end_layout
-
-\begin_layout Standard
-Az egyik leghatékonyabb módja az 
-\begin_inset Formula 
-\[
-\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}
-\]
-
-\end_inset
-
- egyenletrendszer megoldásának, amikor az 
-\begin_inset Formula $A$
-\end_inset
-
- együtthatómátrix nagy és ritka, a konjugált gradiens módszer és ennek különböző
- származtatott változatai.
- Az eredeti módszer 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-hivatkozás?
-\end_layout
-
-\end_inset
-
- csak szimmetrikus pozitív definit együtthatómátrixok esetén alkalmazható,
- de azóta számos változat született, amik nem csak szimmetrikus nemdefinit
- mátrixok, de nemszimmetrikus mátrixok esetén is alkalmazhatók.
 \end_layout
 
 \begin_layout Section
