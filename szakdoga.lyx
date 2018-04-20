@@ -1588,7 +1588,7 @@ Az
 \end_inset
 
  vektorok lineárisan összefüggők, mert 
-\begin_inset Formula $3\boldsymbol{a}_{1}+2\boldsymbol{a}_{2}-\boldsymbol{a}_{3}=0$
+\begin_inset Formula $3\boldsymbol{a}_{1}+2\boldsymbol{a}_{2}-\boldsymbol{a}_{3}=\boldsymbol{0}$
 \end_inset
 
  .
@@ -1826,7 +1826,7 @@ ahol
 
 -es mátrix oszlopai lineárisan összefüggők.
  Ezért létezik egy olyan 
-\begin_inset Formula $\boldsymbol{x}\neq0$
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
 \end_inset
 
  vektor, hogy
@@ -1855,11 +1855,11 @@ Ebből következik, hogy
 \end_inset
 
 Mivel 
-\begin_inset Formula $\boldsymbol{x}\neq0$
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
 \end_inset
 
 , léteznie kell egy olyan 
-\begin_inset Formula $\boldsymbol{y}\neq0$
+\begin_inset Formula $\boldsymbol{y}\neq\boldsymbol{0}$
 \end_inset
 
  vektornak, hogy 
@@ -3351,7 +3351,7 @@ Az
  indukált normájának definíciója
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{A}=\max_{x\neq0}\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{p}}{\left\Vert \boldsymbol{x}\right\Vert _{p}},
+\boldsymbol{A}=\max_{\boldsymbol{x}\neq\boldsymbol{0}}\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{p}}{\left\Vert \boldsymbol{x}\right\Vert _{p}},
 \end{equation}
 
 \end_inset
@@ -5816,7 +5816,7 @@ Tegyük fel, hogy
 \end_inset
 
  sajátvektora, hogy 
-\begin_inset Formula $\boldsymbol{Ax}=0$
+\begin_inset Formula $\boldsymbol{Ax}=\boldsymbol{0}$
 \end_inset
 
 .
@@ -9363,7 +9363,7 @@ reference "eq:BlCG_Ax=b"
 \end_inset
 
  alakú, ahol 
-\begin_inset Formula $\boldsymbol{p}_{j}\neq0$
+\begin_inset Formula $\boldsymbol{p}_{j}\neq\boldsymbol{0}$
 \end_inset
 
  és 
@@ -9743,7 +9743,7 @@ reference "eq:BlCG_6_Si"
 .
 \begin_inset Formula 
 \[
-\boldsymbol{P}_{j}^{T}\boldsymbol{Q}_{i}=0,
+\boldsymbol{P}_{j}^{T}\boldsymbol{Q}_{i}=\boldsymbol{0},
 \]
 
 \end_inset
@@ -9751,7 +9751,7 @@ reference "eq:BlCG_6_Si"
 
 \begin_inset Formula 
 \[
-\boldsymbol{Q}_{i}\boldsymbol{G}\boldsymbol{P}_{j}=0,
+\boldsymbol{Q}_{i}\boldsymbol{G}\boldsymbol{P}_{j}=\boldsymbol{0},
 \]
 
 \end_inset
@@ -9838,7 +9838,7 @@ Legyen
 ahol
 \begin_inset Formula 
 \[
-P_{i}^{T}GS_{i-1}=0,
+\boldsymbol{P}_{i}^{T}\boldsymbol{G}\boldsymbol{S}_{i-1}=\boldsymbol{0},
 \]
 
 \end_inset
