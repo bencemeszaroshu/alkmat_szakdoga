@@ -7041,7 +7041,7 @@ key "BasicMatrices"
 Az indukált mátrixnorma definíciójából,
 \begin_inset Formula 
 \begin{equation}
-\left\Vert \boldsymbol{A}\right\Vert _{2}^{2}=\left(\max_{\boldsymbol{x}\neq0}\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{2}}{\left\Vert \boldsymbol{x}\right\Vert _{2}}\right)^{2}=\max_{\boldsymbol{x}\neq0}\left(\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{2}}{\left\Vert \boldsymbol{x}\right\Vert _{2}}\right)^{2}=\max_{\boldsymbol{x}\neq0}\left(\frac{\boldsymbol{x}\boldsymbol{A}^{T}\boldsymbol{A}\boldsymbol{x}}{\boldsymbol{x}^{T}\boldsymbol{x}}\right).\label{eq:kettesnorma_es_matrixsugara}
+\left\Vert \boldsymbol{A}\right\Vert _{2}^{2}=\left(\max_{\boldsymbol{x}\neq0}\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{2}}{\left\Vert \boldsymbol{x}\right\Vert _{2}}\right)^{2}=\max_{\boldsymbol{x}\neq\boldsymbol{0}}\left(\frac{\left\Vert \boldsymbol{Ax}\right\Vert _{2}}{\left\Vert \boldsymbol{x}\right\Vert _{2}}\right)^{2}=\max_{\boldsymbol{x}\neq\boldsymbol{0}}\left(\frac{\boldsymbol{x}\boldsymbol{A}^{T}\boldsymbol{A}\boldsymbol{x}}{\boldsymbol{x}^{T}\boldsymbol{x}}\right).\label{eq:kettesnorma_es_matrixsugara}
 \end{equation}
 
 \end_inset
@@ -7103,7 +7103,7 @@ reference "eq:kettesnorma_es_matrixsugara"
  egyenlőség alakja
 \begin_inset Formula 
 \begin{equation}
-\left\Vert \boldsymbol{A}\right\Vert _{2}^{2}=\max_{\boldsymbol{z}\neq0}\left(\frac{\boldsymbol{z}^{T}\boldsymbol{\Lambda}\boldsymbol{z}}{\boldsymbol{z}^{T}\boldsymbol{z}}\right)=\max_{\boldsymbol{z}\neq0}\left[\left(\sum_{i=1}^{n}\lambda_{i}\boldsymbol{z}_{i}^{2}\right)/\left(\sum_{i=1}^{n}\boldsymbol{z}_{i}^{2}\right)\right].\label{eq:kettesnorma_2}
+\left\Vert \boldsymbol{A}\right\Vert _{2}^{2}=\max_{\boldsymbol{z}\neq\boldsymbol{0}}\left(\frac{\boldsymbol{z}^{T}\boldsymbol{\Lambda}\boldsymbol{z}}{\boldsymbol{z}^{T}\boldsymbol{z}}\right)=\max_{\boldsymbol{z}\neq\boldsymbol{0}}\left[\left(\sum_{i=1}^{n}\lambda_{i}\boldsymbol{z}_{i}^{2}\right)/\left(\sum_{i=1}^{n}\boldsymbol{z}_{i}^{2}\right)\right].\label{eq:kettesnorma_2}
 \end{equation}
 
 \end_inset
