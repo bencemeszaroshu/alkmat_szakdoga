@@ -9986,17 +9986,17 @@ Szimmetrikus mátrixok
 \end_layout
 
 \begin_layout Standard
-A fő módszerek az egyenletrendszer
+A fő módszerek az 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-ide Ax=b crossref
+Ax=b crossref
 \end_layout
 
 \end_inset
 
- megoldására, ha az 
+ egyenletrendszer megoldására, ha az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -10391,6 +10391,12 @@ magyar?
 \end_inset
 
  mátrix kondíció számát csökkentse, ezzel javítva a módszer konvergenciáját.
+ A fejezet több másik algoritmusát is prekondicionálhatjuk a 
+\begin_inset Formula $\boldsymbol{K}$
+\end_inset
+
+ mátrix módosításával, de erre a a fejezetben nem térünk ki.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -10402,7 +10408,7 @@ A
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- együtthatómátrx szimmetrikus, a következők.
+ együtthatómátrix szimmetrikus, a következők.
 \end_layout
 
 \begin_layout Standard
@@ -10692,17 +10698,232 @@ SYMMLQ
 \begin_layout Standard
 \noindent
 A 4-es és 5-ös módszer az 1-es és 2-es módszer 3-tagú változata.
- 
+ A 6-os módszernek nincs 2-tagú megfelelője.
+ Mivel 
+\begin_inset Formula $\boldsymbol{G}=\boldsymbol{I}$
+\end_inset
+
+, bármilyen ortogonális 
+\begin_inset Formula $\boldsymbol{p}_{j}$
+\end_inset
+
+ vektorok megfelelőek lesznek.
+ A probléma az 
+\begin_inset Formula $\boldsymbol{x}_{i+1}$
+\end_inset
+
+ vektorok kiszámítása, mert a *7*-es egyenlőségben szerepel 
+\begin_inset Formula $\boldsymbol{g}_{i}=\boldsymbol{x}_{1}-\boldsymbol{A}^{-1}\boldsymbol{b}$
+\end_inset
+
+, és 
+\begin_inset Formula $\boldsymbol{A}^{-1}$
+\end_inset
+
+ nem ismert.
+ Egy lehetséges megoldás, hogy válasszuk a 
+\begin_inset Formula $\boldsymbol{p}_{1}$
+\end_inset
+
+ vektort úgy, hogy 
+\begin_inset Formula $\boldsymbol{p}_{1}=\boldsymbol{A}\boldsymbol{r}_{1}$
+\end_inset
+
+, ahol
+\begin_inset Formula 
+\[
+\boldsymbol{r}_{i}=\boldsymbol{A}\boldsymbol{x}_{i}-\boldsymbol{b},
+\]
+
+\end_inset
+
+és használjunk egy indirekt számítást, hogy megkapjuk a *10*-es egyenlőségben
+ szereplő 
+\begin_inset Formula $\boldsymbol{p}_{i}^{T}\boldsymbol{g}_{i}$
+\end_inset
+
+-t, *lásd pl.
+ ref*, de ez numerikusan nem kívánatos, lásd *ref*.
+ Azonban, ha a 
+\begin_inset Formula $\boldsymbol{p}_{j}$
+\end_inset
+
+ vektorokat a *21*-es egyenlőség felhasználásával számoljuk, akkor a *8*-as
+ egyenlőségből, és a 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{K}$
+\end_inset
+
+ mátrixok megfelelő értékét felhasználva,
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{A}\boldsymbol{S}_{i}=\boldsymbol{S}_{i+1}\boldsymbol{T}_{i+1}\,,\label{eq:TAX_29}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\boldsymbol{T}_{i+1}$
+\end_inset
+
+ az 
+\begin_inset Formula $(i+1){\times}i$
+\end_inset
+
+ méretű bal felső sarokminormátrixa valamilyen tridiagonális 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Ennek nagyon hírtelen van itt vége.
+mi az, hogy tridiagonális?
 \end_layout
 
 \end_inset
 
+mátrixnak.
+ Legyen 
+\begin_inset Formula $\boldsymbol{Q}_{i+1}$
+\end_inset
 
+ olyan ortogonális mátrix, hogy
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{Q}_{i+1}\boldsymbol{T}_{i+1}=\begin{bmatrix}\boldsymbol{U}_{i}\\
+\boldsymbol{0}^{T}
+\end{bmatrix}\,,\label{eq:TAX_30}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\boldsymbol{U}_{i}$
+\end_inset
+
+ felső háromszögmátrix, és 
+\begin_inset Formula $\boldsymbol{0}^{T}$
+\end_inset
+
+ sorvektor.
+ Legyen az 
+\begin_inset Formula $\boldsymbol{Y}_{i}$
+\end_inset
+
+ mátrix
+\begin_inset Formula 
+\begin{equation}
+\begin{bmatrix}\boldsymbol{Y}_{i} & \boldsymbol{y}_{i+1}\end{bmatrix}=\boldsymbol{S}_{i+1}\boldsymbol{Q}_{i+1}^{T}\,.\label{eq:TAX_31}
+\end{equation}
+
+\end_inset
+
+Ekkor a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_29"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_30"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_31"
+
+\end_inset
+
+ egyenlőségekből
+\begin_inset Formula 
+\[
+\boldsymbol{A}\boldsymbol{S}_{i}=\boldsymbol{Y}_{i}\boldsymbol{U}_{i}\,,
+\]
+
+\end_inset
+
+ahol, mivel az 
+\begin_inset Formula $\boldsymbol{S}_{i+1}$
+\end_inset
+
+ mátrix oszlopai ortogonálisak, az 
+\begin_inset Formula $\boldsymbol{Y}_{i}$
+\end_inset
+
+ mátrix oszlopai szintén ortogonálisak.
+ Ha most minimalizálni akarjuk a 
+\begin_inset Formula $\phi(\boldsymbol{x})$
+\end_inset
+
+ függvényt az
+\begin_inset Formula 
+\[
+\boldsymbol{x}=\boldsymbol{x}_{1}+\boldsymbol{Y}_{i}\boldsymbol{z}
+\]
+
+\end_inset
+
+ manifold felett, a 
+\series bold
+
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+
+\series default
+, 
+\begin_inset Formula $\boldsymbol{S}_{i}$
+\end_inset
+
+ mátrix és a 
+\begin_inset Formula $\boldsymbol{g}_{i}$
+\end_inset
+
+ vektor megfelelő értékeit a *7*-es egyenlőségbe helyettesítve, a *11, 28
+ és 32*-es egyenlőségből kapjuk, hogy
+\begin_inset Formula 
+\[
+\boldsymbol{x}_{i+1}=\boldsymbol{x}_{i}-\boldsymbol{Y}_{i}(\boldsymbol{Y}_{i}^{T}\boldsymbol{Y}_{i})^{-1}\boldsymbol{U}_{i}^{-T}\boldsymbol{S}_{i}^{T}\boldsymbol{r}_{1}\,.
+\]
+
+\end_inset
+
+Ez lényegében az SYMMLQ módszere Paige-nek és Saunders-nek *ref*.
+ Ők azonban az 
+\begin_inset Formula $\boldsymbol{x}_{i}$
+\end_inset
+
+ vektorokat csak segédvektoroknak használták, és az 
+\begin_inset Formula $\boldsymbol{x}_{i}$
+\end_inset
+
+ vektorokból számoltak egy közelítő vektor sorozatot az *Ax=b* egyenletrendszer
+ megoldására, számos más fontos numerikus finomítás mellett.
+ Az algoritmusukat először Fletcher használta mint mimum-hiba algoritmus
+ *ref*, illetve mivel szükség van a 
+\begin_inset Formula $\boldsymbol{p}_{i+1}$
+\end_inset
+
+ vektorra az 
+\begin_inset Formula $\boldsymbol{x}_{i+1}$
+\end_inset
+
+ vektor kiszámításához, tekinthetünk a módszerre mint egy implicit 
+\begin_inset Quotes pld
+\end_inset
+
+look-ahead
+\begin_inset Quotes prd
+\end_inset
+
+ módszerre.
+ 
 \end_layout
 
 \begin_layout Subsection
