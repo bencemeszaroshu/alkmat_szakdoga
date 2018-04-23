@@ -11237,33 +11237,269 @@ A 7-es módszer, annak ellenére, hogy
 \begin_inset Formula $\boldsymbol{GK}$
 \end_inset
 
- mátrix kondíciószáma a négyzete az 1-6 módszerek kondíciószámának, ami
- miatt gyakran lassú a konvergencia.
- 
-\begin_inset Note Note
-status open
+ mátrix kondíciószáma a négyzete az 1-6 módszerek kondíciószámának, és emiatt
+ gyakran lassú a konvergencia.
+ A *Craig's method-ra* hasonlóak igazak, de még a 6-os módszerhez hasonlóan
+ az 
+\begin_inset Formula $\boldsymbol{A}^{-1}$
+\end_inset
 
-\begin_layout Plain Layout
-itt van egy cite broyden cikkben, meg még a craigs módszerről.
- 9-es??
+ mátrixra is szükség van az 
+\begin_inset Formula $\boldsymbol{x}_{i}$
+\end_inset
+
+ vektorok kiszámításához.
+ Ezen túlléphetünk, ha megszorozzuk balról a *16*-os egyenlőséget az 
+\begin_inset Formula $\boldsymbol{A}^{-T}$
+\end_inset
+
+ mátrixszal, így nem a 
+\begin_inset Formula $\{\boldsymbol{p}_{i}\}$
+\end_inset
+
+ sorozatot, hanem egy 
+\begin_inset Formula $\{\boldsymbol{q}_{i}\}$
+\end_inset
+
+ sorozatot generálva, ahol 
+\begin_inset Formula $\boldsymbol{q}_{i}=\boldsymbol{A}^{-T}\boldsymbol{p}_{i}$
+\end_inset
+
+, amikből az 
+\begin_inset Formula $\{\boldsymbol{x}_{i}\}$
+\end_inset
+
+ sorozat számolható.
+ A 9-es módszer egy speciális esete az általánosabb Young és Jea módszernek
+ *ref?*, ahol szükséges, hogy 
+\begin_inset Formula $\boldsymbol{Z}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{Z}\boldsymbol{A}$
+\end_inset
+
+ mátrixok szimmetrikusak legyenek, ami egy erős megkötés.
+ A stabilitás garantált, ha 
+\begin_inset Formula $\boldsymbol{Z}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{ZA}$
+\end_inset
+
+ is definit.
 \end_layout
+
+\begin_layout Standard
+Mivel a fenti módszerek egyike se teljesen kielégítő nemszimmetrikus mátrixok
+ esetén, nézzük meg a speciális esetet, amikor a 
+\begin_inset Formula $G$
+\end_inset
+
+ mátrix alakja 
+\begin_inset Formula 
+\[
+\boldsymbol{G}=\begin{bmatrix}\boldsymbol{G}_{11} & \boldsymbol{0}\\
+\boldsymbol{0} & \boldsymbol{G}_{22}
+\end{bmatrix}\,,
+\]
 
 \end_inset
 
+vagy
+\begin_inset Formula 
+\[
+\boldsymbol{G}=\begin{bmatrix}\boldsymbol{0} & \boldsymbol{G}_{12}\\
+\boldsymbol{G}_{21} & \boldsymbol{0}
+\end{bmatrix}\,.
+\]
+
+\end_inset
+
+Innen nem nehéz megmutatni *ref 13, 29*, hogy ha a 
+\begin_inset Formula $2n{\times}2$
+\end_inset
+
+-es 
+\begin_inset Formula $\boldsymbol{W}_{j}$
+\end_inset
+
+ mátrix alakja
+\begin_inset Formula 
+\[
+\boldsymbol{W}_{j}=\begin{bmatrix}\boldsymbol{w}_{j1} & \boldsymbol{0}\\
+\boldsymbol{0} & \boldsymbol{w}_{j2}
+\end{bmatrix}\,,\qquad j=1,2,...,i,
+\]
+
+\end_inset
+
+akkor
+\begin_inset Formula 
+\[
+\boldsymbol{Q}_{i}=\begin{bmatrix}\boldsymbol{Q}_{i1} & \boldsymbol{0}\\
+\boldsymbol{0} & \boldsymbol{Q}_{i2}
+\end{bmatrix}
+\]
+
+\end_inset
+
+alakú, és
+\begin_inset Formula 
+\[
+\boldsymbol{P}_{i+1}=\begin{bmatrix}\boldsymbol{u}_{i+1} & 0\\
+0 & \boldsymbol{v}_{i+1}
+\end{bmatrix}
+\]
+
+\end_inset
+
+alakú.
+ Így a *14*-es egyenlőségből
+\begin_inset Formula 
+\[
+\boldsymbol{u}_{i+1}=\boldsymbol{Q}_{i1}^{T}\boldsymbol{w}_{i+1,1}\,.
+\]
+
+\end_inset
+
+Hasonlóan kaphatjuk a 
+\begin_inset Formula $\boldsymbol{v}_{i+1}$
+\end_inset
+
+ vektort.
  
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+Úgy, mint a *14-es* egyenlőség esetében, a 
+\begin_inset Formula $\boldsymbol{W}_{i+1}$
+\end_inset
 
-\begin_layout Plain Layout
-Ennek a táblázatnak van egy előtörténete.
-\end_layout
+ mátrixot megfelelően kell választani, hogy működő algoritmust kapjunk,
+ és itt is két eset lehetséges *13, 29 ref*.
+ Az első, amikor
+\begin_inset Formula 
+\[
+\boldsymbol{W}_{j}=\boldsymbol{K}\boldsymbol{F}_{j}\,
+\]
 
 \end_inset
 
+alakú, ahol
+\begin_inset Formula 
+\[
+\boldsymbol{F}_{j}=\begin{bmatrix}\boldsymbol{g}_{j1} & \boldsymbol{0}\\
+\boldsymbol{0} & \boldsymbol{g}_{j2}
+\end{bmatrix}\,.
+\]
 
+\end_inset
+
+A 
+\begin_inset Formula $\boldsymbol{g}_{j1}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{g}_{j2}$
+\end_inset
+
+ vektorok egyértelmű partíciói a gradiens 
+\begin_inset Formula $\boldsymbol{g}_{j}$
+\end_inset
+
+ vektornak a *11*, *35* és *36* egyenlőségek miatt.
+ A 
+\begin_inset Formula $\boldsymbol{K}$
+\end_inset
+
+ mátrix alakja
+\begin_inset Formula 
+\[
+\boldsymbol{K}=\begin{bmatrix}\boldsymbol{K}_{11} & \boldsymbol{0}\\
+\boldsymbol{0} & \boldsymbol{K}_{22}
+\end{bmatrix}\,,
+\]
+
+\end_inset
+
+vagy
+\begin_inset Formula 
+\[
+\boldsymbol{K}=\begin{bmatrix}\boldsymbol{0} & \boldsymbol{K}_{12}\\
+\boldsymbol{K}_{21} & \boldsymbol{0}
+\end{bmatrix}\,,
+\]
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\boldsymbol{K}_{11}$
+\end_inset
+
+, 
+\begin_inset Formula $\boldsymbol{K}_{12}$
+\end_inset
+
+, 
+\begin_inset Formula $\boldsymbol{K}_{21}$
+\end_inset
+
+, 
+\begin_inset Formula $\boldsymbol{K}_{22}$
+\end_inset
+
+ konstansok és 
+\begin_inset Formula $\boldsymbol{K}=\boldsymbol{K}^{T}$
+\end_inset
+
+.
+ *(Lásd Hegedüs, aki elössz...)*.
+ Ebben az esetben meg lehet mutatni *ref 13, 19*, hogy a *40*-es egyenlőségből
+\begin_inset Formula 
+\[
+\boldsymbol{u}_{i+1}=\boldsymbol{w}_{i+1,1}-\boldsymbol{u}_{i}\alpha_{i1}\,,
+\]
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\alpha_{i1}$
+\end_inset
+
+-et úgy választjuk, hogy kielégítse vagy az 
+\begin_inset Formula $\boldsymbol{u}_{i}^{T}\boldsymbol{G}_{11}\boldsymbol{u}_{i+1}=0$
+\end_inset
+
+ egyenlőséget, ha a 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ mátrix *35* szerint adott, vagy a 
+\begin_inset Formula $\boldsymbol{v}_{i}^{T}\boldsymbol{G}_{21}\boldsymbol{u}_{i+1}=0$
+\end_inset
+
+ egyenlőséget, ha a 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ mátrix *36* szerint adott.
+ *The proof is similar to that used to establish equation (16) and is omitted.*
+ Hasonlóan kaphatjuk a 
+\begin_inset Formula $\boldsymbol{v}_{i+1}$
+\end_inset
+
+ vektort.
+ A 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ és a 
+\begin_inset Formula $\boldsymbol{K}$
+\end_inset
+
+ mátrix lehetséges választásai jelenleg a következők:
 \end_layout
 
 \begin_layout Standard
