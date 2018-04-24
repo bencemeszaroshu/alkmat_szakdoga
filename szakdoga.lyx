@@ -11499,7 +11499,7 @@ ahol
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
- mátrix lehetséges választásai jelenleg a következők:
+ mátrix lehetséges választásai jelenleg a következők.
 \end_layout
 
 \begin_layout Standard
@@ -11816,8 +11816,7 @@ bcr
 
 \begin_layout Standard
 \noindent
-Ezeknél a módszereknél, csak úgy, mint az 1-es és 2-es módszernél, ha a
- 
+Ezeknél a módszereknél, mint az 1-es és 2-es módszernél, ha a 
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
@@ -11855,6 +11854,67 @@ Ezeknél a módszereknél, csak úgy, mint az 1-es és 2-es módszernél, ha a
 
  együtthatómátrix négyzetes és nemszinguláris.
  
+\end_layout
+
+\begin_layout Standard
+Az algoritmusok következő csoportját úgy kapjuk, hogy a *41-es* egyenlőséget
+ a
+\begin_inset Formula 
+\[
+\boldsymbol{W}_{j}=\boldsymbol{K}\boldsymbol{G}\boldsymbol{P}_{j-1}
+\]
+
+\end_inset
+
+egyenlőségre cseréljük.
+ Ekkor meg lehet mutatni *ref 13*, hogy
+\begin_inset Formula 
+\[
+\boldsymbol{u}_{i+1}=\boldsymbol{w}_{i+1,1}-\boldsymbol{u}_{i}\alpha_{i1}-\boldsymbol{u}_{i-1}\beta_{i-1,1}\,,
+\]
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\alpha_{i1}$
+\end_inset
+
+-et és 
+\begin_inset Formula $\beta_{i-1,1}$
+\end_inset
+
+-et úgy választjuk, hogy kielégítse az 
+\begin_inset Formula $\boldsymbol{u}_{i-1}^{T}\boldsymbol{G}_{11}\boldsymbol{u}_{i+1}=\boldsymbol{u}_{i}^{T}\boldsymbol{G}_{11}\boldsymbol{u}_{i+1}=0$
+\end_inset
+
+ egyenlőséget, ha a 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ mátrix *35* szerint adott, vagy a 
+\begin_inset Formula $\boldsymbol{v}_{i-1}^{T}\boldsymbol{G}_{21}\boldsymbol{u}_{i+1}=\boldsymbol{v}_{i}^{T}\boldsymbol{G}_{21}\boldsymbol{u}_{i+1}=0$
+\end_inset
+
+ egyenlőséget, ha a 
+\begin_inset Formula $G$
+\end_inset
+
+ mátrix *36* szerint adott.
+ Úgy, mint a 4-6-os módszereknél, 
+\begin_inset Formula $\boldsymbol{u}_{0}$
+\end_inset
+
+ nullvektor és 
+\begin_inset Formula $\boldsymbol{u}_{1}$
+\end_inset
+
+ tetszőleges.
+ A *47*-hez hasonló egyenlőségből kaphatjuk a 
+\begin_inset Formula $\boldsymbol{v}_{i+1}$
+\end_inset
+
+ vektort.
+ A következők a lehetőségek.
 \end_layout
 
 \begin_layout Standard
@@ -12327,6 +12387,32 @@ melyik módszerek? többinél is lehetne névvel hivatkozni mint Broyden, és
 
 \end_inset
 
+A 15-ös módszer érdekes tulajdonsága, hogy az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix nem kell, hogy négyzetes legyen, és ha 
+\begin_inset Formula $m{\times}n$
+\end_inset
+
+-es 
+\begin_inset Formula $n$
+\end_inset
+
+ rangú mátrix (tehát 
+\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{A}$
+\end_inset
+
+ nemszinguláris), akkor a 
+\begin_inset Formula $\boldsymbol{K}_{12}$
+\end_inset
+
+ mátrixot 
+\begin_inset Formula $(\boldsymbol{A}^{T}\boldsymbol{A})^{-1}\boldsymbol{A}^{T}$
+\end_inset
+
+-nek választva, az algoritmus változatlan és használható.
+ A 14-es módszernek ugyanez a tulajdonsága.
  A 16-os módszer alkotja az alapját a QMR módszernek.
  Csak úgy, mint a SYMMLQ (módszer 6) esetén, a probléma a kvadratikus függvény
  stacionárius pontjának számolása, mert szükség van 
@@ -12356,6 +12442,78 @@ Broyden szerint
  Itt hasonló nehézségekbe ütközünk, mint a 6-os és 16-os módszernél, és
  ezeket hasonlóan is lehet megoldani.
  
+\end_layout
+
+\begin_layout Standard
+A módszerek utolsó csoportja tulajdonképpen az általánosított Lánczos féle
+ algoritmus *lásd a (21)-es egyenlősget feljebb*.
+ Legyen a *21-es* egyenlőségben a 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{K}$
+\end_inset
+
+ mátrix a *35-ös* és a *44-es* egyenlőség szerint adott.
+ Legyen 
+\begin_inset Formula $\boldsymbol{p}_{i}^{T}=\begin{bmatrix}\boldsymbol{u}_{i}^{T} & \boldsymbol{v}_{i}^{T}\end{bmatrix}$
+\end_inset
+
+.
+ Ha a tetszőlegesen választható 
+\begin_inset Formula $\boldsymbol{p}_{1}=0$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{v}_{1}=0$
+\end_inset
+
+, akkor a *21-es* egyenlőségből kivonva és a konjugáltságot megkövetelve
+ kapjuk, hogy
+\begin_inset Formula 
+\[
+\boldsymbol{u}_{i+1}=\boldsymbol{K}_{12}\boldsymbol{G}_{22}\boldsymbol{v}_{i}-\boldsymbol{u}_{i-1}\beta_{i-1}
+\]
+
+\end_inset
+
+és 
+\begin_inset Formula $\boldsymbol{v}_{i+1}=0$
+\end_inset
+
+, minden páros 
+\begin_inset Formula $i$
+\end_inset
+
+-re, és
+\begin_inset Formula 
+\[
+\boldsymbol{v}_{i+1}=\boldsymbol{K}_{21}\boldsymbol{G}_{11}\boldsymbol{u}_{i}-\boldsymbol{v}_{i-1}\delta_{i-1}
+\]
+
+\end_inset
+
+és 
+\begin_inset Formula $\boldsymbol{u}_{i+1}=0$
+\end_inset
+
+, minden páratlan 
+\begin_inset Formula $i$
+\end_inset
+
+-re.
+ Hasonló egyenlőségekhez juthatunk a 
+\begin_inset Formula $\boldsymbol{p}_{1}=0$
+\end_inset
+
+ és az 
+\begin_inset Formula $\boldsymbol{u}_{1}=0$
+\end_inset
+
+ választással.
+ Ez a Golub-Kahan algoritmus általánosítása *Broyden ref*, és két esetben
+ használható lineáris egyenletrendszerek megoldására.
 \end_layout
 
 \begin_layout Standard
@@ -12445,7 +12603,7 @@ Referencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-15
+18
 \end_layout
 
 \end_inset
@@ -12526,7 +12684,7 @@ bcr3
 \begin_inset Text
 
 \begin_layout Plain Layout
-17
+19
 \end_layout
 
 \end_inset
@@ -12610,18 +12768,8 @@ magyar? referencia van Broydenben
 
 \end_inset
 
- amíg a 19-es módszer a Paige és Saunders féle LSQR módszer.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-algoritmus?
-\end_layout
-
-\end_inset
-
- Úgy mint a másik algoritmusukban 
+ amíg a 19-es módszer a Paige és Saunders féle LSQR algoritmus.
+ Itt is 
 \begin_inset Note Note
 status open
 
@@ -12631,7 +12779,7 @@ Broydenben van ref
 
 \end_inset
 
- ortoginális transzformációk szükségesek ahhoz, hogy a megoldás következő
+ ortogonális transzformációk szükségesek ahhoz, hogy a megoldás következő
  becslését ki tudjuk számolni, mivel a gradiens számoláshoz szükséges az
  együtthatómátrix inverze.
  
@@ -12652,6 +12800,32 @@ Majd tele kell rakni az egész fejezetet a Broyden cikkre referenciával
 
 \begin_layout Subsection
 Konklúzió
+\end_layout
+
+\begin_layout Standard
+Megmutattuk, hogy nem kevesebb mint tizenkilenc konjugált gradiens algoritmust
+ származtathatunk azzal, hogy 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{K}$
+\end_inset
+
+ két szimmetrikus mátrixot választunk, és a generátorokat két különböző
+ mód egyikével definiáljuk.
+ Az egyik választás két-tagú (Hestenes-Stiefel) rekurrens forumulákhoz vezetett,
+ a másik 3-tagú (Lanczos) formulákhoz vezetett.
+ A két-tagú formulák stabilitása garantált, ha 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{K}$
+\end_inset
+
+ mátrixok definitek.
+ 
 \end_layout
 
 \begin_layout Standard
