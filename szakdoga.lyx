@@ -10596,7 +10596,124 @@ reference "eq:TAX_14"
 \end_layout
 
 \begin_layout Standard
-Az egyik
+Az első lehetőség, amikor a 
+\begin_inset Formula $G$
+\end_inset
+
+ mátrixnak nincs semmilyen különösebb blokk struktúrája, és ahol a 
+\begin_inset Formula $P_{j}$
+\end_inset
+
+ mátrixok 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+ vektorok, a kapcsolodó 
+\begin_inset Formula $W_{j}$
+\end_inset
+
+ generátorok mátrixok pedig 
+\begin_inset Formula $w_{j}$
+\end_inset
+
+ vektorok.
+ Megmutatjuk, hogy ha
+\begin_inset Formula 
+\begin{equation}
+w_{j}=Kg_{j}\,,\label{eq:TAX_15}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $K$
+\end_inset
+
+ tetszőleges szimmetrikus mátrix, akkor a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_14"
+
+\end_inset
+
+ egyenlőség a 
+\begin_inset Formula 
+\begin{equation}
+p_{i+1}=Kg_{i+1}-p_{i}\alpha_{i}\label{eq:TAX_16}
+\end{equation}
+
+\end_inset
+
+alakra egyszerűsödik, ahol 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ valamilyen konstans.
+ 
+\end_layout
+
+\begin_layout Standard
+Először bebizonyítjuk a következő tételt.
+\end_layout
+
+\begin_layout Theorem
+Legyen 
+\begin_inset Formula $x_{i+1}$
+\end_inset
+
+ stacionárius pontja a 
+\begin_inset Formula $\phi(x)$
+\end_inset
+
+ függvénynek a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_6"
+
+\end_inset
+
+ egyenlőségben definiált manifold felett.
+ Legyen 
+\begin_inset Formula $g_{i+1}$
+\end_inset
+
+ az 
+\begin_inset Formula $x_{i+1}$
+\end_inset
+
+ ponthoz tartozó gradiense a 
+\begin_inset Formula $\phi(x)$
+\end_inset
+
+ függvénynek, és legyenek a 
+\begin_inset Formula $w_{j}$
+\end_inset
+
+ vektorok az 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+ mátrix generátorai.
+ Ekkor 
+\begin_inset Formula $w_{j}^{T}g_{i+1}=0,$
+\end_inset
+
+ 
+\begin_inset Formula $i\leq j\leq i$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+jo ez??
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
