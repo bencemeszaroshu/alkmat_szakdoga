@@ -9968,17 +9968,635 @@ A konjugált gradiens módszerek új rendszertana
 \end_layout
 
 \begin_layout Standard
+Az egyik legjobban használható módszer az
+\begin_inset Formula 
+\begin{equation}
+Ax=b\label{eq:TAX_1}
+\end{equation}
+
+\end_inset
+
+egyenletrendszer megoldására, ahol 
+\begin_inset Formula $A$
+\end_inset
+
+ valós nemszinguláris ritka mátrix, 
+\series bold
+
+\begin_inset Formula $b$
+\end_inset
+
+
+\series default
+ pedig valós vektor, a konjugált gradiens módszer vagy valamelyik ebből
+ származtatott módszer a sok közül 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ Hestenes és Siefel eredeti módszere *ref* csak akkor alkalmazható, ha az
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ együtthatómátrix szimmetrikus és pozitív definit, de azóta rengetek származtato
+tt módszer született, amelyek nem csak szimmetrikus indefinit együtthatómátrixok
+ esetén, de nemszimmetrikus együtthatómátrixok esetén is alkalmazhatók 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ A módszerek áttekintése nehézkes, pl.
+ a tendencia miatt, hogy az algoritmusokat különböző módszerekkel származtatják.
+ Broyden 1996-os cikkében 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+ rendszerezte a konjugált gradiens módszereket.
+ Cikke támaszkodik más szerzők több azonos célú megelőző munkáira, pl.
+ S.F.
+ Ashby, T.A.
+ Manteuffel és P.E.
+ Saylor 1990-es cikkére 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ashby"
+
+\end_inset
+
+.
+ Ők minden algoritmust három mátrixszal jellemeznek.
+ az 
+\begin_inset Formula $A$
+\end_inset
+
+ együtthatómátrixszal, egy Hermit-féle pozitív definit 
+\begin_inset Formula $B$
+\end_inset
+
+ mátrixszal (a belső szorzat mátrixszal), és egy további 
+\begin_inset Formula $C$
+\end_inset
+
+ mátrixszal (a prekondicionáló mátrixszal).
+ A cikkük erősen támaszkodik Faber és Manteuffel cikkére 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Faber_and_Manteuffel"
+
+\end_inset
+
+, akik a valós 
+\begin_inset Formula $M$
+\end_inset
+
+ mátrixot 
+\begin_inset Formula $B-normal(s)$
+\end_inset
+
+-nek definiálják, ha a 
+\begin_inset Formula $B$
+\end_inset
+
+ mátrix Hermit-féle, pozitív definit, és
+\begin_inset Formula 
+\begin{equation}
+M^{T}B=Bp(M)\,,\label{eq:TAX_2}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $s$
+\end_inset
+
+ a legkisebb fokszáma a 
+\begin_inset Formula $p(M)$
+\end_inset
+
+ mátrixpolinomnak, amelyre a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_2"
+
+\end_inset
+
+ egyenlőség teljesül 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Faber_and_Manteuffel"
+
+\end_inset
+
+.
+ Megmutatták, hogy egy 3-tagú rekurrens prekondicionált konjugált gradiens
+ módszernél, ha a 
+\begin_inset Formula $CA$
+\end_inset
+
+ mátrixszorzat 
+\begin_inset Formula $B-normal(1)$
+\end_inset
+
+, akkor a módszer véges lépésben leáll 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Itt vhogy eddigi eredményekre kéne hivatkozni, és hogy ezt vitte tovább
- Broyden
+???
 \end_layout
 
 \end_inset
 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Faber_and_Manteuffel"
 
+\end_inset
+
+.
+ Broyden rendszertanában egy Hessian 
+\begin_inset Formula $G$
+\end_inset
+
+ mátrixból és egy további 
+\begin_inset Formula $K$
+\end_inset
+
+ mátrixból származtatja a módszereket 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ Broyden 
+\begin_inset Formula $G$
+\end_inset
+
+ mátrixa általában azonos az Ashby féle 
+\begin_inset Formula $B$
+\end_inset
+
+ mátrixszal, azzal a különbséggel, hogy a pozitív definitség a 
+\begin_inset Formula $G$
+\end_inset
+
+ mátrixnál nem megkövetelt.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ További összefüggés a két rendszertan között, hogy
+\begin_inset Formula 
+\begin{equation}
+CA=KG\label{eq:TAX_3}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $C$
+\end_inset
+
+ és 
+\begin_inset Formula $A$
+\end_inset
+
+ az Ashby féle 
+\begin_inset Formula $C$
+\end_inset
+
+ és 
+\begin_inset Formula $A$
+\end_inset
+
+ mátrix 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ Ebből következik, hogy az 
+\begin_inset Formula $KG$
+\end_inset
+
+ mátrixszorzatnak 
+\begin_inset Formula $B-normal(1)$
+\end_inset
+
+-nek kell lennie.
+ Legyen 
+\begin_inset Formula $KG$
+\end_inset
+
+ az 
+\begin_inset Formula $M$
+\end_inset
+
+ mátrix, és 
+\begin_inset Formula $G$
+\end_inset
+
+ a 
+\begin_inset Formula $B$
+\end_inset
+
+ mátrix a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_2"
+
+\end_inset
+
+ egyenlőségben.
+ Ekkor a B-normalitás követelménye
+\begin_inset Formula 
+\begin{equation}
+GK^{T}G=Gp(KG),\label{eq:TAX_4}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $p(KG)$
+\end_inset
+
+ lineáris mátrixpolinom 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ Ennek elégséges feltétele, ha a 
+\begin_inset Formula $K$
+\end_inset
+
+ mátrix szimmetrikus, ekkor 
+\begin_inset Formula $p(KG)$
+\end_inset
+
+ helyett vehetjük a 
+\begin_inset Formula $KG$
+\end_inset
+
+ mátrixszorzatot 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ Habár a 
+\begin_inset Formula $K$
+\end_inset
+
+ mátrix szimmetrikussága erősebb feltétel, mint a B-normalitás, de még elég
+ általános, hogy a standard módszereket is tartalmazza a rendszertan 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ Ennek a mátrix felbontásnak egy következménye még, hogy a hagyományos 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+standard?
+\end_layout
+
+\end_inset
+
+ 2-tagú konjugált gradiens módszereknél, a két tipikus numerikus instabilitása
+ ezeknek a módszereknek (lásd következő fejezet), a 
+\begin_inset Formula $G$
+\end_inset
+
+ és a 
+\begin_inset Formula $K$
+\end_inset
+
+ mátrixokból könnyen megállapítható 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ A 
+\begin_inset Formula $K$
+\end_inset
+
+ és 
+\begin_inset Formula $G$
+\end_inset
+
+ mátrixok még szükségünk van bizonyos vektorokra (a generátorokra), amelyek
+ minden iterációval változnak.
+ Ezeket kétféleképpen választhatjuk, az egyik választás vezet a 2-tagú (Hestenes
+-Stiefel) rekurrens formulához, míg a másik választás a 3-tagú (Lanczos)
+ formulához 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Legyen a 
+\begin_inset Formula $\phi(x)$
+\end_inset
+
+ kvadratikus függvény
+\begin_inset Formula 
+\begin{equation}
+\phi(x)=\frac{1}{2}x^{T}Gx-x^{T}h,\label{eq:TAX_5}
+\end{equation}
+
+\end_inset
+
+ahol a 
+\begin_inset Formula $G$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű szimmetrikus mátrix, de nem feltétlen pozitív definit, 
+\begin_inset Formula $h$
+\end_inset
+
+ pedig 
+\begin_inset Formula $n$
+\end_inset
+
+-ed rendű vektor.
+ Legyen 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ a kezdeti értéke az 
+\begin_inset Formula $x$
+\end_inset
+
+ vektornak és legyen 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+ konstans 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+többi helyen nem irogattam ki, hogy konstans mátrix
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $n{\times}i$
+\end_inset
+
+-s, vagy 
+\begin_inset Formula $n{\times}2i$
+\end_inset
+
+-s mátrix.
+ Ha 
+\begin_inset Formula $x_{i+1}$
+\end_inset
+
+ jelöli az 
+\begin_inset Formula $x$
+\end_inset
+
+ értéket, amelyre 
+\begin_inset Formula $\phi(x)$
+\end_inset
+
+ stacionárius, ahol az 
+\begin_inset Formula $x$
+\end_inset
+
+ vektornak ki kell elégítenie az
+\begin_inset Formula 
+\begin{equation}
+x=x_{1}+S_{i}z\label{eq:TAX_6}
+\end{equation}
+
+\end_inset
+
+egyenlőséget, ahol 
+\begin_inset Formula $z$
+\end_inset
+
+ 
+\begin_inset Formula $i$
+\end_inset
+
+-ed vagy 
+\begin_inset Formula $2i$
+\end_inset
+
+-ed rendű vektor, akkor
+\begin_inset Formula 
+\begin{equation}
+x_{i+1}=x_{1}-S_{i}(S_{i}^{T}GS_{i})^{-1}S_{i}^{T}g_{1}\,,\label{eq:TAX_7}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $g_{1}$
+\end_inset
+
+ a gradiensvektora a 
+\begin_inset Formula $\phi$
+\end_inset
+
+ függvénynek az 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ helyen.
+ Továbbá, ha
+\begin_inset Formula 
+\begin{equation}
+S_{i}=\begin{bmatrix}P_{1} & P_{2} & ... & P_{i}\end{bmatrix}\,,\label{eq:TAX_8}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $P_{j}\,$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq j\leq i$
+\end_inset
+
+, konstans részmátrixok egy vagy két oszloppal úgy, hogy a 
+\begin_inset Formula $C_{j}=P_{j}^{T}GP_{j}$
+\end_inset
+
+ mátrix nemszinguláris és 
+\begin_inset Formula 
+\begin{equation}
+P_{j}^{T}GP_{k}=0,\label{eq:TAX_9}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $j\neq k$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq j,k\leq i$
+\end_inset
+
+.
+ Az 
+\begin_inset Formula $x_{i+1}$
+\end_inset
+
+ vektor kifejezhető úgy is, hogy
+\begin_inset Formula 
+\begin{equation}
+x_{i+1}=x_{i}-P_{i}(P_{i}^{T}GP_{i})^{-1}P_{i}^{T}g_{i}\,,\label{eq:TAX_10}
+\end{equation}
+
+\end_inset
+
+ahol
+\begin_inset Formula 
+\begin{equation}
+g_{i}=Gx_{i}-h.\label{eq:TAX_11}
+\end{equation}
+
+\end_inset
+
+A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_7"
+
+\end_inset
+
+ egyenlőséget 
+\begin_inset Formula $G$
+\end_inset
+
+ mátrixszal szorozva, és a 
+\begin_inset Formula $h$
+\end_inset
+
+ vektort mindkét oldalból kivonva,
+\begin_inset Formula 
+\begin{equation}
+g_{i+1}=Q_{i}g_{1}\,,\label{eq:TAX_12}
+\end{equation}
+
+\end_inset
+
+ahol
+\begin_inset Formula 
+\begin{equation}
+Q_{i}=I-GS_{i}(S_{i}^{T}GS_{i})^{-1}S_{i}^{T}\,.\label{eq:TAX_13}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahhoz, hogy ki tudjuk számolni 
+\begin_inset Formula $x_{i+2}$
+\end_inset
+
+-t, szükség van a 
+\begin_inset Formula $P_{i+1}$
+\end_inset
+
+ mátrixra.
+ Könnyen látható, hogy ha
+\begin_inset Formula 
+\begin{equation}
+P_{i+1}=Q_{i}^{T}W_{i+1}\,,\label{eq:TAX_14}
+\end{equation}
+
+\end_inset
+
+akkor a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_9"
+
+\end_inset
+
+ egyenlőség fennáll 
+\begin_inset Formula $(i+1)$
+\end_inset
+
+-re, tetszőleges 
+\begin_inset Formula $W_{i+1}$
+\end_inset
+
+ mátrixszal.
+ A 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ mátrix túl nagy és sűrű, de mivel 
+\begin_inset Formula $W_{i+1}$
+\end_inset
+
+ tetszőlegesen választható, ezzel egyszerűsíthetjük a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_14"
+
+\end_inset
+
+ összefüggést.
+ Két lehetséges választása a 
+\begin_inset Formula $W_{i+1}$
+\end_inset
+
+ mátrixnak különösen előnyös.
+\end_layout
+
+\begin_layout Standard
+Az egyik
 \end_layout
 
 \begin_layout Subsection
