@@ -11074,12 +11074,17 @@ cg
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Note Note
-status open
+\begin_inset CommandInset citation
+LatexCommand cite
+after "3.5.1-es fejezet"
+key "KrylovBook"
 
-\begin_layout Plain Layout
-krylovos könyv?
-\end_layout
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Orig_cg"
 
 \end_inset
 
@@ -11148,6 +11153,20 @@ cr
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "3.6.1-es fejezet"
+key "KrylovBook"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Orig_cg"
+
+\end_inset
+
 
 \end_layout
 
@@ -11213,6 +11232,12 @@ pcg
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ashby"
+
+\end_inset
+
 
 \end_layout
 
@@ -11487,6 +11512,12 @@ Nazareth
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Nazareth"
+
+\end_inset
+
 
 \end_layout
 
@@ -11552,6 +11583,12 @@ Nazareth
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
 
 \end_layout
 
@@ -11617,6 +11654,13 @@ SYMMLQ
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "3.8.1-es fejezet"
+key "KrylovBook"
+
+\end_inset
+
 
 \end_layout
 
@@ -12118,6 +12162,21 @@ cgne
 \begin_inset Text
 
 \begin_layout Plain Layout
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "3.7.3-as fejezet"
+key "KrylovBook"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Orig_cg"
+
+\end_inset
+
 
 \end_layout
 
@@ -12183,6 +12242,13 @@ Craig's method
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "3.7.3-as fejezet"
+key "KrylovBook"
+
+\end_inset
+
 
 \end_layout
 
@@ -12248,6 +12314,13 @@ orthodir
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "2.5-ös fejezet"
+key "KrylovBook"
+
+\end_inset
+
 
 \end_layout
 
@@ -12815,6 +12888,13 @@ bcg
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "3.5.2-es fejezet"
+key "KrylovBook"
+
+\end_inset
+
 
 \end_layout
 
@@ -12886,6 +12966,13 @@ Heg
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "3.5.4-es fejezet"
+key "KrylovBook"
+
+\end_inset
+
 
 \end_layout
 
@@ -12967,6 +13054,12 @@ bcr
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
 
 \end_layout
 
@@ -13293,6 +13386,13 @@ MRZ
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "3.5.3-as fejezet"
+key "KrylovBook"
+
+\end_inset
+
 
 \end_layout
 
@@ -13364,6 +13464,13 @@ Heg3
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "3.5.3-as fejezet"
+key "KrylovBook"
+
+\end_inset
+
 
 \end_layout
 
@@ -13445,6 +13552,13 @@ bcr3
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "3.6.4-es fejezet"
+key "KrylovBook"
+
+\end_inset
+
 
 \end_layout
 
@@ -13516,6 +13630,13 @@ QMR
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "1.2-es fejezet"
+key "KrylovBook"
+
+\end_inset
+
 
 \end_layout
 
@@ -13587,6 +13708,12 @@ QMR
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
 
 \end_layout
 
@@ -13953,6 +14080,13 @@ bcr3
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "3.6.4"
+key "KrylovBook"
+
+\end_inset
+
 
 \end_layout
 
@@ -14024,6 +14158,13 @@ LSQR
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "3.8.2"
+key "KrylovBook"
+
+\end_inset
+
 
 \end_layout
 
