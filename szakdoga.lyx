@@ -9971,25 +9971,25 @@ A konjugált gradiens módszerek új rendszertana
 Az egyik legjobban használható módszer az
 \begin_inset Formula 
 \begin{equation}
-Ax=b\label{eq:TAX_1}
+\boldsymbol{Ax}=\boldsymbol{b}\label{eq:TAX_1}
 \end{equation}
 
 \end_inset
 
 egyenletrendszer megoldására, ahol 
-\begin_inset Formula $A$
+\begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
  valós nemszinguláris ritka mátrix, 
 \series bold
 
-\begin_inset Formula $b$
+\begin_inset Formula $\boldsymbol{b}$
 \end_inset
 
 
 \series default
- pedig valós vektor, a konjugált gradiens módszer vagy valamelyik ebből
- származtatott módszer a sok közül 
+ pedig valós vektor, a konjugált gradiens módszer és az ebből származtatott
+ különböző módszerek 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenNewTaxonomy"
@@ -9999,12 +9999,12 @@ key "BroydenNewTaxonomy"
 .
  Hestenes és Siefel eredeti módszere *ref* csak akkor alkalmazható, ha az
  
-\begin_inset Formula $A$
+\begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- együtthatómátrix szimmetrikus és pozitív definit, de azóta rengetek származtato
-tt módszer született, amelyek nem csak szimmetrikus indefinit együtthatómátrixok
- esetén, de nemszimmetrikus együtthatómátrixok esetén is alkalmazhatók 
+ együtthatómátrix szimmetrikus és pozitív definit, de már rengetek származtatott
+ módszer született, amelyek nem csak szimmetrikus indefinit együtthatómátrixok
+ esetén, de nemszimmetrikus együtthatómátrixok esetén is alkalmazható 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenNewTaxonomy"
@@ -10012,8 +10012,8 @@ key "BroydenNewTaxonomy"
 \end_inset
 
 .
- A módszerek áttekintése nehézkes, pl.
- a tendencia miatt, hogy az algoritmusokat különböző módszerekkel származtatják.
+ A módszerek áttekintése nehézkes, például amiatt, hogy az algoritmusokat
+ a különböző szerzők különböző módokon származtatják.
  Broyden 1996-os cikkében 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -10021,9 +10021,8 @@ key "BroydenNewTaxonomy"
 
 \end_inset
 
- rendszerezte a konjugált gradiens módszereket.
- Cikke támaszkodik más szerzők több azonos célú megelőző munkáira, pl.
- S.F.
+ rendszerezi a konjugált gradiens módszereket.
+ Cikke támaszkodik más szerzők azonos célú korábbi munkáira, például S.F.
  Ashby, T.A.
  Manteuffel és P.E.
  Saylor 1990-es cikkére 
@@ -10035,20 +10034,20 @@ key "Ashby"
 
 .
  Ők minden algoritmust három mátrixszal jellemeznek.
- az 
-\begin_inset Formula $A$
+ Az 
+\begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
  együtthatómátrixszal, egy Hermit-féle pozitív definit 
-\begin_inset Formula $B$
+\begin_inset Formula $\boldsymbol{B}$
 \end_inset
 
  mátrixszal (a belső szorzat mátrixszal), és egy további 
-\begin_inset Formula $C$
+\begin_inset Formula $\boldsymbol{C}$
 \end_inset
 
  mátrixszal (a prekondicionáló mátrixszal).
- A cikkük erősen támaszkodik Faber és Manteuffel cikkére 
+ Az ő cikkük pedig erősen támaszkodik Faber és Manteuffel cikkére 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Faber_and_Manteuffel"
@@ -10056,21 +10055,21 @@ key "Faber_and_Manteuffel"
 \end_inset
 
 , akik a valós 
-\begin_inset Formula $M$
+\begin_inset Formula $\boldsymbol{M}$
 \end_inset
 
  mátrixot 
-\begin_inset Formula $B-normal(s)$
+\begin_inset Formula $B-normális(s)$
 \end_inset
 
--nek definiálják, ha a 
-\begin_inset Formula $B$
+-nek nevezik, ha a 
+\begin_inset Formula $\boldsymbol{B}$
 \end_inset
 
  mátrix Hermit-féle, pozitív definit, és
 \begin_inset Formula 
 \begin{equation}
-M^{T}B=Bp(M)\,,\label{eq:TAX_2}
+\boldsymbol{M}^{T}\boldsymbol{B}=\boldsymbol{B}p(\boldsymbol{M})\,,\label{eq:TAX_2}
 \end{equation}
 
 \end_inset
@@ -10080,7 +10079,7 @@ ahol
 \end_inset
 
  a legkisebb fokszáma a 
-\begin_inset Formula $p(M)$
+\begin_inset Formula $p(\boldsymbol{M})$
 \end_inset
 
  mátrixpolinomnak, amelyre a 
@@ -10100,24 +10099,14 @@ key "Faber_and_Manteuffel"
 .
  Megmutatták, hogy egy 3-tagú rekurrens prekondicionált konjugált gradiens
  módszernél, ha a 
-\begin_inset Formula $CA$
+\begin_inset Formula $\boldsymbol{CA}$
 \end_inset
 
  mátrixszorzat 
-\begin_inset Formula $B-normal(1)$
+\begin_inset Formula $B-normális(1)$
 \end_inset
 
 , akkor a módszer véges lépésben leáll 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-???
-\end_layout
-
-\end_inset
-
- 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Faber_and_Manteuffel"
@@ -10126,11 +10115,11 @@ key "Faber_and_Manteuffel"
 
 .
  Broyden rendszertanában egy Hessian 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  mátrixból és egy további 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  mátrixból származtatja a módszereket 
@@ -10142,15 +10131,15 @@ key "BroydenNewTaxonomy"
 
 .
  Broyden 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  mátrixa általában azonos az Ashby féle 
-\begin_inset Formula $B$
+\begin_inset Formula $\boldsymbol{B}$
 \end_inset
 
  mátrixszal, azzal a különbséggel, hogy a pozitív definitség a 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  mátrixnál nem megkövetelt.
@@ -10165,25 +10154,25 @@ key "BroydenNewTaxonomy"
  További összefüggés a két rendszertan között, hogy
 \begin_inset Formula 
 \begin{equation}
-CA=KG\label{eq:TAX_3}
+\boldsymbol{CA}=\boldsymbol{KG}\label{eq:TAX_3}
 \end{equation}
 
 \end_inset
 
 ahol 
-\begin_inset Formula $C$
+\begin_inset Formula $\boldsymbol{C}$
 \end_inset
 
  és 
-\begin_inset Formula $A$
+\begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
  az Ashby féle 
-\begin_inset Formula $C$
+\begin_inset Formula $\boldsymbol{C}$
 \end_inset
 
  és 
-\begin_inset Formula $A$
+\begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
  mátrix 
@@ -10194,29 +10183,29 @@ key "BroydenNewTaxonomy"
 \end_inset
 
 .
- Ebből következik, hogy az 
-\begin_inset Formula $KG$
+ Ebből következik, hogy a 
+\begin_inset Formula $\boldsymbol{KG}$
 \end_inset
 
  mátrixszorzatnak 
-\begin_inset Formula $B-normal(1)$
+\begin_inset Formula $B-normális(1)$
 \end_inset
 
 -nek kell lennie.
  Legyen 
-\begin_inset Formula $KG$
+\begin_inset Formula $\boldsymbol{KG}$
 \end_inset
 
  az 
-\begin_inset Formula $M$
+\begin_inset Formula $\boldsymbol{M}$
 \end_inset
 
  mátrix, és 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  a 
-\begin_inset Formula $B$
+\begin_inset Formula $\boldsymbol{B}$
 \end_inset
 
  mátrix a 
@@ -10227,16 +10216,20 @@ reference "eq:TAX_2"
 \end_inset
 
  egyenlőségben.
- Ekkor a B-normalitás követelménye
+ Ekkor a 
+\begin_inset Formula $B-normalitás$
+\end_inset
+
+ követelménye
 \begin_inset Formula 
 \begin{equation}
-GK^{T}G=Gp(KG),\label{eq:TAX_4}
+\boldsymbol{G}\boldsymbol{K}^{T}\boldsymbol{G}=\boldsymbol{G}p(\boldsymbol{KG}),\label{eq:TAX_4}
 \end{equation}
 
 \end_inset
 
 ahol 
-\begin_inset Formula $p(KG)$
+\begin_inset Formula $p(\boldsymbol{KG})$
 \end_inset
 
  lineáris mátrixpolinom 
@@ -10248,15 +10241,15 @@ key "BroydenNewTaxonomy"
 
 .
  Ennek elégséges feltétele, ha a 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  mátrix szimmetrikus, ekkor 
-\begin_inset Formula $p(KG)$
+\begin_inset Formula $p(\boldsymbol{KG})$
 \end_inset
 
  helyett vehetjük a 
-\begin_inset Formula $KG$
+\begin_inset Formula $\boldsymbol{KG}$
 \end_inset
 
  mátrixszorzatot 
@@ -10268,11 +10261,15 @@ key "BroydenNewTaxonomy"
 
 .
  Habár a 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
- mátrix szimmetrikussága erősebb feltétel, mint a B-normalitás, de még elég
- általános, hogy a standard módszereket is tartalmazza a rendszertan 
+ mátrix szimmetrikussága erősebb feltétel, mint a 
+\begin_inset Formula $B-normalitás$
+\end_inset
+
+, de még elég általános, hogy a standard módszereket is tartalmazza a rendszerta
+n 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenNewTaxonomy"
@@ -10280,23 +10277,14 @@ key "BroydenNewTaxonomy"
 \end_inset
 
 .
- Ennek a mátrix felbontásnak egy következménye még, hogy a hagyományos 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-standard?
-\end_layout
-
-\end_inset
-
- 2-tagú konjugált gradiens módszereknél, a két tipikus numerikus instabilitása
- ezeknek a módszereknek (lásd következő fejezet), a 
-\begin_inset Formula $G$
+ Ennek a mátrixfelbontásnak még egy következménye, hogy a hagyományos 2-tagú
+ konjugált gradiens módszereknél, a két tipikus numerikus instabilitása
+ ezeknek a módszereknek (lásd később), a 
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  és a 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  mátrixokból könnyen megállapítható 
@@ -10308,15 +10296,19 @@ key "BroydenNewTaxonomy"
 
 .
  A 
-\begin_inset Formula $K$
+\series bold
+
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
+
+\series default
  és 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- mátrixok még szükségünk van bizonyos vektorokra (a generátorokra), amelyek
- minden iterációval változnak.
+ mátrixokon kívűl még szükségünk van bizonyos vektorokra, a generátor vektorokra
+, amelyek minden iterációval változnak.
  Ezeket kétféleképpen választhatjuk, az egyik választás vezet a 2-tagú (Hestenes
 -Stiefel) rekurrens formulához, míg a másik választás a 3-tagú (Lanczos)
  formulához 
@@ -10331,19 +10323,19 @@ key "BroydenNewTaxonomy"
 
 \begin_layout Standard
 Legyen a 
-\begin_inset Formula $\phi(x)$
+\begin_inset Formula $\phi(\boldsymbol{x})$
 \end_inset
 
  kvadratikus függvény
 \begin_inset Formula 
 \begin{equation}
-\phi(x)=\frac{1}{2}x^{T}Gx-x^{T}h,\label{eq:TAX_5}
+\phi(\boldsymbol{x})=\frac{1}{2}\boldsymbol{x}^{T}\boldsymbol{Gx}-\boldsymbol{x}^{T}\boldsymbol{h},\label{eq:TAX_5}
 \end{equation}
 
 \end_inset
 
-ahol a 
-\begin_inset Formula $G$
+ahol 
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  
@@ -10351,34 +10343,24 @@ ahol a
 \end_inset
 
 -ed rendű szimmetrikus mátrix, de nem feltétlen pozitív definit, 
-\begin_inset Formula $h$
+\begin_inset Formula $\boldsymbol{h}$
 \end_inset
 
  pedig 
-\begin_inset Formula $n$
+\begin_inset Formula $\boldsymbol{n}$
 \end_inset
 
 -ed rendű vektor.
  Legyen 
-\begin_inset Formula $x_{1}$
+\begin_inset Formula $\boldsymbol{x}_{1}$
 \end_inset
 
  a kezdeti értéke az 
-\begin_inset Formula $x$
+\begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
- vektornak és legyen 
-\begin_inset Formula $S_{i}$
-\end_inset
-
- konstans 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-többi helyen nem irogattam ki, hogy konstans mátrix
-\end_layout
-
+ vektornak, és legyen 
+\begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
  
@@ -10390,23 +10372,19 @@ többi helyen nem irogattam ki, hogy konstans mátrix
 \end_inset
 
 -s mátrix.
- Ha 
-\begin_inset Formula $x_{i+1}$
+ Ekkor, ha 
+\begin_inset Formula $\boldsymbol{x}_{i+1}$
 \end_inset
 
- jelöli az 
-\begin_inset Formula $x$
+ jelöli azt az 
+\begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
- értéket, amelyre 
-\begin_inset Formula $\phi(x)$
+ vektor értéket, amelyre a 
+\begin_inset Formula $\phi(\boldsymbol{x})$
 \end_inset
 
- stacionárius, ahol az 
-\begin_inset Formula $x$
-\end_inset
-
- vektornak ki kell elégítenie az
+ függvény stacionárius az
 \begin_inset Formula 
 \begin{equation}
 x=x_{1}+S_{i}z\label{eq:TAX_6}
@@ -10414,7 +10392,7 @@ x=x_{1}+S_{i}z\label{eq:TAX_6}
 
 \end_inset
 
-egyenlőséget, ahol 
+manifold felett, ahol 
 \begin_inset Formula $z$
 \end_inset
 
@@ -10429,13 +10407,13 @@ egyenlőséget, ahol
 -ed rendű vektor, akkor
 \begin_inset Formula 
 \begin{equation}
-x_{i+1}=x_{1}-S_{i}(S_{i}^{T}GS_{i})^{-1}S_{i}^{T}g_{1}\,,\label{eq:TAX_7}
+\boldsymbol{x}_{i+1}=\boldsymbol{x}_{1}-\boldsymbol{S}_{i}(\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{S}_{i})^{-1}\boldsymbol{S}_{i}^{T}\boldsymbol{g}_{1}\,,\label{eq:TAX_7}
 \end{equation}
 
 \end_inset
 
 ahol 
-\begin_inset Formula $g_{1}$
+\begin_inset Formula $\boldsymbol{g}_{1}$
 \end_inset
 
  a gradiensvektora a 
@@ -10443,34 +10421,34 @@ ahol
 \end_inset
 
  függvénynek az 
-\begin_inset Formula $x_{1}$
+\begin_inset Formula $\boldsymbol{x}_{1}$
 \end_inset
 
  helyen.
  Továbbá, ha
 \begin_inset Formula 
 \begin{equation}
-S_{i}=\begin{bmatrix}P_{1} & P_{2} & ... & P_{i}\end{bmatrix}\,,\label{eq:TAX_8}
+\boldsymbol{S}_{i}=\begin{bmatrix}\boldsymbol{P}_{1} & \boldsymbol{P}_{2} & ... & \boldsymbol{P}_{i}\end{bmatrix}\,,\label{eq:TAX_8}
 \end{equation}
 
 \end_inset
 
 ahol 
-\begin_inset Formula $P_{j}\,$
+\begin_inset Formula $\boldsymbol{P}_{j}\,$
 \end_inset
 
 , 
 \begin_inset Formula $1\leq j\leq i$
 \end_inset
 
-, konstans részmátrixok egy vagy két oszloppal úgy, hogy a 
-\begin_inset Formula $C_{j}=P_{j}^{T}GP_{j}$
+, részmátrixok egy vagy két oszloppal, úgy, hogy a 
+\begin_inset Formula $\boldsymbol{C}_{j}=\boldsymbol{P}_{j}^{T}\boldsymbol{G}\boldsymbol{P}_{j}$
 \end_inset
 
  mátrix nemszinguláris és 
 \begin_inset Formula 
 \begin{equation}
-P_{j}^{T}GP_{k}=0,\label{eq:TAX_9}
+\boldsymbol{P}_{j}^{T}\boldsymbol{G}\boldsymbol{P}_{k}=0,\label{eq:TAX_9}
 \end{equation}
 
 \end_inset
@@ -10485,13 +10463,13 @@ P_{j}^{T}GP_{k}=0,\label{eq:TAX_9}
 
 .
  Az 
-\begin_inset Formula $x_{i+1}$
+\begin_inset Formula $\boldsymbol{x}_{i+1}$
 \end_inset
 
  vektor kifejezhető úgy is, hogy
 \begin_inset Formula 
 \begin{equation}
-x_{i+1}=x_{i}-P_{i}(P_{i}^{T}GP_{i})^{-1}P_{i}^{T}g_{i}\,,\label{eq:TAX_10}
+\boldsymbol{x}_{i+1}=\boldsymbol{x}_{i}-\boldsymbol{P}_{i}(\boldsymbol{P}_{i}^{T}\boldsymbol{G}\boldsymbol{P}_{i})^{-1}\boldsymbol{P}_{i}^{T}\boldsymbol{g}_{i}\,,\label{eq:TAX_10}
 \end{equation}
 
 \end_inset
@@ -10499,7 +10477,7 @@ x_{i+1}=x_{i}-P_{i}(P_{i}^{T}GP_{i})^{-1}P_{i}^{T}g_{i}\,,\label{eq:TAX_10}
 ahol
 \begin_inset Formula 
 \begin{equation}
-g_{i}=Gx_{i}-h.\label{eq:TAX_11}
+\boldsymbol{g}_{i}=\boldsymbol{G}\boldsymbol{x}_{i}-\boldsymbol{h}.\label{eq:TAX_11}
 \end{equation}
 
 \end_inset
@@ -10511,18 +10489,18 @@ reference "eq:TAX_7"
 
 \end_inset
 
- egyenlőséget 
-\begin_inset Formula $G$
+ egyenlőséget a 
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  mátrixszal szorozva, és a 
-\begin_inset Formula $h$
+\begin_inset Formula $\boldsymbol{h}$
 \end_inset
 
  vektort mindkét oldalból kivonva,
 \begin_inset Formula 
 \begin{equation}
-g_{i+1}=Q_{i}g_{1}\,,\label{eq:TAX_12}
+\boldsymbol{g}_{i+1}=\boldsymbol{Q}_{i}\boldsymbol{g}_{1}\,,\label{eq:TAX_12}
 \end{equation}
 
 \end_inset
@@ -10530,7 +10508,7 @@ g_{i+1}=Q_{i}g_{1}\,,\label{eq:TAX_12}
 ahol
 \begin_inset Formula 
 \begin{equation}
-Q_{i}=I-GS_{i}(S_{i}^{T}GS_{i})^{-1}S_{i}^{T}\,.\label{eq:TAX_13}
+\boldsymbol{Q}_{i}=\boldsymbol{I}-\boldsymbol{G}\boldsymbol{S}_{i}(\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{S}_{i})^{-1}\boldsymbol{S}_{i}^{T}\,.\label{eq:TAX_13}
 \end{equation}
 
 \end_inset
@@ -10540,18 +10518,18 @@ Q_{i}=I-GS_{i}(S_{i}^{T}GS_{i})^{-1}S_{i}^{T}\,.\label{eq:TAX_13}
 
 \begin_layout Standard
 Ahhoz, hogy ki tudjuk számolni 
-\begin_inset Formula $x_{i+2}$
+\begin_inset Formula $\boldsymbol{x}_{i+2}$
 \end_inset
 
--t, szükség van a 
-\begin_inset Formula $P_{i+1}$
+ vektort, szükség van a 
+\begin_inset Formula $\boldsymbol{P}_{i+1}$
 \end_inset
 
  mátrixra.
  Könnyen látható, hogy ha
 \begin_inset Formula 
 \begin{equation}
-P_{i+1}=Q_{i}^{T}W_{i+1}\,,\label{eq:TAX_14}
+\boldsymbol{P}_{i+1}=\boldsymbol{Q}_{i}^{T}\boldsymbol{W}_{i+1}\,,\label{eq:TAX_14}
 \end{equation}
 
 \end_inset
@@ -10568,19 +10546,19 @@ reference "eq:TAX_9"
 \end_inset
 
 -re, tetszőleges 
-\begin_inset Formula $W_{i+1}$
+\begin_inset Formula $\boldsymbol{W}_{i+1}$
 \end_inset
 
  mátrixszal.
  A 
-\begin_inset Formula $Q_{i}$
+\begin_inset Formula $\boldsymbol{Q}_{i}$
 \end_inset
 
- mátrix túl nagy és sűrű, de mivel 
-\begin_inset Formula $W_{i+1}$
+ mátrix túl nagy és sűrű, de mivel a 
+\begin_inset Formula $\boldsymbol{W}_{i+1}$
 \end_inset
 
- tetszőlegesen választható, ezzel egyszerűsíthetjük a 
+ mátrix tetszőlegesen választható, ezzel egyszerűsíthetjük a 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:TAX_14"
@@ -10589,7 +10567,7 @@ reference "eq:TAX_14"
 
  összefüggést.
  Két lehetséges választása a 
-\begin_inset Formula $W_{i+1}$
+\begin_inset Formula $\boldsymbol{W}_{i+1}$
 \end_inset
 
  mátrixnak különösen előnyös.
@@ -10597,36 +10575,36 @@ reference "eq:TAX_14"
 
 \begin_layout Standard
 Az első lehetőség, amikor a 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- mátrixnak nincs semmilyen különösebb blokk struktúrája, és ahol a 
-\begin_inset Formula $P_{j}$
+ mátrixnak nincs semmilyen különösebb blokk struktúrája, és amikor a 
+\begin_inset Formula $\boldsymbol{P}_{j}$
 \end_inset
 
  mátrixok 
-\begin_inset Formula $p_{j}$
+\begin_inset Formula $\boldsymbol{p}_{j}$
 \end_inset
 
  vektorok, a kapcsolodó 
-\begin_inset Formula $W_{j}$
+\begin_inset Formula $\boldsymbol{W}_{j}$
 \end_inset
 
- generátorok mátrixok pedig 
-\begin_inset Formula $w_{j}$
+ generátor mátrixok pedig 
+\begin_inset Formula $\boldsymbol{w}_{j}$
 \end_inset
 
  vektorok.
  Megmutatjuk, hogy ha
 \begin_inset Formula 
 \begin{equation}
-w_{j}=Kg_{j}\,,\label{eq:TAX_15}
+\boldsymbol{w}_{j}=\boldsymbol{K}\boldsymbol{g}_{j}\,,\label{eq:TAX_15}
 \end{equation}
 
 \end_inset
 
 ahol 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  tetszőleges szimmetrikus mátrix, akkor a 
@@ -10639,7 +10617,7 @@ reference "eq:TAX_14"
  egyenlőség a 
 \begin_inset Formula 
 \begin{equation}
-p_{i+1}=Kg_{i+1}-p_{i}\alpha_{i}\label{eq:TAX_16}
+\boldsymbol{p}_{i+1}=\boldsymbol{K}\boldsymbol{g}_{i+1}-\boldsymbol{p}_{i}\alpha_{i}\label{eq:TAX_16}
 \end{equation}
 
 \end_inset
@@ -10648,7 +10626,7 @@ alakra egyszerűsödik, ahol
 \begin_inset Formula $\alpha_{i}$
 \end_inset
 
- valamilyen konstans.
+ konstans.
  
 \end_layout
 
@@ -10664,7 +10642,7 @@ name "thm:TAX_Lemma1"
 \end_inset
 
 Legyen 
-\begin_inset Formula $x_{i+1}$
+\begin_inset Formula $\boldsymbol{x}_{i+1}$
 \end_inset
 
  stacionárius pontja a 
@@ -10680,28 +10658,28 @@ reference "eq:TAX_6"
 
  egyenlőségben definiált manifold felett.
  Legyen 
-\begin_inset Formula $g_{i+1}$
+\begin_inset Formula $\boldsymbol{g}_{i+1}$
 \end_inset
 
  az 
-\begin_inset Formula $x_{i+1}$
+\begin_inset Formula $\boldsymbol{x}_{i+1}$
 \end_inset
 
  ponthoz tartozó gradiense a 
-\begin_inset Formula $\phi(x)$
+\begin_inset Formula $\phi(\boldsymbol{x})$
 \end_inset
 
  függvénynek, és legyenek a 
-\begin_inset Formula $w_{j}$
+\begin_inset Formula $\boldsymbol{w}_{j}$
 \end_inset
 
  vektorok az 
-\begin_inset Formula $S_{i}$
+\begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
  mátrix generátorai.
  Ekkor 
-\begin_inset Formula $w_{j}^{T}g_{i+1}=0,$
+\begin_inset Formula $\boldsymbol{w}_{j}^{T}\boldsymbol{g}_{i+1}=0,$
 \end_inset
 
  
@@ -10723,12 +10701,33 @@ jo ez??
 \end_layout
 
 \begin_layout Proof
-A *12*-es egyenlőségből 
-\begin_inset Formula $w_{j}^{T}g_{i+1}=w_{j}^{T}Q_{i}g_{1}$
+A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_12"
+
 \end_inset
 
-, a *13-as* és a *9*-es egyenlőségből 
-\begin_inset Formula $Q_{j-1}Q_{i}=Q_{i}$
+ egyenlőségből 
+\begin_inset Formula $\boldsymbol{w}_{j}^{T}\boldsymbol{g}_{i+1}=\boldsymbol{w}_{j}^{T}\boldsymbol{Q}_{i}\boldsymbol{g}_{1}$
+\end_inset
+
+, a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_13"
+
+\end_inset
+
+ és a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_9"
+
+\end_inset
+
+ egyenlőségből 
+\begin_inset Formula $\boldsymbol{Q}_{j-1}\boldsymbol{Q}_{i}=\boldsymbol{Q}_{i}$
 \end_inset
 
 , 
@@ -10736,18 +10735,38 @@ A *12*-es egyenlőségből
 \end_inset
 
 , ezért 
-\begin_inset Formula $w_{j}^{T}g_{i+1}=w_{j}^{T}Q_{j-1}Q_{i}g_{1}$
+\begin_inset Formula $\boldsymbol{w}_{j}^{T}\boldsymbol{g}_{i+1}=\boldsymbol{w}_{j}^{T}\boldsymbol{Q}_{j-1}\boldsymbol{Q}_{i}\boldsymbol{g}_{1}$
 \end_inset
 
 .
- Így a *14*-es egyenlőségből 
-\begin_inset Formula $w_{j}^{T}g_{i+1}=p_{j}Q_{i}g_{1}$
+ Ezért a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_14"
+
+\end_inset
+
+ egyenlőségből 
+\begin_inset Formula $\boldsymbol{w}_{j}^{T}\boldsymbol{g}_{i+1}=\boldsymbol{p}_{j}\boldsymbol{Q}_{i}\boldsymbol{g}_{1}$
 \end_inset
 
 .
- A tétel következik a *8-as* egyenlőségből, mivel a *13*as egyenlőség miatt
- 
-\begin_inset Formula $S_{i}^{T}Q_{i}=0$
+ A tétel következik a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_8"
+
+\end_inset
+
+ egyenlőségből, mivel a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_13"
+
+\end_inset
+
+ egyenlőség miatt 
+\begin_inset Formula $\boldsymbol{S}_{i}^{T}\boldsymbol{Q}_{i}=0$
 \end_inset
 
 .
@@ -10755,7 +10774,7 @@ A *12*-es egyenlőségből
 
 \begin_layout Corollary*
 Ha 
-\begin_inset Formula $w_{j}=Kg_{j}$
+\begin_inset Formula $\boldsymbol{w_{j}}=\boldsymbol{K}\boldsymbol{g}_{j}$
 \end_inset
 
 , 
@@ -10763,7 +10782,7 @@ Ha
 \end_inset
 
 , akkor 
-\begin_inset Formula $g_{j}^{T}Kg_{k}=0$
+\begin_inset Formula $\boldsymbol{g}_{j}^{T}\boldsymbol{K}\boldsymbol{g}_{k}=0$
 \end_inset
 
 , 
@@ -10783,13 +10802,13 @@ Ha
 
 \begin_layout Standard
 Megmutatjuk, hogy ha a 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
- mátrix definit, akkor a generátorok fenti választásával
+ mátrix definit, akkor a generátor vektorok fenti választásával
 \begin_inset Formula 
 \begin{equation}
-p_{j}^{T}GKg_{i+1}=0,\label{eq:TAX_17}
+\boldsymbol{p}_{j}^{T}\boldsymbol{G}\boldsymbol{K}\boldsymbol{g}_{i+1}=0,\label{eq:TAX_17}
 \end{equation}
 
 \end_inset
@@ -10799,7 +10818,14 @@ ahol
 \end_inset
 
 .
- A *10*es egyenlőségben 
+ A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_10"
+
+\end_inset
+
+ egyenlőségben 
 \begin_inset Formula $i$
 \end_inset
 
@@ -10808,37 +10834,44 @@ ahol
 \end_inset
 
 -re cserélve, az egyenlőséget megszorozva a 
-\begin_inset Formula $KG$
+\begin_inset Formula $\boldsymbol{K}\boldsymbol{G}$
 \end_inset
 
- mátrixszal és a 
-\begin_inset Formula $Kh$
+ mátrixszal, és a 
+\begin_inset Formula $\boldsymbol{Kh}$
 \end_inset
 
- vektort kivonva mindkét oldalból, a *11-es* egyenlőségből kapjuk, hogy
+ vektort kivonva mindkét oldalból, a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_11"
+
+\end_inset
+
+ egyenlőségből kapjuk, hogy
 \begin_inset Formula 
 \begin{equation}
-Kg_{j+1}=Kg_{j}-KGp_{j}\gamma_{j}\,,\label{eq:TAX_18}
+\boldsymbol{K}\boldsymbol{g}_{j+1}=\boldsymbol{K}\boldsymbol{g}_{j}-\boldsymbol{K}\boldsymbol{G}\boldsymbol{p}_{j}\gamma_{j}\,,\label{eq:TAX_18}
 \end{equation}
 
 \end_inset
 
 ahol 
-\begin_inset Formula $\gamma_{j}=\frac{p_{j}^{T}g_{j}}{p_{j}^{T}Gp_{j}}$
+\begin_inset Formula $\gamma_{j}=\frac{\boldsymbol{p}_{j}^{T}\boldsymbol{g}_{j}}{\boldsymbol{p}_{j}^{T}\boldsymbol{G}\boldsymbol{p}_{j}}$
 \end_inset
 
 .
  A 
-\begin_inset Formula $P_{j}$
+\begin_inset Formula $\boldsymbol{P}_{j}$
 \end_inset
 
  mátrix most egy vektor, ezért 
-\begin_inset Formula $p_{j}$
+\begin_inset Formula $\boldsymbol{p}_{j}$
 \end_inset
 
 -vel jelöltük.
  Megszorozva ezt az egyenlőséget a 
-\begin_inset Formula $g_{i+1}^{T}$
+\begin_inset Formula $\boldsymbol{g}_{i+1}^{T}$
 \end_inset
 
  vektorral, a 
@@ -10849,15 +10882,22 @@ reference "thm:TAX_Lemma1"
 \end_inset
 
 -es tétel következményéből kapjuk, hogy 
-\begin_inset Formula $\gamma_{j}p_{j}^{T}GKg_{i+1}=0$
+\begin_inset Formula $\gamma_{j}\boldsymbol{p}_{j}^{T}\boldsymbol{G}\boldsymbol{K}\boldsymbol{g}_{i+1}=0$
 \end_inset
 
 , 
 \begin_inset Formula $1\leq j\leq i-1.$
 \end_inset
 
- Most a *18*-as egyenlőséget megszorozva a 
-\begin_inset Formula $g_{j+1}^{T}$
+A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_18"
+
+\end_inset
+
+ egyenlőséget megszorozva a 
+\begin_inset Formula $\boldsymbol{g}_{j+1}^{T}$
 \end_inset
 
  vektorral, a 
@@ -10867,37 +10907,72 @@ reference "thm:TAX_Lemma1"
 
 \end_inset
 
--es tétel következményéből kapjuk, hogy ha 
-\begin_inset Formula $g_{j+1}\neq0$
+-es tétel következménye, hogy ha 
+\begin_inset Formula $\boldsymbol{g}_{j+1}\neq\boldsymbol{0}$
 \end_inset
 
  és 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  definit, akkor 
 \begin_inset Formula $\gamma\neq0$
 \end_inset
 
-, így kapjuk a *17*-es egyenlőséget.
+, így kapjuk a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_17"
+
+\end_inset
+
+ egyenlőséget.
  
 \end_layout
 
 \begin_layout Standard
-A *13*-as és *14*-es egyenlőségből
+A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_13"
+
+\end_inset
+
+ és a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_14"
+
+\end_inset
+
+ egyenlőségből
 \begin_inset Formula 
 \begin{equation}
-p_{i+1}=Kg_{i+1}-S_{i}(S_{i}^{T}GS_{i})^{-1}S_{i}^{T}GKg_{i+1}\,,\label{eq:TAX_19}
+\boldsymbol{p}_{i+1}=\boldsymbol{K}\boldsymbol{g}_{i+1}-\boldsymbol{S}_{i}(\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{S}_{i})^{-1}\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{K}\boldsymbol{g}_{i+1}\,,\label{eq:TAX_19}
 \end{equation}
 
 \end_inset
 
-de a *17*-es egyenlőség miatt ennek az egyenlőségnek csak a 
-\begin_inset Formula $S_{i}^{T}GKg_{i+1}$
+de a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_17"
+
 \end_inset
 
- része nem nulla, ebből következik a *16-os* egyenlőség és az 
-\begin_inset Formula $S_{i}^{T}GS_{i}$
+ egyenlőség miatt ennek az egyenlőségnek csak a 
+\begin_inset Formula $\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{K}\boldsymbol{g}_{i+1}$
+\end_inset
+
+ tagja nem nulla, ebből következik a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_16"
+
+\end_inset
+
+ egyenlőség és az 
+\begin_inset Formula $\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{S}_{i}$
 \end_inset
 
  mátrix diagonalitása.
@@ -10909,27 +10984,34 @@ Az
 \begin_inset Formula $\alpha_{i}$
 \end_inset
 
- konstansot úgy választjuk a *16-s* egyenlőségben, hogy 
-\begin_inset Formula $p_{i}^{T}Gp_{i+1}=0$
+ konstansot úgy választjuk a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_16"
+
+\end_inset
+
+ egyenlőségben, hogy 
+\begin_inset Formula $\boldsymbol{p}_{i}^{T}\boldsymbol{G}\boldsymbol{p}_{i+1}=0$
 \end_inset
 
  legyen.
  Ez mindig lehetséges, ha 
-\begin_inset Formula $p_{i}^{T}Gp_{i}\neq0$
+\begin_inset Formula $\boldsymbol{p}_{i}^{T}\boldsymbol{G}\boldsymbol{p}_{i}\neq0$
 \end_inset
 
 .
  Ez a feltétel mindig teljesül a nem nulla 
-\begin_inset Formula $p_{i}$
+\begin_inset Formula $\boldsymbol{p}_{i}$
 \end_inset
 
  vektorokra, ha a 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  mátrix definit.
  Az olyan algoritmusokat, ahol a 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  mátrix definit, 
@@ -10938,28 +11020,27 @@ Az
 
 -nak nevezezzük.
  Ha a 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  mátrix definit, egy másféle numerikus instabilitást kerülhetünk el, amikor
- is az egymást követő lépések annyira kicsik lesznek, hogy az algoritmus
- *elhal* *Broyden ref 13, 10, 11*.
+ is az egymást követő lépések túl kicsik lesznek*Broyden ref 13, 10, 11*.
  Azokat az algoritmusokat, ahol a 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  mátrix definit, 
 \begin_inset Formula $\omega-stabilis$
 \end_inset
 
--nek nevezzük.
+-nak nevezzük.
  Így a konjugált gradiens algoritmusok kétféle numerikus instabilitása a
  
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  és a 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  mátrixoktól függenek.
@@ -10968,34 +11049,41 @@ Az
 
 \begin_layout Standard
 A második lehetőség a 
-\begin_inset Formula $w_{j}$
+\begin_inset Formula $\boldsymbol{w}_{j}$
 \end_inset
 
  vektor választására, ha 
 \begin_inset Formula 
 \begin{equation}
-w_{j}=KGp_{j-1}\,,\label{eq:TAX_20}
+\boldsymbol{w}_{j}=\boldsymbol{K}\boldsymbol{G}\boldsymbol{p}_{j-1}\,,\label{eq:TAX_20}
+\end{equation}
+
+\end_inset
+
+ahol a 
+\begin_inset Formula $\boldsymbol{p}_{1}$
+\end_inset
+
+ vektort tetszőlegesen választhatjuk és 
+\begin_inset Formula $\boldsymbol{p}_{0}=\boldsymbol{0}.$
+\end_inset
+
+ Ezzel a választással a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_14"
+
+\end_inset
+
+ egyenlőség alakja 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{p}_{i+1}=\boldsymbol{K}\boldsymbol{G}\boldsymbol{p}_{i}-\boldsymbol{p}_{i}\alpha_{i}-\boldsymbol{p}_{i-1}\beta_{i-1}\,,\label{eq:TAX_21}
 \end{equation}
 
 \end_inset
 
 ahol 
-\begin_inset Formula $p_{1}$
-\end_inset
-
- vektort tetszőlegesen választhatjuk és 
-\begin_inset Formula $p_{0}=0.$
-\end_inset
-
- Ezzel a választással a *14*-es egyenlőség a 
-\begin_inset Formula 
-\begin{equation}
-p_{i+1}=KGp_{i}-p_{i}\alpha_{i}-p_{i-1}\beta_{i-1}\label{eq:TAX_21}
-\end{equation}
-
-\end_inset
-
-alakra egyszerűsödik, ahol 
 \begin_inset Formula $\alpha_{i}$
 \end_inset
 
@@ -11006,7 +11094,7 @@ alakra egyszerűsödik, ahol
  konstansokat úgy választjuk, hogy
 \begin_inset Formula 
 \begin{equation}
-p_{i-1}^{T}Gp_{i+1}=p_{i}^{T}Gp_{i+1}=0.\label{eq:TAX_22}
+\boldsymbol{p}_{i-1}^{T}\boldsymbol{G}\boldsymbol{p}_{i+1}=\boldsymbol{p}_{i}^{T}\boldsymbol{G}\boldsymbol{p}_{i+1}=0.\label{eq:TAX_22}
 \end{equation}
 
 \end_inset
@@ -11016,14 +11104,28 @@ p_{i-1}^{T}Gp_{i+1}=p_{i}^{T}Gp_{i+1}=0.\label{eq:TAX_22}
 
 \begin_layout Theorem
 Legyenek a 
-\begin_inset Formula $p_{j}$
+\begin_inset Formula $\boldsymbol{p}_{j}$
 \end_inset
 
- vektorok a *14*-es és *13-as* egyenlőségben definiált 
-\begin_inset Formula $w_{j}$
+ vektorok a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_14"
+
 \end_inset
 
- generátorokból számolva, 
+ és 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_13"
+
+\end_inset
+
+ egyenlőségben definiált 
+\begin_inset Formula $\boldsymbol{w}_{j}$
+\end_inset
+
+ generátor vektorokból számolva, 
 \begin_inset Formula $1\leq j\leq i$
 \end_inset
 
@@ -11031,7 +11133,7 @@ Legyenek a
  Ekkor
 \begin_inset Formula 
 \begin{equation}
-w_{j}^{T}Gp_{i}=0,\label{eq:TAX_23}
+\boldsymbol{w}_{j}^{T}\boldsymbol{G}\boldsymbol{p}_{i}=0,\label{eq:TAX_23}
 \end{equation}
 
 \end_inset
@@ -11044,12 +11146,19 @@ ahol
 \end_layout
 
 \begin_layout Proof
-A *8-as* egyenlőség és a 
-\begin_inset Formula $p_{j}$
+A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_8"
+
 \end_inset
 
- vektor konjugált tulajdonsága miatt, 
-\begin_inset Formula $S_{j}^{T}Gp_{i}=0$
+ egyenlőség és a 
+\begin_inset Formula $\boldsymbol{p}_{j}$
+\end_inset
+
+ vektor konjugáltsága miatt, 
+\begin_inset Formula $\boldsymbol{S}_{j}^{T}\boldsymbol{G}\boldsymbol{p}_{i}=0$
 \end_inset
 
 , 
@@ -11057,12 +11166,19 @@ A *8-as* egyenlőség és a
 \end_inset
 
 .
- A *13*-as egyenlőségből, mivel 
-\begin_inset Formula $Q_{0}=I$
+ A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_13"
+
+\end_inset
+
+-as egyenlőségből, mivel 
+\begin_inset Formula $\boldsymbol{Q}_{0}=\boldsymbol{I}$
 \end_inset
 
 , 
-\begin_inset Formula $Gp_{i}=Q_{j-1}Gp_{i}$
+\begin_inset Formula $\boldsymbol{G}\boldsymbol{p}_{i}=\boldsymbol{Q}_{j-1}\boldsymbol{G}\boldsymbol{p}_{i}$
 \end_inset
 
 , 
@@ -11071,11 +11187,18 @@ A *8-as* egyenlőség és a
 
 .
  Ezért 
-\begin_inset Formula $w_{j}^{T}Gp_{i}=w_{j}^{T}Q_{j-1}Gp_{i}$
+\begin_inset Formula $\boldsymbol{w}_{j}^{T}\boldsymbol{G}\boldsymbol{p}_{i}=\boldsymbol{w}_{j}^{T}\boldsymbol{Q}_{j-1}\boldsymbol{G}\boldsymbol{p}_{i}$
 \end_inset
 
-, és a *14-es* egyenlőségből és a konjugáltságból, 
-\begin_inset Formula $w_{j}^{T}Gp_{i}=p_{j}^{T}Gp_{i}=0$
+, és a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_14"
+
+\end_inset
+
+ egyenlőségből és a konjugáltságból, 
+\begin_inset Formula $\boldsymbol{w}_{j}^{T}\boldsymbol{G}\boldsymbol{p}_{i}=\boldsymbol{p}_{j}^{T}\boldsymbol{G}\boldsymbol{p}_{i}=0$
 \end_inset
 
 , 
@@ -11087,13 +11210,20 @@ A *8-as* egyenlőség és a
 
 \begin_layout Corollary*
 Ha a 
-\begin_inset Formula $w_{j}$
+\begin_inset Formula $\boldsymbol{w}_{j}$
 \end_inset
 
- generátorokat a *20-as* egyenlőség szerint választjuk, akkor
+ generátor vektorokat a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_20"
+
+\end_inset
+
+ egyenlőség szerint választjuk, akkor
 \begin_inset Formula 
 \[
-p_{j}^{T}GKGp_{i}=0,
+\boldsymbol{p}_{j}^{T}\boldsymbol{G}\boldsymbol{K}\boldsymbol{G}\boldsymbol{p}_{i}=0,
 \]
 
 \end_inset
@@ -11114,20 +11244,41 @@ ahol
 \end_layout
 
 \begin_layout Standard
-A generátorok fenti választásával, a *14-es* egyenlőség alakja
+A generátor vektorok fenti választásával, a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_14"
+
+\end_inset
+
+ egyenlőség alakja
 \begin_inset Formula 
 \begin{equation}
-p_{i+1}=KGp_{i}-S_{i}(S_{i}^{T}GS_{i})^{-1}S_{i}^{T}GKGp_{i}\,.
+\boldsymbol{p}_{i+1}=\boldsymbol{K}\boldsymbol{G}\boldsymbol{p}_{i}-\boldsymbol{S}_{i}(\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{S}_{i})^{-1}\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{K}\boldsymbol{G}\boldsymbol{p}_{i}\,.\label{eq:TAX_24}
 \end{equation}
 
 \end_inset
 
-A *24-es* egyenlőségből, csak az utolsó két tagja nem nulla a 
-\begin_inset Formula $S_{i}^{T}GKGp_{i}$
+A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_24"
+
 \end_inset
 
- szorzatnak, ezért a *21-es* egyenlőség az 
-\begin_inset Formula $S_{i}^{T}GS_{i}$
+ egyenlőségből, csak az utolsó két tagja nem nulla a 
+\begin_inset Formula $\boldsymbol{S}_{i}^{T}\boldsymbol{GKG}\boldsymbol{p}_{i}$
+\end_inset
+
+ szorzatnak, ezért a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_21"
+
+\end_inset
+
+ egyenlőség az 
+\begin_inset Formula $\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{S}_{i}$
 \end_inset
 
  mátrix diagonalitásából egyből következik.
@@ -11140,16 +11291,16 @@ Néhány megjegyzés:
 
 \begin_layout Enumerate
 A kezdeti 
-\begin_inset Formula $p_{1}$
+\begin_inset Formula $\boldsymbol{p}_{1}$
 \end_inset
 
  vektor tetszőleges.
  Ha a 
-\begin_inset Formula $p_{1}$
+\begin_inset Formula $\boldsymbol{p}_{1}$
 \end_inset
 
  vektornak a 
-\begin_inset Formula $g_{1}$
+\begin_inset Formula $\boldsymbol{g}_{1}$
 \end_inset
 
  vektort választjuk, akkor az Orthodir algoritmust kapjuk *Broyden ref*.
@@ -11158,50 +11309,64 @@ A kezdeti
 
 \begin_layout Enumerate
 Ha 
-\begin_inset Formula $p_{1}=Kg_{1}$
+\begin_inset Formula $\boldsymbol{p}_{1}=\boldsymbol{K}\boldsymbol{g}_{1}$
 \end_inset
 
-, akkor a *20-as* egyenlőségből kapott 
-\begin_inset Formula $\left\{ x_{i}\right\} $
+, akkor a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_20"
+
 \end_inset
 
- vektorsorozat megegyezik a *16-os* egyenlőségből kapott 
-\begin_inset Formula $\left\{ x_{i}\right\} $
+ egyenlőségből kapott 
+\begin_inset Formula $\left\{ \boldsymbol{x}_{i}\right\} $
 \end_inset
 
- vektorsorozattal, és a stabilitási feltételek hasonlóak.
+ vektorsorozat megegyezik a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_16"
+
+\end_inset
+
+ egyenlőségből kapott 
+\begin_inset Formula $\left\{ \boldsymbol{x}_{i}\right\} $
+\end_inset
+
+ vektorsorozattal, és a stabilitás feltételei hasonlóak.
  
 \end_layout
 
 \begin_layout Enumerate
 Mivel a kezdeti 
-\begin_inset Formula $p_{1}$
+\begin_inset Formula $\boldsymbol{p}_{1}$
 \end_inset
 
- vektor választása tetszőleges, választhatjuk 
-\begin_inset Formula $P_{1}$
+ vektor választása tetszőleges, választhatjuk a 
+\begin_inset Formula $\boldsymbol{P}_{1}$
 \end_inset
 
- mátrixnak, tetszőleges számú oszloppal, így kapjuk a blokk módszereket
+ mátrixnak, tetszőleges számú oszloppal, és így kapjuk a blokk módszereket
  *ref Broyden 13*.
 \end_layout
 
 \begin_layout Enumerate
-A két-tagú módszereknél a konjugált 
-\begin_inset Formula $p_{j}$
+A 2-tagú módszereknél a konjugált 
+\begin_inset Formula $\boldsymbol{p}_{j}$
 \end_inset
 
  vektorok számítása elválaszthatatlanul összefügg a 
-\begin_inset Formula $\phi(x)$
+\begin_inset Formula $\phi(\boldsymbol{x})$
 \end_inset
 
- függvény stacionárius pontjának számításával, viszont a három-tagú módszereknél
+ függvény stacionárius pontjának számításával, viszont a 3-tagú módszereknél
  a 
-\begin_inset Formula $p_{j}$
+\begin_inset Formula $\boldsymbol{p}_{j}$
 \end_inset
 
- konjugált vektorok generálása teljesen független 
-\begin_inset Formula $\phi(x)$
+ konjugált vektorok generálása teljesen független a 
+\begin_inset Formula $\phi(\boldsymbol{x})$
 \end_inset
 
  függvény stacionárius pontjának számításától.
