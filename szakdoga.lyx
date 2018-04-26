@@ -10657,6 +10657,12 @@ Először bebizonyítjuk a következő tételt.
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:TAX_Lemma1"
+
+\end_inset
+
 Legyen 
 \begin_inset Formula $x_{i+1}$
 \end_inset
@@ -10714,6 +10720,492 @@ jo ez??
 \end_inset
 
 
+\end_layout
+
+\begin_layout Proof
+A *12*-es egyenlőségből 
+\begin_inset Formula $w_{j}^{T}g_{i+1}=w_{j}^{T}Q_{i}g_{1}$
+\end_inset
+
+, a *13-as* és a *9*-es egyenlőségből 
+\begin_inset Formula $Q_{j-1}Q_{i}=Q_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $0\leq j-1\leq i$
+\end_inset
+
+, ezért 
+\begin_inset Formula $w_{j}^{T}g_{i+1}=w_{j}^{T}Q_{j-1}Q_{i}g_{1}$
+\end_inset
+
+.
+ Így a *14*-es egyenlőségből 
+\begin_inset Formula $w_{j}^{T}g_{i+1}=p_{j}Q_{i}g_{1}$
+\end_inset
+
+.
+ A tétel következik a *8-as* egyenlőségből, mivel a *13*as egyenlőség miatt
+ 
+\begin_inset Formula $S_{i}^{T}Q_{i}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary*
+Ha 
+\begin_inset Formula $w_{j}=Kg_{j}$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq j\leq i$
+\end_inset
+
+, akkor 
+\begin_inset Formula $g_{j}^{T}Kg_{k}=0$
+\end_inset
+
+, 
+\begin_inset Formula $j\neq0$
+\end_inset
+
+, 
+\begin_inset Formula $j\geq1$
+\end_inset
+
+, 
+\begin_inset Formula $k\leq i+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Megmutatjuk, hogy ha a 
+\begin_inset Formula $K$
+\end_inset
+
+ mátrix definit, akkor a generátorok fenti választásával
+\begin_inset Formula 
+\begin{equation}
+p_{j}^{T}GKg_{i+1}=0,\label{eq:TAX_17}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $1\leq j\leq i-1$
+\end_inset
+
+.
+ A *10*es egyenlőségben 
+\begin_inset Formula $i$
+\end_inset
+
+-t 
+\begin_inset Formula $j$
+\end_inset
+
+-re cserélve, az egyenlőséget megszorozva a 
+\begin_inset Formula $KG$
+\end_inset
+
+ mátrixszal és a 
+\begin_inset Formula $Kh$
+\end_inset
+
+ vektort kivonva mindkét oldalból, a *11-es* egyenlőségből kapjuk, hogy
+\begin_inset Formula 
+\begin{equation}
+Kg_{j+1}=Kg_{j}-KGp_{j}\gamma_{j}\,,\label{eq:TAX_18}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\gamma_{j}=\frac{p_{j}^{T}g_{j}}{p_{j}^{T}Gp_{j}}$
+\end_inset
+
+.
+ A 
+\begin_inset Formula $P_{j}$
+\end_inset
+
+ mátrix most egy vektor, ezért 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+-vel jelöltük.
+ Megszorozva ezt az egyenlőséget a 
+\begin_inset Formula $g_{i+1}^{T}$
+\end_inset
+
+ vektorral, a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:TAX_Lemma1"
+
+\end_inset
+
+-es tétel következményéből kapjuk, hogy 
+\begin_inset Formula $\gamma_{j}p_{j}^{T}GKg_{i+1}=0$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq j\leq i-1.$
+\end_inset
+
+ Most a *18*-as egyenlőséget megszorozva a 
+\begin_inset Formula $g_{j+1}^{T}$
+\end_inset
+
+ vektorral, a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:TAX_Lemma1"
+
+\end_inset
+
+-es tétel következményéből kapjuk, hogy ha 
+\begin_inset Formula $g_{j+1}\neq0$
+\end_inset
+
+ és 
+\begin_inset Formula $K$
+\end_inset
+
+ definit, akkor 
+\begin_inset Formula $\gamma\neq0$
+\end_inset
+
+, így kapjuk a *17*-es egyenlőséget.
+ 
+\end_layout
+
+\begin_layout Standard
+A *13*-as és *14*-es egyenlőségből
+\begin_inset Formula 
+\begin{equation}
+p_{i+1}=Kg_{i+1}-S_{i}(S_{i}^{T}GS_{i})^{-1}S_{i}^{T}GKg_{i+1}\,,\label{eq:TAX_19}
+\end{equation}
+
+\end_inset
+
+de a *17*-es egyenlőség miatt ennek az egyenlőségnek csak a 
+\begin_inset Formula $S_{i}^{T}GKg_{i+1}$
+\end_inset
+
+ része nem nulla, ebből következik a *16-os* egyenlőség és az 
+\begin_inset Formula $S_{i}^{T}GS_{i}$
+\end_inset
+
+ mátrix diagonalitása.
+ 
+\end_layout
+
+\begin_layout Standard
+Az 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ konstansot úgy választjuk a *16-s* egyenlőségben, hogy 
+\begin_inset Formula $p_{i}^{T}Gp_{i+1}=0$
+\end_inset
+
+ legyen.
+ Ez mindig lehetséges, ha 
+\begin_inset Formula $p_{i}^{T}Gp_{i}\neq0$
+\end_inset
+
+.
+ Ez a feltétel mindig teljesül a nem nulla 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ vektorokra, ha a 
+\begin_inset Formula $G$
+\end_inset
+
+ mátrix definit.
+ Az olyan algoritmusokat, ahol a 
+\begin_inset Formula $G$
+\end_inset
+
+ mátrix definit, 
+\begin_inset Formula $b-stabilis$
+\end_inset
+
+-nak nevezezzük.
+ Ha a 
+\begin_inset Formula $K$
+\end_inset
+
+ mátrix definit, egy másféle numerikus instabilitást kerülhetünk el, amikor
+ is az egymást követő lépések annyira kicsik lesznek, hogy az algoritmus
+ *elhal* *Broyden ref 13, 10, 11*.
+ Azokat az algoritmusokat, ahol a 
+\begin_inset Formula $K$
+\end_inset
+
+ mátrix definit, 
+\begin_inset Formula $\omega-stabilis$
+\end_inset
+
+-nek nevezzük.
+ Így a konjugált gradiens algoritmusok kétféle numerikus instabilitása a
+ 
+\begin_inset Formula $G$
+\end_inset
+
+ és a 
+\begin_inset Formula $K$
+\end_inset
+
+ mátrixoktól függenek.
+ 
+\end_layout
+
+\begin_layout Standard
+A második lehetőség a 
+\begin_inset Formula $w_{j}$
+\end_inset
+
+ vektor választására, ha 
+\begin_inset Formula 
+\begin{equation}
+w_{j}=KGp_{j-1}\,,\label{eq:TAX_20}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ vektort tetszőlegesen választhatjuk és 
+\begin_inset Formula $p_{0}=0.$
+\end_inset
+
+ Ezzel a választással a *14*-es egyenlőség a 
+\begin_inset Formula 
+\begin{equation}
+p_{i+1}=KGp_{i}-p_{i}\alpha_{i}-p_{i-1}\beta_{i-1}\label{eq:TAX_21}
+\end{equation}
+
+\end_inset
+
+alakra egyszerűsödik, ahol 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ és 
+\begin_inset Formula $\beta_{i+1}$
+\end_inset
+
+ konstansokat úgy választjuk, hogy
+\begin_inset Formula 
+\begin{equation}
+p_{i-1}^{T}Gp_{i+1}=p_{i}^{T}Gp_{i+1}=0.\label{eq:TAX_22}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Legyenek a 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+ vektorok a *14*-es és *13-as* egyenlőségben definiált 
+\begin_inset Formula $w_{j}$
+\end_inset
+
+ generátorokból számolva, 
+\begin_inset Formula $1\leq j\leq i$
+\end_inset
+
+.
+ Ekkor
+\begin_inset Formula 
+\begin{equation}
+w_{j}^{T}Gp_{i}=0,\label{eq:TAX_23}
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $1\leq j\leq i-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+A *8-as* egyenlőség és a 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+ vektor konjugált tulajdonsága miatt, 
+\begin_inset Formula $S_{j}^{T}Gp_{i}=0$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq j\leq i-1$
+\end_inset
+
+.
+ A *13*-as egyenlőségből, mivel 
+\begin_inset Formula $Q_{0}=I$
+\end_inset
+
+, 
+\begin_inset Formula $Gp_{i}=Q_{j-1}Gp_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq j\leq i-1$
+\end_inset
+
+.
+ Ezért 
+\begin_inset Formula $w_{j}^{T}Gp_{i}=w_{j}^{T}Q_{j-1}Gp_{i}$
+\end_inset
+
+, és a *14-es* egyenlőségből és a konjugáltságból, 
+\begin_inset Formula $w_{j}^{T}Gp_{i}=p_{j}^{T}Gp_{i}=0$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq j\leq i-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary*
+Ha a 
+\begin_inset Formula $w_{j}$
+\end_inset
+
+ generátorokat a *20-as* egyenlőség szerint választjuk, akkor
+\begin_inset Formula 
+\[
+p_{j}^{T}GKGp_{i}=0,
+\]
+
+\end_inset
+
+ahol 
+\begin_inset Formula $0\leq j\leq i-2$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A generátorok fenti választásával, a *14-es* egyenlőség alakja
+\begin_inset Formula 
+\begin{equation}
+p_{i+1}=KGp_{i}-S_{i}(S_{i}^{T}GS_{i})^{-1}S_{i}^{T}GKGp_{i}\,.
+\end{equation}
+
+\end_inset
+
+A *24-es* egyenlőségből, csak az utolsó két tagja nem nulla a 
+\begin_inset Formula $S_{i}^{T}GKGp_{i}$
+\end_inset
+
+ szorzatnak, ezért a *21-es* egyenlőség az 
+\begin_inset Formula $S_{i}^{T}GS_{i}$
+\end_inset
+
+ mátrix diagonalitásából egyből következik.
+ 
+\end_layout
+
+\begin_layout Standard
+Néhány megjegyzés:
+\end_layout
+
+\begin_layout Enumerate
+A kezdeti 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ vektor tetszőleges.
+ Ha a 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ vektornak a 
+\begin_inset Formula $g_{1}$
+\end_inset
+
+ vektort választjuk, akkor az Orthodir algoritmust kapjuk *Broyden ref*.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Ha 
+\begin_inset Formula $p_{1}=Kg_{1}$
+\end_inset
+
+, akkor a *20-as* egyenlőségből kapott 
+\begin_inset Formula $\left\{ x_{i}\right\} $
+\end_inset
+
+ vektorsorozat megegyezik a *16-os* egyenlőségből kapott 
+\begin_inset Formula $\left\{ x_{i}\right\} $
+\end_inset
+
+ vektorsorozattal, és a stabilitási feltételek hasonlóak.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Mivel a kezdeti 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ vektor választása tetszőleges, választhatjuk 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+ mátrixnak, tetszőleges számú oszloppal, így kapjuk a blokk módszereket
+ *ref Broyden 13*.
+\end_layout
+
+\begin_layout Enumerate
+A két-tagú módszereknél a konjugált 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+ vektorok számítása elválaszthatatlanul összefügg a 
+\begin_inset Formula $\phi(x)$
+\end_inset
+
+ függvény stacionárius pontjának számításával, viszont a három-tagú módszereknél
+ a 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+ konjugált vektorok generálása teljesen független 
+\begin_inset Formula $\phi(x)$
+\end_inset
+
+ függvény stacionárius pontjának számításától.
+ *ref ref ref*
 \end_layout
 
 \begin_layout Subsection
