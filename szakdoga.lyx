@@ -9906,19 +9906,19 @@ ahol
 \begin_inset Formula $1\leq j\leq i$
 \end_inset
 
-, részmátrixok egy vagy két oszloppal, úgy, hogy a 
+, részmátrixok, egy vagy két oszloppal, úgy, hogy a 
 \begin_inset Formula $\boldsymbol{C}_{j}=\boldsymbol{P}_{j}^{T}\boldsymbol{G}\boldsymbol{P}_{j}$
 \end_inset
 
- mátrix nemszinguláris és 
+ mátrix nemszinguláris, és 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{P}_{j}^{T}\boldsymbol{G}\boldsymbol{P}_{k}=0,\label{eq:TAX_9}
+\boldsymbol{P}_{j}^{T}\boldsymbol{G}\boldsymbol{P}_{k}=\boldsymbol{0},\label{eq:TAX_9}
 \end{equation}
 
 \end_inset
 
-
+ahol 
 \begin_inset Formula $j\neq k$
 \end_inset
 
@@ -10271,7 +10271,7 @@ Ha
 \end_inset
 
 , 
-\begin_inset Formula $j\neq0$
+\begin_inset Formula $j\neq k$
 \end_inset
 
 , 
@@ -10374,7 +10374,7 @@ reference "thm:TAX_Lemma1"
 \begin_inset Formula $1\leq j\leq i-1.$
 \end_inset
 
-A 
+ A 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:TAX_18"
@@ -10514,10 +10514,32 @@ reference "eq:TAX_16"
 \end_inset
 
  mátrix definit, 
-\begin_inset Formula $b-stabilis$
-\end_inset
-
--nak nevezezzük.
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+b-stabilis
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang magyar
+nak nevezezzük.
  Ha a 
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
@@ -10536,10 +10558,36 @@ key "BroydenNewTaxonomy"
 \end_inset
 
  mátrix definit, 
-\begin_inset Formula $\omega-stabilis$
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\omega$
 \end_inset
 
--nak nevezzük.
+-stabilis
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang magyar
+nak nevezzük.
  Így a konjugált gradiens algoritmusok kétféle numerikus instabilitása a
  
 \begin_inset Formula $\boldsymbol{G}$
@@ -10596,11 +10644,11 @@ reference "eq:TAX_14"
 
 \end_inset
 
-ahol 
+ahol az 
 \begin_inset Formula $\alpha_{i}$
 \end_inset
 
- és 
+ és a 
 \begin_inset Formula $\beta_{i+1}$
 \end_inset
 
@@ -10638,7 +10686,7 @@ reference "eq:TAX_13"
 \begin_inset Formula $\boldsymbol{w}_{j}$
 \end_inset
 
- generátor vektorokból számolva, 
+ generátorvektorokból számolva, 
 \begin_inset Formula $1\leq j\leq i$
 \end_inset
 
@@ -10679,7 +10727,7 @@ reference "eq:TAX_8"
 \begin_inset Formula $\boldsymbol{p}_{j}$
 \end_inset
 
- vektor konjugáltsága miatt, 
+ vektorok konjugáltsága miatt, 
 \begin_inset Formula $\boldsymbol{S}_{j}^{T}\boldsymbol{G}\boldsymbol{p}_{i}=0$
 \end_inset
 
@@ -10735,7 +10783,7 @@ Ha a
 \begin_inset Formula $\boldsymbol{w}_{j}$
 \end_inset
 
- generátor vektorokat a 
+ generátorvektorokat a 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:TAX_20"
@@ -10839,7 +10887,7 @@ key "Ashby"
 
 \end_inset
 
-, 
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenNewTaxonomy"
@@ -11306,11 +11354,7 @@ magyar?
 
 \end_inset
 
-módszer 
-\begin_inset Formula $\boldsymbol{b}$
-\end_inset
-
--stabilis és 
+módszer b-stabilis és 
 \begin_inset Formula $\omega$
 \end_inset
 
@@ -11337,11 +11381,8 @@ módszer
 \end_inset
 
  együtthatómátrix esetén nem ajánlott.
- A 3-as módszer, a prekondicionált konjugált gradiens módszer 
-\begin_inset Formula $\boldsymbol{b}$
-\end_inset
-
--stabilis és 
+ A 3-as módszer, a prekondicionált konjugált gradiens módszer b-stabilis
+ és 
 \begin_inset Formula $\omega$
 \end_inset
 
@@ -11778,8 +11819,7 @@ reference "eq:TAX_10"
 \begin_inset Formula $\boldsymbol{p}_{i}^{T}\boldsymbol{g}_{i}$
 \end_inset
 
--t, *lásd pl.
- ref*, de ez numerikusan nem kívánatos 
+-t, de ez numerikusan nemkívánatos 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenNewTaxonomy"
@@ -12000,7 +12040,7 @@ key "BroydenNewTaxonomy"
 \begin_inset Formula $\boldsymbol{x}_{i}$
 \end_inset
 
- vektorokból számoltak egy közelítő vektor sorozatot az 
+ vektorokból számoltak egy közelítő vektorsorozatot az 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:TAX_1"
@@ -12024,7 +12064,7 @@ key "BroydenNewTaxonomy"
 \begin_inset Formula $\boldsymbol{x}_{i+1}$
 \end_inset
 
- vektor kiszámításához, tekinthetünk a módszerre mint egy implicit look-ahead
+ vektor kiszámításához, tekinthetünk a módszerre mint egy implicit előretekintő
  módszerre 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -12045,7 +12085,8 @@ Ha az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- együttható mátrix nemszimmetrikus, az 1-6 módszereket nem tudjuk alkalmazni
+ együtthatómátrix nemszimmetrikus, az 1-6 módszereket nem tudjuk alkalmazni.
+ Az 1-es módszert adja azonban a 7-es módszert és még két másik variációt.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -12380,11 +12421,7 @@ key "KrylovBook"
 
 \begin_layout Standard
 \noindent
-A 7-es módszer, annak ellenére, hogy 
-\begin_inset Formula $\boldsymbol{b}$
-\end_inset
-
--stabilis és 
+A 7-es módszer, annak ellenére, hogy b-stabilis és 
 \begin_inset Formula $\omega$
 \end_inset
 
@@ -12394,12 +12431,12 @@ A 7-es módszer, annak ellenére, hogy
 
  mátrix kondíciószáma a négyzete az 1-6 módszerek kondíciószámának, és emiatt
  gyakran lassú a konvergencia.
- A *Craig's method-ra* hasonlóak igazak, de még a 6-os módszerhez hasonlóan
- az 
+ A 8-as módszerre hasonlóak igazak, de ennél a módszernél a 6-os módszerhez
+ hasonlóan az 
 \begin_inset Formula $\boldsymbol{A}^{-1}$
 \end_inset
 
- mátrixra is szükség van az 
+ mátrixra is szükség van még, az 
 \begin_inset Formula $\boldsymbol{x}_{i}$
 \end_inset
 
@@ -12431,7 +12468,14 @@ reference "eq:TAX_16"
 \begin_inset Formula $\left\{ \boldsymbol{x}_{i}\right\} $
 \end_inset
 
- sorozat számolható.
+ sorozat számolható 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  A 9-es módszer egy speciális esete az általánosabb Young és Jea módszernek
  
 \begin_inset CommandInset citation
@@ -12688,7 +12732,6 @@ ahol
 \end_inset
 
 .
- *(Lásd Hegedüs, aki elössz...)*.
  Ebben az esetben meg lehet mutatni 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -12753,7 +12796,6 @@ key "BroydenNewTaxonomy"
 \end_inset
 
 .
- *The proof is similar to that used to establish equation (16) and is omitted.*
  Hasonlóan kaphatjuk a 
 \begin_inset Formula $\boldsymbol{v}_{i+1}$
 \end_inset
@@ -13119,7 +13161,7 @@ key "BroydenNewTaxonomy"
 
 \begin_layout Standard
 \noindent
-Ezeknél a módszereknél, mint az 1-es és 2-es módszernél, ha a 
+Ezeknél a módszereknél, mint az 1-es és 2-es módszereknél, ha a 
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
@@ -13128,30 +13170,18 @@ Ezeknél a módszereknél, mint az 1-es és 2-es módszernél, ha a
 \end_inset
 
  mátrix nem definit, a stabilitás nem garantált.
- A 10-es módszer a Lánczos-féle bikonjugált gradiens módszer, ami se nem
- 
-\begin_inset Formula $\boldsymbol{b}$
-\end_inset
-
--stabilis, se nem 
+ A 10-es módszer a Lanczos-féle bikonjugált gradiens módszer, ami se nem
+ b-stabilis, se nem 
 \begin_inset Formula $\omega$
 \end_inset
 
 -stabilis.
- A 11-es Hegedüs féle módszer 
+ A 11-es Hegedüs-féle módszer 
 \begin_inset Formula $\omega$
 \end_inset
 
--stabilis, de nem 
-\begin_inset Formula $\boldsymbol{b}$
-\end_inset
-
--stabilis.
- A 12-es módszer a 2-es módszer általánosítása, és 
-\begin_inset Formula $\boldsymbol{b}$
-\end_inset
-
--stabilis, ha az 
+-stabilis, de nem b-stabilis.
+ A 12-es módszer a 2-es módszer általánosítása, és b-stabilis, ha az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -13214,7 +13244,11 @@ ahol
 \end_inset
 
 -et úgy választjuk, hogy kielégítse az 
-\begin_inset Formula $\boldsymbol{u}_{i-1}^{T}\boldsymbol{G}_{11}\boldsymbol{u}_{i+1}=\boldsymbol{u}_{i}^{T}\boldsymbol{G}_{11}\boldsymbol{u}_{i+1}=0$
+\begin_inset Formula 
+\[
+\boldsymbol{u}_{i-1}^{T}\boldsymbol{G}_{11}\boldsymbol{u}_{i+1}=\boldsymbol{u}_{i}^{T}\boldsymbol{G}_{11}\boldsymbol{u}_{i+1}=0
+\]
+
 \end_inset
 
  egyenlőséget, ha a 
@@ -13229,7 +13263,11 @@ reference "eq:TAX_35"
 \end_inset
 
  szerint adott, vagy a 
-\begin_inset Formula $\boldsymbol{v}_{i-1}^{T}\boldsymbol{G}_{21}\boldsymbol{u}_{i+1}=\boldsymbol{v}_{i}^{T}\boldsymbol{G}_{21}\boldsymbol{u}_{i+1}=0$
+\begin_inset Formula 
+\[
+\boldsymbol{v}_{i-1}^{T}\boldsymbol{G}_{21}\boldsymbol{u}_{i+1}=\boldsymbol{v}_{i}^{T}\boldsymbol{G}_{21}\boldsymbol{u}_{i+1}=0
+\]
+
 \end_inset
 
  egyenlőséget, ha a 
@@ -13252,7 +13290,7 @@ reference "eq:TAX_36"
 \begin_inset Formula $\boldsymbol{u}_{1}$
 \end_inset
 
- tetszőleges.
+ tetszőleges vektor.
  A 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -13820,8 +13858,8 @@ A 15-ös módszer érdekes tulajdonsága, hogy az
 \end_inset
 
 -re.
- A 17-es módszereknél nehézségekbe ütközünk, mint a 6-os és 16-os módszernél,
- és ezeket hasonlóan is lehet megoldani 
+ A 17-es módszereknél ugyanolyan nehézségekbe ütközünk, mint a 6-os és 16-os
+ módszernél, és ezeket hasonlóan is lehet megoldani 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenNewTaxonomy"
@@ -13833,7 +13871,7 @@ key "BroydenNewTaxonomy"
 \end_layout
 
 \begin_layout Standard
-A módszerek utolsó csoportja tulajdonképpen az általánosított Lánczos-féle
+A módszerek utolsó csoportja tulajdonképpen az általánosított Lanczos-féle
  algoritmus 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -14288,7 +14326,7 @@ Megmutattuk, hogy nem kevesebb mint tizenkilenc konjugált gradiens algoritmust
  mód egyikével definiáljuk.
  Az egyik választás két-tagú (Hestenes-Stiefel) rekurrens módszerekhez vezetett,
  a másik 3-tagú (Lanczos) módszerekhez vezetett.
- A két-tagú formulák stabilitása garantált, ha 
+ A 2-tagú módszerek stabilitása garantált, ha 
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
@@ -14304,7 +14342,7 @@ key "BroydenNewTaxonomy"
 
 \end_inset
 
- csak 2 vagy 3-tagú rekurrens formulájú módszerket
+ csak 2 vagy 3-tagú rekurrens módszerket
 \begin_inset Note Note
 status open
 
@@ -14317,7 +14355,7 @@ magyar?
  vett be.
  Így fontos módszerek, mint pl.
  a GCR, GMRES, ORTHOMIN kimaradtak, és pl.
- az ORTHODIR módszer csak a teljesen szimmetrikus formájában szerepel.
+ az ORTHODIR módszer csak a teljesen szimmetrikus formájában szerepelt.
  
 \begin_inset Note Note
 status open
