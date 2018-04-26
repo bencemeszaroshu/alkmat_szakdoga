@@ -9345,7 +9345,7 @@ key "BroydenNewTaxonomy"
 \end_inset
 
 .
- Hestenes és Siefel eredeti módszere 
+ Hestenes és Siefel eredeti 1952-es módszere 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Orig_cg"
@@ -9356,9 +9356,10 @@ key "Orig_cg"
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- együtthatómátrix szimmetrikus és pozitív definit, de már rengetek származtatott
- módszer született, amelyek nem csak szimmetrikus indefinit együtthatómátrixok
- esetén, de nemszimmetrikus együtthatómátrixok esetén is alkalmazható 
+ együtthatómátrix szimmetrikus és pozitív definit.
+ Az eredeti módszer óta már rengetek származtatott módszer született, amelyek
+ nem csak szimmetrikus indefinit együtthatómátrixok esetén, de nemszimmetrikus
+ együtthatómátrixok esetén is alkalmazható 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenNewTaxonomy"
@@ -9413,10 +9414,32 @@ key "Faber_and_Manteuffel"
 \end_inset
 
  mátrixot 
-\begin_inset Formula $B-normális(s)$
-\end_inset
-
--nek nevezik, ha a 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+B-normális(s
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang magyar
+)-nek nevezik, ha a 
 \begin_inset Formula $\boldsymbol{B}$
 \end_inset
 
@@ -9710,8 +9733,8 @@ B-normalitás
 \noun default
 \color inherit
 \lang magyar
-, de még elég általános, hogy a standard módszereket is tartalmazza a rendszerta
-n 
+, de ahhoz még elég általános, hogy a standard módszereket is tartalmazza
+ a rendszertan 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenNewTaxonomy"
@@ -9752,8 +9775,8 @@ key "BroydenNewTaxonomy"
  mátrixokon kívűl még szükségünk van bizonyos vektorokra, a generátor vektorokra
 , amelyek minden iterációval változnak.
  Ezeket kétféleképpen választhatjuk, az egyik választás vezet a 2-tagú (Hestenes
--Stiefel) rekurrens módszerekhez, míg a másik választás a 3-tagú (Lánczos)
- módszerekhez 
+-Stiefel) rekurrens módszerekhez, míg a másik választás a 3-tagú rekurrens
+ (Lánczos) módszerekhez 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenNewTaxonomy"
