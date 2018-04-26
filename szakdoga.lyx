@@ -9857,7 +9857,7 @@ ahol
 
 \end_inset
 
-manifold felett, ahol 
+hipersík felett, ahol 
 \begin_inset Formula $z$
 \end_inset
 
@@ -10143,7 +10143,7 @@ reference "eq:TAX_6"
 
 \end_inset
 
- egyenlőségben definiált manifold felett.
+ egyenlőségben definiált hipersík felett.
  Legyen 
 \begin_inset Formula $\boldsymbol{g}_{i+1}$
 \end_inset
@@ -11932,7 +11932,7 @@ ahol, mivel az
 
 \end_inset
 
- manifold felett, a 
+ hipersík felett, a 
 \series bold
 
 \begin_inset Formula $\boldsymbol{G}$
@@ -14872,14 +14872,14 @@ idempotens nincs definiálva
 
 \end_inset
 
-A konjugált gradiens módszer folyamatosan növekvő dimenziójú manifoldokon
+A konjugált gradiens módszer folyamatosan növekvő dimenziójú hipersíkokon
  iterál a 
 \begin_inset Formula $\phi$
 \end_inset
 
- függvény szintezésével, ahol az előző manifoldok rész-manifoldjai az utolsónak.
+ függvény szintezésével, ahol az előző hipersíkok rész-hipersíkjai az utolsónak.
  A módszerhez, hogy számításilag életképes legyen, szükségszerű, hogy a
- szintezés szekvenciálisan történjen, ezért kell a manifoldokat alkotó vektorokn
+ szintezés szekvenciálisan történjen, ezért kell a hipersíkokat alkotó vektorokn
 ak konjugáltnak lenniük.
  
 \begin_inset Note Note
