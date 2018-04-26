@@ -10316,7 +10316,7 @@ reference "eq:TAX_11"
 \end_inset
 
 ahol 
-\begin_inset Formula $\gamma_{j}=\frac{\boldsymbol{p}_{j}^{T}\boldsymbol{g}_{j}}{\boldsymbol{p}_{j}^{T}\boldsymbol{G}\boldsymbol{p}_{j}}$
+\begin_inset Formula $\gamma_{j}=\boldsymbol{p}_{j}^{T}\boldsymbol{g}_{j}/\boldsymbol{p}_{j}^{T}\boldsymbol{G}\boldsymbol{p}_{j}$
 \end_inset
 
 .
