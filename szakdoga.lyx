@@ -9447,7 +9447,7 @@ reference "eq:BlCG_Ax=b"
 
  alakúra alakítjuk.
  Ez azonban megduplázza a számítási igényt minden egyes iterációnál, és
- a mátrix kondíció számát a négyzetére emeli, miközben nem javítja a numerikus
+ a mátrix kondíciószámát a négyzetére emeli, miközben nem javítja a numerikus
  stabilitást.
  
 \end_layout
@@ -10387,7 +10387,7 @@ ahol
  függvény stacionárius az
 \begin_inset Formula 
 \begin{equation}
-x=x_{1}+S_{i}z\label{eq:TAX_6}
+\boldsymbol{x}=\boldsymbol{x}_{1}+\boldsymbol{S}_{i}\boldsymbol{z}\label{eq:TAX_6}
 \end{equation}
 
 \end_inset
@@ -10688,16 +10688,6 @@ reference "eq:TAX_6"
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-jo ez??
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Proof
@@ -11379,12 +11369,9 @@ Szimmetrikus mátrixok
 
 \begin_layout Standard
 A fő módszerek az 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ax=b crossref
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_1"
 
 \end_inset
 
@@ -11694,7 +11681,9 @@ Ezek a
 \begin_inset Formula $\boldsymbol{p}_{i}$
 \end_inset
 
- vektorra 2-tagú 
+ vektorra 2-tagú rekurrens módszert adnak.
+ Az első kettő, az eredeti konjugált gradiens módszer és a conjugate residual
+ 
 \begin_inset Note Note
 status open
 
@@ -11704,9 +11693,7 @@ magyar?
 
 \end_inset
 
- formulát adnak.
- Az első kettő, az eredeti konjugált gradiens módszer és a conjugate residual
- módszer 
+módszer 
 \begin_inset Formula $\boldsymbol{b}$
 \end_inset
 
@@ -11737,17 +11724,7 @@ magyar?
 \end_inset
 
  együtthatómátrix esetén nem ajánlott.
- A 3-as módszer, a prekondicionált 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-ez így valszeg nem jó magyarul
-\end_layout
-
-\end_inset
-
- konjugált gradiens módszer 
+ A 3-as módszer, a prekondicionált konjugált gradiens módszer 
 \begin_inset Formula $\boldsymbol{b}$
 \end_inset
 
@@ -11782,12 +11759,12 @@ magyar?
 \begin_inset Formula $\boldsymbol{KG}$
 \end_inset
 
- mátrix kondíció számát csökkentse, ezzel javítva a módszer konvergenciáját.
+ mátrix kondíciószámát csökkentse, ezzel javítva a módszer konvergenciáját.
  A fejezet több másik algoritmusát is prekondicionálhatjuk a 
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
- mátrix módosításával, de erre a a fejezetben nem térünk ki.
+ mátrix módosításával, de erre külön nem térünk ki.
  
 \end_layout
 
@@ -11796,11 +11773,11 @@ A
 \begin_inset Formula $\boldsymbol{p}_{i}$
 \end_inset
 
- vektorra 3-tagú formulát adó módszerek, ha az 
+ vektorra 3-tagú rekurrens módszert adnak a következők, ha az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- együtthatómátrix szimmetrikus, a következők.
+ együtthatómátrix szimmetrikus.
 \end_layout
 
 \begin_layout Standard
@@ -12104,7 +12081,14 @@ A 4-es és 5-ös módszer az 1-es és 2-es módszer 3-tagú változata.
 \begin_inset Formula $\boldsymbol{x}_{i+1}$
 \end_inset
 
- vektorok kiszámítása, mert a *7*-es egyenlőségben szerepel 
+ vektorok kiszámítása, mert a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_7"
+
+\end_inset
+
+ egyenlőségben szerepel 
 \begin_inset Formula $\boldsymbol{g}_{i}=\boldsymbol{x}_{1}-\boldsymbol{A}^{-1}\boldsymbol{b}$
 \end_inset
 
@@ -12123,24 +12107,43 @@ A 4-es és 5-ös módszer az 1-es és 2-es módszer 3-tagú változata.
 
 , ahol
 \begin_inset Formula 
-\[
-\boldsymbol{r}_{i}=\boldsymbol{A}\boldsymbol{x}_{i}-\boldsymbol{b},
-\]
+\begin{equation}
+\boldsymbol{r}_{i}=\boldsymbol{A}\boldsymbol{x}_{i}-\boldsymbol{b},\label{eq:TAX_28}
+\end{equation}
 
 \end_inset
 
-és használjunk egy indirekt számítást, hogy megkapjuk a *10*-es egyenlőségben
- szereplő 
+mradéktag, és használjunk egy indirekt számítást, hogy megkapjuk a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_10"
+
+\end_inset
+
+ egyenlőségben szereplő 
 \begin_inset Formula $\boldsymbol{p}_{i}^{T}\boldsymbol{g}_{i}$
 \end_inset
 
 -t, *lásd pl.
  ref*, de ez numerikusan nem kívánatos, lásd *ref*.
- Azonban, ha a 
+ Ha a 
 \begin_inset Formula $\boldsymbol{p}_{j}$
 \end_inset
 
- vektorokat a *21*-es egyenlőség felhasználásával számoljuk, akkor a *8*-as
+ vektorokat a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_21"
+
+\end_inset
+
+ egyenlőség felhasználásával számoljuk, akkor a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_8"
+
+\end_inset
+
  egyenlőségből, és a 
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
@@ -12149,7 +12152,7 @@ A 4-es és 5-ös módszer az 1-es és 2-es módszer 3-tagú változata.
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
- mátrixok megfelelő értékét felhasználva,
+ mátrixok megfelelő értékeit felhasználva,
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{A}\boldsymbol{S}_{i}=\boldsymbol{S}_{i+1}\boldsymbol{T}_{i+1}\,,\label{eq:TAX_29}
@@ -12234,9 +12237,9 @@ reference "eq:TAX_31"
 
  egyenlőségekből
 \begin_inset Formula 
-\[
-\boldsymbol{A}\boldsymbol{S}_{i}=\boldsymbol{Y}_{i}\boldsymbol{U}_{i}\,,
-\]
+\begin{equation}
+\boldsymbol{A}\boldsymbol{S}_{i}=\boldsymbol{Y}_{i}\boldsymbol{U}_{i}\,,\label{eq:TAX_32}
+\end{equation}
 
 \end_inset
 
@@ -12255,9 +12258,9 @@ ahol, mivel az
 
  függvényt az
 \begin_inset Formula 
-\[
-\boldsymbol{x}=\boldsymbol{x}_{1}+\boldsymbol{Y}_{i}\boldsymbol{z}
-\]
+\begin{equation}
+\boldsymbol{x}=\boldsymbol{x}_{1}+\boldsymbol{Y}_{i}\boldsymbol{z}\label{eq:TAX_33}
+\end{equation}
 
 \end_inset
 
@@ -12277,12 +12280,39 @@ ahol, mivel az
 \begin_inset Formula $\boldsymbol{g}_{i}$
 \end_inset
 
- vektor megfelelő értékeit a *7*-es egyenlőségbe helyettesítve, a *11, 28
- és 32*-es egyenlőségből kapjuk, hogy
+ vektor megfelelő értékeit a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_7"
+
+\end_inset
+
+ egyenlőségbe helyettesítve, a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_11"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_28"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_32"
+
+\end_inset
+
+ egyenlőségből kapjuk, hogy
 \begin_inset Formula 
-\[
-\boldsymbol{x}_{i+1}=\boldsymbol{x}_{i}-\boldsymbol{Y}_{i}(\boldsymbol{Y}_{i}^{T}\boldsymbol{Y}_{i})^{-1}\boldsymbol{U}_{i}^{-T}\boldsymbol{S}_{i}^{T}\boldsymbol{r}_{1}\,.
-\]
+\begin{equation}
+\boldsymbol{x}_{i+1}=\boldsymbol{x}_{i}-\boldsymbol{Y}_{i}(\boldsymbol{Y}_{i}^{T}\boldsymbol{Y}_{i})^{-1}\boldsymbol{U}_{i}^{-T}\boldsymbol{S}_{i}^{T}\boldsymbol{r}_{1}\,.\label{eq:TAX_34}
+\end{equation}
 
 \end_inset
 
@@ -12295,8 +12325,14 @@ Ez lényegében az SYMMLQ módszere Paige-nek és Saunders-nek *ref*.
 \begin_inset Formula $\boldsymbol{x}_{i}$
 \end_inset
 
- vektorokból számoltak egy közelítő vektor sorozatot az *Ax=b* egyenletrendszer
- megoldására, számos más fontos numerikus finomítás mellett.
+ vektorokból számoltak egy közelítő vektor sorozatot az 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_1"
+
+\end_inset
+
+ egyenletrendszer megoldására, számos más fontos numerikus finomítás mellett.
  Az algoritmusukat először Fletcher használta mint mimum-hiba algoritmus
  *ref*, illetve mivel szükség van a 
 \begin_inset Formula $\boldsymbol{p}_{i+1}$
@@ -12306,14 +12342,7 @@ Ez lényegében az SYMMLQ módszere Paige-nek és Saunders-nek *ref*.
 \begin_inset Formula $\boldsymbol{x}_{i+1}$
 \end_inset
 
- vektor kiszámításához, tekinthetünk a módszerre mint egy implicit 
-\begin_inset Quotes pld
-\end_inset
-
-look-ahead
-\begin_inset Quotes prd
-\end_inset
-
+ vektor kiszámításához, tekinthetünk a módszerre mint egy implicit look-ahead
  módszerre.
  
 \end_layout
@@ -12641,24 +12670,31 @@ A 7-es módszer, annak ellenére, hogy
 \end_inset
 
  vektorok kiszámításához.
- Ezen túlléphetünk, ha megszorozzuk balról a *16*-os egyenlőséget az 
+ Ezen túlléphetünk, ha megszorozzuk balról a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_16"
+
+\end_inset
+
+ egyenlőséget az 
 \begin_inset Formula $\boldsymbol{A}^{-T}$
 \end_inset
 
  mátrixszal, így nem a 
-\begin_inset Formula $\{\boldsymbol{p}_{i}\}$
+\begin_inset Formula $\left\{ \boldsymbol{p}_{i}\right\} $
 \end_inset
 
- sorozatot, hanem egy 
-\begin_inset Formula $\{\boldsymbol{q}_{i}\}$
+ vektorsorozatot, hanem egy 
+\begin_inset Formula $\left\{ \boldsymbol{q}_{i}\right\} $
 \end_inset
 
- sorozatot generálva, ahol 
+ vektorsorozatot generálva, ahol 
 \begin_inset Formula $\boldsymbol{q}_{i}=\boldsymbol{A}^{-T}\boldsymbol{p}_{i}$
 \end_inset
 
 , amikből az 
-\begin_inset Formula $\{\boldsymbol{x}_{i}\}$
+\begin_inset Formula $\left\{ \boldsymbol{x}_{i}\right\} $
 \end_inset
 
  sorozat számolható.
@@ -12686,26 +12722,26 @@ A 7-es módszer, annak ellenére, hogy
 \begin_layout Standard
 Mivel a fenti módszerek egyike se teljesen kielégítő nemszimmetrikus mátrixok
  esetén, nézzük meg a speciális esetet, amikor a 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  mátrix alakja 
 \begin_inset Formula 
-\[
+\begin{equation}
 \boldsymbol{G}=\begin{bmatrix}\boldsymbol{G}_{11} & \boldsymbol{0}\\
 \boldsymbol{0} & \boldsymbol{G}_{22}
-\end{bmatrix}\,,
-\]
+\end{bmatrix}\,,\label{eq:TAX_35}
+\end{equation}
 
 \end_inset
 
 vagy
 \begin_inset Formula 
-\[
+\begin{equation}
 \boldsymbol{G}=\begin{bmatrix}\boldsymbol{0} & \boldsymbol{G}_{12}\\
 \boldsymbol{G}_{21} & \boldsymbol{0}
-\end{bmatrix}\,.
-\]
+\end{bmatrix}\,.\label{eq:TAX_36}
+\end{equation}
 
 \end_inset
 
@@ -12719,40 +12755,47 @@ Innen nem nehéz megmutatni *ref 13, 29*, hogy ha a
 
  mátrix alakja
 \begin_inset Formula 
-\[
+\begin{equation}
 \boldsymbol{W}_{j}=\begin{bmatrix}\boldsymbol{w}_{j1} & \boldsymbol{0}\\
 \boldsymbol{0} & \boldsymbol{w}_{j2}
-\end{bmatrix}\,,\qquad j=1,2,...,i,
-\]
+\end{bmatrix}\,,\qquad j=1,2,...,i,\label{eq:TAX_37}
+\end{equation}
 
 \end_inset
 
 akkor
 \begin_inset Formula 
-\[
+\begin{equation}
 \boldsymbol{Q}_{i}=\begin{bmatrix}\boldsymbol{Q}_{i1} & \boldsymbol{0}\\
 \boldsymbol{0} & \boldsymbol{Q}_{i2}
-\end{bmatrix}
-\]
+\end{bmatrix}\label{eq:TAX_38}
+\end{equation}
 
 \end_inset
 
 alakú, és
 \begin_inset Formula 
-\[
-\boldsymbol{P}_{i+1}=\begin{bmatrix}\boldsymbol{u}_{i+1} & 0\\
-0 & \boldsymbol{v}_{i+1}
-\end{bmatrix}
-\]
+\begin{equation}
+\boldsymbol{P}_{i+1}=\begin{bmatrix}\boldsymbol{u}_{i+1} & \boldsymbol{0}\\
+\boldsymbol{0} & \boldsymbol{v}_{i+1}
+\end{bmatrix}\label{eq:TAX_39}
+\end{equation}
 
 \end_inset
 
 alakú.
- Így a *14*-es egyenlőségből
+ Így a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_14"
+
+\end_inset
+
+ egyenlőségből
 \begin_inset Formula 
-\[
-\boldsymbol{u}_{i+1}=\boldsymbol{Q}_{i1}^{T}\boldsymbol{w}_{i+1,1}\,.
-\]
+\begin{equation}
+\boldsymbol{u}_{i+1}=\boldsymbol{Q}_{i1}^{T}\boldsymbol{w}_{i+1,1}\,.\label{eq:TAX_40}
+\end{equation}
 
 \end_inset
 
@@ -12765,7 +12808,14 @@ Hasonlóan kaphatjuk a
 \end_layout
 
 \begin_layout Standard
-Úgy, mint a *14-es* egyenlőség esetében, a 
+Úgy, mint a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_14"
+
+\end_inset
+
+ egyenlőség esetében, a 
 \begin_inset Formula $\boldsymbol{W}_{i+1}$
 \end_inset
 
@@ -12773,19 +12823,19 @@ Hasonlóan kaphatjuk a
  és itt is két eset lehetséges *13, 29 ref*.
  Az első, amikor
 \begin_inset Formula 
-\[
-\boldsymbol{W}_{j}=\boldsymbol{K}\boldsymbol{F}_{j}\,
-\]
+\begin{equation}
+\boldsymbol{W}_{j}=\boldsymbol{K}\boldsymbol{F}_{j}\,\label{eq:TAX_41}
+\end{equation}
 
 \end_inset
 
 alakú, ahol
 \begin_inset Formula 
-\[
+\begin{equation}
 \boldsymbol{F}_{j}=\begin{bmatrix}\boldsymbol{g}_{j1} & \boldsymbol{0}\\
 \boldsymbol{0} & \boldsymbol{g}_{j2}
-\end{bmatrix}\,.
-\]
+\end{bmatrix}\,.\label{eq:TAX_42}
+\end{equation}
 
 \end_inset
 
@@ -12801,28 +12851,49 @@ A
 \begin_inset Formula $\boldsymbol{g}_{j}$
 \end_inset
 
- vektornak a *11*, *35* és *36* egyenlőségek miatt.
+ vektornak a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_11"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_35"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_36"
+
+\end_inset
+
+ egyenlőségek miatt.
  A 
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  mátrix alakja
 \begin_inset Formula 
-\[
+\begin{equation}
 \boldsymbol{K}=\begin{bmatrix}\boldsymbol{K}_{11} & \boldsymbol{0}\\
 \boldsymbol{0} & \boldsymbol{K}_{22}
-\end{bmatrix}\,,
-\]
+\end{bmatrix}\,,\label{eq:TAX_43}
+\end{equation}
 
 \end_inset
 
 vagy
 \begin_inset Formula 
-\[
+\begin{equation}
 \boldsymbol{K}=\begin{bmatrix}\boldsymbol{0} & \boldsymbol{K}_{12}\\
 \boldsymbol{K}_{21} & \boldsymbol{0}
-\end{bmatrix}\,,
-\]
+\end{bmatrix}\,,\label{eq:TAX_44}
+\end{equation}
 
 \end_inset
 
@@ -12848,11 +12919,18 @@ ahol
 
 .
  *(Lásd Hegedüs, aki elössz...)*.
- Ebben az esetben meg lehet mutatni *ref 13, 19*, hogy a *40*-es egyenlőségből
+ Ebben az esetben meg lehet mutatni *ref 13, 19*, hogy a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_40"
+
+\end_inset
+
+ egyenlőségből
 \begin_inset Formula 
-\[
-\boldsymbol{u}_{i+1}=\boldsymbol{w}_{i+1,1}-\boldsymbol{u}_{i}\alpha_{i1}\,,
-\]
+\begin{equation}
+\boldsymbol{u}_{i+1}=\boldsymbol{w}_{i+1,1}-\boldsymbol{u}_{i}\alpha_{i1}\,,\label{eq:TAX_45}
+\end{equation}
 
 \end_inset
 
@@ -12868,7 +12946,14 @@ ahol
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- mátrix *35* szerint adott, vagy a 
+ mátrix 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_35"
+
+\end_inset
+
+ szerint adott, vagy a 
 \begin_inset Formula $\boldsymbol{v}_{i}^{T}\boldsymbol{G}_{21}\boldsymbol{u}_{i+1}=0$
 \end_inset
 
@@ -12876,7 +12961,14 @@ ahol
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- mátrix *36* szerint adott.
+ mátrix 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_36"
+
+\end_inset
+
+ szerint adott.
  *The proof is similar to that used to establish equation (16) and is omitted.*
  Hasonlóan kaphatjuk a 
 \begin_inset Formula $\boldsymbol{v}_{i+1}$
@@ -13217,7 +13309,7 @@ Ezeknél a módszereknél, mint az 1-es és 2-es módszernél, ha a
 \end_inset
 
  mátrix nem definit, a stabilitás nem garantált.
- A 10-es módszer a Lánczos féle bikonjugált gradiens módszer, ami se nem
+ A 10-es módszer a Lánczos-féle bikonjugált gradiens módszer, ami se nem
  
 \begin_inset Formula $\boldsymbol{b}$
 \end_inset
@@ -13249,21 +13341,27 @@ Ezeknél a módszereknél, mint az 1-es és 2-es módszernél, ha a
 \end_layout
 
 \begin_layout Standard
-Az algoritmusok következő csoportját úgy kapjuk, hogy a *41-es* egyenlőséget
- a
+Az algoritmusok következő csoportját úgy kapjuk, hogy a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_41"
+
+\end_inset
+
+ egyenlőséget a
 \begin_inset Formula 
-\[
-\boldsymbol{W}_{j}=\boldsymbol{K}\boldsymbol{G}\boldsymbol{P}_{j-1}
-\]
+\begin{equation}
+\boldsymbol{W}_{j}=\boldsymbol{K}\boldsymbol{G}\boldsymbol{P}_{j-1}\label{eq:TAX_46}
+\end{equation}
 
 \end_inset
 
 egyenlőségre cseréljük.
  Ekkor meg lehet mutatni *ref 13*, hogy
 \begin_inset Formula 
-\[
-\boldsymbol{u}_{i+1}=\boldsymbol{w}_{i+1,1}-\boldsymbol{u}_{i}\alpha_{i1}-\boldsymbol{u}_{i-1}\beta_{i-1,1}\,,
-\]
+\begin{equation}
+\boldsymbol{u}_{i+1}=\boldsymbol{w}_{i+1,1}-\boldsymbol{u}_{i}\alpha_{i1}-\boldsymbol{u}_{i-1}\beta_{i-1,1}\,,\label{eq:TAX_47}
+\end{equation}
 
 \end_inset
 
@@ -13283,15 +13381,29 @@ ahol
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- mátrix *35* szerint adott, vagy a 
+ mátrix 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_35"
+
+\end_inset
+
+ szerint adott, vagy a 
 \begin_inset Formula $\boldsymbol{v}_{i-1}^{T}\boldsymbol{G}_{21}\boldsymbol{u}_{i+1}=\boldsymbol{v}_{i}^{T}\boldsymbol{G}_{21}\boldsymbol{u}_{i+1}=0$
 \end_inset
 
  egyenlőséget, ha a 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- mátrix *36* szerint adott.
+ mátrix 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_36"
+
+\end_inset
+
+ szerint adott.
  Úgy, mint a 4-6-os módszereknél, 
 \begin_inset Formula $\boldsymbol{u}_{0}$
 \end_inset
@@ -13301,7 +13413,14 @@ ahol
 \end_inset
 
  tetszőleges.
- A *47*-hez hasonló egyenlőségből kaphatjuk a 
+ A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_47"
+
+\end_inset
+
+ egyenlőséghez hasonló egyenlőségből kaphatjuk a 
 \begin_inset Formula $\boldsymbol{v}_{i+1}$
 \end_inset
 
@@ -13803,7 +13922,7 @@ A 15-ös módszer érdekes tulajdonsága, hogy az
 \begin_inset Formula $(\boldsymbol{A}^{T}\boldsymbol{A})^{-1}\boldsymbol{A}^{T}$
 \end_inset
 
--nek választva, az algoritmus változatlan és használható.
+ mátrixnak választva, az algoritmus változatlan és használható.
  A 14-es módszernek ugyanez a tulajdonsága.
  A 16-os módszer alkotja az alapját a QMR módszernek.
  Csak úgy, mint a SYMMLQ (módszer 6) esetén, a probléma a kvadratikus függvény
@@ -13812,34 +13931,22 @@ A 15-ös módszer érdekes tulajdonsága, hogy az
 \end_inset
 
 -re.
- A 17-es algoritmus új.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-még mindig? vagy 
-\begin_inset Quotes pld
-\end_inset
-
-Broyden szerint
-\begin_inset Quotes prd
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- Itt hasonló nehézségekbe ütközünk, mint a 6-os és 16-os módszernél, és
- ezeket hasonlóan is lehet megoldani.
+ A 17-es módszereknél nehézségekbe ütközünk, mint a 6-os és 16-os módszernél,
+ és ezeket hasonlóan is lehet megoldani.
  
 \end_layout
 
 \begin_layout Standard
-A módszerek utolsó csoportja tulajdonképpen az általánosított Lánczos féle
- algoritmus *lásd a (21)-es egyenlősget feljebb*.
- Legyen a *21-es* egyenlőségben a 
+A módszerek utolsó csoportja tulajdonképpen az általánosított Lánczos-féle
+ algoritmus.
+ Legyen a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_21"
+
+\end_inset
+
+ egyenlőségben a 
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
@@ -13847,7 +13954,21 @@ A módszerek utolsó csoportja tulajdonképpen az általánosított Lánczos fé
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
- mátrix a *35-ös* és a *44-es* egyenlőség szerint adott.
+ mátrix a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_35"
+
+\end_inset
+
+ és a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_44"
+
+\end_inset
+
+ egyenlőség szerint adott.
  Legyen 
 \begin_inset Formula $\boldsymbol{p}_{i}^{T}=\begin{bmatrix}\boldsymbol{u}_{i}^{T} & \boldsymbol{v}_{i}^{T}\end{bmatrix}$
 \end_inset
@@ -13861,12 +13982,18 @@ A módszerek utolsó csoportja tulajdonképpen az általánosított Lánczos fé
 \begin_inset Formula $\boldsymbol{v}_{1}=0$
 \end_inset
 
-, akkor a *21-es* egyenlőségből kivonva és a konjugáltságot megkövetelve
- kapjuk, hogy
+, akkor a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TAX_21"
+
+\end_inset
+
+ egyenlőségből kivonva, és a konjugáltságot megkövetelve kapjuk, hogy
 \begin_inset Formula 
-\[
-\boldsymbol{u}_{i+1}=\boldsymbol{K}_{12}\boldsymbol{G}_{22}\boldsymbol{v}_{i}-\boldsymbol{u}_{i-1}\beta_{i-1}
-\]
+\begin{equation}
+\boldsymbol{u}_{i+1}=\boldsymbol{K}_{12}\boldsymbol{G}_{22}\boldsymbol{v}_{i}-\boldsymbol{u}_{i-1}\beta_{i-1}\label{eq:TAX_48}
+\end{equation}
 
 \end_inset
 
@@ -13880,9 +14007,9 @@ A módszerek utolsó csoportja tulajdonképpen az általánosított Lánczos fé
 
 -re, és
 \begin_inset Formula 
-\[
-\boldsymbol{v}_{i+1}=\boldsymbol{K}_{21}\boldsymbol{G}_{11}\boldsymbol{u}_{i}-\boldsymbol{v}_{i-1}\delta_{i-1}
-\]
+\begin{equation}
+\boldsymbol{v}_{i+1}=\boldsymbol{K}_{21}\boldsymbol{G}_{11}\boldsymbol{u}_{i}-\boldsymbol{v}_{i-1}\delta_{i-1}\label{eq:TAX_49}
+\end{equation}
 
 \end_inset
 
