@@ -10809,14 +10809,14 @@ A kezdeti
  vektort választjuk, akkor az Orthodir algoritmust kapjuk 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "BroydenNewTaxonomy"
+key "Ashby"
 
 \end_inset
 
- 
+, 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Ashby"
+key "BroydenNewTaxonomy"
 
 \end_inset
 
@@ -10926,7 +10926,14 @@ reference "eq:TAX_1"
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- együtthatómátrix szimmetrikus, a következők.
+ együtthatómátrix szimmetrikus, a következők 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -11364,7 +11371,14 @@ A
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- együtthatómátrix szimmetrikus.
+ együtthatómátrix szimmetrikus 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -14246,8 +14260,8 @@ Megmutattuk, hogy nem kevesebb mint tizenkilenc konjugált gradiens algoritmust
 
  két szimmetrikus mátrixot választunk, és a generátorokat két különböző
  mód egyikével definiáljuk.
- Az egyik választás két-tagú (Hestenes-Stiefel) rekurrens forumulákhoz vezetett,
- a másik 3-tagú (Lanczos) formulákhoz vezetett.
+ Az egyik választás két-tagú (Hestenes-Stiefel) rekurrens módszerekhez vezetett,
+ a másik 3-tagú (Lanczos) módszerekhez vezetett.
  A két-tagú formulák stabilitása garantált, ha 
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
@@ -14257,11 +14271,7 @@ Megmutattuk, hogy nem kevesebb mint tizenkilenc konjugált gradiens algoritmust
 \end_inset
 
  mátrixok definitek.
- 
-\end_layout
-
-\begin_layout Standard
-Broyden a rendszertanába 
+ Broyden a rendszertanába 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenNewTaxonomy"
@@ -14283,14 +14293,11 @@ magyar?
  a GCR, GMRES, ORTHOMIN kimaradtak, és pl.
  az ORTHODIR módszer csak a teljesen szimmetrikus formájában szerepel.
  
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-IDE MAJD MÉG KELL KONKLUDÁLNI!
+itt még van ami kimaradt
 \end_layout
 
 \end_inset
