@@ -8921,7 +8921,7 @@ Ekkor
  A második eset, ha 
 \begin_inset Formula 
 \[
-\mu_{\min}=-\mu_{\min}<0.
+\mu_{\min}=-\left|\mu_{\min}\right|<0.
 \]
 
 \end_inset
@@ -8939,7 +8939,11 @@ ezért
 \end_inset
 
  minden 
-\begin_inset Formula $\omega\geq0$
+\begin_inset Formula $\omega<\frac{\lambda_{\min}}{\left|\mu_{\min}\right|}$
+\end_inset
+
+ és 
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
 \end_inset
 
  esetén.
@@ -8960,8 +8964,7 @@ key "BroydenSORkonvergencia"
 
 \end_inset
 
-.
- Legyen
+, legyen
 \begin_inset Formula 
 \[
 \boldsymbol{P}=(\boldsymbol{I}+\boldsymbol{L}^{T})(\boldsymbol{I}+\boldsymbol{L})-\boldsymbol{U}^{T}\boldsymbol{U},
