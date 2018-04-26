@@ -14833,7 +14833,7 @@ Függelék
 LatexCommand bibtex
 btprint "btPrintAll"
 bibfiles "szakdoga"
-options "bibtotoc,unsrt"
+options "bibtotoc,plain"
 
 \end_inset
 
