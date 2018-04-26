@@ -9997,8 +9997,14 @@ key "BroydenNewTaxonomy"
 \end_inset
 
 .
- Hestenes és Siefel eredeti módszere *ref* csak akkor alkalmazható, ha az
- 
+ Hestenes és Siefel eredeti módszere 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Orig_cg"
+
+\end_inset
+
+ csak akkor alkalmazható, ha az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
@@ -10103,9 +10109,31 @@ key "Faber_and_Manteuffel"
 \end_inset
 
  mátrixszorzat 
-\begin_inset Formula $B-normális(1)$
-\end_inset
-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+B-normális(1)
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang magyar
 , akkor a módszer véges lépésben leáll 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -10188,9 +10216,31 @@ key "BroydenNewTaxonomy"
 \end_inset
 
  mátrixszorzatnak 
-\begin_inset Formula $B-normális(1)$
-\end_inset
-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+B-normális(1)
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang magyar
 -nek kell lennie.
  Legyen 
 \begin_inset Formula $\boldsymbol{KG}$
@@ -10217,9 +10267,31 @@ reference "eq:TAX_2"
 
  egyenlőségben.
  Ekkor a 
-\begin_inset Formula $B-normalitás$
-\end_inset
-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+B-normalitás
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang magyar
  követelménye
 \begin_inset Formula 
 \begin{equation}
@@ -10265,9 +10337,31 @@ key "BroydenNewTaxonomy"
 \end_inset
 
  mátrix szimmetrikussága erősebb feltétel, mint a 
-\begin_inset Formula $B-normalitás$
-\end_inset
-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+B-normalitás
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang magyar
 , de még elég általános, hogy a standard módszereket is tartalmazza a rendszerta
 n 
 \begin_inset CommandInset citation
@@ -10310,8 +10404,8 @@ key "BroydenNewTaxonomy"
  mátrixokon kívűl még szükségünk van bizonyos vektorokra, a generátor vektorokra
 , amelyek minden iterációval változnak.
  Ezeket kétféleképpen választhatjuk, az egyik választás vezet a 2-tagú (Hestenes
--Stiefel) rekurrens formulához, míg a másik választás a 3-tagú (Lanczos)
- formulához 
+-Stiefel) rekurrens módszerekhez, míg a másik választás a 3-tagú (Lánczos)
+ módszerekhez 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenNewTaxonomy"
@@ -10508,12 +10602,19 @@ reference "eq:TAX_7"
 ahol
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{Q}_{i}=\boldsymbol{I}-\boldsymbol{G}\boldsymbol{S}_{i}(\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{S}_{i})^{-1}\boldsymbol{S}_{i}^{T}\,.\label{eq:TAX_13}
+\boldsymbol{Q}_{i}=\boldsymbol{I}-\boldsymbol{G}\boldsymbol{S}_{i}(\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{S}_{i})^{-1}\boldsymbol{S}_{i}^{T}\label{eq:TAX_13}
 \end{equation}
 
 \end_inset
 
 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -10571,6 +10672,14 @@ reference "eq:TAX_14"
 \end_inset
 
  mátrixnak különösen előnyös.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10628,6 +10737,13 @@ alakra egyszerűsödik, ahol
 
  konstans.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10688,6 +10804,14 @@ reference "eq:TAX_6"
 
 .
  
+\begin_inset CommandInset citation
+LatexCommand cite
+after "9. oldal, Lemma 1"
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -10916,7 +11040,14 @@ reference "eq:TAX_17"
 
 \end_inset
 
- egyenlőséget.
+ egyenlőséget 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -10965,7 +11096,14 @@ reference "eq:TAX_16"
 \begin_inset Formula $\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{S}_{i}$
 \end_inset
 
- mátrix diagonalitása.
+ mátrix diagonalitása 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -11014,7 +11152,14 @@ reference "eq:TAX_16"
 \end_inset
 
  mátrix definit, egy másféle numerikus instabilitást kerülhetünk el, amikor
- is az egymást követő lépések túl kicsik lesznek*Broyden ref 13, 10, 11*.
+ is az egymást követő lépések túl kicsik lesznek 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  Azokat az algoritmusokat, ahol a 
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
@@ -11033,7 +11178,14 @@ reference "eq:TAX_16"
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
- mátrixoktól függenek.
+ mátrixoktól függenek 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -11133,6 +11285,15 @@ ahol
 \end_inset
 
 .
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "10. oldal, Lemma 2"
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -11271,7 +11432,14 @@ reference "eq:TAX_21"
 \begin_inset Formula $\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{S}_{i}$
 \end_inset
 
- mátrix diagonalitásából egyből következik.
+ mátrix diagonalitásából egyből következik 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -11293,7 +11461,21 @@ A kezdeti
 \begin_inset Formula $\boldsymbol{g}_{1}$
 \end_inset
 
- vektort választjuk, akkor az Orthodir algoritmust kapjuk *Broyden ref*.
+ vektort választjuk, akkor az Orthodir algoritmust kapjuk 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ashby"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -11324,7 +11506,14 @@ reference "eq:TAX_16"
 \begin_inset Formula $\left\{ \boldsymbol{x}_{i}\right\} $
 \end_inset
 
- vektorsorozattal, és a stabilitás feltételei hasonlóak.
+ vektorsorozattal, és a stabilitás feltételei hasonlóak 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -11338,7 +11527,14 @@ Mivel a kezdeti
 \end_inset
 
  mátrixnak, tetszőleges számú oszloppal, és így kapjuk a blokk módszereket
- *ref Broyden 13*.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -11359,8 +11555,14 @@ A 2-tagú módszereknél a konjugált
 \begin_inset Formula $\phi(\boldsymbol{x})$
 \end_inset
 
- függvény stacionárius pontjának számításától.
- *ref ref ref*
+ függvény stacionárius pontjának számításától (módszer 6, 16, 17, 19) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -11764,7 +11966,14 @@ magyar?
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
- mátrix módosításával, de erre külön nem térünk ki.
+ mátrix módosításával, de erre külön nem térünk ki 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -12125,7 +12334,14 @@ reference "eq:TAX_10"
 \end_inset
 
 -t, *lásd pl.
- ref*, de ez numerikusan nem kívánatos, lásd *ref*.
+ ref*, de ez numerikusan nem kívánatos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  Ha a 
 \begin_inset Formula $\boldsymbol{p}_{j}$
 \end_inset
@@ -12178,7 +12394,14 @@ mi az, hogy tridiagonális?
 
 \end_inset
 
-mátrixnak.
+mátrixnak 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  Legyen 
 \begin_inset Formula $\boldsymbol{Q}_{i+1}$
 \end_inset
@@ -12316,7 +12539,14 @@ reference "eq:TAX_32"
 
 \end_inset
 
-Ez lényegében az SYMMLQ módszere Paige-nek és Saunders-nek *ref*.
+Ez lényegében az SYMMLQ módszere Paige-nek és Saunders-nek 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  Ők azonban az 
 \begin_inset Formula $\boldsymbol{x}_{i}$
 \end_inset
@@ -12334,7 +12564,14 @@ reference "eq:TAX_1"
 
  egyenletrendszer megoldására, számos más fontos numerikus finomítás mellett.
  Az algoritmusukat először Fletcher használta mint mimum-hiba algoritmus
- *ref*, illetve mivel szükség van a 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+, illetve mivel szükség van a 
 \begin_inset Formula $\boldsymbol{p}_{i+1}$
 \end_inset
 
@@ -12343,7 +12580,14 @@ reference "eq:TAX_1"
 \end_inset
 
  vektor kiszámításához, tekinthetünk a módszerre mint egy implicit look-ahead
- módszerre.
+ módszerre 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -12356,7 +12600,15 @@ Ha az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- együttható mátrix nemszimmetrikus, az 1-6 módszereket nem tudjuk alkalmazni.
+ együttható mátrix nemszimmetrikus, az 1-6 módszereket nem tudjuk alkalmazni
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -12699,7 +12951,14 @@ reference "eq:TAX_16"
 
  sorozat számolható.
  A 9-es módszer egy speciális esete az általánosabb Young és Jea módszernek
- *ref?*, ahol szükséges, hogy 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+, ahol szükséges, hogy 
 \begin_inset Formula $\boldsymbol{Z}$
 \end_inset
 
@@ -12716,7 +12975,14 @@ reference "eq:TAX_16"
 \begin_inset Formula $\boldsymbol{ZA}$
 \end_inset
 
- is definit.
+ is definit 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -12745,7 +13011,14 @@ vagy
 
 \end_inset
 
-Innen nem nehéz megmutatni *ref 13, 29*, hogy ha a 
+Innen nem nehéz megmutatni 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+, hogy ha a 
 \begin_inset Formula $2n{\times}2$
 \end_inset
 
@@ -12794,12 +13067,20 @@ reference "eq:TAX_14"
  egyenlőségből
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{u}_{i+1}=\boldsymbol{Q}_{i1}^{T}\boldsymbol{w}_{i+1,1}\,.\label{eq:TAX_40}
+\boldsymbol{u}_{i+1}=\boldsymbol{Q}_{i1}^{T}\boldsymbol{w}_{i+1,1}\label{eq:TAX_40}
 \end{equation}
 
 \end_inset
 
-Hasonlóan kaphatjuk a 
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ Hasonlóan kaphatjuk a 
 \begin_inset Formula $\boldsymbol{v}_{i+1}$
 \end_inset
 
@@ -12820,7 +13101,14 @@ reference "eq:TAX_14"
 \end_inset
 
  mátrixot megfelelően kell választani, hogy működő algoritmust kapjunk,
- és itt is két eset lehetséges *13, 29 ref*.
+ és itt is két eset lehetséges 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  Az első, amikor
 \begin_inset Formula 
 \begin{equation}
@@ -12919,7 +13207,14 @@ ahol
 
 .
  *(Lásd Hegedüs, aki elössz...)*.
- Ebben az esetben meg lehet mutatni *ref 13, 19*, hogy a 
+ Ebben az esetben meg lehet mutatni 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+, hogy a 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:TAX_40"
@@ -12968,7 +13263,14 @@ reference "eq:TAX_36"
 
 \end_inset
 
- szerint adott.
+ szerint adott 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  *The proof is similar to that used to establish equation (16) and is omitted.*
  Hasonlóan kaphatjuk a 
 \begin_inset Formula $\boldsymbol{v}_{i+1}$
@@ -12983,7 +13285,14 @@ reference "eq:TAX_36"
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
- mátrix lehetséges választásai jelenleg a következők.
+ mátrix lehetséges választásai jelenleg a következők 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -13336,7 +13645,14 @@ Ezeknél a módszereknél, mint az 1-es és 2-es módszernél, ha a
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- együtthatómátrix négyzetes és nemszinguláris.
+ együtthatómátrix négyzetes és nemszinguláris 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -13356,8 +13672,22 @@ reference "eq:TAX_41"
 
 \end_inset
 
-egyenlőségre cseréljük.
- Ekkor meg lehet mutatni *ref 13*, hogy
+egyenlőségre cseréljük 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ Ekkor meg lehet mutatni 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+, hogy
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{u}_{i+1}=\boldsymbol{w}_{i+1,1}-\boldsymbol{u}_{i}\alpha_{i1}-\boldsymbol{u}_{i-1}\beta_{i-1,1}\,,\label{eq:TAX_47}
@@ -13425,7 +13755,14 @@ reference "eq:TAX_47"
 \end_inset
 
  vektort.
- A következők a lehetőségek.
+ A következők a lehetőségek 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -13932,13 +14269,27 @@ A 15-ös módszer érdekes tulajdonsága, hogy az
 
 -re.
  A 17-es módszereknél nehézségekbe ütközünk, mint a 6-os és 16-os módszernél,
- és ezeket hasonlóan is lehet megoldani.
+ és ezeket hasonlóan is lehet megoldani 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Standard
 A módszerek utolsó csoportja tulajdonképpen az általánosított Lánczos-féle
- algoritmus.
+ algoritmus 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  Legyen a 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -14021,7 +14372,14 @@ reference "eq:TAX_21"
 \begin_inset Formula $i$
 \end_inset
 
--re.
+-re 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  Hasonló egyenlőségekhez juthatunk a 
 \begin_inset Formula $\boldsymbol{p}_{1}=0$
 \end_inset
@@ -14030,9 +14388,23 @@ reference "eq:TAX_21"
 \begin_inset Formula $\boldsymbol{u}_{1}=0$
 \end_inset
 
- választással.
- Ez a Golub-Kahan algoritmus általánosítása *Broyden ref*, és két esetben
- használható lineáris egyenletrendszerek megoldására.
+ választással 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ Ez a Golub-Kahan algoritmus általánosítása, és két esetben használható
+ lineáris egyenletrendszerek megoldására 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -14300,7 +14672,14 @@ Broydenben van ref
 
  ortogonális transzformációk szükségesek ahhoz, hogy a megoldás következő
  becslését ki tudjuk számolni, mivel a gradiens számoláshoz szükséges az
- együtthatómátrix inverze.
+ együtthatómátrix inverze 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -14370,11 +14749,14 @@ magyar?
  a GCR, GMRES, ORTHOMIN kimaradtak, és pl.
  az ORTHODIR módszer csak a teljesen szimmetrikus formájában szerepel.
  
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Ide majd még kell konkludálni
+IDE MAJD MÉG KELL KONKLUDÁLNI!
 \end_layout
 
 \end_inset
