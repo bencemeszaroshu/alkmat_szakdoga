@@ -14374,15 +14374,296 @@ Blokk konjugált gradiens módszer (BlCG)
 \end_layout
 
 \begin_layout Standard
+Jól ismert, hogy a konjugált gradiens módszerek nemszimmetrikus vagy indefinit
+ szimmetrikus együtthatómátrixokra alkalmazva *breakdown* következhet be
+ nullával osztás miatt.
+ Ebben a fejezetben, Broyden *ref* cikkére támaszkodva, szükséges és elégséges
+ feltételeket vezetünk le a *breakdown* elkerülésére, a Lanczos-féle és
+ a Hestenes-Stiefel-féle algoritmusok esetén.
+ Ezeket a feltételeket aztán az algoritmusokat meghatározó mátrixokhoz definitsé
+géhez kapcsoljuk, és megmutatjuk, hogy a Lanczos-féle algoritmus stabilisabb,
+ mint a Hestenes-Stiefel-féle algoritmus.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ITT SOK KIMARADT A BEVEZETÉSBŐL
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
-\begin_layout Subsection
-Hestenes és Stiefel, Luenberger és Fletcher módszerének általánosítása
+\begin_layout Standard
+A fejezetben tárgyalt blokk konjugált gradiens algoritmus két változata
+ a
+\begin_inset Formula 
+\begin{equation}
+GX=H\label{eq:BCG_1}
+\end{equation}
+
+\end_inset
+
+egyenletrendszer megoldására alkalmas, ahol 
+\begin_inset Formula $G$
+\end_inset
+
+ 
+\begin_inset Formula $n{\times}n$
+\end_inset
+
+-es valós mátrix, 
+\begin_inset Formula $X$
+\end_inset
+
+ és 
+\begin_inset Formula $H$
+\end_inset
+
+ pedig 
+\begin_inset Formula $n{\times}r$
+\end_inset
+
+-es valós mátrix, ahol 
+\begin_inset Formula $r$
+\end_inset
+
+ általában jóval kisebb, mint 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Ha az 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ mátrix az 
+\begin_inset Formula $i$
+\end_inset
+
+-edik becsült megoldása a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BCG_1"
+
+\end_inset
+
+ egyenletrendszernek, és
+\begin_inset Formula 
+\begin{equation}
+F_{i}=GX_{i}-H\,,\label{eq:BCG_2}
+\end{equation}
+
+\end_inset
+
+akkor
+\begin_inset Formula 
+\begin{equation}
+X_{i+1}=X_{i}+P_{i}M_{i}\,,\label{eq:BCG_3}
+\end{equation}
+
+\end_inset
+
+ahol
+\begin_inset Formula 
+\begin{equation}
+M_{i}=-D_{i}^{-1}P_{i}^{T}F_{i}\label{eq:BCG_4}
+\end{equation}
+
+\end_inset
+
+és
+\begin_inset Formula 
+\begin{equation}
+D_{i}=P_{i}^{T}GP_{i}\,.\label{eq:BCG_5}
+\end{equation}
+
+\end_inset
+
+Ekkor az algoritmus leállásának elégséges feltétele, a konjugáktság feltétel,
+ azaz hogy 
+\begin_inset Formula $P_{i}^{T}GP_{j}=0$
+\end_inset
+
+, ahol 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+ Ha 
+\begin_inset Formula 
+\begin{equation}
+\overline{P}=\left[\begin{array}{cccc}
+\boldsymbol{P}_{1} & \boldsymbol{P}_{2} & ... & \boldsymbol{P}_{i}\end{array}\right]
+\end{equation}
+
+\end_inset
+
+és
+\begin_inset Formula 
+\begin{equation}
+Q_{i}=I-G\overline{P_{i}}\,\overline{D_{i}}^{-1}\overline{P_{i}}^{T}\,
+\end{equation}
+
+\end_inset
+
+ahol
+\begin_inset Formula 
+\begin{equation}
+\overline{D}_{i}=\overline{P_{i}}^{T}G\overline{P_{i}}\,,
+\end{equation}
+
+\end_inset
+
+akkor 
+\begin_inset Formula $Q_{i}G\overline{P_{i}}=0$
+\end_inset
+
+, és ha
+\begin_inset Formula 
+\begin{equation}
+P_{i+1}=Q_{i}^{T}W_{i+1}\,,
+\end{equation}
+
+\end_inset
+
+akkor 
+\begin_inset Formula $P_{i+1}$
+\end_inset
+
+ automatikusan kielégíti a konjugáltság feltételét bármilyen 
+\begin_inset Formula $W_{i+1}$
+\end_inset
+
+ generátormátrixra.
+ A 
+\begin_inset Formula $\overline{D_{i}}=diag\left(D_{j}\right)$
+\end_inset
+
+ mátrix blokkdiagonális, és 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+egyelőre 
 \end_layout
 
-\begin_layout Subsection
-Hegedüs és a bikonjugált gradiens módszer általánosítása
+\end_inset
+
+ feltételezzük, hogy nemszinguláris.
+ 
+\end_layout
+
+\begin_layout Standard
+Mivel a 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ mátrixok nagyon és ritkák, a 
+\begin_inset Formula $P_{i+1}$
+\end_inset
+
+ mátrixok számítása a *9-es* egyenlőséggel nem praktikus.
+ Ha a 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ generátormátrixokat jól választjuk, akkor jelentős egyszerűsítések lehetségesek.
+ A Lazncos-féle algoritmusnál
+\begin_inset Formula 
+\begin{equation}
+W_{i}=KGP_{i-1}\,,
+\end{equation}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $K$
+\end_inset
+
+ egy tetszőleges valós szimmetrikus mátrix, a Hestenes-Stiefel-féle algoritmusná
+l
+\begin_inset Formula 
+\begin{equation}
+W_{i}=KF_{i}\,.
+\end{equation}
+
+\end_inset
+
+Ekkor a *9-es* egyenlőség a Lazncos-féle algoritmusban
+\begin_inset Formula 
+\begin{equation}
+P_{i+1}=(I-P_{i}D_{i}^{-1}P_{i}^{T}G-P_{i-1}D_{i-1}^{-1}P_{i-1}^{T}G)KGP_{i}
+\end{equation}
+
+\end_inset
+
+alakra egyszerűsödik *ref*, ahol 
+\begin_inset Formula $P_{0}=0$
+\end_inset
+
+ és 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+ tetszőleges, és a
+\begin_inset Formula 
+\begin{equation}
+P_{i+1}=(I-P_{i}D_{i}^{-1}P_{i}^{T}G)KF_{i+1}
+\end{equation}
+
+\end_inset
+
+alakra egyszerűsödik a Hestenes-Stiefel-féle algortimus esetén, ahol 
+\begin_inset Formula $P_{0}=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Mind a két algoritmus stabilis, ha a 
+\begin_inset Formula $G$
+\end_inset
+
+ és 
+\begin_inset Formula $K$
+\end_inset
+
+ mátiroxk definitek *oleary ref*.
+ A Hestenes-Stiefel-féle algoritmus *breakdown free*, akkor és csak akkor,
+ ha a 
+\begin_inset Formula $P_{i}^{T}GP_{i}$
+\end_inset
+
+ és 
+\begin_inset Formula $F_{i}^{T}KF_{i}$
+\end_inset
+
+ mátrixok nemszingulárisak.
+ Ez a tulajdonság garantált, ha a 
+\begin_inset Formula $G$
+\end_inset
+
+ és a 
+\begin_inset Formula $K$
+\end_inset
+
+ mátrixok definitek és a 
+\begin_inset Formula $P_{i}$
+\end_inset
+
+ és 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+ mátrixok teljes rangúak.
+ 
 \end_layout
 
 \begin_layout Section
