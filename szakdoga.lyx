@@ -14403,7 +14403,7 @@ A fejezetben tárgyalt blokk konjugált gradiens algoritmus két változata
  a
 \begin_inset Formula 
 \begin{equation}
-GX=H\label{eq:BCG_1}
+\boldsymbol{GX}=\boldsymbol{H}\label{eq:BCG_1}
 \end{equation}
 
 \end_inset
@@ -14455,7 +14455,7 @@ reference "eq:BCG_1"
  egyenletrendszernek, és
 \begin_inset Formula 
 \begin{equation}
-F_{i}=GX_{i}-H\,,\label{eq:BCG_2}
+\boldsymbol{F}_{i}=\boldsymbol{G}\boldsymbol{X}_{i}-\boldsymbol{H}\,,\label{eq:BCG_2}
 \end{equation}
 
 \end_inset
@@ -14463,7 +14463,7 @@ F_{i}=GX_{i}-H\,,\label{eq:BCG_2}
 akkor
 \begin_inset Formula 
 \begin{equation}
-X_{i+1}=X_{i}+P_{i}M_{i}\,,\label{eq:BCG_3}
+\boldsymbol{X}_{i+1}=\boldsymbol{X}_{i}+\boldsymbol{P}_{i}\boldsymbol{M}_{i}\,,\label{eq:BCG_3}
 \end{equation}
 
 \end_inset
@@ -14471,7 +14471,7 @@ X_{i+1}=X_{i}+P_{i}M_{i}\,,\label{eq:BCG_3}
 ahol
 \begin_inset Formula 
 \begin{equation}
-M_{i}=-D_{i}^{-1}P_{i}^{T}F_{i}\label{eq:BCG_4}
+\boldsymbol{M}_{i}=-\boldsymbol{D}_{i}^{-1}\boldsymbol{P}_{i}^{T}\boldsymbol{F}_{i}\label{eq:BCG_4}
 \end{equation}
 
 \end_inset
@@ -14479,14 +14479,14 @@ M_{i}=-D_{i}^{-1}P_{i}^{T}F_{i}\label{eq:BCG_4}
 és
 \begin_inset Formula 
 \begin{equation}
-D_{i}=P_{i}^{T}GP_{i}\,.\label{eq:BCG_5}
+\boldsymbol{D}_{i}=\boldsymbol{P}_{i}^{T}\boldsymbol{G}\boldsymbol{P}_{i}\,.\label{eq:BCG_5}
 \end{equation}
 
 \end_inset
 
 Ekkor az algoritmus leállásának elégséges feltétele, a konjugáktság feltétel,
  azaz hogy 
-\begin_inset Formula $P_{i}^{T}GP_{j}=0$
+\begin_inset Formula $\boldsymbol{P}_{i}^{T}\boldsymbol{G}\boldsymbol{P}_{j}=\boldsymbol{0}$
 \end_inset
 
 , ahol 
@@ -14497,7 +14497,7 @@ Ekkor az algoritmus leállásának elégséges feltétele, a konjugáktság felt
  Ha 
 \begin_inset Formula 
 \begin{equation}
-\overline{P}=\left[\begin{array}{cccc}
+\overline{\boldsymbol{P}}=\left[\begin{array}{cccc}
 \boldsymbol{P}_{1} & \boldsymbol{P}_{2} & ... & \boldsymbol{P}_{i}\end{array}\right]
 \end{equation}
 
@@ -14506,7 +14506,7 @@ Ekkor az algoritmus leállásának elégséges feltétele, a konjugáktság felt
 és
 \begin_inset Formula 
 \begin{equation}
-Q_{i}=I-G\overline{P_{i}}\,\overline{D_{i}}^{-1}\overline{P_{i}}^{T}\,
+\boldsymbol{Q}_{i}=\boldsymbol{I}-\boldsymbol{G}\overline{\boldsymbol{P}_{i}}\,\overline{\boldsymbol{D}_{i}}^{-1}\overline{\boldsymbol{P}_{i}}^{T}\,
 \end{equation}
 
 \end_inset
@@ -14514,34 +14514,34 @@ Q_{i}=I-G\overline{P_{i}}\,\overline{D_{i}}^{-1}\overline{P_{i}}^{T}\,
 ahol
 \begin_inset Formula 
 \begin{equation}
-\overline{D}_{i}=\overline{P_{i}}^{T}G\overline{P_{i}}\,,
+\overline{\boldsymbol{D}}_{i}=\overline{\boldsymbol{P}_{i}}^{T}\boldsymbol{G}\overline{\boldsymbol{P}_{i}}\,,
 \end{equation}
 
 \end_inset
 
 akkor 
-\begin_inset Formula $Q_{i}G\overline{P_{i}}=0$
+\begin_inset Formula $\boldsymbol{Q}_{i}\boldsymbol{G}\overline{\boldsymbol{P}_{i}}=\boldsymbol{0}$
 \end_inset
 
 , és ha
 \begin_inset Formula 
 \begin{equation}
-P_{i+1}=Q_{i}^{T}W_{i+1}\,,\label{eq:BCG_9}
+\boldsymbol{P}_{i+1}=\boldsymbol{Q}_{i}^{T}\boldsymbol{W}_{i+1}\,,\label{eq:BCG_9}
 \end{equation}
 
 \end_inset
 
 akkor 
-\begin_inset Formula $P_{i+1}$
+\begin_inset Formula $\boldsymbol{P}_{i+1}$
 \end_inset
 
  automatikusan kielégíti a konjugáltság feltételét bármilyen 
-\begin_inset Formula $W_{i+1}$
+\begin_inset Formula $\boldsymbol{W}_{i+1}$
 \end_inset
 
  generátormátrixra.
  A 
-\begin_inset Formula $\overline{D_{i}}=diag\left(D_{j}\right)$
+\begin_inset Formula $\overline{\boldsymbol{D}_{i}}=diag\left(\boldsymbol{D}_{j}\right)$
 \end_inset
 
  mátrix blokkdiagonális, és 
@@ -14560,23 +14560,23 @@ egyelőre
 
 \begin_layout Standard
 Mivel a 
-\begin_inset Formula $Q_{i}$
+\begin_inset Formula $\boldsymbol{Q}_{i}$
 \end_inset
 
  mátrixok nagyon és ritkák, a 
-\begin_inset Formula $P_{i+1}$
+\begin_inset Formula $\boldsymbol{P}_{i+1}$
 \end_inset
 
  mátrixok számítása a *9-es* egyenlőséggel nem praktikus.
  Ha a 
-\begin_inset Formula $W_{i}$
+\begin_inset Formula $\boldsymbol{W}_{i}$
 \end_inset
 
  generátormátrixokat jól választjuk, akkor jelentős egyszerűsítések lehetségesek.
  A Lazncos-féle algoritmusnál
 \begin_inset Formula 
 \begin{equation}
-W_{i}=KGP_{i-1}\,,
+\boldsymbol{W}_{i}=\boldsymbol{K}\boldsymbol{G}\boldsymbol{P}_{i-1}\,,
 \end{equation}
 
 \end_inset
@@ -14589,7 +14589,7 @@ ahol
 l
 \begin_inset Formula 
 \begin{equation}
-W_{i}=KF_{i}\,.
+\boldsymbol{W}_{i}=\boldsymbol{K}\boldsymbol{F}_{i}\,.
 \end{equation}
 
 \end_inset
@@ -14597,29 +14597,29 @@ W_{i}=KF_{i}\,.
 Ekkor a *9-es* egyenlőség a Lazncos-féle algoritmusban
 \begin_inset Formula 
 \begin{equation}
-P_{i+1}=(I-P_{i}D_{i}^{-1}P_{i}^{T}G-P_{i-1}D_{i-1}^{-1}P_{i-1}^{T}G)KGP_{i}
+\boldsymbol{P}_{i+1}=(\boldsymbol{I}-\boldsymbol{P}_{i}\boldsymbol{D}_{i}^{-1}\boldsymbol{P}_{i}^{T}\boldsymbol{G}-\boldsymbol{P}_{i-1}\boldsymbol{D}_{i-1}^{-1}\boldsymbol{P}_{i-1}^{T}\boldsymbol{G})\boldsymbol{K}\boldsymbol{G}\boldsymbol{P}_{i}
 \end{equation}
 
 \end_inset
 
 alakra egyszerűsödik *ref*, ahol 
-\begin_inset Formula $P_{0}=0$
+\begin_inset Formula $\boldsymbol{P}_{0}=\boldsymbol{0}$
 \end_inset
 
  és 
-\begin_inset Formula $P_{1}$
+\begin_inset Formula $\boldsymbol{P}_{1}$
 \end_inset
 
  tetszőleges, és a
 \begin_inset Formula 
 \begin{equation}
-P_{i+1}=(I-P_{i}D_{i}^{-1}P_{i}^{T}G)KF_{i+1}
+\boldsymbol{P}_{i+1}=(\boldsymbol{I}-\boldsymbol{P}_{i}\boldsymbol{D}_{i}^{-1}\boldsymbol{P}_{i}^{T}\boldsymbol{G})\boldsymbol{K}\boldsymbol{F}_{i+1}
 \end{equation}
 
 \end_inset
 
 alakra egyszerűsödik a Hestenes-Stiefel-féle algortimus esetén, ahol 
-\begin_inset Formula $P_{0}=0$
+\begin_inset Formula $\boldsymbol{P}_{0}=\boldsymbol{0}$
 \end_inset
 
 .
@@ -14628,51 +14628,51 @@ alakra egyszerűsödik a Hestenes-Stiefel-féle algortimus esetén, ahol
 
 \begin_layout Standard
 Mind a két algoritmus stabilis, ha a 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  és 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  mátiroxk definitek *oleary ref*.
  A Hestenes-Stiefel-féle algoritmus *breakdown free*, akkor és csak akkor,
  ha a 
-\begin_inset Formula $P_{i}^{T}GP_{i}$
+\begin_inset Formula $\boldsymbol{P}_{i}^{T}\boldsymbol{G}\boldsymbol{P}_{i}$
 \end_inset
 
  és 
-\begin_inset Formula $F_{i}^{T}KF_{i}$
+\begin_inset Formula $\boldsymbol{F}_{i}^{T}\boldsymbol{K}\boldsymbol{F}_{i}$
 \end_inset
 
  mátrixok nemszingulárisak.
  Ez a tulajdonság garantált, ha a 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  és a 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  mátrixok definitek és a 
-\begin_inset Formula $P_{i}$
+\begin_inset Formula $\boldsymbol{P}_{i}$
 \end_inset
 
  és 
-\begin_inset Formula $F_{i}$
+\begin_inset Formula $\boldsymbol{F}_{i}$
 \end_inset
 
  mátrixok teljesrangúak *O'Leary ref*.
  Broyden *ref* a 
-\begin_inset Formula $P_{i}^{T}GP_{i}$
+\begin_inset Formula $\boldsymbol{P}_{i}^{T}\boldsymbol{G}\boldsymbol{P}_{i}$
 \end_inset
 
  és 
-\begin_inset Formula $P_{i}^{T}F_{i}$
+\begin_inset Formula $\boldsymbol{P}_{i}^{T}\boldsymbol{F}_{i}$
 \end_inset
 
- (
-\begin_inset Formula $F_{i}^{T}KF_{i}$
+ (ami 
+\begin_inset Formula $\boldsymbol{F}\boldsymbol{K}\boldsymbol{F}_{i}$
 \end_inset
 
  a Hestenes-Stiefel-féle algortimus esetnén) mátrixokat vizsgálta a mögöttes
@@ -14686,10 +14686,13 @@ A Krylov sorozatok
 
 \begin_layout Standard
 Legyen
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\overline{V}_{i}=\left[\begin{array}{cccc}
-P_{1}KGP_{1} & (KG)^{2}P_{1} & ... & (KG)^{i-1}P_{1}\end{array}\right]
+\overline{\boldsymbol{V}}_{i}=\left[\begin{array}{ccccc}
+\boldsymbol{P}_{1} & \boldsymbol{K}\boldsymbol{G}\boldsymbol{P}_{1} & (\boldsymbol{K}\boldsymbol{G})^{2}\boldsymbol{P}_{1} & ... & (\boldsymbol{KG})^{i-1}\boldsymbol{P}_{1}\end{array}\right]
 \end{equation}
 
 \end_inset
@@ -14697,26 +14700,26 @@ P_{1}KGP_{1} & (KG)^{2}P_{1} & ... & (KG)^{i-1}P_{1}\end{array}\right]
 és
 \begin_inset Formula 
 \begin{equation}
-S_{i}=\overline{V}_{i}^{T}G\overline{V}_{i}\,.
+\boldsymbol{S}_{i}=\overline{\boldsymbol{V}}_{i}^{T}\boldsymbol{G}\overline{\boldsymbol{V}}_{i}\,.
 \end{equation}
 
 \end_inset
 
 A 
-\begin_inset Formula $\overline{P}_{i}$
+\begin_inset Formula $\boldsymbol{\overline{P}}_{i}$
 \end_inset
 
  mátrix kicserélése a 
-\begin_inset Formula $\tilde{P}_{i}=\overline{P}_{i}M_{i}$
+\begin_inset Formula $\tilde{\boldsymbol{P}}_{i}=\overline{\boldsymbol{P}}_{i}\boldsymbol{M}_{i}$
 \end_inset
 
  mátrixra, ahol az 
-\begin_inset Formula $M_{i}$
+\begin_inset Formula $\boldsymbol{M}_{i}$
 \end_inset
 
  mátrix nemszinguláris, a *4-es* és *5-ös* egyenlőségekben, nem változtatja
  meg a 
-\begin_inset Formula $Q_{i}$
+\begin_inset Formula $\boldsymbol{Q}_{i}$
 \end_inset
 
  mátrixot *ref Broyden*.
@@ -14732,7 +14735,7 @@ Megmutatjuk, hogy (ehhez kéne a biz)
 
  A Lanczos-féle blokk konjugált gradiens módszer *breakdown-free*, akkor
  és csak akkor, ha az 
-\begin_inset Formula $\left\{ S_{j}\right\} $
+\begin_inset Formula $\left\{ \boldsymbol{S}_{j}\right\} $
 \end_inset
 
 mátrixok nemszingulárisak.
@@ -14746,7 +14749,7 @@ name "thm:BCG_Theorem1"
 \end_inset
 
 Legyen 
-\begin_inset Formula $P_{1}$
+\begin_inset Formula $\boldsymbol{P}_{1}$
 \end_inset
 
  tetszőleges mátrix, és legyen 
@@ -14754,11 +14757,11 @@ Legyen
 \end_inset
 
 -re az 
-\begin_inset Formula $S_{j}$
+\begin_inset Formula $\boldsymbol{S}_{j}$
 \end_inset
 
  mátrix nemszinguláris, és számoljuk a 
-\begin_inset Formula $P_{j}$
+\begin_inset Formula $\boldsymbol{P}_{j}$
 \end_inset
 
  mátrixokt a Lanczos algoritmussal (
@@ -14776,7 +14779,7 @@ reference "eq:BCG_9"
 \end_inset
 
  egyenlőségek, 
-\begin_inset Formula $W_{i+1}=KGP_{i}$
+\begin_inset Formula $\boldsymbol{W}_{i+1}=\boldsymbol{K}\boldsymbol{G}\boldsymbol{P}_{i}$
 \end_inset
 
 ).
@@ -14785,15 +14788,15 @@ reference "eq:BCG_9"
 \end_inset
 
 -re a 
-\begin_inset Formula $D_{j}$
+\begin_inset Formula $\boldsymbol{D}_{j}$
 \end_inset
 
  mátrixok nemszingulárisak, és a 
-\begin_inset Formula $D_{i+1}$
+\begin_inset Formula $\boldsymbol{D}_{i+1}$
 \end_inset
 
- mátrixik akkor és csak akkor nemszinguláris, ha az 
-\begin_inset Formula $S_{i+1}$
+ mátrix akkor és csak akkor nemszinguláris, ha az 
+\begin_inset Formula $\boldsymbol{S}_{i+1}$
 \end_inset
 
 mátrix nemszinguláris.
@@ -14806,16 +14809,16 @@ Lásd *Broyden ref*, 45.
 
 \begin_layout Standard
 Ez a tétel azt mutatja meg, hogy ha a 
-\begin_inset Formula $S_{j}$
+\begin_inset Formula $\boldsymbol{S}_{j}$
 \end_inset
 
  mátrixok nemszingulárisak, akkor a 
-\begin_inset Formula $D_{j}$
+\begin_inset Formula $\boldsymbol{D}_{j}$
 \end_inset
 
  mátrixok nemszingulárisak, és így az algoritmus *breakdown-free*.
  Másrészről, ha az 
-\begin_inset Formula $S_{j}$
+\begin_inset Formula $\boldsymbol{S}_{j}$
 \end_inset
 
  mátrixok nemszingulárisak 
@@ -14823,30 +14826,30 @@ Ez a tétel azt mutatja meg, hogy ha a
 \end_inset
 
 -re, akkor az 
-\begin_inset Formula $S_{i}$
+\begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
  mátrix szinguláris, ezért a 
-\begin_inset Formula $D_{i}$
+\begin_inset Formula $\boldsymbol{D}_{i}$
 \end_inset
 
  mátrix szinguláris, és a 
-\begin_inset Formula $P_{i+1}$
+\begin_inset Formula $\boldsymbol{P}_{i+1}$
 \end_inset
 
  és 
-\begin_inset Formula $X_{i+1}$
+\begin_inset Formula $\boldsymbol{X}_{i+1}$
 \end_inset
 
 mátrixok nem számolhatóak.
  Ezért az algoritmus *breakdown-ol* 
-\begin_inset Formula $X_{i}$
+\begin_inset Formula $\boldsymbol{X}_{i}$
 \end_inset
 
  kiszámolása után.
  A Lanzos-féle algoritmusnál a *breakdownak* csak ez az egyetlen oka lehet,
  hogy az 
-\begin_inset Formula $S_{i}$
+\begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
  mátrix szinguláris.
@@ -14855,14 +14858,14 @@ mátrixok nem számolhatóak.
 \begin_layout Standard
 A Hestenes-Stiefel-féle blokk konjugált gradiens módszernél a stabilitást
  a 
-\begin_inset Formula $P_{i}^{T}F_{i}$
+\begin_inset Formula $\boldsymbol{P}_{i}^{T}\boldsymbol{F}_{i}$
 \end_inset
 
  mátrix is befolyásolja *broyden 5*.
  Legyen
 \begin_inset Formula 
 \begin{equation}
-T_{i}=\left[\overline{V}_{i}^{T}F_{1}\overline{V}_{i}^{T}G\overline{V}_{i-1}\right]\,.
+\boldsymbol{T}_{i}=\left[\overline{\boldsymbol{V}}_{i}^{T}\boldsymbol{F}_{1}\overline{\boldsymbol{V}}_{i}^{T}\boldsymbol{G}\overline{\boldsymbol{V}}_{i-1}\right]\,.
 \end{equation}
 
 \end_inset
@@ -14879,7 +14882,7 @@ reference "thm:BCG_Theorem1"
 \end_inset
 
 -es tétel feltételei legyenek kielégíte, és ezenfelül az 
-\begin_inset Formula $X_{1}$
+\begin_inset Formula $\boldsymbol{X}_{1}$
 \end_inset
 
  mátrix legyen tetszőleges.
@@ -14888,14 +14891,14 @@ reference "thm:BCG_Theorem1"
 \end_inset
 
 -re a 
-\begin_inset Formula $P_{j}^{T}F_{j}$
+\begin_inset Formula $\boldsymbol{P}_{j}^{T}\boldsymbol{F}_{j}$
 \end_inset
 
- mátrix akkor és csak akkor nemszinguláris, ha 
-\begin_inset Formula $T_{j}$
+ mátrix akkor és csak akkor nemszinguláris, ha a 
+\begin_inset Formula $\boldsymbol{T}_{j}$
 \end_inset
 
- nemszinguláris.
+ mátrix nemszinguláris.
 \end_layout
 
 \begin_layout Proof
@@ -14924,15 +14927,15 @@ name "thm:BCG_Theorem_3"
 \end_inset
 
 Legyen 
-\begin_inset Formula $X_{1}$
+\begin_inset Formula $\boldsymbol{X}_{1}$
 \end_inset
 
  tetszőleges mátrix, és legyenek az 
-\begin_inset Formula $S_{j}$
+\begin_inset Formula $\boldsymbol{S}_{j}$
 \end_inset
 
  és a 
-\begin_inset Formula $T_{j}$
+\begin_inset Formula $\boldsymbol{T}_{j}$
 \end_inset
 
  mátrixok nemszingulárisak, 
@@ -14940,7 +14943,7 @@ Legyen
 \end_inset
 
 , és számoljuk a 
-\begin_inset Formula $P_{j+1}$
+\begin_inset Formula $\boldsymbol{P}_{j+1}$
 \end_inset
 
  mátrixot a Hestenes-Stiefel-féle algoritmussal (
@@ -14958,16 +14961,16 @@ reference "eq:BCG_9"
 \end_inset
 
  egyenlőségek, 
-\begin_inset Formula $W_{i+1}=KF_{i+1}$
+\begin_inset Formula $\boldsymbol{W}_{i+1}=\boldsymbol{K}\boldsymbol{F}_{i+1}$
 \end_inset
 
 ).
  Ekkor 
-\begin_inset Formula $D_{j}$
+\begin_inset Formula $\boldsymbol{D}_{j}$
 \end_inset
 
  és 
-\begin_inset Formula $P_{j}^{T}F_{j}$
+\begin_inset Formula $\boldsymbol{P}_{j}^{T}\boldsymbol{F}_{j}$
 \end_inset
 
  mátrixok nemszigulárisak, 
@@ -14975,19 +14978,19 @@ reference "eq:BCG_9"
 \end_inset
 
 , és a 
-\begin_inset Formula $D_{i+1}$
+\begin_inset Formula $\boldsymbol{D}_{i+1}$
 \end_inset
 
  mátrix akkor és csak akkor nemszinguláris, ha 
-\begin_inset Formula $S_{i+1}$
+\begin_inset Formula $\boldsymbol{S}_{i+1}$
 \end_inset
 
  nemszinguláris, és 
-\begin_inset Formula $P_{i+1}^{T}F_{i+1}$
+\begin_inset Formula $\boldsymbol{P}_{i+1}^{T}\boldsymbol{F}_{i+1}$
 \end_inset
 
  nemszinguláris, akkor és csak akkor, ha a 
-\begin_inset Formula $T_{i+1}$
+\begin_inset Formula $\boldsymbol{T}_{i+1}$
 \end_inset
 
  mátrix nemszinguláris.
@@ -15001,11 +15004,11 @@ Lásd *Broyden ref*, 48.
 
 \begin_layout Corollary*
 Ha a tétel feltételei teljesülnek, kivéve a 
-\begin_inset Formula $T_{i}$
+\begin_inset Formula $\boldsymbol{T}_{i}$
 \end_inset
 
  mátrix nemszingularitása, akkor a 
-\begin_inset Formula $D_{i+1}$
+\begin_inset Formula $\boldsymbol{D}_{i+1}$
 \end_inset
 
  mátrix szinguláris.
@@ -15014,12 +15017,12 @@ Ha a tétel feltételei teljesülnek, kivéve a
 
 \begin_layout Standard
 Ha az 
-\begin_inset Formula $S_{j}$
+\begin_inset Formula $\boldsymbol{S}_{j}$
 \end_inset
 
  mátrix szinguláris, a Lanzos-féle és a Hestenes-Stiefel-féle blokk konjugált
  gradiens módszerek *breakdown*-olnak, de ha a 
-\begin_inset Formula $T_{j}$
+\begin_inset Formula $\boldsymbol{T}_{j}$
 \end_inset
 
  mátrix szinguláris, csak a Hestenes-Stiefel-féle módszer *breakdownol*.
@@ -15031,7 +15034,7 @@ Ha az
 \begin_layout Standard
 Ha a kétféle módszert ugyanarra a problémára alkalmazzuk, ugyanazokkal a
  kezdeti értékekkel (a Lanczos-féle módszernél 
-\begin_inset Formula $P_{1}=KF_{1}$
+\begin_inset Formula $\boldsymbol{P}_{1}=\boldsymbol{K}\boldsymbol{F}_{1}$
 \end_inset
 
 ), akkor minden 
@@ -15057,13 +15060,13 @@ felső indexben HS-sel jelölve bla bla
 \end_inset
 
 
-\begin_inset Formula $Q_{j}^{HS}=Q_{j}^{L}$
+\begin_inset Formula $\boldsymbol{Q}_{j}^{HS}=\boldsymbol{Q}_{j}^{L}$
 \end_inset
 
  és
 \begin_inset Formula 
 \begin{equation}
-P_{j}^{HS}=P_{j}^{L}L_{j-1}\,,
+\boldsymbol{P}_{j}^{HS}=\boldsymbol{P}_{j}^{L}\boldsymbol{L}_{j-1}\,,
 \end{equation}
 
 \end_inset
@@ -15079,7 +15082,7 @@ ez az L mátrix és a 25-ös egyenlőség a proof-ban van
 \end_inset
 
  a *25-ös* egyenlőségből, 
-\begin_inset Formula $L_{j-1}=M_{1}^{HS}M_{2}^{HS}...M_{j-1}^{HS}$
+\begin_inset Formula $\boldsymbol{L}_{j-1}=\boldsymbol{M}_{1}^{HS}\boldsymbol{M}_{2}^{HS}...\boldsymbol{M}_{j-1}^{HS}$
 \end_inset
 
  .
@@ -15091,32 +15094,32 @@ reference "thm:BCG_Theorem_3"
 \end_inset
 
 -as tétel következményéből, ha a 
-\begin_inset Formula $T_{j-1}$
+\begin_inset Formula $\boldsymbol{T}_{j-1}$
 \end_inset
 
  mátrix szinguláris, akkor 
-\begin_inset Formula $L_{j-1}$
+\begin_inset Formula $\boldsymbol{L}_{j-1}$
 \end_inset
 
 mátrix is szinguláris, és a *29*-es egyenlőségből következik, hogy a 
-\begin_inset Formula $P_{j}^{HS}$
+\begin_inset Formula $\boldsymbol{P}_{j}^{HS}$
 \end_inset
 
  mátrix *rank-deficient*, és így a 
-\begin_inset Formula $D_{j}^{HS}$
+\begin_inset Formula $\boldsymbol{D}_{j}^{HS}$
 \end_inset
 
  mátrix is szinguláris, akkor is, ha a 
-\begin_inset Formula $\overline{V}_{j}$
+\begin_inset Formula $\overline{\boldsymbol{V}}_{j}$
 \end_inset
 
  mátrix teljesrangú.
  Ez egy jelentős különbség a Lanczos-féle módszerhez képest, ahol a 
-\begin_inset Formula $\overline{V}_{j}$
+\begin_inset Formula $\overline{\boldsymbol{V}}_{j}$
 \end_inset
 
  és a 
-\begin_inset Formula $\overline{P}_{j}$
+\begin_inset Formula $\boldsymbol{\overline{P}}_{j}$
 \end_inset
 
  mátrixok rangja mindig megegyezik.
@@ -15124,34 +15127,34 @@ mátrix is szinguláris, és a *29*-es egyenlőségből következik, hogy a
 
 \begin_layout Standard
 Legvégül megnézzük az 
-\begin_inset Formula $\left\{ X_{i}\right\} $
+\begin_inset Formula $\left\{ \boldsymbol{X}_{i}\right\} $
 \end_inset
 
  mátrixsorozatot.
  A *4*, *5* és *29*-es egyenlőségekből
 \begin_inset Formula 
 \begin{equation}
-M_{j}^{HS}-L_{j-1}^{-1}M_{j}^{L}\,,
+\boldsymbol{M}_{j}^{HS}-\boldsymbol{L}_{j-1}^{-1}\boldsymbol{M}_{j}^{L}\,,
 \end{equation}
 
 \end_inset
 
 így a *25*-ös egyenlőségből 
-\begin_inset Formula $M_{j}^{L}=M_{1}^{HS}M_{2}^{HS}...M_{j}^{HS}$
+\begin_inset Formula $\boldsymbol{M}_{j}^{L}=\boldsymbol{M}_{1}^{HS}\boldsymbol{M}_{2}^{HS}...\boldsymbol{M}_{j}^{HS}$
 \end_inset
 
 .
  Ezt írhatjuk úgy is, hogy 
-\begin_inset Formula $M_{j}^{HS}=(M_{j-1}^{L})^{-1}M_{j}^{L}$
+\begin_inset Formula $\boldsymbol{M}_{j}^{HS}=(\boldsymbol{M}_{j-1}^{L})^{-1}\boldsymbol{M}_{j}^{L}$
 \end_inset
 
 .
  A *29-es* és *30-as* egyenlőségből 
-\begin_inset Formula $P_{j}^{HS}M_{j}^{HS}=P_{j}^{L}M_{j}^{L}$
+\begin_inset Formula $\boldsymbol{P}_{j}^{HS}\boldsymbol{M}_{j}^{HS}=\boldsymbol{P}_{j}^{L}\boldsymbol{M}_{j}^{L}$
 \end_inset
 
 , így a két módszerrel generált 
-\begin_inset Formula $\left\{ X_{i}\right\} $
+\begin_inset Formula $\left\{ \boldsymbol{X}_{i}\right\} $
 \end_inset
 
  mátrixsorozat azonos.
@@ -15163,19 +15166,19 @@ Konklúzió
 
 \begin_layout Standard
 Ha 
-\begin_inset Formula $P_{1}=KF_{1}$
+\begin_inset Formula $\boldsymbol{P}_{1}=\boldsymbol{K}\boldsymbol{F}_{1}$
 \end_inset
 
 , és a 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  mátrix nemszinguláris, akkor a *21-es* egyenlőségből 
-\begin_inset Formula $T_{i}=\overline{V}_{i}^{T}K^{-1}\overline{V}_{i}$
+\begin_inset Formula $\boldsymbol{T}_{i}=\overline{\boldsymbol{V}}_{i}^{T}\boldsymbol{K}^{-1}\overline{\boldsymbol{V}}_{i}$
 \end_inset
 
 , és mivel 
-\begin_inset Formula $S_{i}=\overline{V}_{i}^{T}G\overline{V}_{i}$
+\begin_inset Formula $\boldsymbol{S}_{i}=\overline{\boldsymbol{V}}_{i}^{T}\boldsymbol{G}\overline{\boldsymbol{V}}_{i}$
 \end_inset
 
 , láthatjuk, hogy
@@ -15183,7 +15186,7 @@ Ha
 
 \begin_layout Enumerate
 Ha a 
-\begin_inset Formula $\overline{V}_{i}$
+\begin_inset Formula $\boldsymbol{\overline{V}}_{i}$
 \end_inset
 
  mátrix *rank-deficient*, akkor az 
@@ -15199,11 +15202,11 @@ Ha a
 
 \begin_layout Enumerate
 Ha a 
-\begin_inset Formula $\overline{V}_{i}$
+\begin_inset Formula $\overline{\boldsymbol{V}}_{i}$
 \end_inset
 
  mátrix teljesrangú és a 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  mátrix indefinit, akkor lehet *breakdown* mindkét algoritmusnál
@@ -15211,11 +15214,11 @@ Ha a
 
 \begin_layout Enumerate
 Ha a 
-\begin_inset Formula $\overline{V}_{i}$
+\begin_inset Formula $\overline{\boldsymbol{V}}_{i}$
 \end_inset
 
  mátrix teljesrangú és a 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  mátrix indefinit, akkor a Hestenes-Stiefel-féle algoritmusnál lehet *breakdown*
@@ -15229,7 +15232,7 @@ Az első eset kezelésére léteznek különböző módszerek *ref broyden*.
 \end_inset
 
  valamilyen értékére az 
-\begin_inset Formula $S_{i}$
+\begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
  mátrix szingulári.
@@ -15238,11 +15241,11 @@ Az első eset kezelésére léteznek különböző módszerek *ref broyden*.
 \end_inset
 
  mátrix azért szinguláris, mert a 
-\begin_inset Formula $\overline{V}_{i}$
+\begin_inset Formula $\boldsymbol{\overline{V}}_{i}$
 \end_inset
 
  mátrix *rank-deficient*, akkor az 
-\begin_inset Formula $S_{k}$
+\begin_inset Formula $\boldsymbol{S}_{k}$
 \end_inset
 
  mátrix szinguláris, 
@@ -15250,18 +15253,21 @@ Az első eset kezelésére léteznek különböző módszerek *ref broyden*.
 \end_inset
 
 .
- Ekkor találhatunk olyan j-lépéses *look-ahead* módszert, amivel megakadályozhat
-juk a *breakdownt*.
+ Ekkor találhatunk olyan 
+\begin_inset Formula $j$
+\end_inset
+
+-lépéses *look-ahead* módszert, amivel megakadályozhatjuk a *breakdownt*.
  De, ha az 
-\begin_inset Formula $S_{i}$
+\begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
  mátrix szinguláris, miközben a 
-\begin_inset Formula $\overline{V}_{i}$
+\begin_inset Formula $\overline{\boldsymbol{V}}_{i}$
 \end_inset
 
  mátrix teljesrangú (mert a 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  mátrix indefinit), akkor 
@@ -15269,11 +15275,11 @@ juk a *breakdownt*.
 \end_inset
 
 , hogy 
-\begin_inset Formula $S_{i+j}$
+\begin_inset Formula $\boldsymbol{S}_{i+j}$
 \end_inset
 
  nemszinguláris, vagy 
-\begin_inset Formula $S_{k}$
+\begin_inset Formula $\boldsymbol{S}_{k}$
 \end_inset
 
  szinguláris 
@@ -15282,7 +15288,7 @@ juk a *breakdownt*.
 
 , és az *incurable breakdown* elkerülhetetlen.
  A harmadik esetnél, ha a 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  mátrix definit, csak a Hestenes-Stiefel-féle algoritmust használhatjuk.
@@ -15292,16 +15298,16 @@ juk a *breakdownt*.
 \begin_layout Standard
 Nemszimmetrikus vagy indefinit szimmetrikus rendszereknél sokszor megvan
  a lehetőségünk, hogy olyan algoritmust válasszunk, aminél vagy a 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  vagy a 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  mátrix, de nem mind a kettő definit.
  A fenti elemzés alapján ilyenkor érdemes a 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  mátrixot indefinitnek választani és a Lanczos-féle algoritmust használni.
