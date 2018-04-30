@@ -9367,8 +9367,8 @@ key "BroydenNewTaxonomy"
 \end_inset
 
 .
- A módszerek áttekintése nehézkes, például amiatt, hogy az algoritmusokat
- a különböző szerzők különböző módokon származtatják.
+ A módszerek áttekintése azonban nehézkes lehet, például amiatt, hogy az
+ algoritmusokat a különböző szerzők különböző módokon származtatják.
  Broyden 1996-os cikkében 
 \begin_inset CommandInset citation
 LatexCommand cite
