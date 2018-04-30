@@ -9426,9 +9426,9 @@ key "Faber_and_Manteuffel"
 \noun off
 \color none
 \lang english
-B-normális(s
+B-normális(
 \family default
-\series default
+\series bold
 \shape default
 \size default
 \emph default
@@ -9438,6 +9438,8 @@ B-normális(s
 \uwave default
 \noun default
 \color inherit
+s
+\series default
 \lang magyar
 )-nek nevezik, ha a 
 \begin_inset Formula $\boldsymbol{B}$
@@ -9513,11 +9515,11 @@ key "Faber_and_Manteuffel"
 \end_inset
 
 .
- Broyden rendszertanában egy Hessian 
+ Broyden rendszertanában egy 
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- mátrixból és egy további 
+ Hesse-mátrixból és egy további 
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
@@ -9989,7 +9991,7 @@ key "BroydenNewTaxonomy"
 \end_layout
 
 \begin_layout Standard
-Ahhoz, hogy ki tudjuk számolni 
+Ahhoz, hogy ki tudjuk számolni az 
 \begin_inset Formula $\boldsymbol{x}_{i+2}$
 \end_inset
 
@@ -10396,7 +10398,7 @@ reference "thm:TAX_Lemma1"
 \begin_inset Formula $\boldsymbol{g}_{j+1}\neq\boldsymbol{0}$
 \end_inset
 
- és 
+, és minthogy 
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
@@ -10508,12 +10510,12 @@ reference "eq:TAX_16"
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- mátrix definit.
+ mátrix pozitív definit.
  Az olyan algoritmusokat, ahol a 
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- mátrix definit, 
+ mátrix pozitív definit, 
 \family roman
 \series medium
 \shape up
@@ -10649,7 +10651,7 @@ ahol az
 \end_inset
 
  és a 
-\begin_inset Formula $\beta_{i+1}$
+\begin_inset Formula $\beta_{i-1}$
 \end_inset
 
  konstansokat úgy választjuk, hogy
@@ -10851,7 +10853,7 @@ reference "eq:TAX_21"
 \begin_inset Formula $\boldsymbol{S}_{i}^{T}\boldsymbol{G}\boldsymbol{S}_{i}$
 \end_inset
 
- mátrix diagonalitásából egyből következik 
+ mátrix diagonalitásából azonnal következik 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenNewTaxonomy"
@@ -12064,7 +12066,14 @@ key "BroydenNewTaxonomy"
 \begin_inset Formula $\boldsymbol{x}_{i+1}$
 \end_inset
 
- vektor kiszámításához, tekinthetünk a módszerre mint egy implicit előretekintő
+ vektor kiszámításához, tekinthetünk a módszerre mint egy implicit 
+\begin_inset Quotes pld
+\end_inset
+
+előretekintő
+\begin_inset Quotes prd
+\end_inset
+
  módszerre 
 \begin_inset CommandInset citation
 LatexCommand cite
