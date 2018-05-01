@@ -118,7 +118,7 @@ Bevezetés
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Itt majd írni arról, hogy Broyden hogyan közelíti meg a lin.algebrát.
@@ -186,7 +186,7 @@ május 20.) szerény családi háttérrel, Angliában született.
  adott eszközöket.
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Mint például?
@@ -14383,18 +14383,24 @@ Blokk konjugált gradiens módszer (BlCG)
 \end_layout
 
 \begin_layout Standard
-Jól ismert, hogy a konjugált gradiens módszerek nemszimmetrikus vagy indefinit
- szimmetrikus együtthatómátrixokra alkalmazva *breakdown* következhet be
- nullával osztás miatt.
- Ebben a fejezetben, Broyden *ref* cikkére támaszkodva, szükséges és elégséges
- feltételeket vezetünk le a *breakdown* elkerülésére, a Lanczos-féle és
- a Hestenes-Stiefel-féle algoritmusok esetén.
- Ezeket a feltételeket aztán az algoritmusokat meghatározó mátrixokhoz definitsé
-géhez kapcsoljuk, és megmutatjuk, hogy a Lanczos-féle algoritmus stabilisabb,
- mint a Hestenes-Stiefel-féle algoritmus.
-\end_layout
+Jól ismert, hogy a konjugált gradiens módszereket nemszimmetrikus vagy indefinit
+ szimmetrikus együtthatómátrixokra alkalmazva, az algoritmus összeomlása
+ következhet be nullával osztás miatt.
+ Ebben a fejezetben, Broyden 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
 
-\begin_layout Standard
+\end_inset
+
+ cikkére támaszkodva, szükséges és elégséges feltételeket vezetünk le az
+ összeomlás elkerülésére kétféle blokk konjugált algoritmus esetén.
+ Ezeket a feltételeket aztán az algoritmusokat meghatározó mátrixok definitségéh
+ez kapcsoljuk.
+ A kétféle algoritmus a Lanczos-féle és a Hestenes-Stiefel-féle algoritmusok.
+ Megmutatjuk, hogy a Lanczos-féle algoritmus stabilisabb, mint a Hestenes-Stiefe
+l-féle algoritmus.
+ 
 \begin_inset Note Note
 status open
 
@@ -14407,8 +14413,12 @@ ITT SOK KIMARADT A BEVEZETÉSBŐL
 
 \end_layout
 
+\begin_layout Subsection
+A Lanczos-féle és a Hestenes-Stiefel-féle algoritmusok
+\end_layout
+
 \begin_layout Standard
-A fejezetben tárgyalt blokk konjugált gradiens algoritmus két változata
+A fejezetben tárgyalt két változata a blokk konjugált gradiens algoritmusnak
  a
 \begin_inset Formula 
 \begin{equation}
@@ -14418,7 +14428,7 @@ A fejezetben tárgyalt blokk konjugált gradiens algoritmus két változata
 \end_inset
 
 egyenletrendszer megoldására alkalmas, ahol 
-\begin_inset Formula $G$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
  
@@ -14426,11 +14436,11 @@ egyenletrendszer megoldására alkalmas, ahol
 \end_inset
 
 -es valós mátrix, 
-\begin_inset Formula $X$
+\begin_inset Formula $\boldsymbol{X}$
 \end_inset
 
  és 
-\begin_inset Formula $H$
+\begin_inset Formula $\boldsymbol{H}$
 \end_inset
 
  pedig 
@@ -14447,7 +14457,7 @@ egyenletrendszer megoldására alkalmas, ahol
 
 .
  Ha az 
-\begin_inset Formula $X_{i}$
+\begin_inset Formula $\boldsymbol{X}_{i}$
 \end_inset
 
  mátrix az 
@@ -14461,7 +14471,7 @@ reference "eq:BCG_1"
 
 \end_inset
 
- egyenletrendszernek, és
+ egyenletrendszernek, és ha
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{F}_{i}=\boldsymbol{G}\boldsymbol{X}_{i}-\boldsymbol{H}\,,\label{eq:BCG_2}
@@ -14493,8 +14503,8 @@ ahol
 
 \end_inset
 
-Ekkor az algoritmus leállásának elégséges feltétele, a konjugáktság feltétel,
- azaz hogy 
+Ekkor az algoritmus leállásának elégséges feltétele, a konjugáltság feltétele,
+ 
 \begin_inset Formula $\boldsymbol{P}_{i}^{T}\boldsymbol{G}\boldsymbol{P}_{j}=\boldsymbol{0}$
 \end_inset
 
@@ -14515,7 +14525,7 @@ Ekkor az algoritmus leállásának elégséges feltétele, a konjugáktság felt
 és
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{Q}_{i}=\boldsymbol{I}-\boldsymbol{G}\overline{\boldsymbol{P}_{i}}\,\overline{\boldsymbol{D}_{i}}^{-1}\overline{\boldsymbol{P}_{i}}^{T}\,
+\boldsymbol{Q}_{i}=\boldsymbol{I}-\boldsymbol{G}\overline{\boldsymbol{P}_{i}}\,\overline{\boldsymbol{D}_{i}}^{-1}\overline{\boldsymbol{P}_{i}}^{T}\,,
 \end{equation}
 
 \end_inset
@@ -14572,11 +14582,18 @@ Mivel a
 \begin_inset Formula $\boldsymbol{Q}_{i}$
 \end_inset
 
- mátrixok nagyon és ritkák, a 
+ mátrixok nagyok és ritkák, a 
 \begin_inset Formula $\boldsymbol{P}_{i+1}$
 \end_inset
 
- mátrixok számítása a *9-es* egyenlőséggel nem praktikus.
+ mátrixok számítása a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BCG_9"
+
+\end_inset
+
+ egyenlőséggel nem praktikus.
  Ha a 
 \begin_inset Formula $\boldsymbol{W}_{i}$
 \end_inset
@@ -14591,7 +14608,7 @@ Mivel a
 \end_inset
 
 ahol 
-\begin_inset Formula $K$
+\begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
  egy tetszőleges valós szimmetrikus mátrix, a Hestenes-Stiefel-féle algoritmusná
@@ -14603,7 +14620,14 @@ l
 
 \end_inset
 
-Ekkor a *9-es* egyenlőség a Lazncos-féle algoritmusban
+Ekkor a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BCG_9"
+
+\end_inset
+
+ egyenlőség a Lazncos-féle algoritmusban
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{P}_{i+1}=(\boldsymbol{I}-\boldsymbol{P}_{i}\boldsymbol{D}_{i}^{-1}\boldsymbol{P}_{i}^{T}\boldsymbol{G}-\boldsymbol{P}_{i-1}\boldsymbol{D}_{i-1}^{-1}\boldsymbol{P}_{i-1}^{T}\boldsymbol{G})\boldsymbol{K}\boldsymbol{G}\boldsymbol{P}_{i}
@@ -14611,7 +14635,14 @@ Ekkor a *9-es* egyenlőség a Lazncos-féle algoritmusban
 
 \end_inset
 
-alakra egyszerűsödik *ref*, ahol 
+alakra egyszerűsödik 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
+\end_inset
+
+, ahol 
 \begin_inset Formula $\boldsymbol{P}_{0}=\boldsymbol{0}$
 \end_inset
 
@@ -14631,6 +14662,13 @@ alakra egyszerűsödik a Hestenes-Stiefel-féle algortimus esetén, ahol
 \begin_inset Formula $\boldsymbol{P}_{0}=\boldsymbol{0}$
 \end_inset
 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
+\end_inset
+
 .
  
 \end_layout
@@ -14644,8 +14682,15 @@ Mind a két algoritmus stabilis, ha a
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
- mátiroxk definitek *oleary ref*.
- A Hestenes-Stiefel-féle algoritmus *breakdown free*, akkor és csak akkor,
+ mátrixok definitek 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "OLearyBlCG"
+
+\end_inset
+
+.
+ A Hestenes-Stiefel-féle algoritmus akkor és csak akkor összeomlásmentes,
  ha a 
 \begin_inset Formula $\boldsymbol{P}_{i}^{T}\boldsymbol{G}\boldsymbol{P}_{i}$
 \end_inset
@@ -14663,7 +14708,7 @@ Mind a két algoritmus stabilis, ha a
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
- mátrixok definitek és a 
+ mátrixok definitek, és a 
 \begin_inset Formula $\boldsymbol{P}_{i}$
 \end_inset
 
@@ -14671,8 +14716,22 @@ Mind a két algoritmus stabilis, ha a
 \begin_inset Formula $\boldsymbol{F}_{i}$
 \end_inset
 
- mátrixok teljesrangúak *O'Leary ref*.
- Broyden *ref* a 
+ mátrixok teljesrangúak 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "OLearyBlCG"
+
+\end_inset
+
+.
+ Broyden 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
+\end_inset
+
+ a 
 \begin_inset Formula $\boldsymbol{P}_{i}^{T}\boldsymbol{G}\boldsymbol{P}_{i}$
 \end_inset
 
@@ -14690,7 +14749,7 @@ Mind a két algoritmus stabilis, ha a
 \end_layout
 
 \begin_layout Subsection
-A Krylov sorozatok
+Az összeomlás elkerülésének feltételei
 \end_layout
 
 \begin_layout Standard
@@ -14726,24 +14785,34 @@ A
 \begin_inset Formula $\boldsymbol{M}_{i}$
 \end_inset
 
- mátrix nemszinguláris, a *4-es* és *5-ös* egyenlőségekben, nem változtatja
- meg a 
+ mátrix nemszinguláris, a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BCG_4"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BCG_5"
+
+\end_inset
+
+ egyenlőségekben, nem változtatja meg a 
 \begin_inset Formula $\boldsymbol{Q}_{i}$
 \end_inset
 
- mátrixot *ref Broyden*.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Megmutatjuk, hogy (ehhez kéne a biz)
-\end_layout
+ mátrixot 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
 
 \end_inset
 
- A Lanczos-féle blokk konjugált gradiens módszer *breakdown-free*, akkor
- és csak akkor, ha az 
+.
+ Megmutatju, hogy a Lanczos-féle blokk konjugált gradiens módszer akkor
+ és csak akkor összeomlásmentes, ha az 
 \begin_inset Formula $\left\{ \boldsymbol{S}_{j}\right\} $
 \end_inset
 
@@ -14773,7 +14842,7 @@ Legyen
 \begin_inset Formula $\boldsymbol{P}_{j}$
 \end_inset
 
- mátrixokt a Lanczos algoritmussal (
+ mátrixokat a Lanczos algoritmussal (
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:BCG_5"
@@ -14809,6 +14878,15 @@ reference "eq:BCG_9"
 \end_inset
 
 mátrix nemszinguláris.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "45. oldal, Theorem 1"
+key "BroydenBlCG"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -14817,7 +14895,7 @@ Lásd *Broyden ref*, 45.
 \end_layout
 
 \begin_layout Standard
-Ez a tétel azt mutatja meg, hogy ha a 
+Tehát, ha a 
 \begin_inset Formula $\boldsymbol{S}_{j}$
 \end_inset
 
@@ -14825,7 +14903,7 @@ Ez a tétel azt mutatja meg, hogy ha a
 \begin_inset Formula $\boldsymbol{D}_{j}$
 \end_inset
 
- mátrixok nemszingulárisak, és így az algoritmus *breakdown-free*.
+ mátrixok nemszingulárisak, és így az algoritmus összemolásmentes.
  Másrészről, ha az 
 \begin_inset Formula $\boldsymbol{S}_{j}$
 \end_inset
@@ -14851,12 +14929,12 @@ Ez a tétel azt mutatja meg, hogy ha a
 \end_inset
 
 mátrixok nem számolhatóak.
- Ezért az algoritmus *breakdown-ol* 
+ Ezért az algoritmus összeomlik 
 \begin_inset Formula $\boldsymbol{X}_{i}$
 \end_inset
 
  kiszámolása után.
- A Lanzos-féle algoritmusnál a *breakdownak* csak ez az egyetlen oka lehet,
+ A Lanzos-féle algoritmusnál a összeomlásnak csak ez az egyetlen oka lehet,
  hogy az 
 \begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
@@ -14870,7 +14948,14 @@ A Hestenes-Stiefel-féle blokk konjugált gradiens módszernél a stabilitást
 \begin_inset Formula $\boldsymbol{P}_{i}^{T}\boldsymbol{F}_{i}$
 \end_inset
 
- mátrix is befolyásolja *broyden 5*.
+ mátrix is befolyásolja 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Broyden5"
+
+\end_inset
+
+.
  Legyen
 \begin_inset Formula 
 \begin{equation}
@@ -14890,7 +14975,7 @@ reference "thm:BCG_Theorem1"
 
 \end_inset
 
--es tétel feltételei legyenek kielégíte, és ezenfelül az 
+-es tétel feltételei álljanak fenn, és ezenfelül az 
 \begin_inset Formula $\boldsymbol{X}_{1}$
 \end_inset
 
@@ -14908,6 +14993,15 @@ reference "thm:BCG_Theorem1"
 \end_inset
 
  mátrix nemszinguláris.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "47. oldal, Theorem 2"
+key "BroydenBlCG"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -14916,13 +15010,22 @@ Lásd *Broyden ref*, 47.
 \end_layout
 
 \begin_layout Standard
-A Hestenes-Stiefel-féle blokk konjugált gradiens módszernél az algoritmus
- *breakdown* nem csak az 
-\begin_inset Formula $\left\{ S_{j}\right\} $
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Itt kihagytam egy blokkot, ami valszeg kéne 
+\end_layout
+
+\end_inset
+
+ A Hestenes-Stiefel-féle blokk konjugált gradiens módszernél az algoritmus
+ esetleges összeomlása nem csak az 
+\begin_inset Formula $\left\{ \boldsymbol{S}_{j}\right\} $
 \end_inset
 
  mátrixsorozattól, hanem a 
-\begin_inset Formula $\left\{ T_{j}\right\} $
+\begin_inset Formula $\left\{ \boldsymbol{T}_{j}\right\} $
 \end_inset
 
  mátrixsorozattól is függ.
@@ -15004,6 +15107,14 @@ reference "eq:BCG_9"
 
  mátrix nemszinguláris.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+after "48. oldal, Theorem 3"
+key "BroydenBlCG"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -15030,11 +15141,11 @@ Ha az
 \end_inset
 
  mátrix szinguláris, a Lanzos-féle és a Hestenes-Stiefel-féle blokk konjugált
- gradiens módszerek *breakdown*-olnak, de ha a 
+ gradiens módszerek összeomlanak, de ha a 
 \begin_inset Formula $\boldsymbol{T}_{j}$
 \end_inset
 
- mátrix szinguláris, csak a Hestenes-Stiefel-féle módszer *breakdownol*.
+ mátrix szinguláris, csak a Hestenes-Stiefel-féle módszer omlik össze.
  Ezért a Hestenes-Stiefel-féle blokk konjugált gradiens módszert kevésbé
  megbízhatónak tekinthetjük.
  
@@ -15075,7 +15186,7 @@ felső indexben HS-sel jelölve bla bla
  és
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{P}_{j}^{HS}=\boldsymbol{P}_{j}^{L}\boldsymbol{L}_{j-1}\,,
+\boldsymbol{P}_{j}^{HS}=\boldsymbol{P}_{j}^{L}\boldsymbol{L}_{j-1}\,,\label{eq:BCG_29}
 \end{equation}
 
 \end_inset
@@ -15110,11 +15221,18 @@ reference "thm:BCG_Theorem_3"
 \begin_inset Formula $\boldsymbol{L}_{j-1}$
 \end_inset
 
-mátrix is szinguláris, és a *29*-es egyenlőségből következik, hogy a 
+mátrix is szinguláris, és a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BCG_29"
+
+\end_inset
+
+ egyenlőségből következik, hogy a 
 \begin_inset Formula $\boldsymbol{P}_{j}^{HS}$
 \end_inset
 
- mátrix *rank-deficient*, és így a 
+ mátrix hiányos rangú, és így a 
 \begin_inset Formula $\boldsymbol{D}_{j}^{HS}$
 \end_inset
 
@@ -15140,10 +15258,31 @@ Legvégül megnézzük az
 \end_inset
 
  mátrixsorozatot.
- A *4*, *5* és *29*-es egyenlőségekből
+ A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BCG_4"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BCG_5"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BCG_29"
+
+\end_inset
+
+egyenlőségekből
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{M}_{j}^{HS}-\boldsymbol{L}_{j-1}^{-1}\boldsymbol{M}_{j}^{L}\,,
+\boldsymbol{M}_{j}^{HS}-\boldsymbol{L}_{j-1}^{-1}\boldsymbol{M}_{j}^{L}\,,\label{eq:BCG_30}
 \end{equation}
 
 \end_inset
@@ -15158,7 +15297,21 @@ Legvégül megnézzük az
 \end_inset
 
 .
- A *29-es* és *30-as* egyenlőségből 
+ A 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BCG_29"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BCG_30"
+
+\end_inset
+
+ egyenlőségből 
 \begin_inset Formula $\boldsymbol{P}_{j}^{HS}\boldsymbol{M}_{j}^{HS}=\boldsymbol{P}_{j}^{L}\boldsymbol{M}_{j}^{L}$
 \end_inset
 
@@ -15190,7 +15343,7 @@ Ha
 \begin_inset Formula $\boldsymbol{S}_{i}=\overline{\boldsymbol{V}}_{i}^{T}\boldsymbol{G}\overline{\boldsymbol{V}}_{i}$
 \end_inset
 
-, láthatjuk, hogy
+, láthatjuk, hogy:
 \end_layout
 
 \begin_layout Enumerate
@@ -15198,15 +15351,15 @@ Ha a
 \begin_inset Formula $\boldsymbol{\overline{V}}_{i}$
 \end_inset
 
- mátrix *rank-deficient*, akkor az 
-\begin_inset Formula $S_{i}$
+ mátrix hiányosrangú, akkor az 
+\begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
  és a 
-\begin_inset Formula $T_{i}$
+\begin_inset Formula $\boldsymbol{T}_{i}$
 \end_inset
 
- mátrixok szingulárisak és mindkét algoritmus *breakdownol*
+ mátrixok szingulárisak és mindkét algoritmus összeomlik.
 \end_layout
 
 \begin_layout Enumerate
@@ -15218,7 +15371,7 @@ Ha a
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- mátrix indefinit, akkor lehet *breakdown* mindkét algoritmusnál
+ mátrix indefinit, akkor mindkét algoritmusnál lehetséges az összeomlás.
 \end_layout
 
 \begin_layout Enumerate
@@ -15230,13 +15383,21 @@ Ha a
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
- mátrix indefinit, akkor a Hestenes-Stiefel-féle algoritmusnál lehet *breakdown*
+ mátrix indefinit, akkor a Hestenes-Stiefel-féle algoritmusnál lehetséges
+ az összeomlás.
 \end_layout
 
 \begin_layout Standard
-Az első eset kezelésére léteznek különböző módszerek *ref broyden*.
- A második eset sokkal komolyabb, és *serious breakdown-t* eredményezhet,
- ha 
+Az első eset kezelésére léteznek különböző módszerek 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
+\end_inset
+
+.
+ A második eset sokkal komolyabb, és komoly összeomlást eredményezhet, ha
+ 
 \begin_inset Formula $i$
 \end_inset
 
@@ -15244,30 +15405,38 @@ Az első eset kezelésére léteznek különböző módszerek *ref broyden*.
 \begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
- mátrix szingulári.
- Ekkor ha az 
-\begin_inset Formula $S_{i}$
+ mátrix szinguláris.
+ Ha az 
+\begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
  mátrix azért szinguláris, mert a 
 \begin_inset Formula $\boldsymbol{\overline{V}}_{i}$
 \end_inset
 
- mátrix *rank-deficient*, akkor az 
+ mátrix hiányosrangú, akkor az 
 \begin_inset Formula $\boldsymbol{S}_{k}$
 \end_inset
 
- mátrix szinguláris, 
-\begin_inset Formula $\forall k\geq i$
+ mátrix szinguláris minden
+\begin_inset Formula $k\geq i$
 \end_inset
 
-.
+ esetén.
  Ekkor találhatunk olyan 
 \begin_inset Formula $j$
 \end_inset
 
--lépéses *look-ahead* módszert, amivel megakadályozhatjuk a *breakdownt*.
- De, ha az 
+-lépéses 
+\begin_inset Quotes pld
+\end_inset
+
+előretekintő
+\begin_inset Quotes prd
+\end_inset
+
+ módszert, amivel megakadályozhatjuk az összeomlást.
+ Ha az 
 \begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
@@ -15279,23 +15448,23 @@ Az első eset kezelésére léteznek különböző módszerek *ref broyden*.
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- mátrix indefinit), akkor 
-\begin_inset Formula $\exists j\geq1$
+ mátrix indefinit), akkor létezik olyan 
+\begin_inset Formula $j\geq1$
 \end_inset
 
 , hogy 
 \begin_inset Formula $\boldsymbol{S}_{i+j}$
 \end_inset
 
- nemszinguláris, vagy 
+ mátrix nemszinguláris, vagy az 
 \begin_inset Formula $\boldsymbol{S}_{k}$
 \end_inset
 
- szinguláris 
-\begin_inset Formula $\forall k\geq i$
+ mátrix szinguláris minden 
+\begin_inset Formula $k\geq i$
 \end_inset
 
-, és az *incurable breakdown* elkerülhetetlen.
+ esetén, és az összeomlás nem javítható.
  A harmadik esetnél, ha a 
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
