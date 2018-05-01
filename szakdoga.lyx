@@ -14359,10 +14359,10 @@ key "BroydenBlCG"
 \end_inset
 
  cikkére támaszkodva, szükséges és elégséges feltételeket vezetünk le az
- összeomlás elkerülésére, kétféle blokk konjugált algoritmus esetén.
+ összeomlás elkerülésére, a Lanczos-féle és a Hestenes-Stiefel-féle blokk
+ konjugált algoritmusok esetén.
  Ezeket a feltételeket aztán az algoritmusokat meghatározó mátrixok definitségéh
 ez kapcsoljuk.
- A kétféle algoritmus a Lanczos-féle és a Hestenes-Stiefel-féle algoritmusok.
  Megmutatjuk, hogy a Lanczos-féle algoritmus stabilisabb, mint a Hestenes-Stiefe
 l-féle algoritmus.
  
@@ -14481,7 +14481,7 @@ Ekkor az algoritmus leállásának elégséges feltétele, a konjugáltság felt
  Ha 
 \begin_inset Formula 
 \begin{equation}
-\overline{\boldsymbol{P}}=\left[\begin{array}{cccc}
+\overline{\boldsymbol{P}}_{i}=\left[\begin{array}{cccc}
 \boldsymbol{P}_{1} & \boldsymbol{P}_{2} & ... & \boldsymbol{P}_{i}\end{array}\right]
 \end{equation}
 
@@ -14664,12 +14664,11 @@ key "OLearyBlCG"
 \begin_inset Formula $\boldsymbol{F}_{i}^{T}\boldsymbol{K}\boldsymbol{F}_{i}$
 \end_inset
 
- mátrixok nemszingulárisak.
- Ez a tulajdonság garantált, ha a 
+ mátrixok nemszingulárisak, ami garantált, ha a 
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- és a 
+ és a
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
@@ -14677,14 +14676,14 @@ key "OLearyBlCG"
 \begin_inset Formula $\boldsymbol{P}_{i}$
 \end_inset
 
- és 
+ és az 
 \begin_inset Formula $\boldsymbol{F}_{i}$
 \end_inset
 
  mátrixok teljesrangúak 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "OLearyBlCG"
+key "Broyden5"
 
 \end_inset
 
@@ -14701,7 +14700,7 @@ key "OLearyBlCG"
 \begin_inset Formula $\boldsymbol{F}\boldsymbol{K}\boldsymbol{F}_{i}$
 \end_inset
 
- a Hestenes-Stiefel-féle algortimus esetnén) mátrixokat vizsgálta a mögöttes
+ a Hestenes-Stiefel-féle algortimus esetnén) mátrixokat vizsgálta, a mögöttes
  Krylov sorozatok segítségével 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -14738,6 +14737,11 @@ Legyen
 
 \end_inset
 
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 A 
 \begin_inset Formula $\boldsymbol{\overline{P}}_{i}$
 \end_inset
@@ -14775,7 +14779,12 @@ key "BroydenBlCG"
 
 \end_inset
 
- 
+.
+\end_layout
+
+\end_inset
+
+
 \begin_inset Note Note
 status open
 
@@ -14785,8 +14794,7 @@ ez itt kell? lényeges?
 
 \end_inset
 
-.
- Megmutatjuk, hogy a Lanczos-féle blokk konjugált gradiens módszer akkor
+Megmutatjuk, hogy a Lanczos-féle blokk konjugált gradiens módszer akkor
  és csak akkor összeomlásmentes, ha az 
 \begin_inset Formula $\left\{ \boldsymbol{S}_{j}\right\} $
 \end_inset
@@ -14892,16 +14900,16 @@ Tehát, ha a
 \begin_inset Formula $\boldsymbol{S}_{j}$
 \end_inset
 
- mátrixok nemszingulárisak, akkor a 
+ mátrix nemszingulárisak, akkor a 
 \begin_inset Formula $\boldsymbol{D}_{j}$
 \end_inset
 
- mátrixok nemszingulárisak, és így az algoritmus összemolásmentes.
+ mátrix nemszinguláris, és így az algoritmus összemolásmentes.
  Másrészről, ha az 
 \begin_inset Formula $\boldsymbol{S}_{j}$
 \end_inset
 
- mátrixok nemszingulárisak 
+ mátrix nemszinguláris 
 \begin_inset Formula $j=1,2,....,(i-1)$
 \end_inset
 
@@ -14932,7 +14940,14 @@ Tehát, ha a
 \begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
- mátrix szinguláris.
+ mátrix szinguláris 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -15028,7 +15043,14 @@ Itt kihagytam egy blokkot, ami valszeg kéne
 \begin_inset Formula $\left\{ \boldsymbol{T}_{j}\right\} $
 \end_inset
 
- mátrixsorozattól is függ.
+ mátrixsorozattól is függ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Theorem
@@ -15156,7 +15178,14 @@ Ha az
  mátrix szinguláris, akkor csak a Hestenes-Stiefel-féle algoritmus omlik
  össze.
  Ezért a Hestenes-Stiefel-féle blokk konjugált gradiens módszert kevésbé
- megbízhatónak tekinthetjük.
+ megbízhatónak tekinthetjük 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -15207,16 +15236,32 @@ ahol
 status open
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 ez az L mátrix és a 25-ös egyenlőség a proof-ban van
 \end_layout
 
 \end_inset
 
- a *25-ös* egyenlőségből, 
+ a *25-ös* egyenlőségből,
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $\boldsymbol{L}_{j-1}=\boldsymbol{M}_{1}^{HS}\boldsymbol{M}_{2}^{HS}...\boldsymbol{M}_{j-1}^{HS}$
 \end_inset
 
- .
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
+\end_inset
+
+.
  A 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -15260,7 +15305,14 @@ reference "eq:BCG_29"
 \begin_inset Formula $\boldsymbol{\overline{P}}_{j}$
 \end_inset
 
- mátrixok rangja mindig megegyezik.
+ mátrixok rangja mindig megegyezik 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -15330,7 +15382,14 @@ reference "eq:BCG_30"
 \begin_inset Formula $\left\{ \boldsymbol{X}_{i}\right\} $
 \end_inset
 
- mátrixsorozat azonos.
+ mátrixsorozat azonos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -15346,15 +15405,29 @@ Ha
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
- mátrix nemszinguláris, akkor a *21-es* egyenlőségből 
+ mátrix nemszinguláris, akkor 
 \begin_inset Formula $\boldsymbol{T}_{i}=\overline{\boldsymbol{V}}_{i}^{T}\boldsymbol{K}^{-1}\overline{\boldsymbol{V}}_{i}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
 \end_inset
 
 , és mivel 
 \begin_inset Formula $\boldsymbol{S}_{i}=\overline{\boldsymbol{V}}_{i}^{T}\boldsymbol{G}\overline{\boldsymbol{V}}_{i\,}$
 \end_inset
 
-, láthatjuk, hogy:
+, láthatjuk, hogy 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Enumerate
@@ -15407,8 +15480,7 @@ key "BroydenBlCG"
 \end_inset
 
 .
- A második eset sokkal komolyabb, és komoly összeomlást eredményezhet, ha
- 
+ A második eset komoly összeomlást eredményezhet, ha 
 \begin_inset Formula $i$
 \end_inset
 
