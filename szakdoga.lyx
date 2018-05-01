@@ -11345,18 +11345,8 @@ Ezek a
 \end_inset
 
  vektorra 2-tagú rekurrens módszert adnak.
- Az első kettő, az eredeti konjugált gradiens módszer és a conjugate residual
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-magyar?
-\end_layout
-
-\end_inset
-
-módszer b-stabilis és 
+ Az első kettő, az eredeti konjugált gradiens módszer és a konjugált reziduális
+ módszer b-stabilis és 
 \begin_inset Formula $\omega$
 \end_inset
 
@@ -11406,7 +11396,7 @@ módszer b-stabilis és
 status open
 
 \begin_layout Plain Layout
-magyar?
+?
 \end_layout
 
 \end_inset
@@ -13820,7 +13810,7 @@ key "BroydenNewTaxonomy"
 
 \begin_layout Standard
 A 13-as módszer a 3-tagú változata a bikonjugált gradiens módszernek.
- A 14-es és 15-ös módszer a 3-tagú változata a Hegedüs és bikonjugált residual
+ A 14-es és 15-ös módszer a 3-tagú változata a Hegedüs és bikonjugált reziduális
  módszernek.
  
 \begin_inset Note Note
@@ -13829,7 +13819,7 @@ status open
 \begin_layout Plain Layout
 melyik módszerek? többinél is lehetne névvel hivatkozni mint Broyden, és
  mellette, hogy hányas módszer.
- residual magyarul
+ 
 \end_layout
 
 \end_inset
@@ -14270,28 +14260,16 @@ key "KrylovBook"
 \end_layout
 
 \begin_layout Standard
-A 18-as módszer még egy változata a bikonjugált residual módszernek, 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-magyar? referencia van Broydenben
-\end_layout
+A 18-as módszer még egy változata a bikonjugált reziduális módszernek, amíg
+ a 19-es módszer a Paige és Saunders féle LSQR algoritmus 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
 
 \end_inset
 
- amíg a 19-es módszer a Paige és Saunders féle LSQR algoritmus.
- Itt is 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Broydenben van ref
-\end_layout
-
-\end_inset
-
- ortogonális transzformációk szükségesek ahhoz, hogy a megoldás következő
+.
+ Itt is ortogonális transzformációk szükségesek ahhoz, hogy a megoldás következő
  becslését ki tudjuk számolni, mivel a gradiens számoláshoz szükséges az
  együtthatómátrix inverze 
 \begin_inset CommandInset citation
@@ -14302,19 +14280,6 @@ key "BroydenNewTaxonomy"
 
 .
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Majd tele kell rakni az egész fejezetet a Broyden cikkre referenciával
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
