@@ -14412,7 +14412,7 @@ egyenletrendszer megoldására alkalmas, ahol
 \begin_inset Formula $n{\times}r$
 \end_inset
 
--es valós mátrix, ahol 
+-es valós mátrixok, ahol 
 \begin_inset Formula $r$
 \end_inset
 
@@ -14700,7 +14700,7 @@ key "Broyden5"
 \begin_inset Formula $\boldsymbol{F}\boldsymbol{K}\boldsymbol{F}_{i}$
 \end_inset
 
- a Hestenes-Stiefel-féle algortimus esetnén) mátrixokat vizsgálta, a mögöttes
+ a Hestenes-Stiefel-féle algortimus esetén) mátrixokat vizsgálta, a mögöttes
  Krylov sorozatok segítségével 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -14900,11 +14900,11 @@ Tehát, ha a
 \begin_inset Formula $\boldsymbol{S}_{j}$
 \end_inset
 
- mátrix nemszingulárisak, akkor a 
+ mátrixok nemszingulárisak, akkor a 
 \begin_inset Formula $\boldsymbol{D}_{j}$
 \end_inset
 
- mátrix nemszinguláris, és így az algoritmus összemolásmentes.
+ mátrixok sem azok, és így az algoritmus összemolásmentes.
  Másrészről, ha az 
 \begin_inset Formula $\boldsymbol{S}_{j}$
 \end_inset
@@ -15288,7 +15288,7 @@ reference "eq:BCG_29"
 \begin_inset Formula $\boldsymbol{P}_{j}^{HS}$
 \end_inset
 
- mátrix hiányosrangú, és így a 
+ mátrix nem teljesrangú, és így a 
 \begin_inset Formula $\boldsymbol{D}_{j}^{HS}$
 \end_inset
 
@@ -15350,8 +15350,15 @@ reference "eq:BCG_29"
 
 \end_inset
 
-így a *25*-ös egyenlőségből 
+és így 
 \begin_inset Formula $\boldsymbol{M}_{j}^{L}=\boldsymbol{M}_{1}^{HS}\boldsymbol{M}_{2}^{HS}...\boldsymbol{M}_{j}^{HS}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
 \end_inset
 
 .
@@ -15435,7 +15442,7 @@ Ha a
 \begin_inset Formula $\boldsymbol{\overline{V}}_{i}$
 \end_inset
 
- mátrix hiányosrangú, akkor az 
+ mátrix nem teljesrangú, akkor az 
 \begin_inset Formula $\boldsymbol{S}_{i}$
 \end_inset
 
@@ -15497,7 +15504,7 @@ key "BroydenBlCG"
 \begin_inset Formula $\boldsymbol{\overline{V}}_{i}$
 \end_inset
 
- mátrix hiányosrangú, akkor az 
+ mátrix nem teljesrangú, akkor az 
 \begin_inset Formula $\boldsymbol{S}_{k}$
 \end_inset
 
