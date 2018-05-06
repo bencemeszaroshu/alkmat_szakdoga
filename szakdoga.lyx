@@ -117,17 +117,142 @@ Bevezetés
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Itt majd írni arról, hogy Broyden hogyan közelíti meg a lin.algebrát.
- (Nem lesznek determinánsok.)
+Dr.
+ Abaffy József tanár úr három témát hirdetett meg Charles George Broyden
+ barátja emlékére a 2017/18/1 félévben.
+ Ezek a következők voltak:
 \end_layout
+
+\begin_layout Enumerate
+Broyden és a feltétel nélküli optimalizálás,
+\end_layout
+
+\begin_layout Enumerate
+Broyden és a nemlineáris egyenletrendszerek megoldása,
+\end_layout
+
+\begin_layout Enumerate
+Broyden és a lineáris egyenletrendszerek megoldása.
+\end_layout
+
+\begin_layout Standard
+Én a harmadik témát választottam.
+ A lineáris algebra szerepe kiemelkedően fontos rengetek területen, jelentős
+ geometriai, fizikai és mérnöki alkalmazásokkal rendelkezik, sőt, pl.
+ a modern társadalomtudományokban is alkalmazzák.
+ Számos más területen is találkozhatunk lineáris algebrával, szinte minden
+ tudományág tartalmaz olyan modelleket, amelyek lineáris egyenletrendszerekre
+ vezetik vissza a megfigyelt jelenségeket.
+ 
+\end_layout
+
+\begin_layout Standard
+Broyden-en kívül természetesen más szerzők műveiből is merítünk (lásd a
+ hivatkozásoknál), de mivel a témakör igen nagy, teljességre nem törekedhettünk
+ e téren.
+ A diplomamunka pl.
+ a legtöbb tétel bizonyítását tartalmazza, de van, ahol csak hivatkozunk
+ a bizonyításokra.
+ Vannak olyan eredmények, amiket a hely és az idő végessége miatt teljesen
+ kihagytunk, de természetesen ezek a kevésbé fontos eredmények.
+\end_layout
+
+\begin_layout Standard
+A diplomamunka Broyden rövid életrajzával kezdődik.
+ A 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Mátrixok-alapvető-jellemzése"
 
 \end_inset
 
+.
+ és a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Lineáris-egyenletrendszerek-mego"
 
+\end_inset
+
+.
+ fejezet a további fejezeteket alapozzák meg.
+ Ezekben a fejezetekben a további fejezetekhez szükséges fogalmakat vezetünk
+ be.
+ Definíciókat adunk meg és tételeket mondunk ki.
+ Tisztázzuk a jelöléseket.
+ A témakör felvezetése annyiban különleges, hogy egyáltalán nem használjuk
+ a determináns fogalmát.
+ Ebben Broyden-hez igazodunk, mivel ezek a fejezetek nagyban támaszkodnak
+ a Basic Matrices 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BasicMatrices"
+
+\end_inset
+
+ című könyvére.
+ A fejezetek struktúrája szintén kicsit eltér a megszokottól.
+ Ebben szintén Broyden-hez igazodtunk.
+ A témakör más irányból való megközelítése számomra igen hasznos volt.
+ Az 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Felső-relaxációs-eljárás"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Blokk-konjugált-gradiens"
+
+\end_inset
+
+.
+ fejezetek Broyden, a lineáris algebra témakörében elért eredményeit foglalják
+ össze.
+ Az 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Felső-relaxációs-eljárás"
+
+\end_inset
+
+.
+ fejezetben vizsgáljuk a felső relaxációs eljárás konvergencia kritériumait.
+ A 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:A-konjugált-gradiens"
+
+\end_inset
+
+.
+ fejezetben egy átfogó rendszertant adunk a konjugált gradiens módszerekre.
+ A 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Blokk-konjugált-gradiens"
+
+\end_inset
+
+.
+ fejezetben a blokk konjugált gradiens módszert vizsgáljuk.
+ A 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:MATLAB-tesztfeladatokon-való"
+
+\end_inset
+
+.
+ fejezetben MATLAB tesztfeladatokon hasonlítjuk össze a *EZ MÉG NICS KÉSZ*...
+\end_layout
+
+\begin_layout Standard
+Itt szeretném megköszönni Dr.
+ Abaffy József végtelen segítségét a szakdolgozat írásával kapcsolatban.
+ 
 \end_layout
 
 \begin_layout Section
@@ -248,6 +373,12 @@ Köszönet Joan Broyden-nek a életrajzban nyújtott segítségéért.
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Mátrixok-alapvető-jellemzése"
+
+\end_inset
+
 Mátrixok alapvető jellemzése
 \end_layout
 
@@ -3461,6 +3592,12 @@ A kondíciószám mérete jellemzi a mátrix szingularitásának mértékét.
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Lineáris-egyenletrendszerek-mego"
+
+\end_inset
+
 Lineáris egyenletrendszerek megoldása, osztályozása
 \end_layout
 
@@ -7822,6 +7959,12 @@ status open
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Felső-relaxációs-eljárás"
+
+\end_inset
+
 Felső relaxációs eljárás (SOR)
 \end_layout
 
@@ -9308,6 +9451,12 @@ key "BroydenSORkonvergencia"
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:A-konjugált-gradiens"
+
+\end_inset
+
 A konjugált gradiens módszerek új rendszertana
 \end_layout
 
@@ -14344,6 +14493,12 @@ itt még van ami kimaradt
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Blokk-konjugált-gradiens"
+
+\end_inset
+
 Blokk konjugált gradiens módszer (BlCG)
 \end_layout
 
@@ -15595,6 +15750,12 @@ status open
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:MATLAB-tesztfeladatokon-való"
+
+\end_inset
+
 MATLAB tesztfeladatokon való összehasonlítás
 \end_layout
 
