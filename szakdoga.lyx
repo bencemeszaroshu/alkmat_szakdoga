@@ -137,7 +137,7 @@ Broyden és a lineáris egyenletrendszerek megoldása.
 
 \begin_layout Standard
 Én a harmadik témát választottam.
- A lineáris algebra szerepe kiemelkedően fontos rengetek területen, jelentős
+ A lineáris algebra szerepe kiemelkedően fontos rengeteg területen, jelentős
  geometriai, fizikai és mérnöki alkalmazásokkal rendelkezik, sőt, pl.
  a modern társadalomtudományokban is alkalmazzák.
  Számos más területen is találkozhatunk lineáris algebrával, szinte minden
@@ -251,7 +251,7 @@ reference "sec:MATLAB-tesztfeladatokon-való"
 
 \begin_layout Standard
 Szeretném megköszönni Dr.
- Abaffy József végtelen segítségét a szakdolgozat írásával kapcsolatban.
+ Abaffy József segítségét a szakdolgozat írásával kapcsolatban.
  
 \end_layout
 
@@ -387,6 +387,21 @@ Ebben a fejezetben a további fejezetekhez szükséges fogalmakat vezetünk
  be.
  Definíciókat adunk meg és tételeket mondunk ki.
  Tisztázzuk a jelöléseket.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BasicMatrices"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rozsa"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
