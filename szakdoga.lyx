@@ -137,12 +137,12 @@ Broyden és a lineáris egyenletrendszerek megoldása.
 
 \begin_layout Standard
 Én a harmadik témát választottam.
- A lineáris algebra szerepe kiemelkedően fontos rengeteg területen, jelentős
- geometriai, fizikai és mérnöki alkalmazásokkal rendelkezik, sőt, pl.
+ A lineáris algebra szerepe kiemelkedően fontos rengeteg területen, például
+ jelentős geometriai, fizikai és mérnöki alkalmazásokkal rendelkezik, de
  a modern társadalomtudományokban is alkalmazzák.
  Számos más területen is találkozhatunk lineáris algebrával, szinte minden
  tudományág tartalmaz olyan modelleket, amelyek lineáris egyenletrendszerek
- megoldására vezetik vissza a megfigyelt jelenségeket.
+ megoldására vezetik vissza valamilyen probléma megoldását.
  
 \end_layout
 
@@ -209,8 +209,8 @@ reference "sec:Blokk-konjugált-gradiens"
 \end_inset
 
 .
- fejezetek Broyden, a lineáris algebra témakörében elért eredményeit foglalják
- össze.
+ fejezetek Broyden, a numerikus lineáris algebra témakörében elért eredményeit
+ foglalják össze.
  Az 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -9523,7 +9523,7 @@ key "Orig_cg"
  együtthatómátrix szimmetrikus és pozitív definit.
  Az eredeti módszer óta már rengetek származtatott módszer született, amelyek
  nem csak szimmetrikus indefinit együtthatómátrixok esetén, de nemszimmetrikus
- együtthatómátrixok esetén is alkalmazható 
+ együtthatómátrixok esetén is alkalmazhatóak 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenNewTaxonomy"
