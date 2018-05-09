@@ -16147,10 +16147,6 @@ name "sec:Függelék"
 Summary
 \end_layout
 
-\begin_layout Section
-Broyden összes publikációja
-\end_layout
-
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
