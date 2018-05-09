@@ -15771,7 +15771,361 @@ name "sec:MATLAB-tesztfeladatokon-való"
 
 \end_inset
 
-MATLAB tesztfeladatokon való összehasonlítás
+Matlab tesztfeladatokon való összehasonlítás
+\end_layout
+
+\begin_layout Standard
+A Matlab egy interaktív programcsomag tudományos és mérnöki számítások,
+ szimulációk és grafikus adatmegjelenítés elvégzésére.
+ Előre megírt függvények és eszköztárak segítik a felhasználót a gyors algoritmu
+sfejlesztésben és az adatok grafikus megjelenítésében.
+\end_layout
+
+\begin_layout Subsection
+Tesztspecifikáció
+\end_layout
+
+\begin_layout Standard
+A Matlab 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt gallery}
+\end_layout
+
+\end_inset
+
+ egy teszt mátrix gyűjtemény.
+ Az
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim} [A,B,C,...] = gallery(matname,P1,P2,...)  
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+ függvényhívás visszaad egy tesztmátrixot vagy tesztmátrixokat, amit a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt matname}
+\end_layout
+
+\end_inset
+
+ paraméter specifikál.
+ A 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt matname}
+\end_layout
+
+\end_inset
+
+ paraméter a mátrixcsalád neve.
+ A használható mátrixcsaládok nevét a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim} help gallery 
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+ paranccsal, vagy az online Matlab dokumentációban érhetjük el.
+ A 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt P1,P2,...}
+\end_layout
+
+\end_inset
+
+ paraméterek opcionálisak, és a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt matname}
+\end_layout
+
+\end_inset
+
+ által specifikált mátrixcsaládtól függenek.
+ Ezek a paraméterek és a pontos hívási szintaktikák szintén elérhetőek 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt help gallery}
+\end_layout
+
+\end_inset
+
+ paranccsal, vagy az online Matlab dokumentációban.
+ Ez a tesztmátrix galéria több mint ötven különböző tesztmátrixot tartalmaz,
+ amelyek hasznosak lehetnek pl.
+ különböző algoritmusok tesztelésénél.
+ 
+\end_layout
+
+\begin_layout Standard
+Ebben a fejezetben ezek közül a tesztmátrixok közül választunk ki párat,
+ és összehasonlítunk néhány, a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:A-konjugált-gradiens"
+
+\end_inset
+
+.
+ fejezetben tárgyalt konjugált gradiens módszert.
+ A tesztmátrixokkal úgy generálunk tesztfeladatot, hogy az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ tesztmátrixot egy ismert 
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+ vektorral megszorozzuk, és így kapunk egy 
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+ vektort.
+ Megoldjuk az 
+\begin_inset Formula $\boldsymbol{Ax}=\boldsymbol{b}$
+\end_inset
+
+ egyenletrendszert, ahol 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ ismeretlen vektor.
+ Ekkor az 
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+ vektor az egyenletrendszer pontos megoldása, az 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ vektor pedig az egyenletrendszer adott módszerrel számolt megoldása.
+ Ha a megoldáshoz használt módszer nem omlik össze, és eléri a kívánt hibatolera
+nciát, akkor összehasonlítjuk az 
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+ és az 
+\series bold
+x
+\series default
+ vektorokat, és mérjük a megoldáshoz használt iterációk számát is.
+\end_layout
+
+\begin_layout Standard
+A cg, pcg, SYMMLQ, bicgstabl, QMR és az LSQR módszereket hasonlítjuk össze.
+ A módszereket lásd 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:A-konjugált-gradiens"
+
+\end_inset
+
+.
+ fejezet és 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "KrylovBook"
+
+\end_inset
+
+.
+ A módszereknél a toleranciát 
+\begin_inset Formula $10^{-9}$
+\end_inset
+
+ értékre állítjuk, a maximum iteráció számot pedig 
+\begin_inset Formula $1000$
+\end_inset
+
+-re.
+ A cg módszerre saját implementációt használunk, ennek forráskódja megtalálható
+ a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Függelék"
+
+\end_inset
+
+.
+ fejezetben.
+ A többi módszer esetén a Matlab saját implementációját használjuk.
+ A fő program végzi a teszteket, tárolja.
+ és grafikusan megjeleníti az eredményeket.
+ A fő program forráskódja szintén megtalálható a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Függelék"
+
+\end_inset
+
+.
+ fejezetben.
+ 
+\end_layout
+
+\begin_layout Standard
+A teszthez a Matlab 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt gallery}
+\end_layout
+
+\end_inset
+
+-ből a következő mátrixcsaládokat használjuk.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt dorr}
+\end_layout
+
+\end_inset
+
+: Diagonally dominant, ill-conditioned, tridiagonal matrixDiagonally dominant,
+ ill-conditioned, tridiagonal matrixDiagonally dominant, ill-conditioned,
+ tridiagonal matrixDiagonally dominant, ill-conditioned, tridiagonal matrixDiago
+nally dominant, ill-conditioned, tridiagonal matrix 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt chebspec}
+\end_layout
+
+\end_inset
+
+: Chebyshev spectral differentiation matrix
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt prolate}
+\end_layout
+
+\end_inset
+
+: Symmetric, ill-conditioned Toeplitz matrix 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt randhess}
+\end_layout
+
+\end_inset
+
+: Random, orthogonal upper Hessenberg matrix 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt sampling}
+\end_layout
+
+\end_inset
+
+: Nonsymmetric matrix with ill-conditioned integer eigenvalues
+\end_layout
+
+\begin_layout Standard
+\noindent
+Bla bla Bla bla Bla bla Bla bla Bla bla Bla bla 
+\end_layout
+
+\begin_layout Subsection
+Teszteredmények
+\end_layout
+
+\begin_layout Subsection
+Konklúzió
 \end_layout
 
 \begin_layout Section
@@ -15780,6 +16134,13 @@ Konklúzió
 
 \begin_layout Section
 Függelék
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Függelék"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
