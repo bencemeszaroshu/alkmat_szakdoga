@@ -15799,7 +15799,7 @@ tt gallery}
 
 \end_inset
 
- egy teszt mátrix gyűjtemény.
+ egy tesztmátrix gyűjtemény.
  Az
 \end_layout
 
@@ -15920,7 +15920,11 @@ reference "sec:A-konjugált-gradiens"
 
 .
  fejezetben tárgyalt konjugált gradiens módszert.
- A tesztmátrixokkal úgy generálunk tesztfeladatot, hogy az 
+ 
+\end_layout
+
+\begin_layout Standard
+A tesztmátrixokkal úgy generálunk tesztfeladatot, hogy az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
