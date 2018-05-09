@@ -16129,10 +16129,6 @@ Konklúzió
 \end_layout
 
 \begin_layout Section
-Konklúzió
-\end_layout
-
-\begin_layout Section
 Függelék
 \begin_inset CommandInset label
 LatexCommand label
@@ -16141,6 +16137,18 @@ name "sec:Függelék"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Összefoglaló
+\end_layout
+
+\begin_layout Section
+Summary
+\end_layout
+
+\begin_layout Section
+Broyden összes publikációja
 \end_layout
 
 \begin_layout Standard
