@@ -3147,7 +3147,7 @@ Az
 \begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}>0$
 \end_inset
 
- minden 
+, minden 
 \begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
 \end_inset
 
@@ -3175,11 +3175,72 @@ Az
 \begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}\geq0$
 \end_inset
 
- minden 
+, minden 
 \begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
 \end_inset
 
  vektorra.
+ Jelölése 
+\begin_inset Formula $\boldsymbol{A}\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ valós mátrix negatív definit, ha 
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}<0$
+\end_inset
+
+, minden 
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
+\end_inset
+
+ vektorra.
+ Jelölése 
+\begin_inset Formula $\boldsymbol{A}<0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ valós mátrix negatív szemidefinit, ha 
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}\leq0$
+\end_inset
+
+, minden 
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
+\end_inset
+
+ vektorra.
+ Jelölése 
+\begin_inset Formula $\boldsymbol{A}\leq0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3198,7 +3259,7 @@ Az
 \begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}\neq0$
 \end_inset
 
- minden 
+, minden 
 \begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
 \end_inset
 
@@ -3218,15 +3279,30 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- valós mátrix indefinit, ha létezik olyan 
+ valós mátrix indefinit, ha léteznek olyan 
 \begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
 \end_inset
 
- vektor, amelyre 
-\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}<0$
+ és 
+\begin_inset Formula $\boldsymbol{y}\neq0$
+\end_inset
+
+ vektorok, amelyekre 
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}<0<\boldsymbol{y}^{T}\boldsymbol{Ay}$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hasonlóan lehet egy mátix negatív definit és negatív szemidefinit.
 \end_layout
 
 \begin_layout Theorem
