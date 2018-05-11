@@ -3294,17 +3294,6 @@ Az
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Hasonlóan lehet egy mátix negatív definit és negatív szemidefinit.
-\end_layout
-
 \begin_layout Theorem
 Legyen 
 \begin_inset Formula $\boldsymbol{A}$
