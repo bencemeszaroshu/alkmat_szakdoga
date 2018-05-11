@@ -1050,7 +1050,6 @@ c_{ij}=\boldsymbol{a}_{i}^{T}\boldsymbol{b}_{j}\,.\label{eq:matrixszorzat}
 \end_layout
 
 \begin_layout Standard
-\noindent
 Az 
 \begin_inset Formula $\boldsymbol{AB}$
 \end_inset
@@ -1075,6 +1074,25 @@ Az
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix idempotens, ha 
+\begin_inset Formula $\boldsymbol{A}^{2}=\boldsymbol{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition*
