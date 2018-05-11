@@ -3144,10 +3144,6 @@ Az
 \end_inset
 
  valós mátrix pozitív definit, ha 
-\begin_inset Formula $\boldsymbol{A}$
-\end_inset
-
- szimmetrikus, és 
 \begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}>0$
 \end_inset
 
@@ -3155,7 +3151,7 @@ Az
 \begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
 \end_inset
 
--ra.
+ vektorra.
  Jelölése 
 \begin_inset Formula $\boldsymbol{A}>0$
 \end_inset
@@ -3168,6 +3164,69 @@ Az
 \end_inset
 
 
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ valós mátrix pozitív szemidefinit, ha 
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}\geq0$
+\end_inset
+
+ minden 
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
+\end_inset
+
+ vektorra.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ valós mátrix definit, ha 
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}\neq0$
+\end_inset
+
+ minden 
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
+\end_inset
+
+ vektorra.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ valós mátrix indefinit, ha létezik olyan 
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
+\end_inset
+
+ vektor, amelyre 
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}<0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Theorem
