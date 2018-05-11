@@ -13466,7 +13466,16 @@ key "BroydenNewTaxonomy"
 
 \begin_layout Standard
 \noindent
-Ezeknél a módszereknél, mint az 1-es és 2-es módszereknél, ha a 
+Az 
+\begin_inset Formula $\boldsymbol{A}^{-T}$
+\end_inset
+
+ jelölés jelentése 
+\begin_inset Formula $(\boldsymbol{A}^{-1})^{T}$
+\end_inset
+
+.
+ Ezeknél a módszereknél, mint az 1-es és 2-es módszereknél, ha a 
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
