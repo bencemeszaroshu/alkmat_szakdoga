@@ -15968,7 +15968,7 @@ x
 \end_layout
 
 \begin_layout Standard
-A cg, pcg, SYMMLQ, bicgstabl, QMR és az LSQR módszereket hasonlítjuk össze.
+A pcg, SYMMLQ, bicgstabl, QMR és az LSQR módszereket hasonlítjuk össze.
  A módszereket lásd 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -15990,11 +15990,16 @@ key "KrylovBook"
 \end_inset
 
  értékre állítjuk, a maximum iteráció számot pedig 
-\begin_inset Formula $1000$
+\begin_inset Formula $100$
 \end_inset
 
 -re.
- A cg módszerre saját implementációt használunk, ennek forráskódja megtalálható
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A cg módszerre saját implementációt használunk, ennek forráskódja megtalálható
  a 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -16005,7 +16010,12 @@ reference "sec:Függelék"
 .
  fejezetben.
  A többi módszer esetén a Matlab saját implementációját használjuk.
- A fő program végzi a teszteket, tárolja.
+\end_layout
+
+\end_inset
+
+ A módszereknek a saját Matlab implementációját használjukA fő program végzi
+ a teszteket, tárolja.
  és grafikusan megjeleníti az eredményeket.
  A fő program forráskódja szintén megtalálható a 
 \begin_inset CommandInset ref
