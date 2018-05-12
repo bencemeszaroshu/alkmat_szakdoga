@@ -16177,6 +16177,112 @@ sampling
 \end_layout
 
 \begin_layout Standard
+A tesztfeladatokon a pcg, SYMMLQ, bicgstabl, QMR és az LSQR módszereket
+ hasonlítjuk össze.
+ A módszereket lásd 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:A-konjugált-gradiens"
+
+\end_inset
+
+.
+ fejezet és 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "KrylovBook"
+
+\end_inset
+
+.
+ A módszereknél a toleranciát 
+\begin_inset Formula $10^{-6}$
+\end_inset
+
+ értékre állítjuk, a maximum iteráció számot pedig 
+\begin_inset Formula $1000$
+\end_inset
+
+-re.
+ A módszereknek a saját Matlab implementációját használjuk, a matlabos saját
+ függvények neve megegyezik a módszer nevével.
+ A pcg és SYMMLQ módszereknek 
+\begin_inset Formula $\boldsymbol{A}\boldsymbol{A}^{T}$
+\end_inset
+
+ együtthatómátrixokat adtam át, mivel ezek a módszerek megkövetelik az együtthat
+ómátrix szimmetrikusságát.
+\end_layout
+
+\begin_layout Standard
+A konjugált gradiens módszereken kívül minden tesztfeladatot megoldunk a
+ Matlab 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt mldivide}
+\end_layout
+
+\end_inset
+
+ függvényével.
+ Az 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt mldivide}
+\end_layout
+
+\end_inset
+
+ függvényt az 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt x = A
+\backslash
+textbackslash b}
+\end_layout
+
+\end_inset
+
+ paranccsal is meg lehet hívni.
+ Az 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt mldivide}
+\end_layout
+
+\end_inset
+
+ megvizsgálja a feladat együtthatómátrixát, és különböző algoritmusok segítségév
+el próbálja a lehető legjobb megoldómódszert kiválasztani.
+ A választás mikéntje tárgyalva van a Matlab dokumentációjában.
+ 
+\end_layout
+
+\begin_layout Subsection
+A tesztfeladatok elemzése 
+\end_layout
+
+\begin_layout Standard
 A generált tesztmátrixok néhány tulajdonsága:
 \end_layout
 
@@ -16585,48 +16691,114 @@ A mátrixcsaládokat próbáltam úgy választani, hogy a kapott tesztmátrixok
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+Esetünben két együtthatómátrix is rosszul kondicionált, vagy más szóval
+ közel szinguláris, a moler-féle és a sampling-féle együtthatómátrixok.
+ Az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ együtthatómátrix rosszul kondicionáltság azt jelenti, hogy a 
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+ vektor nagyon kicsi megváltozása az 
+\begin_inset Formula $\boldsymbol{Ax}=\boldsymbol{b}$
+\end_inset
+
+ egyenletrendszerben, az 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ vektor nagyon nagy megváltozását eredményezheti.
+ A kondíciószám 
+\begin_inset Quotes pld
+\end_inset
+
+felerősíti
+\begin_inset Quotes prd
+\end_inset
+
+ a pontatlanságot.
+ Ha például a 
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+ vektor elemei mérési hiba miatt 
+\begin_inset Formula $\pm0.01$
+\end_inset
+
+ pontossággal ismertek, akkor az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ együtthatómátrix 
+\begin_inset Formula $10^{2}$
+\end_inset
+
+ nagyságú kondíciószáma azt jelenti, hogy az 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ megoldásvektor elemei 
+\begin_inset Formula $\pm100*0.01=\pm1$
+\end_inset
+
+ pontosságúak lesznek.
+ Természetesen ezek nem pontos definíciók.
+ A mi tesztfeladataink mentesek bármiféle mérési hibától, mivel ismert megoldásb
+ól generáltak.
+ A 
+\begin_inset Formula $10^{16}$
+\end_inset
+
+ méretű kondíciószám azonban már a Matlab lebegőpontos számábrázolásából
+ eredő numerikus hibákat is felerősíti.
+ Ez látszik abból is, hogy a Matlab 
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-IDE JÖHET KOND SZÁM, ROSSZUL KONDICIONÁLTSÁG FEJTEGETÉSE STB, RANG
+
+{
+\backslash
+tt rank}
 \end_layout
 
 \end_inset
 
+ függvénye szerint a moler-féle és a sampling-féle együtthatómátrixok rangja
+ 29, pedig ez azt jelentené, hogy az együtthatómátrixok szingulárisak, és
+ az egyenletrendszernek nincs megoldása.
+ Valószínűleg a a Matlab 
+\begin_inset ERT
+status open
 
+\begin_layout Plain Layout
+
+{
+\backslash
+tt rank}
+\end_layout
+
+\end_inset
+
+ függvénye a rosszul kondicionáltság miatt felerősített numerikus hibák
+ miatt hibázik.
+ Itt még talán érdemes megjegyezni, habár a diplomamunka nem használja a
+ determináns fogalmát, hogy egy mátrix szingularitását az alkalmazásokban
+ nem érdemes a determináns segítségével meghatározni, mert a determináns
+ számolásából adódó numerikus pontatlanságok miatt könnyen valótlan következteté
+sekre juthatunk.
+ 
+\end_layout
+
+\begin_layout Subsection
+Teszteredmények
 \end_layout
 
 \begin_layout Standard
-A pcg, SYMMLQ, bicgstabl, QMR és az LSQR módszereket hasonlítjuk össze.
- A módszereket lásd 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:A-konjugált-gradiens"
-
-\end_inset
-
-.
- fejezet és 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "KrylovBook"
-
-\end_inset
-
-.
- A módszereknél a toleranciát 
-\begin_inset Formula $10^{-6}$
-\end_inset
-
- értékre állítjuk, a maximum iteráció számot pedig 
-\begin_inset Formula $100$
-\end_inset
-
--re.
- A módszereknek a saját Matlab implementációját használjuk.
- A fő program, egy Matlab szkript végzi a teszteket, tárolja, és grafikusan
- megjeleníti az eredményeket.
+A fő program végzi a teszteket, tárolja, és grafikusan megjeleníti az eredmények
+et.
  A fő program forráskódja megtalálható a 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -16639,15 +16811,13 @@ reference "sec:Függelék"
  
 \end_layout
 
-\begin_layout Subsection
-Teszteredmények
+\begin_layout Standard
+A következő táblázatok összefoglalják a különböző módszerek eredményeit.
+ 
 \end_layout
 
 \begin_layout Standard
-error:
-\end_layout
-
-\begin_layout Standard
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="7">
 <features tabularvalignment="middle">
@@ -16663,7 +16833,7 @@ error:
 \begin_inset Text
 
 \begin_layout Plain Layout
-Matrix
+
 \end_layout
 
 \end_inset
@@ -16681,7 +16851,7 @@ pcg
 \begin_inset Text
 
 \begin_layout Plain Layout
-symmlq
+SYMMLQ
 \end_layout
 
 \end_inset
@@ -16699,7 +16869,7 @@ bicgstabl
 \begin_inset Text
 
 \begin_layout Plain Layout
-qmr
+QMR
 \end_layout
 
 \end_inset
@@ -16708,7 +16878,7 @@ qmr
 \begin_inset Text
 
 \begin_layout Plain Layout
-lsqr
+LSQR
 \end_layout
 
 \end_inset
@@ -17143,6 +17313,23 @@ sampling
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\align center
+A módszerek hibái, ahol hiba alatt az 
+\begin_inset Formula $\left|\left\Vert \boldsymbol{x}\right\Vert _{2}-\left\Vert y\right\Vert _{2}\right|$
+\end_inset
+
+ értéket értjük, és ahol az 
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+ vektor az ismert megoldás, az 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ vektor pedig az adott módszerrel számolt megoldás.
 \end_layout
 
 \begin_layout Subsection
