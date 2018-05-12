@@ -16283,7 +16283,8 @@ A tesztfeladatok elemzése
 \end_layout
 
 \begin_layout Standard
-A generált tesztmátrixok néhány tulajdonsága:
+A generált tesztmátrixok néhány tulajdonságát foglalja össze a következő
+ táblázat.
 \end_layout
 
 \begin_layout Standard
@@ -16697,7 +16698,7 @@ Esetünben két együtthatómátrix is rosszul kondicionált, vagy más szóval
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- együtthatómátrix rosszul kondicionáltság azt jelenti, hogy a 
+ együtthatómátrix rosszul kondicionáltsága azt jelenti, hogy a 
 \begin_inset Formula $\boldsymbol{b}$
 \end_inset
 
@@ -16769,7 +16770,7 @@ tt rank}
  függvénye szerint a moler-féle és a sampling-féle együtthatómátrixok rangja
  29, pedig ez azt jelentené, hogy az együtthatómátrixok szingulárisak, és
  az egyenletrendszernek nincs megoldása.
- Valószínűleg a a Matlab 
+ Valószínűleg a Matlab 
 \begin_inset ERT
 status open
 
@@ -17330,6 +17331,10 @@ A módszerek hibái, ahol hiba alatt az
 \end_inset
 
  vektor pedig az adott módszerrel számolt megoldás.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Subsection
