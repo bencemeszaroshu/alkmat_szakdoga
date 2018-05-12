@@ -16066,15 +16066,25 @@ tt help gallery}
 \end_inset
 
  paranccsal, vagy az online Matlab dokumentációban.
- Ez a tesztmátrix galéria több mint ötven különböző tesztmátrixot tartalmaz,
+ Ez a tesztmátrix galéria több mint ötvenféle mátrixcsaládot, típust tartalmaz,
  amelyek hasznosak lehetnek pl.
  különböző algoritmusok tesztelésénél.
- 
+ Ebben a fejezetben a Matlab 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt gallery}
 \end_layout
 
-\begin_layout Standard
-Ebben a fejezetben ezek közül a tesztmátrixok közül választunk ki párat,
- és összehasonlítunk néhány, a 
+\end_inset
+
+-vel generálunk teszt együtthatómátrixokat, és ezekkel a teszt együtthatómátrixo
+kkal generálunk lineáris egyenletrendszereket, azaz tesztfeladatokat.
+ A tesztfeladatok segítségével összehasonlítunk néhány, a 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:A-konjugált-gradiens"
@@ -16087,11 +16097,11 @@ reference "sec:A-konjugált-gradiens"
 \end_layout
 
 \begin_layout Standard
-A tesztmátrixokkal úgy generálunk tesztfeladatot, hogy az 
+A teszt együtthatómátrixokkal úgy generálunk tesztfeladatot, hogy az 
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- tesztmátrixot egy ismert 
+ teszt együtthatómátrixot egy ismert, véletlen generált 
 \begin_inset Formula $\boldsymbol{y}$
 \end_inset
 
@@ -16100,11 +16110,11 @@ A tesztmátrixokkal úgy generálunk tesztfeladatot, hogy az
 \end_inset
 
  vektort.
- Megoldjuk az 
+ A tesztfeladat az 
 \begin_inset Formula $\boldsymbol{Ax}=\boldsymbol{b}$
 \end_inset
 
- egyenletrendszert, ahol 
+ lineáris egyenletrendszer, ahol 
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
@@ -16113,87 +16123,16 @@ A tesztmátrixokkal úgy generálunk tesztfeladatot, hogy az
 \begin_inset Formula $\boldsymbol{y}$
 \end_inset
 
- vektor az egyenletrendszer pontos megoldása, az 
+ vektor az egyenletrendszer pontos megoldása, azaz ismerjük a pontos eredményt,
+ az 
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
- vektor pedig az egyenletrendszer adott módszerrel számolt megoldása.
- Ha a megoldáshoz használt módszer nem omlik össze, és eléri a kívánt hibatolera
-nciát, akkor összehasonlítjuk az 
-\begin_inset Formula $\boldsymbol{y}$
-\end_inset
-
- és az 
-\series bold
-x
-\series default
- vektorokat, és mérjük a megoldáshoz használt iterációk számát is.
+ vektor pedig mindig az egyenletrendszer adott módszerrel számolt megoldása.
 \end_layout
 
 \begin_layout Standard
-A pcg, SYMMLQ, bicgstabl, QMR és az LSQR módszereket hasonlítjuk össze.
- A módszereket lásd 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:A-konjugált-gradiens"
-
-\end_inset
-
-.
- fejezet és 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "KrylovBook"
-
-\end_inset
-
-.
- A módszereknél a toleranciát 
-\begin_inset Formula $10^{-9}$
-\end_inset
-
- értékre állítjuk, a maximum iteráció számot pedig 
-\begin_inset Formula $100$
-\end_inset
-
--re.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-A cg módszerre saját implementációt használunk, ennek forráskódja megtalálható
- a 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Függelék"
-
-\end_inset
-
-.
- fejezetben.
- A többi módszer esetén a Matlab saját implementációját használjuk.
-\end_layout
-
-\end_inset
-
- A módszereknek a saját Matlab implementációját használjukA fő program végzi
- a teszteket, tárolja.
- és grafikusan megjeleníti az eredményeket.
- A fő program forráskódja szintén megtalálható a 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Függelék"
-
-\end_inset
-
-.
- fejezetben.
- 
-\end_layout
-
-\begin_layout Standard
-A teszthez a Matlab 
+A Matlab 
 \begin_inset ERT
 status open
 
@@ -16209,95 +16148,32 @@ tt gallery}
 -ből a következő mátrixcsaládokat használjuk.
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-{
-\backslash
-tt dorr}
+\begin_layout Itemize
+dorr
 \end_layout
 
-\end_inset
-
-: Diagonally dominant, ill-conditioned, tridiagonal matrixDiagonally dominant,
- ill-conditioned, tridiagonal matrixDiagonally dominant, ill-conditioned,
- tridiagonal matrixDiagonally dominant, ill-conditioned, tridiagonal matrixDiago
-nally dominant, ill-conditioned, tridiagonal matrix 
+\begin_layout Itemize
+lehmer
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-{
-\backslash
-tt chebspec}
+\begin_layout Itemize
+minij
 \end_layout
 
-\end_inset
+\begin_layout Itemize
+moler
+\end_layout
 
-: Chebyshev spectral differentiation matrix
+\begin_layout Itemize
+sampling
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-{
-\backslash
-tt prolate}
-\end_layout
-
-\end_inset
-
-: Symmetric, ill-conditioned Toeplitz matrix 
+A generált tesztmátrixok néhány tulajdonsága:
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-{
-\backslash
-tt randhess}
-\end_layout
-
-\end_inset
-
-: Random, orthogonal upper Hessenberg matrix 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-{
-\backslash
-tt sampling}
-\end_layout
-
-\end_inset
-
-: Nonsymmetric matrix with ill-conditioned integer eigenvalues
-\end_layout
-
-\begin_layout Standard
-\noindent
-Bla bla Bla bla Bla bla Bla bla Bla bla Bla bla 
-\end_layout
-
-\begin_layout Standard
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="6">
 <features tabularvalignment="middle">
@@ -16312,7 +16188,7 @@ Bla bla Bla bla Bla bla Bla bla Bla bla Bla bla
 \begin_inset Text
 
 \begin_layout Plain Layout
-Matrix
+Mátrixcsalád
 \end_layout
 
 \end_inset
@@ -16321,7 +16197,7 @@ Matrix
 \begin_inset Text
 
 \begin_layout Plain Layout
-Size
+Méret
 \end_layout
 
 \end_inset
@@ -16330,7 +16206,7 @@ Size
 \begin_inset Text
 
 \begin_layout Plain Layout
-Cond
+Kondíciószám
 \end_layout
 
 \end_inset
@@ -16339,7 +16215,7 @@ Cond
 \begin_inset Text
 
 \begin_layout Plain Layout
-Rank
+Rang
 \end_layout
 
 \end_inset
@@ -16348,7 +16224,7 @@ Rank
 \begin_inset Text
 
 \begin_layout Plain Layout
-Issymmetric
+Szimmetrikus
 \end_layout
 
 \end_inset
@@ -16357,7 +16233,7 @@ Issymmetric
 \begin_inset Text
 
 \begin_layout Plain Layout
-Posdef
+Pozitív definit
 \end_layout
 
 \end_inset
@@ -16413,7 +16289,7 @@ dorr
 \begin_inset Text
 
 \begin_layout Plain Layout
-false
+nem
 \end_layout
 
 \end_inset
@@ -16422,7 +16298,7 @@ false
 \begin_inset Text
 
 \begin_layout Plain Layout
-false
+nem
 \end_layout
 
 \end_inset
@@ -16478,7 +16354,7 @@ lehmer
 \begin_inset Text
 
 \begin_layout Plain Layout
-true
+igen
 \end_layout
 
 \end_inset
@@ -16487,7 +16363,7 @@ true
 \begin_inset Text
 
 \begin_layout Plain Layout
-true
+igen
 \end_layout
 
 \end_inset
@@ -16543,7 +16419,7 @@ minij
 \begin_inset Text
 
 \begin_layout Plain Layout
-true
+igen
 \end_layout
 
 \end_inset
@@ -16552,7 +16428,7 @@ true
 \begin_inset Text
 
 \begin_layout Plain Layout
-true
+igen
 \end_layout
 
 \end_inset
@@ -16608,7 +16484,7 @@ moler
 \begin_inset Text
 
 \begin_layout Plain Layout
-true
+igen
 \end_layout
 
 \end_inset
@@ -16617,7 +16493,7 @@ true
 \begin_inset Text
 
 \begin_layout Plain Layout
-true
+igen
 \end_layout
 
 \end_inset
@@ -16673,7 +16549,7 @@ sampling
 \begin_inset Text
 
 \begin_layout Plain Layout
-false
+nem
 \end_layout
 
 \end_inset
@@ -16682,7 +16558,7 @@ false
 \begin_inset Text
 
 \begin_layout Plain Layout
-false
+nem
 \end_layout
 
 \end_inset
@@ -16693,6 +16569,66 @@ false
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+A mátrixcsaládokat próbáltam úgy választani, hogy a kapott tesztmátrixok
+ különböző tulajdonságokkal rendelkezzenek.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+IDE JÖHET KOND SZÁM, ROSSZUL KONDICIONÁLTSÁG FEJTEGETÉSE STB, RANG
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A pcg, SYMMLQ, bicgstabl, QMR és az LSQR módszereket hasonlítjuk össze.
+ A módszereket lásd 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:A-konjugált-gradiens"
+
+\end_inset
+
+.
+ fejezet és 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "KrylovBook"
+
+\end_inset
+
+.
+ A módszereknél a toleranciát 
+\begin_inset Formula $10^{-6}$
+\end_inset
+
+ értékre állítjuk, a maximum iteráció számot pedig 
+\begin_inset Formula $100$
+\end_inset
+
+-re.
+ A módszereknek a saját Matlab implementációját használjuk.
+ A fő program, egy Matlab szkript végzi a teszteket, tárolja, és grafikusan
+ megjeleníti az eredményeket.
+ A fő program forráskódja megtalálható a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Függelék"
+
+\end_inset
+
+.
+ fejezetben.
+ 
 \end_layout
 
 \begin_layout Subsection
