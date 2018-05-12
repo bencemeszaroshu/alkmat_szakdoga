@@ -17160,6 +17160,386 @@ name "sec:Függelék"
 
 \end_layout
 
+\begin_layout Subsection
+A fő program
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}
+\end_layout
+
+\begin_layout Plain Layout
+
+number_of_testmatrices = 5;
+\end_layout
+
+\begin_layout Plain Layout
+
+y = randn(30, 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+% Setup the linear systems 
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(1).Matrix = 'dorr'; 
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(1).A = gallery('dorr', 30);
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(1).b = Test(1).A*y; 
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(2).Matrix = 'lehmer'; 
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(2).A = gallery('lehmer', 30); 
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(2).b = Test(2).A*y; 
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(3).Matrix = 'minij'; 
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(3).A = gallery('minij', 30); 
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(3).b = Test(3).A*y; 
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(4).Matrix = 'moler'; 
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(4).A = gallery('moler', 30); 
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(4).b = Test(4).A*y;
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(5).Matrix = 'sampling';
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(5).A = gallery('sampling', 30);
+\end_layout
+
+\begin_layout Plain Layout
+
+Test(5).b = Test(5).A*y;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Save some of the properies of the coefficient matrices 
+\end_layout
+
+\begin_layout Plain Layout
+
+for i = 1 : number_of_testmatrices
+\end_layout
+
+\begin_layout Plain Layout
+
+    Test(i).cond = cond(Test(i).A);   
+\end_layout
+
+\begin_layout Plain Layout
+
+    Test(i).rank = rank(full(Test(i).A));
+\end_layout
+
+\begin_layout Plain Layout
+
+    if (issymmetric(Test(i).A));          
+\end_layout
+
+\begin_layout Plain Layout
+
+	        	Test(i).issymmetric = 'true';
+\end_layout
+
+\begin_layout Plain Layout
+
+    else
+\end_layout
+
+\begin_layout Plain Layout
+
+         Test(i).issymmetric = 'false';
+\end_layout
+
+\begin_layout Plain Layout
+
+    end     
+\end_layout
+
+\begin_layout Plain Layout
+
+	    [~,p] = chol(Test(i).A); 
+\end_layout
+
+\begin_layout Plain Layout
+
+   	if (p) 
+\end_layout
+
+\begin_layout Plain Layout
+
+   	    Test(i).posdef = 'false'; 
+\end_layout
+
+\begin_layout Plain Layout
+
+   	else 
+\end_layout
+
+\begin_layout Plain Layout
+
+       	Test(i).posdef = 'true'; 
+\end_layout
+
+\begin_layout Plain Layout
+
+    end 
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+for i = 1 : number_of_testmatrices
+\end_layout
+
+\begin_layout Plain Layout
+
+    % Calculate the result with the pcg method
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Test(i).pcg.x, Test(i).pcg.flag, Test(i).pcg.relres, ...
+\end_layout
+
+\begin_layout Plain Layout
+
+		    Test(i).pcg.iter]  = ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    pcg(Test(i).A, Test(i).b, 1e-6, 1000); % use A*A'
+\end_layout
+
+\begin_layout Plain Layout
+
+    Test(i).pcg.error = abs(norm(y) - norm(Test(i).pcg.x)); 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    % Calculate the result with the SYMMLQ method
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Test(i).symmlq.x, Test(i).symmlq.flag, ...
+\end_layout
+
+\begin_layout Plain Layout
+
+	    Test(i).symmlq.relres, Test(i).symmlq.iter]  = ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    symmlq(Test(i).A*Test(i).A', Test(i).b, 1e-6, 1000);
+\end_layout
+
+\begin_layout Plain Layout
+
+    Test(i).symmlq.error = abs(norm(y) - norm(Test(i).symmlq.x));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    % Calculate the result with the bicgstabl method
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Test(i).bicgstabl.x, Test(i).bicgstabl.flag, ...
+\end_layout
+
+\begin_layout Plain Layout
+
+	    Test(i).bicgstabl.relres, Test(i).bicgstabl.iter]  = ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    bicgstabl(Test(i).A, Test(i).b, 1e-6, 1000);     
+\end_layout
+
+\begin_layout Plain Layout
+
+	    Test(i).bicgstabl.error = abs(norm(y) - ...
+\end_layout
+
+\begin_layout Plain Layout
+
+		    norm(Test(i).bicgstabl.x));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    % Calculate the result with the QMR method
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Test(i).qmr.x, Test(i).qmr.flag, Test(i).qmr.relres, ...
+\end_layout
+
+\begin_layout Plain Layout
+
+		    Test(i).qmr.iter]  = ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    qmr(Test(i).A, Test(i).b, 1e-6, 1000);
+\end_layout
+
+\begin_layout Plain Layout
+
+    Test(i).qmr.error = abs(norm(y) - norm(Test(i).qmr.x));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    % Calculate the result with the LSQR method
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Test(i).lsqr.x, Test(i).lsqr.flag, Test(i).lsqr.relres, ...
+\end_layout
+
+\begin_layout Plain Layout
+
+	    Test(i).lsqr.iter]  = ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    lsqr(Test(i).A, Test(i).b, 1e-6, 1000);
+\end_layout
+
+\begin_layout Plain Layout
+
+    Test(i).lsqr.error = abs(norm(y) - norm(Test(i).lsqr.x));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    % Calculate the result using Matlab mldivide
+\end_layout
+
+\begin_layout Plain Layout
+
+    Test(i).mldivide.x = mldivide(Test(i).A, Test(i).b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    Test(i).mldivide.error = abs(norm(y) - norm(Test(i).mldivide.x)); 
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Összefoglaló
 \end_layout
