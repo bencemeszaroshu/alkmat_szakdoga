@@ -17576,7 +17576,12 @@ for i = 1 : number_of_testmatrices
 
 \begin_layout Plain Layout
 
-    Test(i).pcg.error = abs(norm(y) - norm(Test(i).pcg.x)); 
+    Test(i).pcg.error = abs((norm(y) - norm(Test(i).pcg.x)) ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    / norm(Test(i).pcg.x)); 
 \end_layout
 
 \begin_layout Plain Layout
@@ -17605,7 +17610,12 @@ for i = 1 : number_of_testmatrices
 
 \begin_layout Plain Layout
 
-    Test(i).symmlq.error = abs(norm(y) - norm(Test(i).symmlq.x));
+    Test(i).symmlq.error = abs((norm(y) - norm(Test(i).symmlq.x)) ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    / norm(Test(i).symmlq.x)); 
 \end_layout
 
 \begin_layout Plain Layout
@@ -17634,12 +17644,12 @@ for i = 1 : number_of_testmatrices
 
 \begin_layout Plain Layout
 
-	    Test(i).bicgstabl.error = abs(norm(y) - ...
+	    Test(i).bicgstabl.error = abs((norm(y) - ...
 \end_layout
 
 \begin_layout Plain Layout
 
-		    norm(Test(i).bicgstabl.x));
+		    norm(Test(i).bicgstabl.x)) / norm(Test(i).bicgstabl.x));
 \end_layout
 
 \begin_layout Plain Layout
@@ -17668,7 +17678,12 @@ for i = 1 : number_of_testmatrices
 
 \begin_layout Plain Layout
 
-    Test(i).qmr.error = abs(norm(y) - norm(Test(i).qmr.x));
+    Test(i).qmr.error = abs((norm(y) - norm(Test(i).qmr.x)) ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    / norm(Test(i).qmr.x));
 \end_layout
 
 \begin_layout Plain Layout
@@ -17697,7 +17712,12 @@ for i = 1 : number_of_testmatrices
 
 \begin_layout Plain Layout
 
-    Test(i).lsqr.error = abs(norm(y) - norm(Test(i).lsqr.x));
+    Test(i).lsqr.error = abs((norm(y) - norm(Test(i).lsqr.x)) ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    / norm(Test(i).lsqr.x));
 \end_layout
 
 \begin_layout Plain Layout
@@ -17716,7 +17736,12 @@ for i = 1 : number_of_testmatrices
 
 \begin_layout Plain Layout
 
-    Test(i).mldivide.error = abs(norm(y) - norm(Test(i).mldivide.x)); 
+    Test(i).mldivide.error = abs((norm(y) - norm(Test(i).mldivide.x)) ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    / norm(Test(i).mldivide.x)); 
 \end_layout
 
 \begin_layout Plain Layout
