@@ -246,7 +246,8 @@ reference "sec:MATLAB-tesztfeladatokon-való"
 \end_inset
 
 .
- fejezetben MATLAB tesztfeladatokon hasonlítjuk össze a *EZ MÉG NICS KÉSZ*...
+ fejezetben MATLAB tesztfeladatokon hasonlítjuk össze a pcg, SYMMLQ, bicgstabl,
+ QMR és az LSQR módszereket.
 \end_layout
 
 \begin_layout Standard
@@ -16746,17 +16747,7 @@ tt rank}
 
 \end_inset
 
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-EZ MÉG FENN ÁLL?!?!
-\end_layout
-
-\end_inset
-
-függvénye szerint a moler-féle és a sampling-féle együtthatómátrixok rangja
+ függvénye szerint a moler-féle és a sampling-féle együtthatómátrixok rangja
  29, pedig ez azt jelentené, hogy az együtthatómátrixok szingulárisak, és
  az egyenletrendszernek nincs megoldása.
  Valószínűleg a Matlab 
