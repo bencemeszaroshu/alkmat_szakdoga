@@ -19517,6 +19517,168 @@ sampling
 Konklúzió
 \end_layout
 
+\begin_layout Standard
+A SYMMLQ módszert és a sampling-féle tesztfeladatot leszámítva összességében
+ 
+\begin_inset Quotes pld
+\end_inset
+
+jól teljesítenek
+\begin_inset Quotes prd
+\end_inset
+
+ a konjugált gradiens módszerek.
+ A sampling-féle tesztfeladat együtthatómátrixa rosszul kondicionált, kondíció
+ száma 
+\begin_inset Formula $10^{16}$
+\end_inset
+
+, és az együtthatómátrix ráadásul nem pozitív definit.
+\end_layout
+
+\begin_layout Standard
+A pcg módszer a sampling-féle tesztfeladaton összeomlik, de itt az együtthatómát
+rix nem pozitív definit.
+ Azonban a moler-féle tesztfeladatot 
+\begin_inset Formula $9.10*10^{-3}$
+\end_inset
+
+ relatív hibával megoldja.
+ A moler-féle tesztfeladat együtthatómátrixa rosszul kondicionált, kondíció
+ száma 
+\begin_inset Formula $10^{17}$
+\end_inset
+
+, de az együtthatómátrixa pozitív definit.
+\end_layout
+
+\begin_layout Standard
+A SYMMLQ módszer érdekes eredménye, hogy az első három 
+\begin_inset Quotes pld
+\end_inset
+
+könnyebb
+\begin_inset Quotes prd
+\end_inset
+
+ feladatot rosszabb eredménnyel oldja meg mint bármelyik másik konjugált
+ gradiens alapú módszer, de a sampling-féle tesztfeladatot 
+\begin_inset Formula $9.71*10^{-1}$
+\end_inset
+
+ relatív hibával megoldja.
+ A moler-féle tesztfeladatot is 
+\begin_inset Formula $6.44*10^{-1}$
+\end_inset
+
+ relatív hibával megoldja.
+\end_layout
+
+\begin_layout Standard
+A bicgstabl módszer az első négy tesztfeladaton jól teljesít, a moler-féle
+ tesztfeladatot 
+\begin_inset Formula $9.10*10^{-3}$
+\end_inset
+
+ relatív hibával megoldja, ugyanúgy mint a pcg módszer.
+ A nem pozitív definit együtthatómátrixú sampling-féle tesztfeladatot azonban
+ gyakorlatilag teljesen rossz eredménnyel oldja meg, itt a relatív hibája
+ 
+\begin_inset Formula $6.64*10^{8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A QMR módszer szintén az első négy tesztfeladatot jól megoldja, és a sampling-fé
+le tesztfeladatot is megoldja 
+\begin_inset Formula $5.06*10^{1}$
+\end_inset
+
+ relatív hibával.
+\end_layout
+
+\begin_layout Standard
+Az LSQR módszer mindegyik tesztfeladatot megoldja kevesebb mint 
+\begin_inset Formula $8*10^{-3}$
+\end_inset
+
+ relatív hibával.
+ Az LSQR módszer pontosabban megoldotta a két rosszul kondicionált együtthatómát
+rixos tesztfeladatot mint az 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt mldivide}
+\end_layout
+
+\end_inset
+
+.
+ A sampling-féle tesztfeladatot 
+\begin_inset Formula $10^{-5}$
+\end_inset
+
+ nagyságrendű relatív hibával megoldja, ami a legjobb eredmény.
+ Ez két nagyságrenddel kisebb hiba mint az 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt mldivide}
+\end_layout
+
+\end_inset
+
+ hibája ugyanezen a feladaton.
+ 
+\end_layout
+
+\begin_layout Standard
+A mintegy referenciaként betett 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt mldivide}
+\end_layout
+
+\end_inset
+
+ az első három tesztfeladatot messze a legkisebb hibával oldja meg.
+ Valószínűleg csak a számábrázolás korlátozza.
+ A relatív hibák itt 
+\begin_inset Formula $10^{-14}$
+\end_inset
+
+ és 
+\begin_inset Formula $10^{-15}$
+\end_inset
+
+ nagyságrendűek.
+ A moler-féle tesztfeladatot azonban pontatlanabbúl oldja meg mint bármelyik
+ konjugált gradiens alapú módszer.
+ A SQMMLQ feladatnál egy nagyságrenddel, a többi konjugált gradiens alapú
+ módszerhez képest 3 nagyságrenddel pontatlanabbul.
+ A sampling-féle tesztfeladatot 
+\begin_inset Formula $5.48*10^{-2}$
+\end_inset
+
+ relatív hibával oldotta meg.
+ 
+\end_layout
+
 \begin_layout Section
 Függelék
 \begin_inset CommandInset label
