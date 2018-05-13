@@ -16822,7 +16822,7 @@ A következő táblázatok összefoglalják a különböző módszerek eredmény
  A relatív reziduális
 \begin_inset Formula 
 \[
-\frac{\left\Vert \boldsymbol{A}\boldsymbol{x}_{i}\right\Vert }{\left\Vert \boldsymbol{A}\boldsymbol{x}_{1}\right\Vert }\,,
+\frac{\left\Vert \boldsymbol{A}\boldsymbol{x}_{i}\right\Vert _{2}}{\left\Vert \boldsymbol{A}\boldsymbol{x}_{1}\right\Vert _{2}}\,,
 \]
 
 \end_inset
