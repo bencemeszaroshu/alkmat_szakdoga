@@ -19875,7 +19875,14 @@ reference "sec:Blokk-konjugált-gradiens"
 .
  fejezetben a Lanczos-féle és a Hestenes-Stiefel-féle algortimusokat hasonlítom
  össze, a blokk konjugált gradiens módszeren keresztül.
- Broyden az összeomlás elkerüléseinek feltételeit vizsgálta.
+ Broyden az összeomlás elkerüléseinek feltételeit vizsgálta 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -19895,6 +19902,166 @@ reference "sec:MATLAB-tesztfeladatokon-való"
 
 \begin_layout Section
 Summary
+\end_layout
+
+\begin_layout Standard
+Charles George Broyden (3 February 1933 – 20 May 2011) was an English mathematic
+ian, physicist.
+ He had a major part in the development of the quasi-Newton methods in the
+ 1960-70s.
+ The quasi-Newton methods greatly reduced the needed computing capacity
+ to solve nonlinear optimization problems.
+ In the second part of his life Broyden was spending his time on numerical
+ linear algebra.
+ He was dealing mainly with the conjugate gradient methods and their taxonomy.
+ This thesis presents his research of the second part of his life.
+ 
+\end_layout
+
+\begin_layout Standard
+Why did I chose this topic? Linear algebra is really an important field.
+ It has applications in geometry, physics, engineering, etc., it is even
+ used in modern social sciences.
+ We can say that we can find linear algebra in nearly every field.
+ It is used to model real-life problems with linear systems and to obtain
+ the solution of these systems.
+ 
+\end_layout
+
+\begin_layout Standard
+The thesis begins with the short summary of Broyden’s life.
+ The first part of the thesis gives the necessary background for the following
+ chapters.
+ The first part of the thesis includes definitions, theorems, and clarifies
+ the notation.
+ It also includes a taxonomy of linear systems.
+ The LU-decomposition and the Gauss-elimination are discussed in more detail.
+ 
+\end_layout
+
+\begin_layout Standard
+The remaining chapters summarize the numerical linear algebra results of
+ Broyden.
+ 
+\end_layout
+
+\begin_layout Standard
+The convergence criteria of the SOR method for symmetric coefficient matrices
+ were first introduced by Alexander Ostrowski in 1954 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ostrowski"
+
+\end_inset
+
+.
+ Broyden gave sufficient convergence criteria for symmetric and non-symmetric
+ coefficient matrices in 1964 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+.
+ This is covered by chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Felső-relaxációs-eljárás"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+One of the best methods for solving the linear system 
+\begin_inset Formula 
+\[
+\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}
+\]
+
+\end_inset
+
+ where 
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+
+\series default
+ is large and sparse is the conjugate gradient method or one of its many
+ derivates.
+ The original method, due to Hestenes and Stiefel 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Orig_cg"
+
+\end_inset
+
+, applies only in the case where 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ is symmetric and positive definite but many variations have been proposed
+ to deal not only with symmetric indefinite matrices but with non-symmetric
+ matrices as well.
+ However, the overview of these methods can be quite difficult because the
+ different authors use different techniques when deriving the new algorithms.
+ Broyden gives a new taxonomy of the conjugate gradient methods in his publicati
+on in 1996 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ The result is summarized in chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:A-konjugált-gradiens"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Blokk-konjugált-gradiens"
+
+\end_inset
+
+ I compare the Lanczos and Hestenes-Stiefel algorithm through the block
+ conjugate gradient method.
+ Broyden investigated the breakdown conditions of these algorithms 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenBlCG"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:MATLAB-tesztfeladatokon-való"
+
+\end_inset
+
+ I compare the pcg, SYMMLQ, bicgstabl, QMR and LSQR method in Matlab.
+ The Matlab source code can be found at the end of the thesis.
+ 
 \end_layout
 
 \begin_layout Section
