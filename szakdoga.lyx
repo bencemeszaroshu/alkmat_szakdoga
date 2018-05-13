@@ -19706,6 +19706,193 @@ tt mldivide}
 Összefoglaló
 \end_layout
 
+\begin_layout Standard
+Charles George Broyden (1933.
+\begin_inset space \space{}
+\end_inset
+
+február 3.
+\begin_inset space \space{}
+\end_inset
+
+- 2011.
+\begin_inset space \space{}
+\end_inset
+
+május 20.) angol matematikus, fizikus.
+ Jelentős szerepe volt a kvázi-Newton módszerek kifejlesztésében az 1960-as
+ 70-es években.
+ Az addigi módszerkehez képest jelentősen alacsonyabb számítási igényük
+ miatt, a kávzi-Newton módszerek nagy áttörést jelentettek a nemlineáris
+ optimalizálás területén.
+ Broyden élete második felében a numerikus lineáris algebrára fókuszált,
+ ezen belül is a konjugált gradiens módszerekre és ezek rendszertanára.
+ A szakdolgozat főleg a kutatásainak a konjugált gradiens módszerekkel kapcsolat
+os részét dolgozza fel.
+ 
+\end_layout
+
+\begin_layout Standard
+Miért választottam ezt a témát? A lineáris algebra szerepe kiemelkedően
+ fontos rengeteg területen, például jelentős geometriai, fizikai és mérnöki
+ alkalmazásokkal rendelkezik, de a modern társadalomtudományokban is alkalmazzák.
+ Számos más területen is találkozhatunk lineáris algebrával, szinte minden
+ tudományág tartalmaz olyan modelleket, amelyek lineáris egyenletrendszerek
+ megoldására vezetik vissza valamilyen probléma megoldását.
+ 
+\end_layout
+
+\begin_layout Standard
+A diplomamunka Broyden rövid életrajzával kezdődik.
+ A szakdolgozat első része a további fejezeteket alapozza meg.
+ Ezekben a fejezetekben a további fejezetekhez szükséges fogalmakat vezettem
+ be, definíciókat adtam meg, tételeket mondtam ki, és tisztáztam a jelöléseket.
+ Szintén az elméleti felvezetés része, a lineáris egyenletrendszerek megoldásána
+k osztályozása.
+ A direkt eljárások részben az LU-felbontást és a Gauss-féle eliminációt
+ mutatom be részletesebben.
+ Az iteratív eljárások utal a későbbiekre.
+\end_layout
+
+\begin_layout Standard
+A további fejezetek Broyden, a numerikus lineáris algebra témakörében elért
+ eredményeit foglalják össze.
+ 
+\end_layout
+
+\begin_layout Standard
+A SOR módszer konvergencia kritériumát szimmetrikus együtthatómátrixok esetén
+ Alexander Ostrowski dolgozta ki 1954-ben 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ostrowski"
+
+\end_inset
+
+.
+ Broyden elégséges konvergencia feltételeket adott 1964-ben, szimmetrikus
+ és nemszimmetrikus együtthatómátrixok esetére is 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenSORkonvergencia"
+
+\end_inset
+
+.
+ Ezeket az eredményeket dolgozza fel a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Felső-relaxációs-eljárás"
+
+\end_inset
+
+.
+ fejezet.
+ 
+\end_layout
+
+\begin_layout Standard
+Az egyik legjobban használható módszer az
+\begin_inset Formula 
+\[
+\boldsymbol{Ax}=\boldsymbol{b}
+\]
+
+\end_inset
+
+egyenletrendszer megoldására, ahol 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ valós nemszinguláris ritka mátrix, 
+\series bold
+
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+
+\series default
+ pedig valós vektor, a konjugált gradiens módszer és az ebből származtatott
+ különböző módszerek 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ Hestenes és Siefel eredeti 1952-es módszere 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Orig_cg"
+
+\end_inset
+
+ csak akkor alkalmazható, ha az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ együtthatómátrix szimmetrikus és pozitív definit.
+ Az eredeti módszer óta már rengetek származtatott módszer született, amelyek
+ nem csak szimmetrikus indefinit együtthatómátrixok esetén, de nemszimmetrikus
+ együtthatómátrixok esetén is alkalmazhatóak 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+.
+ A módszerek áttekintése azonban nehézkes lehet, például amiatt, hogy az
+ algoritmusokat a különböző szerzők különböző módokon származtatják.
+ Broyden 1996-os cikkében 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BroydenNewTaxonomy"
+
+\end_inset
+
+ rendszerezi a konjugált gradiens módszereket.
+ Ezeket az eredményeket foglalja össze a 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:A-konjugált-gradiens"
+
+\end_inset
+
+.
+ fejezet.
+\end_layout
+
+\begin_layout Standard
+A 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Blokk-konjugált-gradiens"
+
+\end_inset
+
+.
+ fejezetben a Lanczos-féle és a Hestenes-Stiefel-féle algortimusokat hasonlítom
+ össze, a blokk konjugált gradiens módszeren keresztül.
+ Broyden az összeomlás elkerüléseinek feltételeit vizsgálta.
+ 
+\end_layout
+
+\begin_layout Standard
+A 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:MATLAB-tesztfeladatokon-való"
+
+\end_inset
+
+.
+ fejezetben MATLAB tesztfeladatokon hasonlítom össze a pcg, SYMMLQ, bicgstabl,
+ QMR és az LSQR módszereket.
+ A használt Matlab kód megtalálható a függelékben.
+\end_layout
+
 \begin_layout Section
 Summary
 \end_layout
