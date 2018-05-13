@@ -19536,7 +19536,7 @@ jól teljesítenek
 \begin_inset Formula $10^{16}$
 \end_inset
 
-, és az együtthatómátrix ráadásul nem pozitív definit.
+, és ráadásul nem pozitív definit.
 \end_layout
 
 \begin_layout Standard
@@ -19546,7 +19546,11 @@ rix nem pozitív definit.
 \begin_inset Formula $9.10*10^{-3}$
 \end_inset
 
- relatív hibával megoldja.
+ relatív hibával megoldja mindösszesen 
+\begin_inset Formula $13$
+\end_inset
+
+ iterációval.
  A moler-féle tesztfeladat együtthatómátrixa rosszul kondicionált, kondíció
  száma 
 \begin_inset Formula $10^{17}$
@@ -19611,13 +19615,13 @@ A QMR módszer szintén az első négy tesztfeladatot jól megoldja.
 \end_layout
 
 \begin_layout Standard
-Az LSQR módszer mindegyik tesztfeladatot megoldja kevesebb mint 
+Az LSQR módszer kevesebb mint 
 \begin_inset Formula $8*10^{-3}$
 \end_inset
 
- relatív hibával.
- Az LSQR módszer pontosabban megoldotta a két rosszul kondicionált együtthatómát
-rixos tesztfeladatot mint az 
+ relatív hibával mindegyik tesztfeladatot megoldja.
+ Az LSQR módszer pontosabban megoldja a két rosszul kondicionált együtthatómátri
+xos tesztfeladatot mint az 
 \begin_inset ERT
 status open
 
@@ -19686,7 +19690,7 @@ tt mldivide}
 \begin_inset Formula $5.48*10^{-2}$
 \end_inset
 
- relatív hibával oldotta meg.
+ relatív hibával oldja  meg.
  
 \end_layout
 
