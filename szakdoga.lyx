@@ -17581,7 +17581,7 @@ for i = 1 : number_of_testmatrices
 
 \begin_layout Plain Layout
 
-    / norm(Test(i).pcg.x)); 
+    / norm(y)); 
 \end_layout
 
 \begin_layout Plain Layout
@@ -17615,7 +17615,7 @@ for i = 1 : number_of_testmatrices
 
 \begin_layout Plain Layout
 
-    / norm(Test(i).symmlq.x)); 
+    / norm(y)); 
 \end_layout
 
 \begin_layout Plain Layout
@@ -17649,7 +17649,7 @@ for i = 1 : number_of_testmatrices
 
 \begin_layout Plain Layout
 
-		    norm(Test(i).bicgstabl.x)) / norm(Test(i).bicgstabl.x));
+		    norm(y)) / norm(Test(i).bicgstabl.x));
 \end_layout
 
 \begin_layout Plain Layout
@@ -17683,7 +17683,7 @@ for i = 1 : number_of_testmatrices
 
 \begin_layout Plain Layout
 
-    / norm(Test(i).qmr.x));
+    / norm(y));
 \end_layout
 
 \begin_layout Plain Layout
@@ -17717,7 +17717,7 @@ for i = 1 : number_of_testmatrices
 
 \begin_layout Plain Layout
 
-    / norm(Test(i).lsqr.x));
+    / norm(y));
 \end_layout
 
 \begin_layout Plain Layout
@@ -17741,7 +17741,7 @@ for i = 1 : number_of_testmatrices
 
 \begin_layout Plain Layout
 
-    / norm(Test(i).mldivide.x)); 
+    / norm(y)); 
 \end_layout
 
 \begin_layout Plain Layout
