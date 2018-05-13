@@ -16195,7 +16195,7 @@ key "KrylovBook"
 \end_inset
 
 .
- A módszereknél a toleranciát 
+ A módszereknél a relatív reziduális toleranciáját 
 \begin_inset Formula $10^{-6}$
 \end_inset
 
@@ -16819,6 +16819,23 @@ A következő táblázatok összefoglalják a különböző módszerek eredmény
 \end_inset
 
  vektor pedig az adott módszerrel számolt megoldás.
+ A relatív reziduális
+\begin_inset Formula 
+\[
+\frac{\left\Vert \boldsymbol{A}\boldsymbol{x}_{i}\right\Vert }{\left\Vert \boldsymbol{A}\boldsymbol{x}_{1}\right\Vert }\,,
+\]
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\boldsymbol{x}_{i}$
+\end_inset
+
+ az 
+\begin_inset Formula $i$
+\end_inset
+
+-edik iterációhoz tartozó becslés.
 \end_layout
 
 \begin_layout Standard
@@ -19690,7 +19707,7 @@ tt mldivide}
 \begin_inset Formula $5.48*10^{-2}$
 \end_inset
 
- relatív hibával oldja  meg.
+ relatív hibával oldja meg.
  
 \end_layout
 
