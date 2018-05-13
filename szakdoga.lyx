@@ -17059,7 +17059,7 @@ dorr
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $0$
+\begin_inset Formula $1$
 \end_inset
 
 
@@ -17083,7 +17083,7 @@ dorr
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $6$
+\begin_inset Formula $1000$
 \end_inset
 
 
@@ -17324,7 +17324,10 @@ sampling
 \begin_inset Text
 
 \begin_layout Plain Layout
-0
+\begin_inset Formula $0$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -17846,7 +17849,7 @@ dorr
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $14.5$
+\begin_inset Formula $14$
 \end_inset
 
 
@@ -17907,7 +17910,7 @@ lehmer
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $12.5$
+\begin_inset Formula $12$
 \end_inset
 
 
@@ -17968,7 +17971,7 @@ minij
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $9.25$
+\begin_inset Formula $9$
 \end_inset
 
 
@@ -18029,7 +18032,7 @@ moler
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $5.25$
+\begin_inset Formula $5$
 \end_inset
 
 
@@ -18090,7 +18093,7 @@ sampling
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $21$
+\begin_inset Formula $1000$
 \end_inset
 
 
@@ -18476,7 +18479,7 @@ sampling
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $13$
+\begin_inset Formula $1000$
 \end_inset
 
 
@@ -19550,6 +19553,12 @@ rix nem pozitív definit.
 \end_inset
 
 , de az együtthatómátrixa pozitív definit.
+ A dorr-féle tesztfeladaton a pcg módszer nem éri el a relatív reziduális
+ kívánt toleranciáját, de végül maximum iteráció szám mellett csak 
+\begin_inset Formula $8.65*10^{-2}$
+\end_inset
+
+ lesz az eredmény relatív hibája.
 \end_layout
 
 \begin_layout Standard
@@ -19581,8 +19590,9 @@ A bicgstabl módszer az első négy tesztfeladaton jól teljesít, a moler-féle
 \end_inset
 
  relatív hibával megoldja, ugyanúgy mint a pcg módszer.
- A nem pozitív definit együtthatómátrixú sampling-féle tesztfeladatot azonban
- gyakorlatilag teljesen rossz eredménnyel oldja meg, itt a relatív hibája
+ A nem pozitív definit együtthatómátrixú sampling-féle tesztfeladaton a
+ bicgstabl módszer nem éri el a relatív reziduális kívánt toleranciáját,
+ és nem is tudja megoldani a tesztfeladatot, az eredmény relatív hibája
  
 \begin_inset Formula $6.64*10^{8}$
 \end_inset
@@ -19591,12 +19601,13 @@ A bicgstabl módszer az első négy tesztfeladaton jól teljesít, a moler-féle
 \end_layout
 
 \begin_layout Standard
-A QMR módszer szintén az első négy tesztfeladatot jól megoldja, és a sampling-fé
-le tesztfeladatot is megoldja 
+A QMR módszer szintén az első négy tesztfeladatot jól megoldja.
+ A sampling-féle tesztfeladatnál nem éri el a relatív reziduális kívánt
+ toleranciáját, de maximum iteráció szám mellett csak 
 \begin_inset Formula $5.06*10^{1}$
 \end_inset
 
- relatív hibával.
+ lesz az eredmény relatív hibája.
 \end_layout
 
 \begin_layout Standard
