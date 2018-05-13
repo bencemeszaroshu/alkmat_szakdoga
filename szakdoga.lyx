@@ -2191,7 +2191,11 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix lineárisan független oszlopainak maximum darabszáma az mátrix rangja.
+ mátrix lineárisan független oszlopainak maximum darabszáma az 
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ mátrix rangja.
  Jelölése 
 \begin_inset Formula $r\left(\boldsymbol{A}\right).$
 \end_inset
@@ -3719,7 +3723,7 @@ Az
 A Frobenius norma az euklideszi vektornorma mátrix megfelelője, de nem az
  euklideszi vektornorma által indukált mátrixnorma.
  Nem vektornorma által indukált mátrixnorma, ezért a gyakorlatban sokszor
- szükségtelenül pontatlan eredményekhez vezet.
+ indokolatlanul pontatlan eredményekhez vezet.
 \end_layout
 
 \begin_layout Definition*
@@ -3916,8 +3920,8 @@ Az egyenletrendszer megoldásánál számolnunk kell különböző hibaforrások
 \begin_inset Formula $\boldsymbol{b}$
 \end_inset
 
- vektor elemeinek hibája, a számítások közben keletkező kerekítési hibák,
- és a megoldási módszer képlethibája.
+ vektor elemeinek mérési hibája, a számítások közben keletkező kerekítési
+ hibák, és a megoldási módszer képlethibája.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -4201,7 +4205,7 @@ Az
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- mátrix nemszingulárs, így a 
+ mátrix nemszinguláris, így a 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:Négyzetes-mátrixok-szorzata_nemszing_ha_nemszing"
@@ -4628,11 +4632,11 @@ reference "eq:axb"
 
  egyenletrendszer megoldására a Gauss-féle elimináció.
  Az első, második, stb.
- egyenlőség megfelelő skalárszorosát kivonjuk a többi egyenlőségből, úgy
+ egyenlőség megfelelő skalárszorosát kivonjuk a többi egyenlőségből, úgy,
  hogy ezzel az ismeretlen változókat elimináljuk.
  Ezt addig folytatjuk, amíg az utolsó egyenlőségben már csak egy ismeretlen
  változó marad.
- ekkor a kapott egyenlőségek felső háromszög alakúak.
+ Ekkor a kapott egyenlőségek felső háromszög alakúak.
  A módszert egy példán mutatjuk be.
 \end_layout
 
@@ -5507,31 +5511,10 @@ key "BasicMatrices"
 \end_layout
 
 \begin_layout Standard
-A következő fejezetekben két iterációs eljárással fogunk részletesen foglalkozni
-, Broyden kutatásainak eredményeire támaszkodva.
+A következő fejezetekben két iterációs eljárással fogunk részletesebben
+ foglalkozni, Broyden kutatásainak eredményeire támaszkodva.
  A felső relaxációs eljárással és a blokk konjugált gradiens módszerrel.
  
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BroydenSORkonvergencia"
-
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BroydenBlCG"
-
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BroydenNewTaxonomy"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -5590,11 +5573,11 @@ Legyen
 \begin_inset Formula $\lambda$
 \end_inset
 
- skalár, ami mellett 
+ skalár, ami mellett az 
 \begin_inset Formula $\boldsymbol{A}-\lambda\boldsymbol{I}$
 \end_inset
 
- szinguláris, az 
+ mátrix szinguláris, az 
 \series bold
 
 \begin_inset Formula $\boldsymbol{A}$
@@ -7979,7 +7962,7 @@ reference "thm:Schur"
 \begin_inset Formula $\boldsymbol{U}$
 \end_inset
 
- nem lehet konverges, ha 
+ nem lehet konvergens, ha 
 \begin_inset Formula $u_{ii}\ge1$
 \end_inset
 
@@ -8780,15 +8763,14 @@ reference "eq:SOR_hosszu_konv_feltetel"
 
 \end_inset
 
-formában írható.
- 
+formában írható 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenSORkonvergencia"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Subsection
@@ -8802,7 +8784,7 @@ Tegyük fel, hogy az
 
  mátrix szimmetrikus.
  Legyen 
-\begin_inset Formula $S=\boldsymbol{D}^{-1}\boldsymbol{M}^{-1}\boldsymbol{D}^{-1}$
+\begin_inset Formula $\boldsymbol{S}=\boldsymbol{D}^{-1}\boldsymbol{M}^{-1}\boldsymbol{D}^{-1}$
 \end_inset
 
 .
@@ -9729,7 +9711,7 @@ key "Ashby"
 \end_inset
 
  mátrixszal (a prekondicionáló mátrixszal).
- Az ő cikkük pedig erősen támaszkodik Faber és Manteuffel cikkére 
+ Cikkük erősen támaszkodik Faber és Manteuffel cikkére 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Faber_and_Manteuffel"
@@ -9755,7 +9737,7 @@ key "Faber_and_Manteuffel"
 \lang english
 B-normális(
 \family default
-\series bold
+\series default
 \shape default
 \size default
 \emph default
@@ -9766,7 +9748,6 @@ B-normális(
 \noun default
 \color inherit
 s
-\series default
 \lang magyar
 )-nek nevezik, ha a 
 \begin_inset Formula $\boldsymbol{B}$
@@ -9862,7 +9843,7 @@ key "BroydenNewTaxonomy"
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- mátrixa általában azonos az Ashby féle 
+ mátrixa általában azonos az Ashby-féle 
 \begin_inset Formula $\boldsymbol{B}$
 \end_inset
 
@@ -9870,8 +9851,7 @@ key "BroydenNewTaxonomy"
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- mátrixnál nem megkövetelt.
- 
+ mátrixnál nem megkövetelt 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BroydenNewTaxonomy"
@@ -10395,7 +10375,7 @@ Az első lehetőség, amikor a
 \begin_inset Formula $\boldsymbol{p}_{j}$
 \end_inset
 
- vektorok, a kapcsolodó 
+ vektorok, a kapcsolódó 
 \begin_inset Formula $\boldsymbol{W}_{j}$
 \end_inset
 
@@ -10868,7 +10848,7 @@ b-stabilis
 \noun default
 \color inherit
 \lang magyar
-nak nevezezzük.
+nak nevezzük.
  Ha a 
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
@@ -11209,7 +11189,7 @@ A kezdeti
 \begin_inset Formula $\boldsymbol{g}_{1}$
 \end_inset
 
- vektort választjuk, akkor az Orthodir algoritmust kapjuk 
+ vektort választjuk, akkor az orthodir algoritmust kapjuk 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Ashby"
@@ -11686,11 +11666,11 @@ Ezek a
 \begin_inset Formula $\boldsymbol{A}$
 \end_inset
 
- együtthatómátrix indefinit, akkor a 1-es módszer csak 
+ együtthatómátrix indefinit, akkor a cg módszer csak 
 \begin_inset Formula $\boldsymbol{b}$
 \end_inset
 
--stabilis, a 2-es módszer pedig csak 
+-stabilis, a cr módszer pedig csak 
 \begin_inset Formula $\omega$
 \end_inset
 
@@ -11713,7 +11693,7 @@ Ezek a
 \begin_inset Formula $\boldsymbol{M}$
 \end_inset
 
- mátrix mindketten definitek.
+ mátrixok definitek.
  Az 
 \begin_inset Formula $\boldsymbol{M}$
 \end_inset
@@ -12122,12 +12102,12 @@ reference "eq:TAX_7"
 , ahol
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{r}_{i}=\boldsymbol{A}\boldsymbol{x}_{i}-\boldsymbol{b},\label{eq:TAX_28}
+\boldsymbol{r}_{i}=\boldsymbol{A}\boldsymbol{x}_{i}-\boldsymbol{b}\label{eq:TAX_28}
 \end{equation}
 
 \end_inset
 
-mradéktag, és használjunk egy indirekt számítást, hogy megkapjuk a 
+maradéktag, és indirekt kapjuk a 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:TAX_10"
@@ -12294,7 +12274,7 @@ ahol, mivel az
  hipersík felett, a 
 \series bold
 
-\begin_inset Formula $\boldsymbol{G}$
+\begin_inset Formula $\boldsymbol{G}_{i}$
 \end_inset
 
 
@@ -12755,8 +12735,11 @@ A 7-es módszer, annak ellenére, hogy b-stabilis és
 \begin_inset Formula $\boldsymbol{GK}$
 \end_inset
 
- mátrix kondíciószáma a négyzete az 1-6 módszerek kondíciószámának, és emiatt
- gyakran lassú a konvergencia.
+ mátrix kondíciószáma a négyzete az 1-6 módszerek 
+\begin_inset Formula $\boldsymbol{GK}$
+\end_inset
+
+ mátrixának kondíciószámának, és emiatt gyakran lassú a konvergencia.
  A 8-as módszerre hasonlóak igazak, de ennél a módszernél a 6-os módszerhez
  hasonlóan az 
 \begin_inset Formula $\boldsymbol{A}^{-1}$
@@ -12848,7 +12831,7 @@ Mivel a fenti módszerek egyike se teljesen kielégítő nemszimmetrikus mátrix
 \begin{equation}
 \boldsymbol{G}=\begin{bmatrix}\boldsymbol{G}_{11} & \boldsymbol{0}\\
 \boldsymbol{0} & \boldsymbol{G}_{22}
-\end{bmatrix}\,,\label{eq:TAX_35}
+\end{bmatrix},\label{eq:TAX_35}
 \end{equation}
 
 \end_inset
@@ -12858,7 +12841,7 @@ vagy
 \begin{equation}
 \boldsymbol{G}=\begin{bmatrix}\boldsymbol{0} & \boldsymbol{G}_{12}\\
 \boldsymbol{G}_{21} & \boldsymbol{0}
-\end{bmatrix}\,.\label{eq:TAX_36}
+\end{bmatrix}.\label{eq:TAX_36}
 \end{equation}
 
 \end_inset
@@ -14251,11 +14234,11 @@ reference "eq:TAX_44"
 
 .
  Ha a tetszőlegesen választható 
-\begin_inset Formula $\boldsymbol{p}_{1}=0$
+\begin_inset Formula $\boldsymbol{p}_{1}=\boldsymbol{0}$
 \end_inset
 
  és 
-\begin_inset Formula $\boldsymbol{v}_{1}=0$
+\begin_inset Formula $\boldsymbol{v}_{1}=\boldsymbol{0}$
 \end_inset
 
 , akkor a 
@@ -14274,7 +14257,7 @@ reference "eq:TAX_21"
 \end_inset
 
 és 
-\begin_inset Formula $\boldsymbol{v}_{i+1}=0$
+\begin_inset Formula $\boldsymbol{v}_{i+1}=\boldsymbol{0}$
 \end_inset
 
 , minden páros 
@@ -14290,7 +14273,7 @@ reference "eq:TAX_21"
 \end_inset
 
 és 
-\begin_inset Formula $\boldsymbol{u}_{i+1}=0$
+\begin_inset Formula $\boldsymbol{u}_{i+1}=\boldsymbol{0}$
 \end_inset
 
 , minden páratlan 
@@ -14306,11 +14289,11 @@ key "BroydenNewTaxonomy"
 
 .
  Hasonló egyenlőségekhez juthatunk a 
-\begin_inset Formula $\boldsymbol{p}_{1}=0$
+\begin_inset Formula $\boldsymbol{p}_{1}=\boldsymbol{0}$
 \end_inset
 
  és az 
-\begin_inset Formula $\boldsymbol{u}_{1}=0$
+\begin_inset Formula $\boldsymbol{u}_{1}=\boldsymbol{0}$
 \end_inset
 
  választással 
@@ -14665,7 +14648,7 @@ magyar?
  vett be.
  Így fontos módszerek, mint pl.
  a GCR, GMRES, ORTHOMIN kimaradtak, és pl.
- az ORTHODIR módszer csak a teljesen szimmetrikus formájában szerepelt.
+ az orthodir módszer csak a teljesen szimmetrikus formájában szerepelt.
  
 \begin_inset Note Note
 status open
@@ -16672,7 +16655,7 @@ A mátrixcsaládokat próbáltam úgy választani, hogy a kapott tesztmátrixok
 \end_layout
 
 \begin_layout Standard
-Esetünben két együtthatómátrix is rosszul kondicionált, vagy más szóval
+Esetünkben két együtthatómátrix is rosszul kondicionált, vagy más szóval
  közel szinguláris, a moler-féle és a sampling-féle együtthatómátrixok.
  Az 
 \begin_inset Formula $\boldsymbol{A}$
