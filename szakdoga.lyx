@@ -16779,7 +16779,7 @@ A következő táblázatok összefoglalják a különböző módszerek eredmény
  A relatív hiba alatt az 
 \begin_inset Formula 
 \[
-\left|\frac{\left\Vert \boldsymbol{x}\right\Vert _{2}-\left\Vert \boldsymbol{y}\right\Vert _{2}}{\left\Vert \boldsymbol{y}\right\Vert _{2}}\right|
+\left|\frac{\left\Vert \boldsymbol{x}\right\Vert -\left\Vert \boldsymbol{y}\right\Vert }{\left\Vert \boldsymbol{y}\right\Vert }\right|
 \]
 
 \end_inset
@@ -16796,20 +16796,24 @@ A következő táblázatok összefoglalják a különböző módszerek eredmény
  A relatív reziduális
 \begin_inset Formula 
 \[
-\frac{\left\Vert \boldsymbol{A}\boldsymbol{x}_{i}\right\Vert _{2}}{\left\Vert \boldsymbol{A}\boldsymbol{x}_{1}\right\Vert _{2}}\,,
+\frac{\left\Vert \boldsymbol{b}_{i}-\boldsymbol{b}\right\Vert }{\left\Vert \boldsymbol{b}_{i}\right\Vert }\,,
 \]
 
 \end_inset
 
 ahol 
-\begin_inset Formula $\boldsymbol{x}_{i}$
+\begin_inset Formula $\boldsymbol{b}_{i}$
 \end_inset
 
  az 
 \begin_inset Formula $i$
 \end_inset
 
--edik iterációhoz tartozó becslés.
+-edik iterációhoz tartozó becslése a 
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+ vektornak.
 \end_layout
 
 \begin_layout Standard
@@ -19705,7 +19709,7 @@ február 3.
 május 20.) angol matematikus, fizikus.
  Jelentős szerepe volt a kvázi-Newton módszerek kifejlesztésében az 1960-as
  70-es években.
- Az addigi módszerkehez képest jelentősen alacsonyabb számítási igényük
+ Az addigi módszerekhez képest jelentősen alacsonyabb számítási igényük
  miatt, a kávzi-Newton módszerek nagy áttörést jelentettek a nemlineáris
  optimalizálás területén.
  Broyden élete második felében a numerikus lineáris algebrára fókuszált,
@@ -19729,12 +19733,13 @@ Miért választottam ezt a témát? A lineáris algebra szerepe kiemelkedően
 A diplomamunka Broyden rövid életrajzával kezdődik.
  A diplomamunka első része a további fejezeteket alapozza meg.
  Ezekben a fejezetekben a további fejezetekhez szükséges fogalmakat vezettem
- be, definíciókat adtam meg, tételeket mondtam ki, és tisztáztam a jelöléseket.
- Szintén az elméleti felvezetés része, a lineáris egyenletrendszerek megoldásána
-k osztályozása.
+ be, definíciókat adtam meg, tételeket mondtam ki, a legtöbbet bizonyítottam,
+ és tisztáztam a jelöléseket.
+ Szintén az elméleti felvezetés része, a lineáris egyenletrendszerek megoldási
+ módszereinek osztályozása.
  A direkt eljárások részben az LU-felbontást és a Gauss-féle eliminációt
  mutatom be részletesebben.
- Az iteratív eljárások utal a későbbiekre.
+ Az iteratív eljárások fejezet utal a későbbiekre.
 \end_layout
 
 \begin_layout Standard
@@ -19902,7 +19907,7 @@ ian, physicist.
 \end_layout
 
 \begin_layout Standard
-Why did I chose this topic? Linear algebra is really an important field.
+Why did I choose this topic? Linear algebra is really an important field.
  It has applications in geometry, physics, engineering, etc., it is even
  used in modern social sciences.
  We can say that we can find linear algebra in nearly every field.
